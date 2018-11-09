@@ -1,0 +1,266 @@
+{
+    "env": "STAGE",
+    "EnableMaintenanceMode": false,
+    "eoddata": 
+            {
+        "userid": "vze2rdgy",
+        "password": "Run37Dir"
+    },
+    "logging": {
+        "enable": true,
+        "level": "debug",
+        "file": {
+            "name": "seweb.log",
+            "append": false,
+            "maxfiles": 0
+        }
+    },
+    "stlouisfed": {
+                "apiroot" : "https://api.stlouisfed.org/fred",
+                "fredkey" : "f64a3189bd691d8c120d5c8be6acb370"
+    },
+    "timerserver" : {
+        "purgesessions" : 60
+    },
+    "webkeylocation" : ".",
+    "sebgpd": {
+        "mainsql": "select * from se_edgar_formrecs where is_processed = -1 order by filedate asc limit 1;",
+        "functions": [
+            {
+                "name": "mapsymboltocik",
+                "active": "0",
+                "params": "",
+                "interval": {
+                    "freq": "continuous",
+                    "factor": "5"
+                }
+            },
+            {
+                "name": "eoddata",
+                "active": "1",
+                "params": "NYSE,NASDAQ,AMEX,OTCBB,CBOT,NYBOT,NYMEX,OPRA,CBOT,CFE,CME,KCBT,MGEX,WCE",
+                "interval": {
+                    "freq": "once",
+                    "factor": "1"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "segment",
+                "interval": {
+                    "freq": "once",
+                    "factor": "1"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "fixfinyear",
+                "interval": {
+                    "freq": "once",
+                    "factor": "1"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "updateperformance",
+                "interval": {
+                    "freq": "once",
+                    "factor": "1"
+                }
+            },
+            {
+                "name": "processstatements",
+                "active": "0",
+                "params": "",
+                "instances": 1,
+                "interval": {
+                    "freq": "continuous",
+                    "factor": "2"
+                }
+            },
+            {
+                "name": "parseformindex",
+                "active": "0",
+                "params": "10-Q;10-K;10-Q/A;10-K/A;10-QT;10-KT;20-F;20-F/A;6-K;6-K/A",
+                "interval": {
+                    "freq": "once",
+                    "factor": "1"
+                }
+            },
+            {
+                "name": "pricehistory",
+                "active": "0",
+                "params": "1",
+                "interval": {
+                    "freq": "daily",
+                    "factor": "23:35:00"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "economicnewsprocessor",
+                "interval": {
+                    "freq": "once",
+                    "factor": "3600"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "sourceeconomicsdata",
+                "interval": {
+                    "freq": "once"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "gicsrevenuegrowth",
+                "interval": {
+                    "freq": "once",
+                    "when": "20",
+                    "time": "14:29:00"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "updateearningscalendar",
+                "interval": {
+                    "freq": "monthly",
+                    "when": "21",
+                    "time": "12:30:00"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "processproductkeystats",
+                "interval": {
+                    "freq": "once"
+                }
+            },
+            {
+                "name": "repeateddbaction",
+                "active": "0",
+                "params": "publishseclist",
+                "interval": {
+                    "freq": "once"
+                }
+            }
+        ]
+    },
+    "mail": {
+        "smtp": {
+            "userid": "sajiantony15",
+            "password": "VforXbrl2015",
+            "server": "outgoing.verizon.net",
+            "port": 587
+        },
+        "notifications" : {
+            "error" : "sajiantony@live.com",
+            "admin" : "sajiantony15@verizon.net"
+        }
+    },
+    "threading": {
+        "pool": {
+            "numthreads": 5
+        }
+    },
+    "databases": {
+        "main": {
+            "host": "workhorse",
+            "userid": "smartearn",
+            "password": "Run573Can",
+            "db": "sa"
+        },
+        "backup": {
+            "host": "njmain",
+            "userid": "smartearn",
+            "password": "Run573Can",
+            "db": "sa"
+        },
+        "seeoddata": {
+            "host": "workhorse",
+            "userid": "smartearn",
+            "password": "Run573Can",
+            "db": "saeoddata"
+        },
+        "admin": {
+            "host": "workhorse",
+            "userid": "smartearn",
+            "password": "Run573Can",
+            "db": "saadmin"
+        }    },
+    "key": ".",
+    "functionCaching": {
+        "GlobalCaching": true,
+        "Xbrl": {
+            "CompanyFinancials": false,
+            "CompanyStatements": false
+        },
+        "Securities": {
+            "MarketData": {
+                "Available": [ "EodData" ],
+                "Primary": "EodData"
+            },
+            "get_SecurityDescription": false,
+            "get_Security": false,
+            "get_Company": false
+        }
+    },
+    "mongo" : 
+            {
+                "predictor" : {"collection" : "njprod"}
+            },
+
+    "mdproviders" : [ "eoddata" ],
+    "defmdprovider" : "eoddata",
+
+    "service" : {
+            "ip"  : "127.0.0.1", 
+            "api" 	: "http",
+            "port" 	: 8080
+        },
+    "server" :
+        {
+            "mod" 	: "process"
+        },
+    "http" : 
+        {
+            "script_names" : ["/"]
+        },
+    "cache" :
+        {
+            "backend" 	: "thread_shared",
+            "limit"	: 100000
+        },
+    "session" : 
+        {
+            "browsersession" : 3600,
+            "expire" 	: "fixed",  
+            "timeout" 	: 3600,  
+            "location" 	: "server",  
+            "server" 	:      
+                {  
+                    "storage" 	:        "files",  
+                    "dir"   	:   "./.session"
+                }      
+        },
+    "views" : 
+        {
+            "default_skin" : "skdefault"
+        },
+    "security" 		:	 
+        {
+            "csrf" 	: 
+            {
+                "enable" 	: "true"
+            }
+        }
+
+}

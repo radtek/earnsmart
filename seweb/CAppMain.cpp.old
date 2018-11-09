@@ -1,0 +1,321 @@
+/* 
+ * File:   CAppMain.cpp
+ * Author: santony
+ * 
+ * Created on January 24, 2015, 1:00 PM
+ */
+
+#include "CAppMain.h"
+#include "../sewebmodels/CHome.h"
+#include "../sewebmodels/CLogOn.h"
+#include "../sewebmodels/CRegistration.h"
+#include "../sewebmodels/CResetPwd.h"
+#include "../sewebmodels/CSessionManageMethods.h"
+#include "../sewebmodels/CAccount.h"
+#include "../sewebmodels/CPwd.h"
+#include <uuid/uuid.h>
+
+#define POST "POST"
+#define GET "GET"
+
+#define ISPOST request().request_method()==POST
+#define ISGET request().request_method()==GET
+#define POSTED(name) request().post(name)
+#define GOT(name) request().get(name)
+
+CAppMain::CAppMain(cppcms::service& srv) : CAppBase(srv)
+{
+    
+    
+    // Sign in page.
+    dispatcher().assign("/signon$", &CAppMain::Signon, this);
+    mapper().assign("signon", "/signon");
+
+    // Sign out redirect page.
+    dispatcher().assign("/logout$", [this]()
+    {
+        if (bs.get_UserId(session()))
+        {
+            bs.Clear(context());
+            // reload session.
+            cache().rise(session().get_session_cookie());
+            session().clear();
+            session().reset_session();
+            response().set_redirect_header("/");
+        }
+    });
+    mapper().assign("logout", "/logout");
+    
+    // registration page.
+    dispatcher().assign("/register$", &CAppMain::Register, this);
+    mapper().assign("register", "/register");
+
+    // reset pwd page.
+    dispatcher().assign("/resetpwd$", [this]()
+    {
+        CResetPwd reset;
+        if (ISPOST)
+        {
+            reset.app(*this);
+            reset.EmailAddress = request().post("signEmail");
+            reset.Check();
+        }
+        
+        RENDER:
+        render(_currentSkin, "ResetPwdView", reset);
+    });
+    mapper().assign("resetpwd", "/resetpwd");
+    
+    //change password page.
+    dispatcher().assign("/pwd[/]?([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)$", &CAppMain::Pwd, this, 1);
+    mapper().assign("pwd", "/pwd/{1}");
+    // accounts page
+    dispatcher().assign("/account$", &CAppMain::Account, this);
+    mapper().assign("account", "/account");
+    
+    // default page.
+    dispatcher().assign("", [this]()
+    {
+        CHome homePage;
+        homePage.Header.LoginOrRegister.UserSession = bs.get_WebSession(session());
+        bs.set_LastUrl(session(), "/");
+        render(_currentSkin, "HomeView", homePage);
+    });
+    mapper().assign("");
+    mapper().root("/");
+
+    
+    // Initialize the master object with
+    // header and footer
+   
+}
+
+void CAppMain::Register() 
+{
+    try
+    {
+        CRegistration regist;
+
+        if (ISPOST)
+        {
+            if (session().is_set("RegistrationData"))
+                session().fetch_data("RegistrationData", regist.Data);
+            /*
+             * Post backs to handle are :
+             * a. Basic or Licensed                             done
+             * b. Changing country dropdown, populate states    
+             * c.     
+             */
+            if (regist.Data.Stage == CRegistration::RegStages::UserTypeAndAddress)
+            {
+                regist.Data.Basic = POSTED("regUsertype")=="Basic";
+                regist.Data.EmailAddress = POSTED("regEmail");
+                regist.Data.Pwd = POSTED("regPwd");
+                regist.Data.PwdConfirm = POSTED("regPwdConfirm");
+                regist.Data.Remember = POSTED("regRem") != "";
+                if (!regist.Data.Basic)
+                {
+                    regist.Data.Stage = (CRegistration::RegStages)strtol(POSTED("regStage").c_str(), nullptr, 10);
+                    if (regist.Data.Stage == CRegistration::RegStages::UserTypeAndAddress)
+                    {
+                        Json::Value geoinfo = Json::nullValue;
+                        if (PopulateGeoIpInfo(geoinfo))
+                        {
+                            if (!geoinfo.isMember("bogon"))
+                            {
+                                regist.Data.State = geoinfo["region"].asString();
+                                regist.Data.Country = geoinfo["country"].asString();
+                                //regist.Data.PostalCode = geoinfo["postal"].asString();
+                                //regist.Data.Town = geoinfo["city"].asString();
+                            }
+                        }
+                        if (regist.Data.Country.empty())
+                            regist.Data.Country = "US";
+                        regist.Countries = this->get_CachedCountries();
+                        get_States(regist.Data.Country, &regist.States);
+                        BOOSTER_DEBUG(__FUNCTION__) << "Number of states for " << regist.Data.Country << " is ";
+                        if (regist.States)
+                            BOOSTER_DEBUG(__FUNCTION__) << regist.States->get_Count() ;
+                        else
+                            BOOSTER_DEBUG(__FUNCTION__) << "null";
+                    }                
+                    
+                    
+                    if (regist.Validate())
+                    {
+                        // generate uuid
+                        uuid_t guid;
+                        uuid_generate(guid);
+                        // save this 
+                        regist.Data.Guid = (CSTR)guid;
+
+                        // now upgrade the stage
+                        regist.Data.Stage = CRegistration::RegStages::EmailConfirmation;
+                    
+                    }
+                    if (regist.Country.empty())
+                        regist.Country = "US";
+                    regist.Countries = this->get_CachedCountries();
+                    get_States(regist.Country, &regist.States);
+                    BOOSTER_DEBUG(__FUNCTION__) << "Number of states for " << regist.Country << " is ";
+                    if (regist.States)
+                        BOOSTER_DEBUG(__FUNCTION__) << regist.States->get_Count() ;
+                    else
+                        BOOSTER_DEBUG(__FUNCTION__) << "null";
+                }                
+                // generate uuid
+                uuid_t guid;
+                uuid_generate(guid);
+                // save this 
+                regist.Guid = (CSTR)guid;
+                
+                
+                // now upgrade the stage
+                regist.Stage = CRegistration::RegStages::EmailConfirmation;
+                
+                session().store_data("RegistrationData", regist);
+            }
+        }
+
+    RENDER:
+        session().store_data("RegistrationData", regist.Data);
+        render(_currentSkin, "RegistrationView", regist);
+    }
+    catch (const std::exception& ex)
+    {
+        BERR << ex.what();
+        throw ex;
+    }
+}
+
+void CAppMain::Pwd(string email) 
+{
+    CPwd pwd;
+    // email address is received in session or get method
+    if (email.empty())
+        email = (CSTR)bs.get_Value(session(), "PWD_EMAIL");
+
+    if (request().request_method() == POST)
+    {
+        pwd.EmailAddress = email;
+        pwd.Pwd = request().post("signPwd");
+        pwd.NewPwd = request().post("signNewPwd");
+        pwd.NewPwdConfirm = request().post("signNewPwdConfirm");
+
+        pwd.Check();
+        if (!pwd.get_IsValid())
+            goto RENDER;
+
+        // redirect to home after authentication.
+        SP<IUserSession> pUserSession;
+        IUserSession::Create(&pUserSession);
+        CSessionManageMethods::BuildUserSession(context(), pUserSession._ptr);
+        pUserSession->set_SessionId(session().get_session_cookie().c_str());
+        pwd.Login(pUserSession._ptr);
+        if (pUserSession->get_UserId())
+        {
+            bs.Clear(context());
+            bs.set_UserId(context(), pUserSession->get_UserId());
+            RedirectToHome();
+        }
+    }
+
+    // email address is received in session or get method
+    if (email.empty())
+        email = (CSTR)bs.get_Value(session(), "PWD_EMAIL");
+    if (email.empty())
+    {
+        goto RENDER;
+    }
+
+    pwd.EmailAddress = email;
+
+RENDER:
+    bs.set_LastUrl(session(), request().path_translated());
+    render(_currentSkin, "PwdView", pwd);
+
+}
+
+void CAppMain::Signon()
+{
+    if (bs.get_IsAuthorized(session()))
+    {
+        RedirectToHome();
+        return;
+    }
+
+    CLogOn logon;
+    logon.app(*this);
+    if (request().request_method() == POST)
+    {
+        // validate fields
+        logon.EmailAddress = request().post("signEmail");
+        logon.Password = request().post("signPwd");
+        logon.Remember = "" != request().post("signRem");
+        SP<IUserSession> pUserSession;
+        IUserSession::Create(&pUserSession);
+        CSessionManageMethods::BuildUserSession(context(), pUserSession._ptr);
+        pUserSession->set_SessionId(session().get_session_cookie().c_str());
+        pUserSession->set_Remember(logon.Remember);
+        logon.Validate(pUserSession._ptr);
+        bool b = logon.get_IsValid();
+        if (b)
+        {
+            if (pUserSession->get_UserId())
+            {
+                bs.Clear(context());
+                bs.set_UserId(context(), pUserSession->get_UserId());
+                //RedirectToHome();
+                RedirectToLastPage();
+            }
+        }        
+    }
+
+RENDER:
+    render(_currentSkin, "SignOnView", logon);
+    return;
+}
+
+void CAppMain::Account()     
+{
+    CAccount account;
+    bs.set_LastUrl(session(), "/account");
+    this->render(_currentSkin, "AccountView", account);
+}
+
+
+CAppMain::~CAppMain() 
+{
+}
+
+void CAppMain::init() 
+{
+    if (!bs.get_IsInit(session()))
+        bs.Initialize(context());
+
+}
+
+
+void CAppMain::main(std::string url) 
+{
+    
+    BOOSTER_INFO(__FUNCTION__) << "Session Id: " << session().get_session_cookie();
+    
+    if (!dispatcher().dispatch(url))
+    {
+        response().status(http::response::not_found);
+        CError e("There is no corresponding page for the URL.");
+        render("ErrorView", e);
+    }
+
+    if (bs.get_HasExpired(session()))
+    {
+        SP<IWebSession> pws = bs.get_WebSession(session());
+        if (pws && pws->get_UserId())
+        {
+            bs.Clear(context());
+            // TODO: Redirect to session expired page.
+            response().set_redirect_header("/signon");
+        }
+    }
+}

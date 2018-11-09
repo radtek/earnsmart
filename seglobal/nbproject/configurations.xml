@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAddress.h</itemPath>
+      <itemPath>CAst.h</itemPath>
+      <itemPath>CBsonSerializedData.h</itemPath>
+      <itemPath>CDate.h</itemPath>
+      <itemPath>CDictionary.h</itemPath>
+      <itemPath>CDirectory.h</itemPath>
+      <itemPath>CEnumerator.h</itemPath>
+      <itemPath>CFibnacciQueue.h</itemPath>
+      <itemPath>CFile.h</itemPath>
+      <itemPath>CFinancialPeriod.h</itemPath>
+      <itemPath>CFunctionCache.h</itemPath>
+      <itemPath>CFutex.h</itemPath>
+      <itemPath>CGlobalStringCache.h</itemPath>
+      <itemPath>CIdName.h</itemPath>
+      <itemPath>CJsonObject.h</itemPath>
+      <itemPath>CJsonSerializedData.h</itemPath>
+      <itemPath>CList.h</itemPath>
+      <itemPath>CMisc.h</itemPath>
+      <itemPath>CObjectRoot.h</itemPath>
+      <itemPath>CQuarter.h</itemPath>
+      <itemPath>CROList.h</itemPath>
+      <itemPath>CSecure.h</itemPath>
+      <itemPath>CSecurityExchange.h</itemPath>
+      <itemPath>CString.h</itemPath>
+      <itemPath>CStringToNumber.h</itemPath>
+      <itemPath>CStringUtility.h</itemPath>
+      <itemPath>CTarExtractor.h</itemPath>
+      <itemPath>CThreadPool.h</itemPath>
+      <itemPath>CTimeStamp.h</itemPath>
+      <itemPath>CTimer.h</itemPath>
+      <itemPath>CTimerServices.h</itemPath>
+      <itemPath>FileSystemMonitor.h</itemPath>
+      <itemPath>IObject.h</itemPath>
+      <itemPath>Object.h</itemPath>
+      <itemPath>../ReturnCodes.h</itemPath>
+      <itemPath>SecurityDescription.h</itemPath>
+      <itemPath>TupleHashCombiner.h</itemPath>
+      <itemPath>cpplinq.hpp</itemPath>
+      <itemPath>../../../../commonlib/easylogging/easyloggingpp-9.80/src/easylogging++.h</itemPath>
+      <itemPath>exceptions.h</itemPath>
+      <itemPath>globallogger.h</itemPath>
+      <itemPath>i386-signal.h</itemPath>
+      <itemPath>../secommon.h</itemPath>
+      <itemPath>../seglobalenums.h</itemPath>
+      <itemPath>seglobalinternal.h</itemPath>
+      <itemPath>../seglobaltypedefs.h</itemPath>
+      <itemPath>segvcatch.h</itemPath>
+      <itemPath>stringconversions.h</itemPath>
+      <itemPath>x86_64-signal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>../config/se.config</itemPath>
+      <itemPath>../config/selog4cxx.config</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAddress.cpp</itemPath>
+      <itemPath>CAst.cpp</itemPath>
+      <itemPath>CBsonSerializedData.cpp</itemPath>
+      <itemPath>CDate.cpp</itemPath>
+      <itemPath>CDictionary.cpp</itemPath>
+      <itemPath>CDirectory.cpp</itemPath>
+      <itemPath>CEnumerator.cpp</itemPath>
+      <itemPath>CFibnacciQueue.cpp</itemPath>
+      <itemPath>CFile.cpp</itemPath>
+      <itemPath>CFinancialPeriod.cpp</itemPath>
+      <itemPath>CFunctionCache.cpp</itemPath>
+      <itemPath>CFutex.cpp</itemPath>
+      <itemPath>CGlobalStringCache.cpp</itemPath>
+      <itemPath>CIdName.cpp</itemPath>
+      <itemPath>CJsonSerializedData.cpp</itemPath>
+      <itemPath>CList.cpp</itemPath>
+      <itemPath>CMisc.cpp</itemPath>
+      <itemPath>CObjectRoot.cpp</itemPath>
+      <itemPath>CQuarter.cpp</itemPath>
+      <itemPath>CROList.cpp</itemPath>
+      <itemPath>CSecure.cpp</itemPath>
+      <itemPath>CSecurityExchange.cpp</itemPath>
+      <itemPath>CString.cpp</itemPath>
+      <itemPath>CStringToNumber.cpp</itemPath>
+      <itemPath>CStringUtility.cpp</itemPath>
+      <itemPath>CTarExtractor.cpp</itemPath>
+      <itemPath>CThreadPool.cpp</itemPath>
+      <itemPath>CTimeStamp.cpp</itemPath>
+      <itemPath>CTimer.cpp</itemPath>
+      <itemPath>CTimerServices.cpp</itemPath>
+      <itemPath>CodeMessages.cpp</itemPath>
+      <itemPath>FileSystemMonitor.cpp</itemPath>
+      <itemPath>OmniType.cpp</itemPath>
+      <itemPath>SecurityDescription.cpp</itemPath>
+      <itemPath>TypeCheck.cpp</itemPath>
+      <itemPath>exceptions.cpp</itemPath>
+      <itemPath>globallogger.cpp</itemPath>
+      <itemPath>segvcatch.cpp</itemPath>
+      <itemPath>stringconversions.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <commandLine>-fvisibility=default -O2</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>tar</linkerLibLibItem>
+            <linkerLibLibItem>rt</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../../../../commonlib/easylogging/easyloggingpp-9.80/src/easylogging++.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/se.config" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/selog4cxx.config" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../secommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobalenums.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAddress.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAddress.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAst.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAst.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBsonSerializedData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBsonSerializedData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDirectory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDirectory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEnumerator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEnumerator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFibnacciQueue.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFibnacciQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPeriod.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPeriod.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFunctionCache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFunctionCache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFutex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGlobalStringCache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CGlobalStringCache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIdName.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CIdName.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonSerializedData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CJsonSerializedData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMisc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMisc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CObjectRoot.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <commandLine>-fPIC</commandLine>
+        </ccTool>
+      </item>
+      <item path="CObjectRoot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CQuarter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CQuarter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CROList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CROList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityExchange.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityExchange.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStringToNumber.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStringToNumber.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStringUtility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStringUtility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTarExtractor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTarExtractor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CThreadPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CThreadPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeStamp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeStamp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimerServices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimerServices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CodeMessages.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileSystemMonitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileSystemMonitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OmniType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TupleHashCombiner.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TypeCheck.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpplinq.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="globallogger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="globallogger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="i386-signal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seglobalinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="segvcatch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="segvcatch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stringconversions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stringconversions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="x86_64-signal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <commandLine>-fPIC</commandLine>
+          <preprocessorList>
+            <Elem>ELPP_DISABLE_DEBUG_LOGS</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>tar</linkerLibLibItem>
+            <linkerLibLibItem>rt</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../../../../commonlib/easylogging/easyloggingpp-9.80/src/easylogging++.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/se.config" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/selog4cxx.config" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../secommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobalenums.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAddress.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAddress.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAst.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAst.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBsonSerializedData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBsonSerializedData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CDirectory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CDirectory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEnumerator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEnumerator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFibnacciQueue.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFibnacciQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPeriod.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPeriod.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFunctionCache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFunctionCache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFutex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGlobalStringCache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CGlobalStringCache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIdName.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CIdName.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonSerializedData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CJsonSerializedData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMisc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMisc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CObjectRoot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CObjectRoot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CQuarter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CQuarter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CROList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CROList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityExchange.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityExchange.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStringToNumber.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStringToNumber.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStringUtility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStringUtility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTarExtractor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTarExtractor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CThreadPool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CThreadPool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeStamp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeStamp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimerServices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimerServices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CodeMessages.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileSystemMonitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileSystemMonitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OmniType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TupleHashCombiner.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TypeCheck.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpplinq.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="globallogger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="globallogger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="i386-signal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seglobalinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="segvcatch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="segvcatch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stringconversions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stringconversions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="x86_64-signal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

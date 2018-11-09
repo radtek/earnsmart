@@ -1,0 +1,614 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyScreenerView uses sg::web::models::CompanyScreener %>
+<% template render() %>
+
+<% c++ using namespace sg::web::models; %>
+
+<script>
+    var urlpfx = location.protocol.concat("//")
+            .concat(window.location.hostname).concat(":")
+            .concat(location.port).concat("/gj");
+    
+    var datatable = null;
+    var tablePageIndex = 0;
+    var tableoptions = 
+            {
+                'showRowNumber': true, 
+                'alternatingRowStyle' : true, 
+                'allowHtml' : true,
+                'cssClassNames' : 
+                        {
+                            oddTableRow : 'screenerResultTableOddRow',
+                            hoverTableRow : 'screenerResultTableHoverRow'
+                        }
+            };
+    var exchanges = [];
+    var industries = [];
+    <% if (content.Performances.size()) %>
+    <% c++ FastWriter jswriter; %>
+    var pratios = <% c++ out() << jswriter.write(content.Performances); %>;
+    <% else %>
+    var pratios = [];
+    <% end %>
+    var visualization ;
+    
+    $(document).ready(function ()
+    {
+        var panelspeed = 500; //panel animate speed in milliseconds
+        var panelheight = 0;
+        var iconheight = parseInt($('.screener_icon_close_open').css('height'));
+        var highlightopen = true;
+        
+        tableoptions['page'] = 'enable';
+        tableoptions['pageSize'] = 25;
+        tableoptions['pagingSymbols'] = {prev: 'prev', next: 'next'};
+        tableoptions['pagingButtonsConfiguration'] = 'auto';        
+        tableoptions['width'] = null;
+        tableoptions['height'] = null;        
+        
+        
+        //Initialise collapsible panels
+        function panelinit()
+        {
+            var content = $(".screener_expandable_panel").find('.screener_expandable_panel_content');
+            panelheight = parseInt(content.css('height'));
+            content.css('margin-top', -panelheight);
+            $(this).find('.screener_icon_close_open').css('background-position', '0px -' + iconheight + 'px');
+            $(this).find('.screener_expandable_panel_content').css('margin-top', 0);
+            content.find('.screener_lblchart').css("display", "block");
+        };
+
+        $('.screener_expandable_panel_heading').click(function ()
+        {
+            var obj = $(this).next();
+            var objid = $('.screener_expandable_panel').index($(this).parent());
+            currentpanel = objid;
+            if (parseInt(obj.css('margin-top')) <= (panelheight * -1))
+            {
+                obj.css("visibility", "visible");
+                if (highlightopen == true)
+                {
+                    $(this).addClass('screener_header_active');
+                }
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.screener_icon_close_open').css('background-position', '0px -' + iconheight + 'px').html("&minus;");
+                obj.animate({ 'margin-top': 0 }, panelspeed);
+            }
+            else
+            {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.screener_icon_close_open').css('background-position', '0px 0px').html("&plus;");
+                obj.animate({ 'margin-top': (panelheight * -1) }, panelspeed);
+                if (highlightopen == true) 
+                {
+                    $(this).removeClass('screener_header_active');
+                }
+                obj.css("visibility", "hidden");
+            }
+        });
+        
+        var fnpopindustries = function(sector)
+        {
+            $("#screenerIndustryList").empty();
+            // populate sectors.
+            $.getJSON(urlpfx.concat("/11/").concat(sector), function(data, status)
+            {
+                if (status == "success" && data.length > 1)
+                {
+                    // populate screenerIndustryList
+                    for(var i=1; i!=data.length; ++i)
+                    {
+                        $("#screenerIndustryList")
+                                .append('<option value="'.concat(data[i][0]).concat('">').concat(data[i][1]).concat('</option>'));
+                    }
+                    $("#screenerIndustryList")[0].selectedIndex = 0;
+                }
+            });
+        };
+        
+
+        var fnpopsectors = function()
+        {
+            // populate sectors.
+            $.getJSON(urlpfx.concat("/11/0"), function(data, status)
+            {
+                if (status == "success" && data.length > 1)
+                {
+                    // populate screenerSectorList
+                    for(var i=1; i!=data.length; ++i)
+                    {
+                        $("#screenerSectorList")
+                            .append('<option value="'.concat(data[i][0]).concat('">').concat(data[i][1]).concat('</option>'));
+                    }
+                    $("#screenerSectorList")[0].selectedIndex = 0;
+                    fnpopindustries($("#screenerSectorList").val());
+                }
+            });
+            
+        };
+        
+        var fnpopratios = function(group)
+        {
+            $("#screenerRatios").empty();
+            // populate sectors.
+            $.getJSON(urlpfx.concat("/13/").concat(group), function(data, status)
+            {
+                if (status == "success" && data.length > 1)
+                {
+                    // populate screenerIndustryList
+                    for(var i=1; i!=data.length; ++i)
+                    {
+                        var optstr = [];
+                        optstr.push('<option ');
+                        optstr.push('value="' + data[i][0] + '" ');
+                        optstr.push('title="' + data[i][2] + '" ');
+                        optstr.push('>');
+                        optstr.push(data[i][1]);
+                        optstr.push('</option>');
+                        $("#screenerRatios").append(optstr.join(''));
+                    }
+                    $("#screenerRatios")[0].selectedIndex = 0;
+                    $("#screenerRatioDescription").text($("#screenerRatios option").eq($("#screenerRatios")[0].selectedIndex).attr("title"));
+                }
+            });
+        };
+        
+        
+        var fnpopratiogroups = function()
+        {
+            // populate sectors.
+            $.getJSON(urlpfx.concat("/12"), function(data, status)
+            {
+                if (status == "success" && data.length > 1)
+                {
+                    // populate screenerSectorList
+                    for(var i=1; i!=data.length; ++i)
+                    {
+                        $("#screenerRatioGroups")
+                            .append('<option value="'.concat(data[i][0]).concat('">').concat(data[i][1]).concat('</option>'));
+                    }
+                    $("#screenerRatioGroups")[0].selectedIndex = 0;
+                    fnpopratios($("#screenerRatioGroups").val());
+                }
+            });
+        };
+        
+        
+        var fnselectindustries = function()
+        {
+            var arselected = $("#screenerSelectedIndustries option").map(function(){ return $(this).text();});
+            $("#screenerIndustryList option:selected").each(function()
+            {
+                //alert(arselected.length);
+                if (jQuery.inArray($(this).text(), arselected) == -1)
+                {
+                    $("#screenerSelectedIndustries")
+                        .append('<option value="'.concat($(this).val()).concat('">').concat($(this).text()).concat('</option>'));
+                }
+            });
+            
+            fnpostconditions();
+            
+        };
+        
+        var fnclearindustries = function()
+        {
+            $("#screenerSelectedIndustries option:selected").each(function()
+            {
+                $(this).remove();
+            });
+
+            fnpostconditions();
+        };
+        
+        $("#screenerSectorList").change(function()
+        {
+            event.preventDefault();
+            fnpopindustries($(this).val());
+        });
+
+        $("#screenerRatioGroups").change(function()
+        {
+            event.preventDefault();
+            fnpopratios($(this).val());
+        });
+
+        $("#screenerRatios").change(function()
+        {
+            event.preventDefault();
+            $("#screenerRatioDescription").text($("#screenerRatios option").eq($("#screenerRatios")[0].selectedIndex).attr("title"));
+        });
+        
+        $("#screenerbtnselect").click(function()
+        {
+            event.preventDefault();
+            fnselectindustries();
+        });
+
+        $("#screenerbtnclear").click(function()
+        {
+            event.preventDefault();
+            fnclearindustries();
+        });
+        
+        var fndrawslider = function(id, title)
+        {
+            $.getJSON(urlpfx.concat("/14/" + id), function(dwn, status)
+            {
+                if (status == "success" && dwn.length > 1)
+                {
+                    var divid = "screenerratio_" + id;
+                    $(".screener_formula_selected_ratios")
+                            .append('<div class="DualSliderFloatbox" id=' + divid + '></div>');
+                    var data = google.visualization.arrayToDataTable(dwn);
+                    var screener = new sgweb.DualSlider(document.getElementById("screenerratio_" + id));
+                    screener.tag = id;
+                    console.log("retrieving pratio");
+                    for (var i=0; i!=pratios.length; ++i)
+                    {
+                        if (pratios[i].id == id)
+                        {
+                            console.log(JSON.toString(pratios[i].range));
+                            screener.setState(pratios[i].range);
+                        }
+                    }
+                    console.log("retrieved pratio");
+                    screener.draw( data, 
+                            { 
+                                caption : title, 
+                                width : "250px", height : "50px", 
+                                Description : "Chart shows distribution of companies in the value range. Position the sliders to reduce the range to find companies in that range." 
+                            }
+                        );
+                    google.visualization.events.addListener(screener, 'statechange', function(s)
+                    {
+                       //s.range.start
+                       //s.range.end
+                        var end = false;
+                        if (pratios.length)
+                        {
+                            for (var i=0; i!= pratios.length; ++i)
+                            {
+                                if (pratios[i].id == screener.tag)
+                                {
+                                    pratios[i].range = s.range;
+                                    end = true;
+                                }
+                            }
+                        }
+                        if (end == false)
+                        {
+                            var ratio = {};
+                            ratio["id"] = parseInt(screener.tag);
+                            ratio["range"] = s.range;
+                            pratios[pratios.length] = ratio;
+                        }
+                        
+                        fnpostconditions();
+                        
+                    });
+                }
+            });            
+        };
+        
+        $("#screenerAddRatio").click(function()
+        {
+            event.preventDefault();
+            var selopt = $("#screenerRatios option").eq($("#screenerRatios")[0].selectedIndex);
+            var ratioid = selopt.val();
+            //check if already added
+            if (document.getElementById("screenerratio_" + ratioid) == null)
+            {
+                var rationame = selopt.text();
+                fndrawslider(ratioid, rationame);
+            }
+        });
+        
+        var getpostdata = function()
+        {
+            // populate exchanges.
+            exchanges = [];
+            $("#screenerExchanges :input").each(function()
+            {
+                if ($(this).is(":checked"))
+                {
+                    exchanges.push(parseInt($(this).val()));
+                }
+            });
+            industries = [];
+            <% if (content.GicId == 0) %>
+            if (!$("#screenerallsectors").is(":checked"))
+            {
+                $("#screenerSelectedIndustries option").each(function()
+                {
+                    industries.push(parseInt($(this).val()));
+                });            
+            }
+            <% else %>
+                industries.push(parseInt(<%= GicId %>));
+            <% end %>
+            var postdata = "type=screener&";
+            var jsobj = { exchanges : exchanges, industries : industries, pratios : pratios };
+            postdata += "msg=" + JSON.stringify(jsobj);
+            console.log(postdata);
+            return postdata;
+        };
+        
+        var fnResultTable = function(data, err)
+        {
+            //screener_ResultTable  
+            if (data != null)
+            {
+                datatable = new google.visualization.DataTable(data);
+                
+                visualization = 
+                        new google.visualization.Table(document.getElementById('screener_ResultTable'));
+                visualization.draw(datatable, tableoptions);
+                google.visualization.events.addListener(visualization, 'page', function(p)
+                {
+                    //console.log("Selected page: " + JSON.stringify(p) );
+                    tablePageIndex = p.page;
+                });
+            }
+            else if (err != null)
+            {
+
+            }
+        };
+        
+        var fnpostconditions = function()
+        {
+            var postdata = getpostdata();
+            //alert(postdata);
+            $.post("/fundamentals/screener", 
+            postdata,
+            function(data)
+            {
+                //alert("Done: " + data.toString());
+                fnResultTable(data, null);
+
+            }).fail(function(err)
+            {
+                fnResultTable(null, err);
+            });
+        };
+        
+        $(".screener_clear").click(function(e)
+        {
+            event.preventDefault();
+            var obj = $(e.target);
+            var txt = obj.text();
+            if (txt == "Clear")
+            {
+                // clear checkboxes
+                $(".screener_checkboxes").each(function()
+                {
+                   $(this).attr("checked", false);
+                });
+               // clear selected industries; 
+               $("#screenerSelectedIndustries").empty();
+               $(".screener_formula_selected_ratios").empty();
+
+                exchanges = [];
+                industries = [];
+                pratios = [];
+                
+                fnpostconditions();
+            
+            }
+            else if (txt == "Post")
+            {
+                fnpostconditions();
+            }
+        });
+        
+        $("#screenerallsectors").change(function()
+        {
+            var ischecked = $(this).is(':checked');
+            $("#screenerSectorList").attr("disabled", ischecked);
+            $("#screenerIndustryList").attr("disabled", ischecked);
+            $("#screenerSelectedIndustries").attr("disabled", ischecked);
+            $("#screenerbtnselect").attr("disabled", ischecked);
+            $("#screenerbtnclear").attr("disabled", ischecked);
+        });
+        
+        $(".screener_checkboxes").click(function()
+        {
+            fnpostconditions();
+        });
+
+        panelinit();
+        fnpopsectors();
+        fnpopratiogroups();
+
+        google.setOnLoadCallback(fnpostconditions);
+        
+        
+    }); 
+    
+    $(window).resize(function()
+    {
+        if (visualization && datatable && tableoptions)
+        {
+            console.log("Current page: " + tablePageIndex);
+            tableoptions.startPage = tablePageIndex;
+            visualization.draw(datatable, tableoptions);  
+        }
+    });
+</script>
+
+<div class="screener_container">
+    <div class="companypicks_title">
+        <% c++ if (content.ScreeningMode == CompanyScreener::Default) { %>
+        <span class="companypicks_coname">Screener Using Ratios</span>
+        <% c++ } else if (content.ScreeningMode == CompanyScreener::SameSector) { %>
+        <span class="companypicks_coname">Companies in <%= SectorName %>/<%= IndustryName %></span>
+        <% c++ } else if (content.ScreeningMode == CompanyScreener::SimilarPerformances) { %>
+        <span class="companypicks_coname">Companies with similar performances of <%= pSecurityDescription->get_Name() %></span>
+        <% c++ } %>
+    </div>
+    <div>
+        <div class="screener_panel_heading">
+            <% c++ #ifdef __PAID__ %>
+            <% if (content.get_Session() && content.get_Session()->get_UserId() > 0 ) %>
+                <select class="screener_select_saved">
+                    <option selected>None</option>
+                </select>
+            <% else %>
+            <label class="screener_select_saved"><a href="/signin">Sign-in</a> or <a href="/register">Register</a> to save screener setup</label>
+            <% end %>
+            <% c++ #else %>
+            <label class="screener_select_saved">Configure</label>
+            <% c++ # endif %>
+            <span class="screener_clear">
+                <!--<span>Post</span>-->
+                <span>Clear</span>
+            </span>
+        </div>
+
+        <div class="screener_formula_selected">
+            <table>
+                <tr>
+                    <td>
+                        <div class="ScreenerFloatbox">
+                            <label class="DualSliderCaption">Exchanges</label>
+                            <div id="screenerExchanges" 
+                                 <% if (content.GicId > 0) %> 
+                                    class="ScreenerConfigA" 
+                                 <% else %>
+                                    class="ScreenerConfigB" 
+                                 <% end %> 
+                            >
+                                <table>
+                                    <% if (content.GicId == 0) %>
+                                        <% c++ for(ISecurityExchange* se : *content.get_Exchanges()) { %>
+                                        <tr>
+                                            <td>
+                                                <input class="screener_checkboxes" 
+                                                       type="checkbox" 
+                                                       title="Check to include companies listed in this exchange."
+                                                       value="<% c++ out() << se->get_Id(); %>"><% c++ out() << se->get_Name(); %>
+                                            </td>
+                                        </tr>
+                                        <% c++ } %>
+                                        <% else %>
+                                        <tr>
+                                        <% c++ for(ISecurityExchange* se : *content.get_Exchanges()) { %>
+                                            <td>
+                                                <input class="screener_checkboxes" 
+                                                       type="checkbox" 
+                                                       title="Check to include companies listed in this exchange."
+                                                       value="<% c++ out() << se->get_Id(); %>"><% c++ out() << se->get_Name(); %>
+                                            </td>
+                                        <% c++ } %>
+                                        </tr>
+                                        <% end %>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <% if (content.GicId == 0) %>
+                    <td>
+                        <div class="ScreenerFloatbox">
+                            <label class="DualSliderCaption">Classification</label>
+                            <div class="ScreenerConfig">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <select id="screenerSectorList" style="min-width:150px">
+                                            </select>
+                                        </td>
+                                        <td rowspan="2">
+                                            <div style="vertical-align: central">
+                                                <button 
+                                                    id="screenerbtnselect"
+                                                    title="Click this to select companies from the sectors/industries selected in the list box on the left."
+                                                    >&rAarr;</button>
+                                                <br/>
+                                                <button 
+                                                    id="screenerbtnclear"
+                                                    title="Click this to remove from screening process, the sectors/industries selected in the list box on the right side."
+                                                    >&Cross;</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input class="screener_checkboxes" 
+                                                   type="checkbox" 
+                                                    title="Checking this check box will include all sectors and industries in the screening process."
+                                                   id="screenerallsectors">All Sectors
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="screenerIndustryList" multiple style="min-width:150px" size="10">
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="screenerSelectedIndustries" multiple style="min-width:150px" size="10">
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <% end %>
+                </tr>
+            </table>
+        </div>
+        <div class="screener_formula_selected_ratios"></div>
+    </div>
+    <% if (content.get_Session() && content.get_Session()->get_UserId() > 0 ) %>
+    <div class="screener_save_div">
+        <span >
+            <button>Save</button> in Some Screener Name
+        </span>
+        <span> Or </span>
+        <span >
+            <button>Save As</button>
+            <input type="text"/>
+        </span>
+    </div>
+    <% end %>
+    <br/>
+    <div style="padding-top: 10px">
+        <div class="screener_expandable_panel" id="screener_expandable_panel">
+            <div class="screener_expandable_panel_heading">
+                <span class="screener_icon_close_open">&plus;</span>
+                <span class="screener_paneltitlelabel">
+                    <span class="screener_title_label_columns">Choose Performance Ratios ... </span>
+                </span>
+            </div>
+            <div class="screener_expandable_panel_content">
+                <table style="max-height: 250px;">
+                    <tr>
+                        <td >
+                            <label for="screenerRatioGroups">Categories</label><br/>
+                            <select id="screenerRatioGroups" size="10" style="min-width: 180px; width: available" ></select>
+                        </td>
+                        <td >
+                            <label for="screenerRatios">Ratios</label><br/>
+                            <select id="screenerRatios" size="10" style="min-width: 180px; width: available" >
+                            </select>
+                        </td>
+                        <td >
+                            <textArea readonly id="screenerRatioDescription" style="border:none; text-wrap: normal;min-width: 220px; height: 200px;"></textarea>
+                        </td>
+                        <td valign="top">
+                            <button id="screenerAddRatio" style="width:20px;height: 20px">&plus;</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+    </div>
+    <div id="screener_ResultTable" class="screener_result_table">
+        
+    </div>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

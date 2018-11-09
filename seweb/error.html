@@ -1,0 +1,18 @@
+<% c++ #include "../sewebmodels/CError.h" %>
+<% skin  skdefault %>
+<% view ErrorView uses CError extends MasterView %>
+
+<% template title() %>Earn Smart | Error<% end %>
+
+
+<% template mainContent() %>
+
+<span style="color:red">
+    <%= get_Error().what() %>
+</span>
+
+<% end template %>
+
+
+<% end view %>
+<% end skin %>

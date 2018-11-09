@@ -1,0 +1,6 @@
+
+
+1. Enumerate the xbrl documents, classify them and cache in a dictionary (_pre, _cal, etc)
+2. Parse calculation file
+3. Parse presentation file
+4. Merge presentation file with calculation file. In this case, calculation tags which are needed in presentation must be available from boost graph's vertex maps.

@@ -1,0 +1,64 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view HeaderView uses sg::web::models::Header %>
+<% template render() %>
+    <div>
+        <div id="header_logo">
+            <h1><a href="/"><span>Smart</span>Earn</a></h1>
+            <p><font color="red" 
+                     title="This application is a development version. 
+                     For the most part, the application can be used for stock picking, 
+                     but for a few companies, the financial accounts are not mapped correctly. 
+                     We are working hard in the background to fix all the remaining issues.">( Pre-Alpha )</font></p>
+        </div>
+        
+        
+        
+        <% include render() using CompSearchView with compSearch %>
+
+        <div id="header_outer_div">
+            <p>Copyright 2014 <a href="/about">Smartgaze LLC, New Jersey, USA.</a> | <a href="/sitemap">Sitemap</a></p>
+        </div>
+        
+        
+        <div id="header_menu">
+            <table id="mtr_headerleft">
+                <tr>
+                    <td >
+                        <ul id="headermenu_ulleft">
+                            <% foreach menu in appMenus %>
+                                <% item %>
+                                <% if (menu.Selected) %>
+                                <li id="mtr_tab_selected"><a href="<%= menu.Href %>"><%= menu.Header %></a></li>
+                                <% else %>
+                                <li><a href="<%= menu.Href %>"><%= menu.Header %></a></li>
+                                <% end %>
+                                <% end %>
+                            <% end foreach %>  
+                            <!--<li id="mtr_tab_selected"><a href="#">Financials</a></li>-->
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <table id="mtr_headerright">
+                <tr>
+                    <td align="right" style="text-align: right">
+                        <ul id="headermenu_ulright">
+                            <% foreach menu in userMenus %>
+                                <% item %>
+                                <% if (menu.Selected) %>
+                                <li id="mtr_tab_selected"><a href="<%= menu.Href %>"><%= menu.Header %></a></li>
+                                <% else %>
+                                <li><a href="<%= menu.Href %>"><%= menu.Header %></a></li>
+                                <% end %>
+                                <% end %>
+                            <% end foreach %>  
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

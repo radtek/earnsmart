@@ -1,0 +1,79 @@
+<% c++ #include "../sewebmodels/CMaster.h" %>
+<% skin  skdefault %>
+<% view MasterView uses CMaster %>
+
+<% template title() %>Earn Smart<% end %>
+
+<% template mainContent() %>Overridden area<% end %>
+
+<% template render() %>
+
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+    <head>
+        <title><% include title() %></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/eulerlogo.png">
+        <link rel="shortcut icon" href="/images/eulerlogo.png">
+        <% c++ #ifdef __DEBUG__ %>
+        <script lang="javascript" src="/prog/modernzr.js" ></script>
+        <link rel="stylesheet" href="/css/jquery-ui.structure.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.theme.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css">
+        <% c++ #else %>
+        <script lang="javascript" src="/prog/modernzr-min.js" ></script>
+        <link rel="stylesheet" href="/css/jquery-ui.structure.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.theme.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+        <% c++ #endif %>
+        <link rel="stylesheet" href="/css/earnsmart.css" type="text/css">
+        <!--[if !IE 7]
+            <style type="text/css">
+                #dvMaster { 
+                    display:table; 
+                    height:100%;
+                }
+            </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="dvMaster">
+            <form id="formMain" method="post" name="formMain">
+                <header id="header">
+                    <div id="dvHeaderTb">
+                        <% include render() using HeaderView with Header %>
+                        <% include render() using ToolbarView with Toolbar %>
+                    </div>
+                </header>
+                <div title="Content" id="dvContent">
+                    <% include mainContent() %>
+                </div>
+            </form>
+        </div>
+        <footer id="footer">
+            <div id="dvFooter">
+                <% include render() using FooterView with Footer %>
+            </div>
+        </footer>
+        <% c++ #ifdef __DEBUG__ %>
+        <script lang="javascript" src="/prog/jquery-1.11.3.js" ></script>
+        <script lang="javascript" src="/prog/jquery-ui.js" ></script>
+        <script lang="javascript" src="/ext/js-webshim/dev/polyfiller.js"></script>
+        <script lang="javascript" src="/prog/oboe-browser.js"></script>
+        <% c++ #else %>
+        <script lang="javascript" src="/prog/jquery-1.11.3.min.js" ></script>
+        <script lang="javascript" src="/prog/jquery-ui.min.js" ></script>
+        <script lang="javascript" src="/ext/js-webshim/minified/polyfiller.js"></script>
+        <script lang="javascript" src="/prog/oboe-browser.min.js"></script>
+        <% c++ #endif %>
+        <script lang="javascript">
+            webshims.polyfill("canvas es5 forms forms-ext mediaelement");
+        </script>
+        <script lang="javascript" src="/prog/earnsmart.js"></script>
+    </body>
+</html>
+
+<% end template %>
+<% end view %>
+<% end skin %>

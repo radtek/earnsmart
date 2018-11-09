@@ -1,0 +1,28 @@
+{
+    "name": "sebgpd",
+    "functions" :
+            [
+                {
+                    "name" : "processstatements",
+                    "active" : "1",
+                    "params" : "",
+                    "instances" : 4,
+                    "interval" : 
+                            {
+                                "freq" : "continuous",
+                                "factor" : "3"
+                            }
+                },
+                {
+                    "name" : "processproductkeystats",
+                    "active" : "1",
+                    "params" : "1",
+                    "interval" : 
+                            {
+                                "freq" : "weekly",
+				"days" : "Saturday",		
+                                "factor" : "12:00:00"
+                            }
+                }
+            ]
+}

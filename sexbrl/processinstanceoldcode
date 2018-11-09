@@ -1,0 +1,439 @@
+
+
+ErrorId CProcessEdgarStatements::ProccessInstance(CSmartConnection& conn, mysqlpp::Row& row, CSTR path, properties& ppt1)
+{
+    try
+    {
+        LOGI(_logger, "Process Instance Started");
+        xmlDocPtr docIns = ppt1.xbrlDocs[INSTANCE];
+        if (!docIns)
+            return E_XMLParseError;
+        
+        XmlNs& nsIns = ppt1.nsDocs[INSTANCE];
+        auto rootNode = xmlDocGetRootElement(docIns);
+        xmlXPathContextPtr xpathContext = xmlXPathNewContext(docIns);
+        if (!xpathContext)
+        {
+            LOGEP("Instance xpath context creation failed.");
+            return E_XPathContextCreate;
+        }
+        ErrorId retCode = RegisterNsInXpathContext(xpathContext, nsIns);
+        if (retCode != S_Success)
+        {
+            xmlXPathFreeContext(xpathContext);
+            LOGEP("Namespace registration failed.");
+            return E_XMLParseError;
+        }
+        string defns = GetDocDefaultNamespace(rootNode);
+        
+        string unitcurrRef;
+        string xpathunitcurr = "//" + XPathNsExpr(defns) + "unit";
+        auto xpathobjcurr = xmlXPathEvalExpression(BAD_CAST xpathunitcurr.c_str(), xpathContext);
+        if (!xpathobjcurr)
+        {
+            xmlXPathFreeContext(xpathContext);
+            LOGE(_logger, "Xpath expression creation failed for " << xpathunitcurr);
+            return E_XMLParseError;
+        }
+        auto unitRefNodes = xpathobjcurr->nodesetval;
+        auto unitSize = (unitRefNodes) ? unitRefNodes->nodeNr : 0;
+        for (auto i = 0; i != unitSize; ++i)
+        {
+            xmlNodePtr cur = unitRefNodes->nodeTab[i];
+            // get first child.
+            for (xmlNodePtr ccur = cur->children; ccur; ccur = ccur->next)
+            {
+                if (ccur->type == XML_ELEMENT_NODE)
+                {
+                    xmlChar* content = xmlNodeGetContent(ccur);
+                    if (!xmlStrcmp(content, BAD_CAST "iso4217:USD") || !xmlStrcmp(content, BAD_CAST "USD") )
+                    {
+                        for (xmlAttrPtr attr = cur->properties; attr; attr = attr->next)
+                        {
+                            string attrName = (CSTR)attr->name;
+                            xmlNodePtr attrVal = attr->children;
+                            if (attrName == "id" && attrVal && attrVal->type == XML_TEXT_NODE)
+                            {
+                                unitcurrRef = (CSTR)attrVal->content;
+                                goto HASUNITREF;
+                            }
+                        }                                    
+                    }
+                }
+            }
+        }     
+        
+    HASUNITREF:
+        
+        xmlXPathFreeObject(xpathobjcurr);
+        
+        string xpathstr = "//" + XPathNsExpr(GetDocDefaultNamespace(rootNode)) + "context" ;
+        auto xpathobj = xmlXPathEvalExpression(BAD_CAST xpathstr.c_str(), xpathContext);
+        if (!xpathobj)
+        {
+            xmlXPathFreeContext(xpathContext);
+            LOGE(_logger, "Xpath expression creation failed for " << xpathstr);
+            return E_XMLParseError;
+        }
+        auto contRefNodes = xpathobj->nodesetval;
+        auto size = (contRefNodes) ? contRefNodes->nodeNr : 0;
+        string contextref;
+        string id;
+        using namespace boost::gregorian;
+        for (auto i = 0; i != size; ++i)
+        {
+            string startdate, enddate;
+            xmlNodePtr cur = contRefNodes->nodeTab[i];
+            xmlBufferPtr buf = xmlBufferCreate(); 
+            xmlDocPtr doc = cur->doc;
+            xmlNodeDump(buf,doc,cur,0,0);
+            const xmlChar* str =xmlBufferContent(buf);
+            contextref = (CSTR)str;
+            LOGIP(contextref);
+            xmlBufferFree(buf);
+            vector<UID> segments;
+            vector<UID> dimensions;
+            string identifier;
+            // loop to get startdate, enddate or instant date
+            xmlNodePtr ctxt;
+            xmlChar* val;
+            for (ctxt = cur->children; ctxt; ctxt = ctxt->next)
+            {
+                if (ctxt->type == XML_ELEMENT_NODE) 
+                {
+                    try
+                    {
+                        if (!xmlStrcmp(xmlStrstr(ctxt->name, (xmlChar*)"period"), (xmlChar*)"period") )
+                        {
+                            startdate = enddate = "";
+                            // dig to see if it is instance or duration child
+                            for(xmlNode* nextlevel = ctxt->children; nextlevel; nextlevel = nextlevel->next)
+                            {
+                                if (nextlevel->type == XML_ELEMENT_NODE) 
+                                {
+                                    //LOGI(_logger, "Period child: " << (CSTR)nextlevel->name);
+                                    if (!xmlStrcmp( xmlStrstr( nextlevel->name, (xmlChar*)"instant"), (xmlChar*)"instant" ) )
+                                    {
+                                        val = xmlNodeGetContent(nextlevel);
+                                        startdate = (CSTR)val;
+                                        xmlFreeFunc(val);
+                                    }
+                                    else if (!xmlStrcmp(xmlStrstr(nextlevel->name, (xmlChar*)"startDate"), (xmlChar*)"startDate") )
+                                    {
+                                        val = xmlNodeGetContent(nextlevel);
+                                        startdate = (CSTR)val;
+                                        xmlFreeFunc(val);
+                                    }
+                                    else if (!xmlStrcmp(xmlStrstr(nextlevel->name, (xmlChar*)"endDate"), (xmlChar*)"endDate") )
+                                    {
+                                        val = xmlNodeGetContent(nextlevel);
+                                        enddate = (CSTR)val;
+                                        xmlFreeFunc(val);
+                                    }
+                                }
+                            }                
+                        }
+                        else if (!xmlStrcmp(xmlStrstr(ctxt->name, (xmlChar*)"entity"), (xmlChar*)"entity") )
+                        {
+                                    /*
+                                    <xbrli:context id="I2014Q2_us-gaap_FairValueByFairValueHierarchyLevelAxis_us-gaap_FairValueInputsLevel3Member_us-gaap_FairValueByMeasurementFrequencyAxis_us-gaap_FairValueMeasurementsRecurringMember_us-gaap_MajorTypesOfDebtAndEquitySecuritiesAxis_us-gaap_MortgageBackedSecuritiesMember">
+                                        <xbrli:entity>
+                                          <xbrli:identifier scheme="http://www.sec.gov/CIK">0000940944</xbrli:identifier>
+                                          <xbrli:segment>
+                                            <xbrldi:explicitMember dimension="us-gaap:FairValueByFairValueHierarchyLevelAxis">us-gaap:FairValueInputsLevel3Member</xbrldi:explicitMember>
+                                            <xbrldi:explicitMember dimension="us-gaap:FairValueByMeasurementFrequencyAxis">us-gaap:FairValueMeasurementsRecurringMember</xbrldi:explicitMember>
+                                            <xbrldi:explicitMember dimension="us-gaap:MajorTypesOfDebtAndEquitySecuritiesAxis">us-gaap:MortgageBackedSecuritiesMember</xbrldi:explicitMember>
+                                          </xbrli:segment>
+                                        </xbrli:entity>
+                                        <xbrli:period>
+                                          <xbrli:instant>2013-11-24</xbrli:instant>
+                                        </xbrli:period>
+                                      </xbrli:context>                                 
+                                     */
+                            // get segment child
+                            for (xmlNodePtr entityChild = ctxt->children; entityChild; entityChild = entityChild->next)
+                            {
+                                if (!xmlStrcmp(xmlStrstr(entityChild->name, (xmlChar*)"identifier"), BAD_CAST "identifier"))
+                                {
+                                    identifier = (CSTR)xmlNodeGetContent(entityChild);
+                                    continue;
+                                }
+                                else if (!xmlStrcmp(xmlStrstr(entityChild->name, (xmlChar*)"segment"), BAD_CAST "segment"))
+                                {
+                                    for (xmlNodePtr n1 = entityChild->children; n1; n1 = n1->next)
+                                    {
+                                        if (xmlStrcmp(xmlStrstr(n1->name, (xmlChar*)"explicitMember"), BAD_CAST "explicitMember"))
+                                            continue;
+
+                                        /*
+                                         <xbrli:entity>
+                                        <xbrli:identifier scheme="http://www.sec.gov/CIK">0000066740</xbrli:identifier>
+                                        <xbrli:segment>
+                                        <xbrldi:explicitMember dimension="us-gaap:PropertyPlantAndEquipmentByTypeAxis">us-gaap:LandMember</xbrldi:explicitMember>
+                                        </xbrli:segment>
+                                        </xbrli:entity>
+                                         */
+
+                                        string segValue = (CSTR)xmlNodeGetContent(n1);
+                                        string dimension;
+                                        xmlAttrPtr attrs = n1->properties;
+                                        if (attrs)
+                                        {
+                                            for (xmlAttrPtr attr = attrs; attr; attr = attr->next)
+                                            {
+                                                string attrName = (CSTR)attr->name;
+                                                xmlNodePtr attrVal = attr->children;
+                                                if (attrName == "dimension" && attrVal && attrVal->type == XML_TEXT_NODE)
+                                                {
+                                                    dimension = (CSTR)attrVal->content;
+                                                    break;
+                                                }
+                                            }                                    
+                                        }
+
+                                        trim(segValue);
+                                        trim(dimension);
+                                        if (!segValue.empty())
+                                        {
+                                            vector<string> sgsplit;
+                                            split(sgsplit, segValue, is_any_of(":"));
+                                            Query q = conn->query();
+                                            q << "select xbrl_id from se_xbrl_lookup where xbrl_prefix = " 
+                                                    << quote << sgsplit[0] << " and xbrl_name = " << quote << sgsplit[1];
+                                            StoreQueryResult qrxbrlid = q.store();
+                                            if (qrxbrlid.size())
+                                                segments.push_back(qrxbrlid[0][0]);
+                                            if(!dimension.empty())
+                                            {
+                                                vector<string> dimsplit;
+                                                split(dimsplit, dimension, is_any_of(":"));
+                                                Query q = conn->query();
+                                                q << "select xbrl_id from se_xbrl_lookup where xbrl_prefix = " 
+                                                        << quote << dimsplit[0] << " and xbrl_name = " << quote << dimsplit[1];
+                                                StoreQueryResult qrxbrlid = q.store();
+                                                if (qrxbrlid.size())
+                                                    dimensions.push_back(qrxbrlid[0][0]);
+                                            }
+                                        }
+                                        while (segments.size() != dimensions.size())
+                                        {
+                                            dimensions.push_back(0);
+                                        }
+                                    }                            
+                                }
+                            }
+                        }
+                    }
+                    catch(...)
+                    {
+                        throw seexception(E_UnknownError, "Unknown exception thrown while processing individual period-context ref nodes.");
+                    }
+                }
+            }
+
+            xmlAttr* attr  = NULL;
+            xmlAttr* attrib = cur->properties;
+            for (attr = attrib; attr; attr = attr->next)
+            {
+                string attrName = (CSTR)attr->name;
+                xmlNode* attrVal = attr->children;
+                if (attrVal->type == XML_TEXT_NODE)
+                {
+                    string sAttrVal = (CSTR) attrVal->content;
+                    if(attrName =="id")
+                    {
+                        id =sAttrVal;
+                        string xpathall = "//*[@contextRef=\""+id+"\"]";
+                        auto axpathobj = xmlXPathEvalExpression(BAD_CAST xpathall.c_str(), xpathContext);
+                        try
+                        {
+                            if (!axpathobj)
+                            {
+                                xmlXPathFreeContext(xpathContext);
+                                xmlXPathFreeObject(xpathobj);
+                                LOGE(_logger, "Xpath expression creation failed for " << xpathall);
+                                return E_XMLParseError;
+                            }
+                            auto RefNodes = axpathobj->nodesetval;
+                            auto Asize = (RefNodes) ? RefNodes->nodeNr : 0;
+                            for (auto j = 0; j != Asize; ++j)
+                            {
+                                try
+                                {
+                                    xmlNodePtr insNode = RefNodes->nodeTab[j]; 
+                                    // check unit currency is USD
+                                    string currencyAttribute = "";
+                                    try
+                                    {
+                                        CSTR attrval = (CSTR)xmlGetProp(insNode, BAD_CAST "unitRef");
+                                        if (attrval)
+                                            currencyAttribute = attrval;
+                                    }
+                                    catch(...)
+                                    {
+                                        LOGIP("No unit reference available");
+                                    }
+                                    
+                                    if (currencyAttribute.empty() || currencyAttribute == unitcurrRef)
+                                    {
+                                        auto retIns = InsertInstance(conn, identifier.c_str(), contextref.c_str(),insNode, startdate.c_str(), enddate.c_str(), segments, dimensions, xpathContext, ppt1);
+                                        if (FAILED(retIns))
+                                        {
+                                            xmlXPathFreeObject(axpathobj);
+                                            xmlXPathFreeObject(xpathobj);
+                                            xmlXPathFreeContext(xpathContext);
+                                            return retCode;
+                                        }
+                                    }
+                                }
+                                catch(...)
+                                {
+                                    throw seexception(E_UnknownError, "Unknown exception thrown while inserting instance data.");
+                                }
+                            }
+                            xmlXPathFreeObject(axpathobj);
+                        }
+                        catch(...)
+                        {
+                            xmlXPathFreeObject(axpathobj);
+                            throw;
+                        }
+                    }
+                }
+            }        
+        }
+        xmlXPathFreeObject(xpathobj);
+        xmlXPathFreeContext(xpathContext);
+        LOGI(_logger, "Process Instance End");
+        return S_Success;
+    }
+    catch(...)
+    {
+        LOGEP("ProcessInstance: Failed Unknown error.");
+        return E_UnknownError;
+    }
+    
+}
+ErrorId CProcessEdgarStatements::InsertInstance(CSmartConnection& conn, CIK identifier, CSTR contextref,const xmlNodePtr insNode, CSTR startDate, CSTR endDate, vector<UID> &segments, vector<UID> &dimensions, xmlXPathContextPtr xpathContext, properties& ppt1)
+{
+    try
+    {
+        if(!insNode||!insNode->children||!insNode->children->content)
+        {
+            LOGWP("Insert instance INSNode parameter has no children");
+            return S_Success;
+        }
+        else
+        {
+            string value = (CSTR)insNode->children->content;
+            string name =(CSTR)insNode->name;
+            string prefix;
+            if(insNode->ns)
+                prefix = (CSTR)insNode->ns->prefix;  
+            string xbrl_type;
+            string monetaryvalue;
+            string stringvalue;
+            string numericvalue;
+            try
+            {
+                LOGI(_logger, "Find Data in Lookup Table Table Stared");
+                mysqlpp::Row findRow;
+                string sqlFind = "select xbrl_id,xbrl_type from se_xbrl_lookup where xbrl_prefix = '" +prefix + "' and xbrl_name ='"+name+"'";
+                auto qRes = conn->query(sqlFind).store();
+                if (qRes.size())
+                {
+                    Row findRow = qRes[0];
+                    LOGI(_logger, "Data Insert into Statement Table Stared");
+                    xbrl_type = (CSTR)findRow[1];
+
+                    /* other types currently defaulted below:
+                     *  xbrli:dateUnion
+                        xbrli:contextEntityType
+                        xbrli:contextPeriodType
+                        xbrli:contextScenarioType
+                        QName
+                        xbrli:measuresType
+                        anyType
+                        xl:documentationType
+                        xl:locatorType
+                        xl:arcType
+                        anySimpleType
+                        xl:simpleType
+                        xbrli:stringItemType
+                        xbrli:pureItemType            
+                     */
+
+                    if(xbrl_type=="decimal")
+                        monetaryvalue = value;
+                    else if(xbrl_type =="xbrli:nonZeroDecimal")
+                        monetaryvalue = value;
+                    else if(xbrl_type =="xbrli:monetaryItemType")
+                        monetaryvalue = value;
+                    else if(xbrl_type =="xbrli:sharesItemType")
+                        numericvalue = value;
+                    else
+                        stringvalue = value;
+
+                    Query q = conn->query();
+                    q << "INSERT INTO se_fin_instance (`xbrl_id`, `rec_id`, `identifier`, `monetaryvalue`, `stringvalue`, `numericvalue`, `contextref` " ;
+                    if (strcmp("",startDate))
+                        q << ", `startdate` " ;
+                    if (strcmp("",endDate))
+                        q << ", `enddate` " ;
+                    q << ", `contexttype` " ;
+                    q << ", `seg_value` ";
+                    q << ") VALUES (" ;
+                    q << (I64)findRow[0]<<","<< quote << ppt1.recid << ", " << quote << identifier << ", " << quote << monetaryvalue <<","<< quote << stringvalue <<","<< quote << numericvalue <<","<< quote << contextref;
+                    if (strcmp("",startDate))
+                        q << ", " << quote << startDate ;
+                    if (strcmp("",endDate))
+                        q << ", " << quote << endDate;
+                    if (strcmp("", startDate))
+                    {
+                        if (strcmp("", endDate))
+                            q << ", " << 1;
+                        else
+                            q << ", " << 0;
+                    }
+                    else
+                        q << ", null";
+                    q << ", " << quote << "S";
+                    q << ")";
+                    LOGIP(q.str());
+                    q.exec();
+                    LOGI(_logger, "Data Insert into Statement Table End");
+                    UID instid = q.insert_id();
+                    LOGI(_logger, "New instance_id " << instid);
+                    LOGI(_logger, "Insert segments and dimensions - started");
+                    for (int i=0; i!=segments.size(); ++i)
+                    {
+                        Query q = conn->query();
+                        q << "insert ignore into se_fin_instance_context ";
+                        q << "(instance_id, segment_id, dimension_id) " ;
+                        q << "values (";
+                        q << instid << ", " << segments[i] << ", " << dimensions[i] ;
+                        q << ")";
+                        q.execute();
+                    }
+                    LOGI(_logger, "Insert segments and dimensions - completed");
+                    
+                }
+                else
+                {
+                    LOGW(_logger, "se_xbrl_lookup table doesn't have " << prefix << ":" << name);
+                }
+                return S_Success;
+            }
+            catch (const std::exception& ex)
+            {
+                LOGE(_logger, "Error insertinstance: " << ex.what());
+                return E_XMLParseError;
+            }
+        }
+    }
+    catch(...)
+    {
+        LOGEP("InsertInstance: Failed Unknown error.");
+        return E_UnknownError;
+    }
+}

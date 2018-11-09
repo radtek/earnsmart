@@ -1,0 +1,41 @@
+<% c++ #include "../sewebmodels/CResetPwd.h" %>
+<% skin  skdefault %>
+<% view ResetPwdView uses CResetPwd extends MasterView %>
+
+<% template title() %>Earn Smart | Reset Password<% end %>
+
+
+<% template mainContent() %>
+
+<div id="dvSigonControls">
+    
+    <h2>Reset Password</h2>
+    <h3>Enter your email address and we will email you the new password.</h3>
+    <label class="requireslabel">* - required</label>
+    <div>
+        <div>
+            <input name="signEmail" type="email" placeholder="Email Address" value="<%=EmailAddress%>" title="Enter a valid email address.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=EmailValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <button>Reset Password</button>
+        </div>
+        <% if not get_IsValid() %>
+        <% c++ string s = content.CommonValidationText(); %>
+        <% c++ if (!s.empty()) { %>
+        <div>
+            <label class="validationtextlabel"><% c++ out() << s; %></label>
+        </div>
+        <% c++ } %>
+        <% end %>
+    </div>
+</div>
+    
+<% end template %>
+
+
+<% end view %>
+<% end skin %>

@@ -1,0 +1,66 @@
+<% c++ #include "../sewebmodels/CLogOn.h" %>
+<% skin  skdefault %>
+<% view SignOnView uses CLogOn extends MasterView %>
+
+<% template title() %>Earn Smart | Sign On<% end %>
+
+
+<% template mainContent() %>
+
+<div id="dvSigonControls">
+    
+    <h2>Welcome</h2>
+    <h3>Sign into your account</h3>
+    <label class="requireslabel">* - required</label>
+    <div>
+        <div>
+            <input name="signEmail" type="email" placeholder="email address" value="<%=EmailAddress%>" title="Enter a valid email address.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=EmailValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="signPwd" type="password" placeholder='password' title="Enter a password between 8 and 25 characters">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=PwdValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <% if Remember %>
+            <input name="signRem" type="checkbox" value="Remember" checked>Remember me
+            <% else %>
+            <input name="signRem" type="checkbox" value="yes">Remember me
+            <% end %>
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+        <% if not get_IsValid() %>
+        <% c++ string s = content.CommonValidationText(); %>
+        <% c++ if (!s.empty()) { %>
+        <div>
+            <label class="validationtextlabel"><% c++ out() << s; %></label>
+        </div>
+        <% c++ } %>
+        <% end %>
+        <div>
+            <h4>
+            Have you forgot your password? 
+            </h4>
+            Click <a href="/resetpwd">here</a> to reset your password.
+            <hr>
+            <h4>
+            Don't have an account yet? 
+            </h4>
+            Click <a href="/register">here</a> to register.
+        </div>
+    </div>
+</div>
+
+<% end template %>
+
+
+<% end view %>
+<% end skin %>

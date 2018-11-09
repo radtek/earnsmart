@@ -1,0 +1,1960 @@
+body 
+{
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    padding: 0;
+    color: #616161;
+    background: white;
+    font: 0.8em arial, helvetica, sans-serif;
+}
+
+h1, h2, h3 
+{
+    margin-top: 0;
+    color: #014421;
+}
+
+h1 
+{
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+h2 
+{
+    font-size: 1.6em;
+}
+
+h3 
+{
+    font-size: 1em;
+}
+
+a 
+{
+    text-decoration: none;
+    color: #014421;
+}
+
+a:hover 
+{
+    border-bottom: none;
+}
+
+#m_header_section 
+{
+    position: relative;
+    min-width: 800px;
+    height: 80px;
+    background:white;
+    /*border:1px solid red;*/
+}
+
+#header_logo 
+{
+    background: white;
+    padding-left: 10px;
+    top: 0px;
+    height: 55px;
+    /*border:1px black solid;*/
+}
+
+#header_logo h1, #header_logo p 
+{
+    float: left;
+    margin: 0;
+    color: #014421;
+}
+
+#header_logo span 
+{
+    color: red;
+}
+
+#header_logo h1 
+{
+    padding: 10px 2px 0 0;
+    letter-spacing: -1px;
+    text-transform: lowercase;
+    font-weight: normal;
+    font-size: 3em;
+}
+
+#header_logo p 
+{
+    text-transform: uppercase;
+    padding: 35px 0px 0px 0px;
+    font-size: 10px;
+    color: #110E0F;
+}
+
+#header_logo a 
+{
+    border: none;
+    text-decoration: none;
+    color: #014421;
+}
+
+#header_menu
+{
+    position: absolute;
+    top: 50px;
+    left:10px;
+    height: 28px;
+    background-color: #014421;
+    color:white;
+}
+
+#mtr_headerleft
+{
+    position: absolute;
+    top:0px;
+    left:10px;
+}
+
+#mtr_headerright
+{
+    position: absolute;
+    left: 600px;
+    top:0px;
+    width:auto;
+}
+
+#header_menu ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+#header_menu li 
+{
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+#header_menu a 
+{
+    text-decoration: none;
+    display: block;
+    width: auto;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    border-bottom: 0.2em solid #014421;
+    color: white;
+}
+
+#header_menu a:hover 
+{
+    color: white;
+    border-color: #169f57;
+}
+
+ #header_menu #mtr_tab_selected a 
+ {
+     color: white;
+     border-color: yellow;
+ }
+
+ #header_menu h1 
+{
+    margin: 0;
+    padding: 0.5em 0 1em 0.5em;
+    color: #f80;
+    font-size: 1.5em;
+    font-style: italic;
+}
+ 
+ #mtr_content {
+     clear: both;
+     color: white;
+     padding: 1em;
+ }
+
+ #mtr_content p 
+ {
+     margin: 0 0 1em 0;
+     color:black;
+ }
+            
+#headermenu_ulleft
+{
+}
+
+#headermenu_ulright
+{
+}
+
+#header_outer_div
+{
+    top : 40px;
+    right: 10px;
+    position: absolute;
+    margin: 0 ;
+    background: url(/blob/img04.jpg) no-repeat left top;
+    background-color: #014421;
+    color: #014421;
+    border: 0px;
+    height:0px;
+}
+
+#header_outer_div p 
+{
+    margin: 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    font-size: smaller;
+}
+
+#header_outer_div a 
+{
+    color: #014421;
+}
+
+#header_outer_div .link 
+{
+    float: right;
+}
+
+#header_outer_div .copyright 
+{
+    float: left;
+}
+
+
+#global_cosearch
+{
+    font-size: smaller;
+    position: absolute;
+    width:250px;
+    right: 10px;
+    top: 0px;
+    border:1px #014421 solid;
+    padding: 0px;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.global_cosearch_span
+{
+    display: inline-block;
+    white-space: normal;
+}
+.global_cosearch_input
+{
+    width:auto;
+    border: none;
+    display: inline-block;
+    white-space: normal;
+}
+
+.global_cosearch_input:focus
+{
+    outline : 0;
+}
+
+.global_cosearch_dialogtitle .ui-dialog-titlebar 
+{
+    display:none;
+}
+
+#global_search_dialog
+{
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    min-height: 100px;
+    min-width: 400px;
+    z-index: 100;
+    box-shadow: 2px 2px 1px gainsboro;
+    border-radius: 8px;
+    border:1px #014421 solid;
+    background-color: white;
+    padding: 10px;
+}
+
+#m_main_section 
+{
+    position: relative;
+    /*border:1px solid red;*/
+    min-width: 800px;
+}
+
+#m_main_content
+{
+    position: absolute;
+    padding: 10px;
+    /*border:1px black solid;*/
+    left:10px;
+}
+
+#m_footer_section
+{
+    position: relative;
+}
+
+#footer_outer_div
+{
+    margin: 0 auto;
+    background: url(/blob/img04.jpg) no-repeat left top;
+    background-color: #014421;
+    color: #014421;
+    border: 1px;
+    height:3px;
+}
+
+#footer_outer_div p 
+{
+    margin: 0;
+    padding: 5px 0 0 0;
+    text-align: center;
+    font-size: smaller;
+}
+
+#footer_outer_div a 
+{
+    color: #014421;
+}
+
+#footer_outer_div .link 
+{
+    float: right;
+}
+
+#footer_outer_div .copyright 
+{
+    float: left;
+}
+
+
+/* Menu */
+
+#menu 
+{
+    margin: 0 auto;
+    padding: 0;
+    height: 50px;
+/*	background: url(/blob/img02.jpg) no-repeat left top;*/
+    background: #014421;
+}
+
+div.menu 
+{
+    min-width: 1000px;	
+    margin: 0 auto;
+    padding: 0;
+    height: 50px;
+    /*background: url(/blob/img02.jpg) no-repeat left top;*/
+    background: #014421;
+}
+
+#menu ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 32px;
+	margin: 0;
+	padding: 18px 30px 0 30px;
+	text-decoration: none;
+	text-transform: capitalize;
+	
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+#menu a:hover {
+	color: #FFFFFF;
+}
+
+#menu .current_page_item a {
+	color: #FFFFFF;
+}
+
+/* Wrapper */
+
+#wrapper 
+{
+}
+
+/* Page */
+
+#page {
+    min-width: 990px;
+    min-height:100%;
+    margin: 0 auto;
+    padding: 20px 5px;
+    background: #FFFFFF;
+}
+
+#page-bg {
+}
+
+/* Latest Post */
+
+#latest-post 
+{
+    padding: 20px;
+    border: 1px solid #E7E7E7;
+}
+
+/* Content */
+
+.post 
+{
+    padding-bottom: 15px;
+    line-height: 200%;
+}
+
+.post h1 
+{
+    font-weight: normal;
+}
+
+.title 
+{
+    margin: 0;
+    padding: 10px 0 4px 20px;
+    font-weight: normal;
+}
+
+.title a 
+{
+    border-bottom: none;
+    color: #014421;
+}
+
+.title a:hover 
+{
+    border-bottom: 1px dotted #000000;
+}
+
+.byline 
+{
+    border-bottom: 1px #BBBBBB dashed;
+    margin: -10px 20px 20px 20px;
+}
+
+.tag 
+{
+    padding: 0 15px;
+}
+
+.entry 
+{
+    padding: 0 20px;
+}
+
+#m_main_sidesection
+{
+    width: 200px;
+    /*border:1px blue solid;*/
+    position: absolute;
+    /*vertical-align: top;*/
+}
+
+.sidebarheader
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #014421; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.boxtitlewithselectbox
+{
+    font-size: 120%;
+    padding: 0px;
+    color: white;
+    text-shadow: 0 1px 0 black;
+    line-height: 20px;
+    border-right: 22px solid transparent;
+    border-bottom: 22px solid #169f57;
+    height: 0;
+    display: inline-block;  	
+    width: auto;
+}
+
+.boxtitlewithselectboxselected
+{
+    font-size: 120%;
+    padding: 0px;
+    color: white;
+    text-shadow: 0 1px 0 black;
+    line-height: 20px;
+    border-right: 22px solid transparent;
+    border-bottom: 22px solid #014421;
+    height: 0;
+    display: inline-block;  	
+    width: auto;
+}
+
+.boxtitlewitha
+{
+    font-size: 120%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #169f57; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.boxtitlewithaselected
+{
+    font-size: 120%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #014421; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.boxtitlewitha a
+{
+    color: white;
+}
+
+.boxtitlewitha:hover a
+{
+    color: yellow;
+}
+
+.boxtitlewithaselected a
+{
+    color: white;
+}
+
+.boxtitlewithaselected:hover a
+{
+    color: yellow;
+}
+
+.boxtitlewithselectbox select
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #169f57; 
+    border: 0px;
+    -webkit-appearance: none;
+}
+
+.boxtitlewithselectboxselected select
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #014421; 
+    border: 0px;
+}
+
+.boxtitlewithselectbox a
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #169f57; 
+    border: 0px;
+}
+
+.boxtitlewithselectboxselected a
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #014421; 
+    border: 0px;
+}
+
+
+.boxtitlewithselectbox:hover select
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+    background: #169f57; 
+    border: 0px;
+}
+
+.boxtitlewithselectbox:hover a
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+    background: #169f57; 
+    border: 0px;
+}
+
+.boxtitlewithselectboxselected:hover select
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+    background: #014421; 
+    border: 0px;
+}
+
+.boxtitlewithselectboxselected:hover a
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+    background: #014421; 
+    border: 0px;
+}
+
+
+#sidebar1 {
+	float: left;
+}
+
+#sidebar2 {
+	float: right;
+}
+
+.sidebar {
+    float: left;
+    min-width: 270px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar li {
+	padding: 0 0 20px 0;
+}
+
+.sidebar li ul {
+}
+
+.sidebar li li {
+	margin: 0 20px 0 15px;
+	padding: 8px 0px;
+	border-bottom: 1px #BBBBBB dashed;
+}
+
+
+.sidebar li h2 
+{
+    height: 30px;
+    margin: 0 0 0 0;
+    padding: 10px 15px 0px 15px;
+    background: #014421 ;
+        /*url(/blob/img03.jpg) no-repeat left top;*/
+    letter-spacing: -1px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.sidebar a 
+{
+}
+
+/* Search */
+
+#searchform {
+	margin: 0;
+	padding: 0 0 0 0;
+}
+
+#searchform br {
+	display: none;
+}
+
+#searchform h2 {
+}
+
+#s {
+	margin: 10px 0px 0 15px;
+	padding: 2px 2px;
+	width: 180px;
+	height: 18px;
+	border: 1px solid #CA8186;
+	background: #FFFFFF;
+	font-size: 10px;
+	color: #000000;
+}
+
+#x {
+	margin: 0;
+	padding: 2px 5px;
+	height: 25px;
+	background: #CA8186;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #CCCCCC;
+}
+
+#search
+{
+    background-color:#014421;
+    color: white;
+    border: 1px;
+}
+
+
+/* cosearch */
+.statuslabel
+{
+    color: red;
+    font-size: smaller;
+    font-style:  italic;
+    visibility:  visible;
+    padding: 10pt;
+}
+
+.statuslabelhidden
+{
+    visibility: hidden;
+    padding: 10pt;
+}
+
+table.recentfinds
+{
+    font-size: smaller;
+}
+
+td.recentfinds
+{
+    border-bottom:1px groove lightgreen;
+}
+
+td.appmenus
+{
+    width: 50%;
+    text-align: left;
+}
+
+td.usermenus
+{
+    width: 50%;
+    text-align: right;
+}
+
+/************************ Text ************************************/
+text.disclaim
+{
+    font-size : smaller;
+}
+
+div.disclaim
+{
+    font-size : 70%;
+}
+
+/************************* Boxes *****************************/
+
+.se_div_box
+{
+    padding: 3px;
+    min-width: 100px;
+}
+
+.se_div_box_with_border 
+{
+    border: 1px solid #014421;	
+    padding: 20px;    
+    width: auto;
+    height: auto;
+}
+
+.se_div_box_with_top_border
+{
+    border: none;
+    border-top: 1px solid #014421;	
+    padding: 20px;    
+    width: auto;
+    height: auto;
+}
+
+.se_div_box_title 
+{
+    text-decoration: underline;
+    font-weight: bold;
+    line-height: 45px;
+}
+ 
+
+
+/********************** Fundamentals Page - Common ***********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** Fundamentals Page Header Part ***********************/
+
+.fdm_header 
+{
+    background-color: white;
+    padding-bottom: 10pt;
+    width:available;
+}
+
+.fdm_header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    float: left;
+    width: 100%;
+}
+
+.fdm_header li {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.fdm_header a {
+    text-decoration: none;
+    display: block;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    border-bottom: 0.2em solid #169f57;
+    color: #169f57;
+    cursor: hand;
+    width: auto;
+}
+
+.fdm_header a:hover {
+    color: #014421;
+    border-color: #014421;
+}
+
+.fdm_header .fdm_tab_selected a 
+{
+    color: #014421;
+    /*border-color: #014421;*/
+    border-color: #415c93;
+}
+
+#fdm_stockprice 
+{
+    float:left;
+    text-align: center;
+    box-shadow: 2px 2px 1px gainsboro;
+    border-radius: 8px;
+    border:1px #014421 solid;
+    background-color: white;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: smaller;
+}
+
+#fdm_stockprice tr
+{
+    background-color: white;
+}
+
+#fdm_stockprice a
+{
+    text-decoration: underline;
+    color: #014421;
+}
+
+/********************** Fundamentals Page Content Part***********************/
+
+
+.fdm_content 
+{
+    clear: both;
+    color: black;
+    padding-top: 0em;
+    padding-right: 2em;
+    text-align:left;
+    width:available;
+}
+
+.fdm_content p 
+{
+    margin: 0 0 1em 0;
+    color:black;
+    width:100%;
+}
+
+.fdm_content hr
+{
+    border-bottom: 1px solid #014421; 
+}
+
+/********************** Fundamentals Company Summary Page***********************/
+
+.fdm_summary_title
+{
+    padding-top: 2.0em;
+    //padding-bottom: 1.0em;
+    border-bottom: 2px solid #014421;
+}
+
+.fdm_summary_title td
+{
+    width: 25%;
+}
+
+.fdm_coname
+{
+    margin-bottom: 1em;
+    padding: 0;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#fdm_subsection_header 
+{
+    background-color: white;
+    width:available;
+}
+
+#fdm_subsection_header ul 
+{
+    list-style: none;
+    padding: 0 2 0 0;
+    margin: 0 5 0 0;
+    background: white;
+    float: left;
+    width: 100%;
+}
+
+#fdm_subsection_header li 
+{
+    border-top: 0.5em transparent none;
+}
+
+#fdm_subsection_header p 
+{
+    text-decoration: none;
+    display: block;
+    width: auto;
+    min-width: 700px;
+    padding: 0;
+    font-weight: bold;
+    border-bottom: 0.1em solid #169f57;
+    color: #169f57;
+    text-wrap: none;
+}
+
+
+.fdmcosumcontainer 
+{
+    width: 100%;
+    margin-top: 10pt;
+    margin: auto;
+    padding: 10pt;
+}
+
+.fdmcosumformula_selected
+{
+    min-height: 100px;
+    height: available;
+}
+
+
+.fdmcosumformula_header
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #014421; 
+    height: 0;
+    display: inline-block;  	
+}
+
+
+.fdmcosumformula_config
+{ 
+    border: 1px solid lightgray;	
+    padding: 20px;    
+    width: available;
+}
+
+.fdmcosumformula_config table
+{
+}
+
+.fdmcosumformula_config div
+{
+    color: #014421;
+}
+
+
+.fdmcosumchart
+{
+    width:750px;
+    height:300px;
+}
+
+/********************** Fundamentals Financial Page***********************/
+
+fdm_fin_chart_glance_floatbox
+{
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+
+.fdm_fin_glance_chart
+{
+    width:300px;
+    height: 250px;
+}
+
+.fdm_fin_div_overflowtable
+{
+}
+
+.fdm_fin_table
+{
+    border: 1px solid #DAF572;
+    margin: 0pt;
+    padding: 1pt;
+    font-size: 12px;
+    table-layout:fixed;
+    border-collapse: collapse;
+}
+
+.fdm_fin_table_th_account
+{
+    color:white;
+    background: #445F00;
+    min-width:200px;
+    max-width: 200px;
+    width:200px;
+    word-wrap:normal;
+}
+
+.fdm_fin_table_th_year
+{
+    color:white;
+    background: #445F00;
+    border: 1px solid #DAF572;
+    border-left: 2px solid #DAF572;
+    width: auto;
+}
+
+.fdm_fin_table_th_quarter
+{
+    color:white;
+    background: #445F00;
+    border: 1px solid #DAF572;
+    border-left: 2px solid #DAF572;
+    min-width: 75px;
+    width: 75px;
+}
+
+.fdm_fin_table_td_account
+{
+    border: 1px solid #DAF572;
+    text-align: left;
+    word-wrap:normal;
+    font-weight: bold;
+    margin: 5px;
+    min-width:200px;
+    max-width: 200px;
+    width:200px;
+}
+
+.fdm_fin_table_td_year
+{
+    border: 1px solid #DAF572;
+    border-left: 2px solid #DAF572;
+    text-align: right;
+    font-weight: bold;
+}
+
+.fdm_fin_table_td_abstract_empty_year
+{
+    text-align: right;
+    background: #94AF2C;
+}
+
+.fdm_fin_table_td_empty_year
+{
+    border: 1px solid #DAF572;
+    text-align: right;
+    border-left: 2px solid #DAF572;
+}
+
+.fdm_fin_table_td_quarter
+{
+    border: 1px solid #DAF572;
+    text-align: right;
+    font-size: smaller;
+}
+
+.fdm_fin_table_td_abstract_empty_quarter
+{
+    text-align: right;
+    font-size: smaller;
+    background: #94AF2C;
+}
+
+.fdm_fin_table_td_empty_quarter
+{
+    border: 1px solid #DAF572;
+    text-align: right;
+    font-size: smaller;
+}
+
+.finnumgrowthpos
+{
+    height: 2px;
+    width: auto;green
+    background: -webkit-linear-gradient(left, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 100%);
+}
+
+.finnumgrowthneg
+{
+    height: 2px;
+    width: auto;
+    background: -webkit-linear-gradient(left, rgba(0,255,0,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+#fdm_fin_div_fintable
+{
+    width:100%;
+    overflow: auto;
+}
+
+.arrow-left 
+{
+    position:absolute; 
+    z-index:999;
+    font-size: 60px;
+    opacity: .5;
+    left: 10px;    
+    cursor:pointer;
+    height: 100%;
+    background: lightyellow;
+}
+
+.arrow-right 
+{
+    position:absolute; 
+    z-index:999;
+    font-size: 60px;
+    opacity: .5;
+    right: 10px;
+    cursor:pointer;
+    height: 100%;
+    background: lightyellow;
+}
+
+
+/********************** Fundamentals Performance Page***********************/
+
+.perffieldsetgood
+{ 
+    border: 1px solid #014421;	
+    padding: 20px;    
+    width: available;
+}
+
+.perffieldsetbad
+{ 
+    border: 1px solid red;	
+    padding: 20px;    
+    width: available;
+}
+
+.perffieldsetok
+{ 
+    border: 1px solid orange;	
+    padding: 20px;    
+    width: available;
+}
+
+.perffieldsetunknown
+{ 
+    border: 1px solid lightgray;	
+    padding: 20px;    
+    width: available;
+}
+
+.perfheadergood
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #014421; 
+    height: 0;
+    display: inline-block;  	
+}
+.perfheaderbad
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid red; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.perfheaderok
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid orange; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.perfheaderunknown
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid lightgray; 
+    height: 0;
+    display: inline-block;  	
+}
+
+.floatbox 
+{
+    display: inline-block;
+    width: available;
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+
+.fdm_perf_table
+{
+    table-layout: fixed;
+    width:210px;
+    height: 200px;
+}
+
+.fdm_perf_value_td
+{
+    text-align: center;
+}
+
+.fdm_perf_value_table
+{
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+}
+
+.fdm_perf_value_table thead
+{
+    border-bottom: 1px #014421 solid;
+}
+
+.fdm_perf_value_table th
+{
+    text-align: center;
+    //border: 1px ivory groove;
+}
+
+.fdm_perf_value_table td
+{
+    text-align: center;
+    //border: 1px ivory groove;
+}
+
+.fdm_perf_value_desc
+{
+    height: 50px;
+    word-wrap: break-word; 
+    font-size: smaller;
+}
+
+.fdm_perf_value_desc div
+{
+    padding-bottom: 3px;
+}
+
+.fdm_perf_value_chart
+{
+    width:200px;
+    height: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.fdm_perf_range_table
+{
+    width:100%;
+    font-size: smaller;
+    font-weight: bold;
+    border-top: 1px #014421 solid;
+    height: 30px;
+}
+
+.fdm_perf_range_table thead
+{
+    font-size: smaller;
+    text-align: center;
+    border-bottom: 1px #014421 solid;
+}
+
+.fdm_perf_range_table td
+{
+    font-size: smaller;
+    text-align: center;
+}
+
+select.ui-combobox-list
+{
+    font-size: 90%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #014421; 
+    display: inline-block;  	
+}
+
+/********************** Fundamentals Prospects Page***********************/
+
+.fdmprospectschart
+{
+    width:750px;
+    height:450px;
+}
+
+.fdmprospectsdisclaimer
+{
+    font-size: smaller;
+}
+
+//////////////////////// News Page////////////////////////////////////////
+
+#fdm_news_accordion .ui-accordion-header
+{
+    font-size: 90%;
+}
+
+#fdm_news_accordion .fdm_news_header
+{
+    color : black;
+    background: white;
+}
+
+#fdm_news_accordion .fdm_news_header_selected
+{
+    background : #014421;
+    color : white;
+}
+
+
+#fdm_news_accordion div
+{
+    color: black;
+    background: white;
+    text-decoration: none;
+    border : none;
+    font-weight: normal;
+}
+
+#fdm_news_accordion p
+{
+    color: black;
+    background: white;
+    text-decoration: none;
+    border : none;
+    font-weight: normal;
+}
+
+#fdm_news_accordion a 
+{
+    text-decoration: underline;
+    color: #014421;
+}
+
+//////////////////////// Screener Page//////////////////////////////
+
+.screener_container 
+{
+    width: 100%;
+    margin-top: 10pt;
+    margin: auto;
+    padding: 10pt;
+}
+
+.f3q_container
+{
+    width: 100%;
+    margin-top: 10pt;
+    margin: auto;
+    padding: 10pt;
+}
+
+.screener_expandable_panel 
+{
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    min-height: 20px;
+    overflow: auto;
+    //border: 1px solid #999;
+    overflow: hidden;
+}
+
+.screener_panel_heading 
+{
+    width: 100%;
+    cursor: pointer;
+    height: 25px;
+    clear: both;
+    position: relative;
+    background: lightgray;
+}
+
+.screener_result_table
+{
+    width: 100%;
+}
+
+.screener_formula_selected
+{
+}
+
+.screener_formula_selected_ratios
+{
+    height: available;
+}
+.screener_select_saved
+{
+    position: absolute;
+    left: 5px;
+    min-width: 100px;
+}
+
+.screener_save_div
+{
+    border-top: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
+    font-size: smaller;
+    margin-top: 3px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.screener_save_div  button
+{
+    padding: 2px;
+    font-size: smaller;
+}
+
+.screener_save_div input[type=text]
+{
+    padding: 2px;
+    font-size: smaller;
+}
+
+.screener_checkboxes
+{
+    font-family: smaller;
+}
+
+.screener_clear
+{
+    top: 2px;
+    position: absolute;
+    right: 20px;
+}
+
+
+.screener_expandable_panel_heading 
+{
+    width: 100%;
+    cursor: pointer;
+    height: 20px;
+    clear: both;
+    position: relative;
+}
+
+.screener_titletable
+{
+    padding:5pt;
+}
+
+.screener_expandable_panel_heading h3 
+{
+    font-size: 15px;
+    color:white;
+}
+
+.screener_paneltitlelabel
+{
+    top: 3px;
+    height: 18px;
+    position: absolute;
+    left: 20px;
+    font-weight:bolder;
+}
+
+.screener_paneltitlelabel:hover
+{
+    color: yellow;
+}
+
+.screener_title_label_columns
+{
+    height: 18px;
+    padding-left: 2px;
+    padding-right: 2px;
+    vertical-align: middle;
+    font-size: larger;
+}
+
+.screener_expandable_panel_heading h3:hover 
+{
+    color: yellow;
+}
+
+.screener_titledescription
+{
+    color:white;
+}
+
+.screener_titledescription:hover
+{
+    color: yellow;
+}
+            
+.screener_expandable_panel_content 
+{
+    padding: 0 15px 0 15px;
+    margin-top: -999px;
+    height: 200px;
+    visibility: hidden;
+}
+
+.screener_expandable_panel_content p 
+{
+    padding: 4px 0 6px 0;
+}
+
+.screener_expandable_panel_content p:first-child 
+{
+    padding-top: 10px;
+}
+
+.screener_expandable_panel_content p:last-child 
+{
+    padding-bottom: 15px;
+}
+
+.screener_icon_close_open 
+{
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 5px;
+    color: #014421;
+    font-size: 10px;
+}
+
+.screener_expandable_panel_content img 
+{
+    float: right;
+    padding-left: 12px;
+    clear:both;
+}
+
+.screener_header_active 
+{
+    background-color: lightgray;
+}
+
+.companypicks_title
+{
+    padding-top: 2.0em;
+    padding-bottom: 1.0em;
+    border-bottom: 2px #014421 solid;
+}
+
+.companypicks_coname
+{
+    margin-bottom: 1em;
+    padding: 0;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.company_picks_exchanges
+{
+    .screener_checkboxes   
+}
+
+.ScreenerFloatbox 
+{
+    display: inline-block;
+    width: available;
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+
+.ScreenerConfigA
+{
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: available;
+    height: auto;
+}
+
+.ScreenerConfigB 
+{
+    .ScreenerConfigA;
+    height: 200px;
+}
+
+
+
+.DualSliderFloatbox 
+{
+    display: inline-block;
+    width: 280px;
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+
+.DualSliderCaption
+{
+    font-size: smaller;
+    padding: 3px;
+    text-decoration: none;
+    color: #014421;
+    font-weight: bold;
+    line-height: 25px;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid lightgray;
+    height: 0;
+    display: inline-block;
+}
+
+.DualSliderConfig 
+{
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: available;
+    //height: 100px;
+}
+
+.DualSliderConfig table 
+{
+}
+.DualSliderConfig div 
+{
+    color: #014421;
+}
+
+.DualSliderDescription
+{
+    font-size: 80%;
+}
+
+.screenerResultTableOddRow
+{
+    background-color: lightgray;
+}
+
+.screenerResultTableHoverRow
+{
+    color: #014421;
+}
+
+/********************** Economy Page***********************/
+
+
+#eco_container 
+{
+    width: 100%;
+    margin-top: 10pt;
+    margin: auto;
+    padding: 10pt;
+}
+
+.eco_floatbox 
+{
+    display: inline-block;
+    margin: 0;
+    padding: 2px;
+    float: left;
+}
+
+.eco_float_details
+{ 
+    border: 1px solid #014421;	
+    padding: 5px;    
+    width: 350px;
+    height: 300px;
+}
+
+.eco_float_header
+{
+    font-size: 90%; 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 black;
+    line-height: 45px;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #014421; 
+    height: 0;
+    display: inline-block;  	
+}
+
+
+.eco_float_table
+{
+    table-layout: fixed;
+    
+}
+
+.eco_desc_td
+{
+    text-align: center;
+}
+
+.eco_lblchart
+{
+}
+
+.eco_copyright
+{
+    font-size: smaller;
+}
+
+#eco_news_content
+{
+    padding: 10px;
+    width: available;
+}
+
+.eco_news_list
+{ 
+    border-top: 1px solid #014421;	
+    padding: 5px;    
+}
+
+
+/* older*/
+
+.eco_expandable-panel {
+    width: 100%;
+    position: relative;
+    min-height: 50px;
+    overflow: auto;
+    margin-bottom: 20px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.eco_expandable-panel-heading 
+{
+    width: 100%;
+    cursor: pointer;
+    min-height: 35pt;
+    clear: both;
+    background-color: #014421;
+    position: relative;
+}
+
+.eco_titletable
+{
+    padding:5pt;
+}
+
+.eco_expandable-panel-heading h3 
+{
+    font-size: 15px;
+    color:white;
+}
+
+.eco_paneltitlelabel
+{
+    font-size: 15px;
+    font-weight:bolder;
+    color:white;
+}
+
+.eco_paneltitlelabel:hover
+{
+    color: yellow;
+}
+
+.eco_expandable-panel-heading h3:hover 
+{
+    color: yellow;
+}
+
+.eco_titledescription
+{
+    color:white;
+}
+
+.eco_titledescription:hover
+{
+    color: yellow;
+}
+            
+.eco_expandable-panel-content {
+    padding: 0 15px 0 15px;
+    margin-top: -999px;
+}
+
+.eco_expandable-panel-content p {
+    padding: 4px 0 6px 0;
+}
+
+.eco_expandable-panel-content p:first-child {
+    padding-top: 10px;
+}
+
+.eco_expandable-panel-content p:last-child 
+{
+    padding-bottom: 15px;
+}
+
+.eco_icon-close-open 
+{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-image: url(/blob/minusplus.png);
+    right: 10px;
+}
+
+.eco_expandable-panel-content img 
+{
+    float: right;
+    padding-left: 12px;
+    clear:both;
+}
+
+.eco_header-active {
+    background-color: #014421;
+}
+
+.eco_lblchart
+{
+    z-index:1;
+    height: 200px;
+    width: 250px;
+}
+
+/////////////////////////////////About/////////////////////////////////
+
+.about_contactus
+{
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 5em;
+}
+
+.about_contactus label
+{
+}
+
+.about_contactus input[type=text]
+{
+}
+
+.about_contactus input[type=submit]
+{
+}
+
+//////////////////////////sitemap////////////////////////////////////
+
+.div_site_map
+{
+    
+}
+
+.dl_site_map
+{
+    
+}

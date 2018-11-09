@@ -1,0 +1,139 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyProspectsSectorView uses sg::web::models::CProspectChartSector %>
+
+<% template render() %>
+
+<script type="text/javascript">
+    
+    var url<%= chartid%> = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/<%= RefId %>');
+
+    var chart<%= chartid%> = null;
+    var data<%= chartid%> = null;
+
+    function errorHandler<%= chartid%>(err)
+    {
+        // err = { id , message, detailedMessage }
+    }
+    
+    function drawVisualization<%= chartid%>() 
+    {
+        console.log("Loading chart");
+        var postdata = [];
+        postdata.push("productid=" + <%= ProductId %>);
+        postdata.push("perfid=21");   // add comma seperated m (mappings) values.
+        $.post(url<%= chartid%>, postdata.join("&"))
+            .done(function(findata)
+            {
+                console.log("Data received");
+                if (!findata || !findata.length || findata.length < 2)
+                {
+                    document.getElementById('cchart<%= chartid%>').style.visibility = "hidden";
+                    console.log("Nothing to load.");
+                    return;
+                }
+                
+                console.log("Loading datatable.");
+                console.log(findata);
+                //data<%= chartid%> = new google.visualization.DataTable( google.visualization.arrayToDataTable(findata));
+                data<%= chartid%> = google.visualization.arrayToDataTable(findata);
+
+                var options = 
+                {
+                    title : '',
+                    pointSize : 1,
+                    curveType : "function",
+                    //focusTarget : "category",   // or datum
+                    enableInteractivity : true, // Whether the chart throws user-based events or reacts to user interaction. If false, the chart will not throw 'select' or other interaction-based events (but will throw ready or error events), and will not display hovertext or otherwise change depending on user input.
+                    series: 
+                        {
+                            0 : 
+                                { 
+                                    color : "#00FF33", 
+                                    annotations : 
+                                        { 
+                                            color : "#00FF33" 
+                                        } 
+                                }
+                                , 
+                            1 : 
+                                { 
+                                    color: "#660066", 
+                                    annotations : 
+                                        { 
+                                            color : "#660066" 
+                                        }
+                                } 
+                                , 
+                            2 : 
+                                { 
+                                    color: "#FF0099", 
+                                    annotations : 
+                                        { 
+                                            color : "#FF0099" 
+                                        }
+                                } 
+                        }
+                };
+                console.log("drawing chart...");
+                chart<%= chartid%> = new google.visualization.LineChart(document.getElementById('cchart<%= chartid%>'));
+                chart<%= chartid%>.draw(data<%= chartid%>, options);
+                console.log("Done.");
+            })
+            .error(function(x)
+            {
+                console.log("Error:" + JSON.toString(x));
+                $("#cchart_<%= chartid%>").html("<font cpassword:olor='red'>Failed to draw chart. Data not available.</font>");
+            });
+    }
+
+    google.setOnLoadCallback(drawVisualization<%= chartid%>);       
+    
+</script>
+
+<div class="floatbox">
+    <text class="fdmcosumformula_header"><%= title %></text>
+    <div class="fdmcosumformula_config" id="dashboard<%= chartid%>">
+        <div>
+            The chart below provides an insight on how <%= Prospects.get_SecurityInfo()->get_Symbol() %>:<%= Prospects.get_SecurityInfo()->get_Exchange() %> performs
+            viz-a-viz its industry and sector. Owing to computation delay, please expect sector and industry data to be at most a week behind
+            the statistics of <%= Prospects.get_SecurityInfo()->get_Symbol() %>:<%= Prospects.get_SecurityInfo()->get_Exchange() %>.
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="fdmprospectschart" id="cchart<%= chartid%>">Loading chart...</div>
+                </td>
+            </tr>
+        </table>
+    </div>       
+    <!--
+    <br>
+    <div>
+        <table>
+            <tr>
+                <th style="text-align: left;">
+                    Important statistics for <%= Prospects.get_CompanyInfo()->get_Name() %>
+                </th>                        
+            </tr>
+            <tr>
+                <td>
+                    <ul style="list-style-type: square;">
+                        <li>
+                            Statistically calculated average quarterly revenue Growth (upto 5yrs) is 15% with a growth risk (stddev) of 30%. 
+                            The revenue growth predicted by our system is 14%. This difference should be noted in your decision on investing 
+                            in this company.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    -->
+</div>
+
+<% end template %>
+<% end view %>
+<% end skin %>

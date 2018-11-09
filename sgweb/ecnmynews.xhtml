@@ -1,0 +1,65 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view EconomicNewsView uses sg::web::models::EconomicNews  %>
+<% template render() %>
+    <div id="eco_news_content">
+        <table>
+            <tr>
+            <% c++ if (content.get_News()) { %>
+                <% c++ I32 catCount = content.get_News()->get_Count(); %>
+                <% c++ for (IEconomicNewsFeed* category : *content.get_News()) { %>
+                <td valign="top" width="<% c++ out() << (I32)(100/catCount); %>%">
+                        <text class="eco_float_header">
+                            <% c++ out() << category->get_Title(); %>
+                        </text>
+                        <div class="eco_news_list" >
+                            <table>
+                                <% c++ SP<IEconomicNewsFeeds> pitems; %>
+                                <% c++ SE_CODE retCode = category->get_Items(&pitems); %>
+                                <% c++ if (pitems) { %>
+                                    <% c++ for (IEconomicNewsFeed* feed : *pitems) { %>
+                                    <tr>
+                                        <td style='padding-top: 3px; border-bottom: 1px solid #014421'>
+                                            <p style="font-weight: bold">
+                                                <a href="<% c++ out() << feed->get_Link(); %>" target="_blank">
+                                                    <% c++ out() << feed->get_Title(); %>
+                                                </a>
+                                            </p>
+                                            <% c++ if (feed->get_Description()) { %>
+                                            <p style="font-size: smaller">
+                                                <% c++ out() << feed->get_Description(); %>
+                                            </p>
+                                            <% c++ } %>
+                                            <p style="font-style: italic; font-size: 60%; text-align: right">
+                                                By <a href='<% c++ out() << feed->get_Property("contributor_url"); %>'>
+                                                    <% c++ out() << feed->get_Property("contributor"); %>
+                                                </a>
+                                                on <% c++ out() << feed->get_PublishedOn(); %>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <% c++ } %>
+                                <% c++ } else { %>
+                                    <tr>
+                                        <td>
+                                            No news available for this category.
+                                        </td>
+                                    </tr>
+                                <% c++ } %>
+                            </table>                        
+                        </div>
+                    </td>
+                <% c++ } %>
+            <% c++ } %>
+            
+            <% c++ if (content.get_News() == 0) { %>
+                <td valign="top">
+                    News section currently not available. Sorry for the inconvenience.
+                </td>
+            <% c++ } %>
+            </tr>
+        </table>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

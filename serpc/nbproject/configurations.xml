@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="config" projectFiles="true">
+      <itemPath>../web/nxweb_config.json</itemPath>
+      <itemPath>../web/se.json</itemPath>
+    </logicalFolder>
+    <logicalFolder name="emailtemplates"
+                   displayName="emailtemplates"
+                   projectFiles="true">
+      <itemPath>../web/emailtemplates/licensedregistration.html</itemPath>
+      <itemPath>../web/emailtemplates/resetpassword.html</itemPath>
+      <itemPath>../web/emailtemplates/standardregistration.html</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAdminController.h</itemPath>
+      <itemPath>CCommonController.h</itemPath>
+      <itemPath>CEarnsmartController.h</itemPath>
+      <itemPath>CEconomicsController.h</itemPath>
+      <itemPath>CEmailNotifications.h</itemPath>
+      <itemPath>CHelpDocTreeController.h</itemPath>
+      <itemPath>CHttpConnection.h</itemPath>
+      <itemPath>CHttpContext.h</itemPath>
+      <itemPath>CHttpCookie.h</itemPath>
+      <itemPath>CHttpHeaders.h</itemPath>
+      <itemPath>CHttpParameters.h</itemPath>
+      <itemPath>CHttpRequest.h</itemPath>
+      <itemPath>CHttpResponse.h</itemPath>
+      <itemPath>CHttpUtils.h</itemPath>
+      <itemPath>CJsonRPCService.h</itemPath>
+      <itemPath>CMapIterator.h</itemPath>
+      <itemPath>CRPCServiceBase.h</itemPath>
+      <itemPath>CRPCServiceController.h</itemPath>
+      <itemPath>CRequest.h</itemPath>
+      <itemPath>CResponse.h</itemPath>
+      <itemPath>CRouteMap.h</itemPath>
+      <itemPath>CSecurityController.h</itemPath>
+      <itemPath>CServiceRouter.h</itemPath>
+      <itemPath>CSessionFilter.h</itemPath>
+      <itemPath>CWebController.h</itemPath>
+      <itemPath>ContentTypes.h</itemPath>
+      <itemPath>internal.h</itemPath>
+      <itemPath>rpc.h</itemPath>
+      <itemPath>seappmodule.h</itemPath>
+      <itemPath>sessionfilter.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAdminController.cpp</itemPath>
+      <itemPath>CCommonController.cpp</itemPath>
+      <itemPath>CEarnsmartController.cpp</itemPath>
+      <itemPath>CEconomicsController.cpp</itemPath>
+      <itemPath>CEmailNotifications.cpp</itemPath>
+      <itemPath>CHelpDocTreeController.cpp</itemPath>
+      <itemPath>CHttpConnection.cpp</itemPath>
+      <itemPath>CHttpContext.cpp</itemPath>
+      <itemPath>CHttpCookie.cpp</itemPath>
+      <itemPath>CHttpHeaders.cpp</itemPath>
+      <itemPath>CHttpParameters.cpp</itemPath>
+      <itemPath>CHttpRequest.cpp</itemPath>
+      <itemPath>CHttpResponse.cpp</itemPath>
+      <itemPath>CHttpUtils.cpp</itemPath>
+      <itemPath>CJsonRPCService.cpp</itemPath>
+      <itemPath>CMapIterator.cpp</itemPath>
+      <itemPath>CRPCServiceBase.cpp</itemPath>
+      <itemPath>CRPCServiceController.cpp</itemPath>
+      <itemPath>CRequest.cpp</itemPath>
+      <itemPath>CResponse.cpp</itemPath>
+      <itemPath>CRouteMap.cpp</itemPath>
+      <itemPath>CSecurityController.cpp</itemPath>
+      <itemPath>CServiceRouter.cpp</itemPath>
+      <itemPath>CSessionFilter.cpp</itemPath>
+      <itemPath>CWebController.cpp</itemPath>
+      <itemPath>rpc.c</itemPath>
+      <itemPath>seappmodule++.cpp</itemPath>
+      <itemPath>seappmodule.c</itemPath>
+      <itemPath>sessionfilter.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../web/emailtemplates</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <incDir>
+            <pElem>/usr/include/python2.7</pElem>
+            <pElem>/usr/include/ImageMagick-6</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/ImageMagick-6</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9</pElem>
+            <pElem>../../../../commonlib/nx</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>../../../../commonlib/nx</pElem>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>/usr/include/jsoncpp</pElem>
+          </incDir>
+          <commandLine>-O2</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../../../commonlib/nx"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../../../commonlib/nx"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnx.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sesecurities"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sesecurities"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeoddata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeoddata"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sepredict"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sepredict"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seann"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seann"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+            <linkerLibLibItem>gnutls</linkerLibLibItem>
+            <linkerLibLibItem>MagickWand-6.Q16</linkerLibLibItem>
+            <linkerLibLibItem>MagickCore-6.Q16</linkerLibLibItem>
+            <linkerLibLibItem>python2.7</linkerLibLibItem>
+            <linkerLibLibItem>glib-2.0</linkerLibLibItem>
+            <linkerLibLibItem>dl</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -shared</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../web/emailtemplates/licensedregistration.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/emailtemplates/resetpassword.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/emailtemplates/standardregistration.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/nxweb_config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../web/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCommonController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCommonController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEarnsmartController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEarnsmartController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicsController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicsController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEmailNotifications.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEmailNotifications.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpContext.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpCookie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpCookie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpHeaders.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpHeaders.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpParameters.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpParameters.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpRequest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpRequest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpUtils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpUtils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMapIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMapIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRPCServiceController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRPCServiceController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRequest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRequest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CServiceRouter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CServiceRouter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSessionFilter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSessionFilter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContentTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rpc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="rpc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seappmodule++.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="seappmodule.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="seappmodule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sessionfilter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sessionfilter.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0</pElem>
+          </linkerAddLib>
+          <commandLine>-fPIC -shared</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../web/emailtemplates/licensedregistration.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/emailtemplates/resetpassword.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/emailtemplates/standardregistration.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../web/nxweb_config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../web/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCommonController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCommonController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEarnsmartController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEarnsmartController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicsController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicsController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEmailNotifications.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEmailNotifications.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpConnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpConnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpContext.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpCookie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpCookie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpHeaders.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpHeaders.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpParameters.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpParameters.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpRequest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpRequest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHttpUtils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHttpUtils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMapIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMapIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRPCServiceController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRPCServiceController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRequest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRequest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResponse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResponse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CServiceRouter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CServiceRouter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSessionFilter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSessionFilter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContentTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rpc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="rpc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seappmodule++.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="seappmodule.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="seappmodule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sessionfilter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sessionfilter.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

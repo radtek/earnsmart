@@ -1,0 +1,147 @@
+<% c++ #include "sgwebinternal.h" %>
+<% c++ #include "models.h" %>
+<% c++ #include "../seglobal/exceptions.h" %>
+<% skin sgskin %>
+<% view CompanyFinancialsView uses sg::web::models::CompanyFinancials %>
+<% template render() %>
+
+<script>
+    
+    $(document).ready(function () 
+    {  
+        <% if (content.TabSelection == "S") %>
+        $('#fdm_fin_statements_select').change(function()
+        {
+            $("#fdm_allyears_tabselection").val("S");
+            $("#form_fdm").submit();
+        });
+        
+        $("#fdm_fin_aacclookup").click(function()
+        {
+            $("#fdm_allyears_tabselection").val("L");
+            $("#form_fdm").submit();
+        });
+        
+        $(fdm_fin_div_fintable).scroll(function() 
+        {
+            if($(fdm_fin_div_fintable).scrollLeft() > 1800) 
+            {
+                $(".arrow-right").fadeOut();
+            } 
+            else 
+            {
+                $(".arrow-right").fadeIn();
+            }
+            
+            if($(fdm_fin_div_fintable).scrollLeft() <= 20 )
+            {
+                $(".arrow-left").fadeOut();
+            } 
+            else 
+            {
+                $(".arrow-left").fadeIn();
+            }
+        });
+        
+        if ($(fdm_fin_div_fintable).scrollLeft() > 1800)
+                $(".arrow-right").fadeOut();
+        if($(fdm_fin_div_fintable).scrollLeft() <= 1 )
+            $(".arrow-left").fadeOut();
+        
+        
+        $(".arrow-right").click(function()
+        {
+            //$(fdm_fin_div_fintable).scrollLeft($(fdm_fin_div_fintable).scrollLeft()+100);
+            $(fdm_fin_div_fintable).animate(
+                { "scrollLeft": $(fdm_fin_div_fintable).scrollLeft() + 150}
+            );
+        });
+        $(".arrow-left").click(function()
+        {
+            $(fdm_fin_div_fintable).animate(
+                { "scrollLeft": $(fdm_fin_div_fintable).scrollLeft() - 150}
+            );
+        });
+        
+        $(".arrow-right").height($("#fdm_fin_div_overflowtable").innerHeight());
+        $(".arrow-left").height($("#fdm_fin_div_overflowtable").innerHeight());
+        
+        <% else %>
+        
+        $("#fdm_fin_astatement").click(function()
+        {
+            $("#fdm_allyears_tabselection").val("S");
+            $("#form_fdm").submit();
+        });
+        
+        <% end %>
+        
+        //$("#m_footer_section").offset({top : 10 + Math.max($(document).height(), $(window).height()) - $("#m_footer_section").height() });
+        
+    });
+    
+    
+</script>
+
+
+<div id="fdm_subsection_header">
+    <% if (!content.HasStatements) %>
+    <div class="statuslabel">
+        No statement available for this company. Sorry for the inconvenience.
+    </div>
+    <% else %>
+        <input id="fdm_allyears_tabselection" name="fdm_allyears_tabselection" type="hidden" value="S"/>
+        <ul >
+            <li style="display:inline;padding-left: 6px">
+                <div style='font-weight: bold'>The company's annual and quarterly statements. Click on the drop down on the title below to view all financial statements provided by the company.</div><br>
+                <div id="div_fdm_allyears" class='boxtitlewithselectbox<% c++ out() << ( content.TabSelection == "S" ? "selected" : ""); %>'>
+                    <select id="fdm_fin_statements_select" name="fdm_fin_statements_select" <% c++ out() << ( content.TabSelection == "L" ? "disabled" : ""); %> >
+                        <% foreach stmt in get_Statements() %>
+                            <% item %>
+                                <% if (stmt->get_Id() == content.get_CurrentStatement()->get_Id())%>
+                                <option selected value="<%= stmt->get_Id() %>" ><%= stmt->get_Name() %></option>
+                                <% else %>
+                                <option value="<%= stmt->get_Id() %>" ><%= stmt->get_Name() %></option>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    </select>
+                    <!--
+                    <a id="fdm_fin_astatement" href="javascript::void()" title="Click here to select this tab">&rtriltri;</a>
+                    -->
+                </div>
+            </li>
+            <!--
+            <li style="display:inline">
+                <div id="div_fdm_allyears" class='boxtitlewitha<% c++ out() << (content.TabSelection == "L" ? "selected" : ""); %>'>
+                    <a id="fdm_fin_aacclookup" href="javascript::void()">
+                        Account Lookup
+                    </a>
+                </div>
+            </li>
+            -->
+        </ul>
+        <% if (content.TabSelection == "S") %>
+        <div id="div_fdm_all_years_stmttable" class="se_div_box_with_top_border" style="padding: 5px">
+            <div id="fdm_fin_div_fintable">
+                <div class="arrow-left">
+                    &larr;
+                </div>                
+                <div class="arrow-right">
+                    &rarr;
+                </div>                
+                <div id="fdm_fin_div_overflowtable">
+                <% c++ out() << content; %>
+                </div>
+            </div>
+        </div>
+        <% else %>
+        <div class="se_div_box_with_top_border" style="padding: 5px">
+            
+        </div>
+        <% end %>
+    <% end %>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

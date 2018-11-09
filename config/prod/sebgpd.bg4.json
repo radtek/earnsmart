@@ -1,0 +1,28 @@
+{
+    "name": "sebgpd",
+    "functions" :
+            [
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "1",
+                    "params" : "updateperformance",
+                    "interval" :
+                            {
+                                "freq" : "weekly",
+                                "factor" : "07:00:00",
+				"days" : "Saturday"
+                            }
+                },
+                { 
+                    "name" : "repeateddbaction",
+                    "active" : "1",
+                    "params" : "gicsrevenuegrowth",
+                    "interval" : 
+                            {
+                                "freq" : "weekly",
+                                "days" : "Sunday",
+                                "factor" : "08:00:00"
+                            }    
+                } 
+            ]
+}

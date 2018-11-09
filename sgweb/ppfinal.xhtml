@@ -1,0 +1,30 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view PPFinalView uses sg::web::models::Register  %>
+<% template render() %>
+    <h3>User Registration - Completed</h3>
+    <div style="padding-left:10pt;padding-right:10pt">
+        <p>
+            Thank you for accepting trial subscription service. 
+        </p>
+        <p>
+            An email is sent to you as confirmation. If you haven't received any email from us, please check the login email address provided to us (show here).
+            Please email us (admin@smart-earn.com) to resolve any mistakes in the login email address. 
+        </p>
+        <p>
+            You may also go to 'My Account' link above to resolve any issues. 
+        </p>
+        <p>
+            Please note that your subscription will become active from (show the date +30 days). If you would like to cancel your account, please use 'My Account' link or
+            contact admin@smart-earn.com.
+        </p>
+        <p>
+            Thank you once again.
+        </p>
+        <p>
+            Smart-earn team.
+        </p>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

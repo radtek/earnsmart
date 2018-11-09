@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CFann.h</itemPath>
+      <itemPath>compat_time.h</itemPath>
+      <itemPath>config.h</itemPath>
+      <itemPath>fann.h</itemPath>
+      <itemPath>fann_activation.h</itemPath>
+      <itemPath>fann_cascade.h</itemPath>
+      <itemPath>fann_cpp.h</itemPath>
+      <itemPath>fann_data.h</itemPath>
+      <itemPath>fann_error.h</itemPath>
+      <itemPath>fann_internal.h</itemPath>
+      <itemPath>fann_io.h</itemPath>
+      <itemPath>fann_train.h</itemPath>
+      <itemPath>floatfann.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CFann.cpp</itemPath>
+      <itemPath>doublefann.c</itemPath>
+      <itemPath>fann.c</itemPath>
+      <itemPath>fann_cascade.c</itemPath>
+      <itemPath>fann_error.c</itemPath>
+      <itemPath>fann_io.c</itemPath>
+      <itemPath>fann_train.c</itemPath>
+      <itemPath>fann_train_data.c</itemPath>
+      <itemPath>floatfann.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CFann.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compat_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="doublefann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_activation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cascade.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_cascade.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_error.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_error.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_train.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CFann.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compat_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="doublefann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_activation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cascade.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_cascade.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_error.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_error.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_train.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CFann.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compat_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="doublefann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_activation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cascade.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_cascade.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_error.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_error.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_train.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CFann.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compat_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="doublefann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_activation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cascade.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_cascade.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_error.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_error.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fann_train.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fann_train_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="floatfann.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

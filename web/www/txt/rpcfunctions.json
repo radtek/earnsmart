@@ -1,0 +1,79 @@
+{
+    [
+        {
+            "methodname" : "getdoctree" ,
+            "id" : 800
+        },
+        {    
+            "methodname": "savedocitem" ,
+            "id" : 801
+        }
+        {
+            "methodname" : "deldocitem",
+            "id" : 802
+        },
+        {    
+            "methodname" : "getappdata",
+            "id" : 998
+        },
+        {
+            "methodname": "verifysession",
+            "id" : 999,
+            "url": "[baseaddress]/admin",
+            "params" : []
+        },
+        {
+            "methodname" : "login",
+            "id" : 1000,
+            "url": "[baseaddress]/admin",
+            "params" : [{"emailAddress" : "xx", "pwd" : "xx", "remember" : "true/false"}]
+        }
+        {
+            "methodname" : "resetpwd",
+            "id" : 1001
+        },
+        {
+            "methodname" : "countries",
+            "id" : 1002,
+        }
+        {
+            "methodname" : "states",
+            "id" : 1003
+        },
+        {
+            "methodname" : "register",
+            "id" : 1005,
+            "url": "[baseaddress]/admin",
+            "params" : {
+                "ConfirmPassword" : "aaaa",
+                "Country" : 1,
+                "EmailAddress" : "jsantony@gmail.com",
+                "FirsName" : "",
+                "FirstName" : "Saji",
+                "LastName" : "Antony",
+                "Password" : "aaaa",
+                "PostalCode" : "07410",
+                "RegStages" : 0,
+                "RegType" : "licensed",
+                "RememberMe" : false,
+                "State" : 30,
+                "StateProvince" : "New Jersey",
+                "Street1" : "1-34 17th Street",
+                "Street2" : "",
+                "Town" : "Fair Lawn"
+            }
+        },
+        {
+            "methodname" : "confirmemail",
+            "id": 1006
+        },
+        {
+            "methodname" : "exchangepackages",
+            "id" : 1004
+        },
+        {
+            "methodname" : "upgradeuser",
+            "id" : 1007
+        }
+    ]
+}

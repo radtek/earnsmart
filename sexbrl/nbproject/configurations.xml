@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAsyncProcessor.h</itemPath>
+      <itemPath>CCIKToSymbolMapper.h</itemPath>
+      <itemPath>CCaptureFiscalPeriods.h</itemPath>
+      <itemPath>CExplicitFormulaManager.h</itemPath>
+      <itemPath>CFinPeriodList.h</itemPath>
+      <itemPath>CFinancialItem.h</itemPath>
+      <itemPath>CFinancialPerformance.h</itemPath>
+      <itemPath>CFinancialPerformanceList.h</itemPath>
+      <itemPath>CFinancialRatio.h</itemPath>
+      <itemPath>CFinancialRatioList.h</itemPath>
+      <itemPath>CFinancialStatementPresentation.h</itemPath>
+      <itemPath>CFinancialsConsolidated.h</itemPath>
+      <itemPath>CFormulaParser.h</itemPath>
+      <itemPath>CListEdgarForms.h</itemPath>
+      <itemPath>CPersistPerformanceData.h</itemPath>
+      <itemPath>CProcessEdgarStatementsjson.h</itemPath>
+      <itemPath>CSpecialPerformanceTrainingData.h</itemPath>
+      <itemPath>CStatementUtilities.h</itemPath>
+      <itemPath>CXbrl.h</itemPath>
+      <itemPath>CXbrlAccountMatcher.h</itemPath>
+      <itemPath>CXbrlCalculator.h</itemPath>
+      <itemPath>CXbrlDataNode.h</itemPath>
+      <itemPath>CXbrlDataTree.h</itemPath>
+      <itemPath>CXbrlDocType.h</itemPath>
+      <itemPath>CXbrlIdList.h</itemPath>
+      <itemPath>CXbrlJsonOutputs.h</itemPath>
+      <itemPath>CXbrlStatement.h</itemPath>
+      <itemPath>CXbrlStatementList.h</itemPath>
+      <itemPath>CXbrlUtilities.h</itemPath>
+      <itemPath>../ReturnCodes.h</itemPath>
+      <itemPath>../seglobaltypedefs.h</itemPath>
+      <itemPath>sexbrlapi.h</itemPath>
+      <itemPath>sexbrlinternal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>xbrl parsing steps.txt</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CCIKToSymbolMapper.cpp</itemPath>
+      <itemPath>CCaptureFiscalPeriods.cpp</itemPath>
+      <itemPath>CExplicitFormulaManager.cpp</itemPath>
+      <itemPath>CFinPeriodList.cpp</itemPath>
+      <itemPath>CFinancialItem.cpp</itemPath>
+      <itemPath>CFinancialPerformance.cpp</itemPath>
+      <itemPath>CFinancialPerformanceList.cpp</itemPath>
+      <itemPath>CFinancialRatio.cpp</itemPath>
+      <itemPath>CFinancialRatioList.cpp</itemPath>
+      <itemPath>CFinancialStatementPresentation.cpp</itemPath>
+      <itemPath>CFinancialsConsolidated.cpp</itemPath>
+      <itemPath>CFormulaParser.cpp</itemPath>
+      <itemPath>CListEdgarForms.cpp</itemPath>
+      <itemPath>CPersistPerformanceData.cpp</itemPath>
+      <itemPath>CProcessEdgarStatementsJson.cpp</itemPath>
+      <itemPath>CSpecialPerformanceTrainingData.cpp</itemPath>
+      <itemPath>CStatementUtilities.cpp</itemPath>
+      <itemPath>CXbrl.cpp</itemPath>
+      <itemPath>CXbrlAccountMatcher.cpp</itemPath>
+      <itemPath>CXbrlDataNode.cpp</itemPath>
+      <itemPath>CXbrlDataTree.cpp</itemPath>
+      <itemPath>CXbrlDocType.cpp</itemPath>
+      <itemPath>CXbrlIdList.cpp</itemPath>
+      <itemPath>CXbrlJsonOutputs.cpp</itemPath>
+      <itemPath>CXbrlStatement.cpp</itemPath>
+      <itemPath>CXbrlStatementList.cpp</itemPath>
+      <itemPath>CXbrlUtilities.cpp</itemPath>
+      <itemPath>sexbrlinternal.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>processinstanceoldcode</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/local</pElem>
+            <pElem>../semysql</pElem>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>XBRL_EXPORT</Elem>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>pthread_workqueue</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAsyncProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialItem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialItem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialsConsolidated.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialsConsolidated.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFormulaParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFormulaParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsJson.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlCalculator.h" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDataNode.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDataNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="processinstanceoldcode" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="xbrl parsing steps.txt" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/local</pElem>
+            <pElem>../semysql</pElem>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>XBRL_EXPORT</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>pthread_workqueue</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAsyncProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialItem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialItem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialsConsolidated.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFinancialsConsolidated.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFormulaParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFormulaParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsJson.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlCalculator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataNode.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDataNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="processinstanceoldcode" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="xbrl parsing steps.txt" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/local</pElem>
+            <pElem>../semysql</pElem>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>XBRL_EXPORT</Elem>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>pthread_workqueue</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAsyncProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CCIKToSymbolMapper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CCaptureFiscalPeriods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CExplicitFormulaManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinPeriodList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialItem.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialItem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialPerformance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialPerformanceList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialRatio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialRatioList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialStatementPresentation.cpp"
+            ex="true"
+            tool="1"
+            flavor2="11">
+      </item>
+      <item path="CFinancialsConsolidated.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialsConsolidated.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFormulaParser.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFormulaParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CListEdgarForms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CPersistPerformanceData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsJson.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CProcessEdgarStatementsjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CStatementUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrl.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlAccountMatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlCalculator.h" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDataNode.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDataNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDataTree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDocType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlIdList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlJsonOutputs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlStatement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlStatementList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="processinstanceoldcode" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sexbrlinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="xbrl parsing steps.txt" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/local</pElem>
+            <pElem>../semysql</pElem>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>ELPP_DISABLE_LOGS</Elem>
+            <Elem>XBRL_EXPORT</Elem>
+          </preprocessorList>
+          <useLinkerLibraries>false</useLinkerLibraries>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>pthread_workqueue</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../ReturnCodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../seglobaltypedefs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAsyncProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCIKToSymbolMapper.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CCIKToSymbolMapper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCaptureFiscalPeriods.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CCaptureFiscalPeriods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExplicitFormulaManager.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CExplicitFormulaManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinPeriodList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinPeriodList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialItem.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialItem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformance.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialPerformance.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialPerformanceList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialPerformanceList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatio.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialRatio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialRatioList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialRatioList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFinancialStatementPresentation.cpp"
+            ex="true"
+            tool="1"
+            flavor2="11">
+      </item>
+      <item path="CFinancialsConsolidated.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFinancialsConsolidated.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFormulaParser.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFormulaParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CListEdgarForms.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CListEdgarForms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPersistPerformanceData.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CPersistPerformanceData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProcessEdgarStatementsJson.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CProcessEdgarStatementsjson.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.cpp"
+            ex="false"
+            tool="1"
+            flavor2="11">
+      </item>
+      <item path="CSpecialPerformanceTrainingData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CStatementUtilities.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CStatementUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrl.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlAccountMatcher.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlAccountMatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlCalculator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataNode.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDataNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDataTree.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDataTree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlDocType.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlDocType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlIdList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlIdList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlJsonOutputs.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlJsonOutputs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatement.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlStatement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlStatementList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlStatementList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlUtilities.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlUtilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="processinstanceoldcode" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sexbrlinternal.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sexbrlinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="xbrl parsing steps.txt" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

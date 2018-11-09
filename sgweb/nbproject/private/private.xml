@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>1</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="sgwebsln">
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/CBaseApplication.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fdm_prospects.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/models.h</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fdm_cosummary.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/CompanySummary.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/sgwebinternal.h</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/Fundamentals.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/CompanyProspects.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fdm_allyears.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fundamentals.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/style.css</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/se.js</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/master.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/masteronly.js</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/tmplcc.sh</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/CompanyFinancials.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/CFundamentalsApp.cpp</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fdm_perf.xhtml</file>
+            <file>file:/home/santony/Documents/smartearn/Linux/libraries/sgweb/fdm_financials.xhtml</file>
+        </group>
+        <group name="smartearn"/>
+        <group/>
+    </open-files>
+</project-private>

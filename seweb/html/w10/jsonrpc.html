@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <script src="/prog/jquery-1.11.3.js" ></script>
+    </head>
+    <body>
+        <div>
+            <form onsubmit="return call2();">
+                <p>
+                    <input type="text" id="x" />
+                    <input type="submit" value="/" />
+                    <input type="text" id="y" /> =
+                    <span id="result"></span>
+                </p>
+            </form>  
+        </div>
+        <div>
+            <script>
+                function countries()
+                {
+                    var req = { 
+                        method : "countries",
+                        id : 2
+                    };
+                    $.post("/rpc", "cdata=" + JSON.stringify(req), function(rsp)
+                    {
+                        console.log(rsp.result);
+                        if (rsp.result)
+                        {
+                            var list = rsp.result.countries;
+                            $.each(list, function(i, c)
+                            {
+                                $("#cmbCountries").append($("<option></option>")
+                                        .attr("value", c.code)
+                                        .text(c.name));
+                            });
+                        }
+                    }, "json");
+                    return false;
+                }
+            </script>
+            
+            <form onsubmit="return countries();">
+                <button id="btnCountries">List Countries</button>
+                <select id="cmbCountries" size="10"></select>
+            </form>
+        </div>
+        <script>
+            
+            function call2()
+            {
+                var x = parseInt($("#x").val());
+                var y = parseInt($("#y").val());
+                console.log("calling");
+                var req = { 
+                    method : "div",
+                    params : [x, y]
+                };
+                req.id = 1;
+                $.post("/rpc", "cdata=" + JSON.stringify(req), function(data)
+                {
+                    console.log(data);
+                }, "json");
+                /*
+                $.ajax({
+                    url: "/rpc",
+                    type: "POST",
+                    datatype : "json",
+                    contentType: "application/json-rpc; charset=utf-8",
+                    data : JSON.stringify(req),
+                    success : function(result) {
+                        alert(result.success); // result is an object which is created from the returned JSON
+                    },
+                });                    
+                */    
+                return false;
+            }
+            
+            function call()
+            {
+                var xhr = new XMLHttpRequest();
+                xhr.open("post", '/rpc');
+                // Required by JSON-RPC over HTTP  
+                xhr.setRequestHeader("Content-Type", "application/json");
+                var x = parseInt(document.getElementById('x').value);
+                var y = parseInt(document.getElementById('y').value);
+                var request = '{"method":"div","params":[' + x + ',' + y + '],"id":1}';
+                xhr.onreadystatechange = function() 
+                {  
+                    if (xhr.readyState === 4) {
+                        var res;
+                        if (xhr.status === 200) {
+                            // Don't call eval in real code use some parser  
+                            var result = eval('(' + xhr.responseText + ')');
+                            if (result.error == null) 
+                            {
+                                console.log(result.result);
+                                res = result.result;
+                            }
+                            else {
+                                res = result.error;
+                            }
+                        }
+                        else {
+                            res = 'Invalid Status ' + xhr.status;
+                        }
+                        document.getElementById('result').innerHTML = res;
+                    }
+                }
+                xhr.send(request);  
+                return false; 
+            }
+
+        </script>
+</body>
+
+</html>

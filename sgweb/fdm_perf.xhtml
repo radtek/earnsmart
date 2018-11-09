@@ -1,0 +1,149 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyPerformanceView uses sg::web::models::CompanyPerformance %>
+<% template render() %>
+
+<div id="fdm_subsection_header">
+    <div >
+        <% c++ int i = 0; %>
+        <% c++ if (content.FinYearEnd && content.get_Ratios()) { %>
+            <% c++ for (auto it = content.get_Ratios()->begin(); it != content.get_Ratios()->end(); ++it) { %>
+            <% c++ IFinancialRatio* pratio = *it; %>
+            <% c++ R8 rvalue = pratio->get_Value(content.FinYearEnd); %>
+            <% c++ I16 lastq = pratio->get_LastReportedQuarter(); %>
+            <% c++ R8 rqvalue = pratio->get_QValue(); %>
+            <% c++ if (rvalue > 1e100) continue; %>
+            <% c++ string textclass, divclass; %>
+            <% c++ if (pratio->get_ValuePosition(rvalue) == IFinancialRatio::Bad ) { textclass = "perfheaderbad"; divclass="perffieldsetbad"; } else if (pratio->get_ValuePosition(rvalue) == IFinancialRatio::Ok) { textclass= "perfheaderok"; divclass="perffieldsetok"; } else if (pratio->get_ValuePosition(rvalue) == IFinancialRatio::Unknown) { textclass= "perfheaderunknown"; divclass="perffieldsetunknown"; } else { textclass= "perfheadergood"; divclass="perffieldsetgood"; } %>
+            <div class="floatbox">
+                <script>
+                    function drawVisualization<% c++ out() << i; %>() {
+                       // Prepare the data
+                       var data<% c++ out() << i; %> = google.visualization.arrayToDataTable([
+                         [ 'Year', '<% c++ out() << pratio->get_Name(); %>'],
+                         <% c++ for (I16 year = pratio->get_FloorYear(); year <= content.FinYearEnd; ++year) {%>
+                        <% c++ R8 dval = pratio->get_Value(year); %>
+                        <% c++ if (dval == ER8) dval = 0.0; %>
+                         <% c++ if (year == content.FinYearEnd) { %>
+                         ['<% c++ out() << year; %>', <% c++ out() << dval; %>]
+                         <% c++ } else { %>
+                         ['<% c++ out() << year; %>', <% c++ out() << dval; %>],
+                         <% c++ } %>
+                         <% c++ } %>
+                       ]);
+
+                       // Define a bar chart
+                       var chart<% c++ out() << i; %> = new google.visualization.ChartWrapper({
+                         'chartType': 'LineChart',
+                         'dataTable' : data<% c++ out() << i; %>,
+                         'containerId': 'cchart<% c++ out() << i; %>',
+                         'options': {
+                           'hAxis': { 'title' : 'Year', 'slantedText' : 'automatic'},
+                           'vAxis': {'title' :'<% c++ out() << pratio->get_Name(); %>'},
+                           'chartArea': {top: 5, right: 0, bottom: 5},
+                           'legend' : { 'position' : 'none'}
+                         }
+                       });
+                       chart<% c++ out() << i; %>.draw();
+                     }
+
+                    google.setOnLoadCallback(drawVisualization<% c++ out() << i; %>);   
+
+                </script>
+                <text class="<% c++ out() << textclass; %>"><% c++ out() << pratio->get_Name(); %> </text>
+                <div class="<% c++ out() << divclass; %>" >
+                    <table class="fdm_perf_table">
+                        <tr>
+                            <td class="fdm_perf_value_td">
+                                <table class="fdm_perf_value_table">
+                                    <% c++ if (rqvalue == ER8) { %>
+                                    <thead>                                    
+                                        <TR>
+                                            <th>
+                                                <% c++ out() << content.FinYearEnd; %>
+                                            </th>
+                                        </TR>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <% c++ content.WriteFormattedDouble(out(), rvalue, 2); %>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <% c++ } else { %>
+                                    <thead>                                    
+                                        <TR>
+                                            <th>
+                                                <% c++ out() << content.FinYearEnd; %>
+                                            </th>
+                                            <th>
+                                                <% c++ out() << lastq << "Q-" << pratio->get_CeilYear(); %>
+                                            </th>
+                                        </TR>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <% c++ content.WriteFormattedDouble(out(), rvalue, 2); %>
+                                            </td>
+                                            <td>
+                                                <% c++ content.WriteFormattedDouble(out(), rqvalue, 2); %>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <% c++ } %>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="fdm_perf_value_chart" id="cchart<% c++ out() << i; %>"></div>
+                            </td>
+                        </tr>
+                        <% if (1 == 0 ) %>
+                        <tr>
+                            <td class="fdm_perf_value_desc">
+                                <div style="overflow: auto;height: 50px">
+                                    <div >
+                                        <% c++ out() << pratio->get_Description(); %>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="fdm_perf_range_table">
+                                    <caption>Value Range</caption>
+                                    <tr>
+                                        <td>Best: <% c++ if (pratio->get_MaximumPoint() != MAXR8) out() << pratio->get_MaximumPoint(); else out() << "N/A"; %></td>
+                                        <td>Fine: <% c++ if (pratio->get_MiddlePoint() != ER8) out() << pratio->get_MiddlePoint(); else out() << "N/A"; %></td>
+                                        <td>Worst: <% c++ if (pratio->get_MinimumPoint() != MINR8) out() << pratio->get_MinimumPoint(); else out() << "N/A"; %></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <% else %>
+                        <tr>
+                            <td class="fdm_perf_value_desc">
+                                <div style="overflow: auto;height: 80px">
+                                    <div >
+                                        <% c++ out() << pratio->get_Description(); %>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </table>
+                </div>                    
+            </div>
+            <% c++ i++; } %>
+        <% c++ } %>
+        <% c++ if (!i) { %> 
+        <div>Performance ratios not available for this company. We apologize for this. This incident has been notified to us. We will attempt to fix it as quickly as possible.</div>
+        <% c++ } %>
+    </div>
+</div>
+<% end template %> 
+<% end view %>
+<% end skin %>

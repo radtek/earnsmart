@@ -1,0 +1,108 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view FinancialStatementsView uses sg::web::models::FinancialStatement %>
+<% template render() %>
+
+    <script>
+    
+    function ddDocTypesChanged(e)
+    {
+        $("#ddQuarters").prop("disabled", $("#ddDocTypes").val()=="3");
+    }
+        
+    $(document).ready(function()
+    {
+        $("#ddDocTypes").change(ddDocTypesChanged);
+        
+        $("#ddStatements").change(function(e)
+        {
+            $("#hdFundSel").val("statement");
+            $("#fundm_statement_form").submit();
+        });
+        
+        ddDocTypesChanged(null);
+    });
+    </script>
+
+    <div id="fdm_header">
+    <h1 class="title">Fundamentals of <%= subTitle %></h1>
+        <form action="" id ="fundm_statement_form" name="fundm_statement_form" method="post" > <% csrf %>
+            <ul>
+                <li><a href="#">Summary</a></li>
+                <li id="fdm_tab_selected"><a href="#">Financials</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Prospects</a></li>
+            </ul>
+        </div>
+        <div id="fdm_content">
+            <div>
+               <div style="height: 200px;overflow: hidden;"> 
+                    <div style="float: left;max-width: 70%;overflow: hidden;"> 
+                        <p>	
+                            <input type="hidden" id="hdFundSel" name="hdFundSel" value="<%= hdFundSel %>"/>
+                         <select id = "ddDocTypes" name="ddDocTypes" title="Financial Statement Types" >
+                            <% foreach docType in *get_List() %>
+                            <% item %>
+                            <% if (content.dtype == docType->get_Id()) %>
+                            <option selected value="<%= docType->get_Id() %>"><%= docType->get_Desc() %> </option>
+                            <% else %>
+                            <option value="<%= docType->get_Id() %>"><%= docType->get_Desc() %> </option>
+                            <% end %>
+                            <% end %>
+                            <% empty %>
+                                Your search result is empty.
+                            <% end %>    
+                        </select>
+                            <select id = "ddYears" name="ddYears" title="Financial Years">
+                        <% foreach period in *get_Period() %>
+                        <% item %>
+                        <% if ( period == content.year ) %>
+                            <option value="<%= period %>" selected><%= period %></option>
+                        <% else %>
+                            <option value="<%= period %>"><%= period %></option>
+                        <% end %>
+                        <% end %>
+                        <% empty %>
+                            Your search result is empty.
+                        <% end %>
+                        </select>
+
+                            <select id = "ddQuarters" name="ddQuarters" title="Financial Quarters">
+                            <% c++ for (int i = 1; i <= 4; i++) { if (i == content.qtr) out() << "<option value=\"" << i << "\" selected >" << i << "</option>" << std::endl; else out() << "<option value=\"" << i << "\">" << i << "</option>" << std::endl; } %>
+                        </select>
+
+                            <button id = "bt">submit</button>   
+
+                        </p>
+                        <p>
+                         <% if get_StatementTitles()  %>  
+                         <select id = "ddStatements" name="ddStatements" title="Available Statements">
+                        <% foreach statement in *get_StatementTitles() %>
+                        <% item %>
+                        <% if (content.stId == statement->get_Id()) %>
+                        <option value="<%= statement->get_Id() %>" selected ><%= statement->get_Name() %> </option>
+                        <% else %>
+                        <option value="<%= statement->get_Id() %>" ><%= statement->get_Name() %> </option>
+                        <% end %>
+                        <% end %>
+                        <% empty %>
+                        <option value="0">Not statements found.</option>
+                        <% end %>
+                        </select>
+                        <% end %>     
+                        </p>  
+                    </div>   
+                   <!--
+               <div class="pHistory" style="position:absolute;left:70%;float:right;overflow: hidden;"> 
+                    <% c++ content.getHistoricalPrice(out()); %>                                                 
+                </div> 
+                   -->
+            </div> 
+              <% c++ content.RenderStatement(out()); %>
+            </div>
+        </form>
+    </div>
+    
+<% end template %> 
+<% end view %>
+<% end skin %>

@@ -1,0 +1,11 @@
+Install notes:
+
+./configure --prefix=/user
+
+SKIP make and proceed to
+
+sudo make install
+
+THROWS AN EXCEPTION. IGNORE
+
+go to cppunit's folder and copy /include/cppunit/* to /usr/include/cppunit folder.

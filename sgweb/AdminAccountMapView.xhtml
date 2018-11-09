@@ -1,0 +1,591 @@
+<% c++ #include "admmodels.h" %>
+<% skin sgskin %>
+<% view AccountMapView uses sg::web::adm::AccountMapModel  %>
+
+<% template render() %>
+
+<% c++ using namespace sg::web::adm; %>
+
+<% c++ if (content.PageSelection == AccountMapModel::CommonAccounts ) { %>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/mapaccounts/common"><b>Common Accounts</b></a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapcommon">Map Common Accounts</a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapspecific">Map Company Specific Accounts</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+    var baseurl = location.protocol.concat("//").
+            concat(window.location.hostname).concat(":").
+            concat(location.port).concat('/gj/');
+    
+    var fnpopcommonaccounts = function(data)
+    {
+        //console.log(data);
+        //var jdata = JSON.parse(data);
+        var jdata = data;
+        if (jdata.length <= 1)    // first is always header
+        {
+            return;
+        }
+        
+        for (var i=1; i != jdata.length; ++i)
+        {
+            $('#amap0_list_commonaccounts').append('<option value="' + jdata[i][0] + '">' + jdata[i][1] + '</option>');
+        }
+    };
+
+    $(document).ready(function()
+    {
+        // populate amap0_list_commonaccounts
+        $.get(baseurl.concat('10010'), function(data)
+                {
+                    fnpopcommonaccounts(data);
+                }
+            );
+    
+        $('#amap0_list_commonaccounts').change(function()
+        {
+            var obj = $('#amap0_list_commonaccounts option:selected');
+            if (obj)
+                $('#amap0_txt_accountname').val(obj.text());
+        });
+        
+        $('#amap0_btn_add').click(function()
+        {
+            if ( $(this).text() == "Add")
+            {
+                // clear text box
+                $('#amap0_txt_accountname').val("");
+                //change label
+                $(this).text("Save");
+                $("#amap0_btn_cancel").css("visibility", "visible");
+            }
+            else
+            {
+                if ($('#amap0_txt_accountname').val() != "")
+                {
+                    // post data and get data
+                    $.post('/companies/mapaccounts/common/add', "Account=" + $('#amap0_txt_accountname').val(), function(data)
+                    {
+                        var jdata = data;
+                        //var jdata = JSON.parse(data);
+                        if (jdata.length > 1)
+                        {
+                            $('#amap0_list_commonaccounts')
+                                    .append('<option value="' + jdata[1][0] + '">' + jdata[1][1] + '</option>');
+                        }
+                    });
+
+                    // clear text box
+                    $('#amap0_txt_accountname').val("");
+                    //change label
+                    $(this).text("Add");
+                    $("#amap0_btn_cancel").css("visibility", "hidden");
+                }
+                else
+                {
+                    alert("Empty text box.");
+                }
+            }
+        });
+        
+        $('#amap0_btn_cancel').click(function()
+        {
+            // clear text box
+            $('#amap0_txt_accountname').val("");
+            $("#amap0_btn_add").text("Add");
+            $("#amap0_btn_cancel").css("visibility", "hidden");
+        });
+    
+    });
+    
+</script>
+
+
+<div id="amap_div_content">
+<label id="amap0_lbl_commonaccounts">List of Common Accounts</label>
+<select id="amap0_list_commonaccounts" size="20"></select>
+<button id="amap0_btn_add">Add</button>
+<button id="amap0_btn_cancel">Cancel</button>
+<input type="text" id="amap0_txt_accountname"/>
+</div>
+
+<% c++ } else if (content.PageSelection == AccountMapModel::MapCommonAccounts ) { %>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/mapaccounts/common">Common Accounts</a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapcommon"><b>Map Common Accounts</b></a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapspecific">Map Company Specific Accounts</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    
+    var baseurl = location.protocol.concat("//").
+            concat(window.location.hostname).concat(":").
+            concat(location.port).concat('/gj/');
+    
+    var fnpopaccounts = function(sel, data, valsel, textsel)
+    {
+        var jdata = data;
+        //var jdata = JSON.parse(data);
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+        {
+            return;
+        }
+        for (var i=1; i != jdata.length; ++i)
+        {
+            sel.append('<option value="' + jdata[i][valsel] + '">' + jdata[i][textsel] + '(' + jdata[i][valsel] + ')' + '</option>');
+        }
+    };
+
+    var fnpopaccountusgaap = function(sel, data)
+    {
+        var jdata = data;
+        //var jdata = JSON.parse(data);
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+            return;
+        
+        for (var i=1; i != jdata.length; ++i)
+        {
+            sel.append('<option title="' + jdata[i][2] + '" value="' + jdata[i][0] + '">' + jdata[i][1] + '(' + jdata[i][0] + ')' + '</option>');
+        }
+    };
+
+    var fnpopselectedaccounts = function(sel, data)
+    {
+        var jdata = data;
+        //var jdata = JSON.parse(data);
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+            return;
+        for (var i=1; i != jdata.length; ++i)
+        {
+            var html = '<div class="ui-state-default" style="padding : 2px;" xbrlid="' + jdata[i][1] + '"' + 
+                'title="' + jdata[i][3] + '">' +
+                '<span class="amap_span_deleteaccount">&cross;</span>' +
+                '<span xbrlid="' + jdata[i][1] + '" class="amap_span_realccount">' + jdata[i][2] + '(' + jdata[i][1] + ')' + '</span>' +
+                '</div>';
+            sel.append(html);
+        }
+    };
+    
+    var fnloadselectedaccounts = function ()
+    {
+        var obj = $('#amap_list_matches option:selected');
+        if (obj)
+        {
+            $.get(baseurl.concat('10011/').concat(obj.val()), function(data)
+                {
+                    fnpopselectedaccounts($("#amap_div_accountlabel"), data);
+                }
+            );
+        }
+    };
+    
+    $(document).ready(function(data)
+    {
+        
+        // populate amap0_list_commonaccounts
+        $.get(baseurl.concat('10010'), function(data)
+            {
+                fnpopaccounts($("#amap_list_matches"), data, 0, 1);
+            }
+        );
+    
+        $.get(baseurl.concat('10013'), function(data)
+            {
+                fnpopaccountusgaap($("#amap_list_companyaccounts"), data);
+            }
+        );
+
+        $('#amap_list_matches').change(function()
+        {
+            fnloadselectedaccounts();
+        });
+        
+        $('#amap_list_companyaccounts').dblclick(function(e)
+        {
+            if (e.target.tagName == "OPTION")
+            {
+                var t = $(e.target);
+                $.post('/companies/mapaccounts/mapcommon/add', 
+                "caccount=" + $('#amap_list_matches').val() + "&account=" + t.val(), 
+                function(data, s)
+                {
+                    if (s == "success")
+                    {
+                        var html = '<div class="ui-state-default" style="padding : 2px;" xbrlid="' + t.val() + '"' + 
+                            'title="' + t.attr("title") + '">' +
+                            '<span class="amap_span_deleteaccount">&cross;</span>' +
+                            '<span xbrlid="' + t.val() + '" class="amap_span_realccount">' + t.text() + '</span>' +
+                            '</div>';
+                        $("#amap_div_accountlabel").append(html);
+                    }
+                });
+            }
+        });
+        
+        $('#amap_div_accountlabel').click(function(e)
+        {
+            if ("amap_span_deleteaccount" == e.target.getAttribute("class"))
+            {
+                /*
+                 * to convert to jquery, sorround a $(..) to dom object
+                 * to get a dom object, simply look for the first array element. $(x)[0];
+                 */
+                if (confirm("Do you want to delete this account ?"))
+                {
+                    $.post('/companies/mapaccounts/mapcommon/remove', 
+                    "caccount=" + $('#amap_list_matches').val() + "&account=" + $(e.target).parent().attr("xbrlid"), 
+                    function(data, s)
+                    {
+                        if (s == "success")
+                            $(e.target).parent().remove();
+                    });
+                }
+            }
+        });
+        
+        $("#amap_div_accountlabel").sortable( { update : function(event, ui)
+            {
+                var prioritizedXbrlIds = [];
+                $(".amap_span_realccount").each(function()
+                {
+                    prioritizedXbrlIds.push($(this).attr("xbrlid"));
+                });
+                $.post('/companies/mapaccounts/mapcommon/sort', 
+                    "caccount=" + $('#amap_list_matches').val() + "&accounts=" + prioritizedXbrlIds.join("|")) 
+                .done(function()
+                {
+                    console.log("done");
+                })
+                .error(function()
+                {
+                    console.log("failed");
+                    fnloadselectedaccounts();
+                });
+            }
+        });
+        $("#amap_div_accountlabel").disableSelection();
+    });
+    
+</script>
+
+
+<div id="amap_div_content">
+    <div id="amap_div_inputs">
+        <div id="amap_mappingview">
+            <table style="width:100%;">
+                <tr>
+                    <td width="33%">
+                        Match Accounts
+                    </td>
+                    <td width="33%">
+                        Company Accounts
+                    </td>
+                    <td width="33%">
+                        Selected Accounts
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <select id="amap_list_matches" size="20"></select>                        
+                    </td>
+                    <td >
+                        <select id="amap_list_companyaccounts" size="20">
+                        </select>
+                    </td>
+                    <td>
+                        <div id="amap_div_accountlabel">
+                        </div>
+                    </td>
+                </tr>
+            </table>            
+        </div>
+    </div>
+</div>
+
+<% c++ } else { %>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/mapaccounts/common">Common Accounts</a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapcommon">Map Common Accounts</a></li>
+        <li>|</li>
+        <li><a href="/companies/mapaccounts/mapspecific"><b>Map Company Specific Accounts</b></a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    
+    var baseurl = location.protocol.concat("//").
+            concat(window.location.hostname).concat(":").
+            concat(location.port).concat('/gj/');
+    
+    var fnpopaccounts = function(sel, data, valsel, textsel)
+    {
+        //var jdata = JSON.parse(data);
+        var jdata = data;
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+        {
+            return;
+        }
+        for (var i=1; i != jdata.length; ++i)
+        {
+            //sel.append('<option value="' + jdata[i][valsel] + '">' + jdata[i][textsel] + '</option>');
+            sel.append('<option value="' + jdata[i][valsel] + '">' + jdata[i][textsel] + '(' + jdata[i][valsel] + ')' + '</option>');
+            
+        }
+    };
+
+    var fnpopcoaccount = function(sel, data)
+    {
+        //var jdata = JSON.parse(data);
+        var jdata = data;
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+            return;
+        
+        for (var i=1; i != jdata.length; ++i)
+        {
+            sel.append('<option title="' + jdata[i][0] + '" value="' + jdata[i][0] + '">' + jdata[i][2] + '(' + jdata[i][1] + '/' + jdata[i][0] + ')' + '</option>');
+        }
+    };
+    
+    var fnpopselectedaccounts = function(sel, data)
+    {
+        //var jdata = JSON.parse(data);
+        var jdata = data;
+        sel.empty();
+        if (jdata.length <= 1)    // first is always header
+            return;
+        for (var i=1; i != jdata.length; ++i)
+        {
+            var html = '<div class="ui-state-default" style="padding : 2px;" xbrlid="' + jdata[i][1] + '"' + 
+                'title="' + jdata[i][3] + '">' +
+                '<span class="amap_span_deleteaccount">&cross;</span>' +
+                '<span xbrlid="' + jdata[i][1] + '" class="amap_span_realccount">' + jdata[i][2] + '(' + jdata[i][1] + ')' + '</span>' +
+                '</div>';
+            sel.append(html);
+        }
+    };
+    
+    var fnloadselectedaccounts = function()
+    {
+        var obj = $('#amap_list_matches option:selected');
+        var cik = $('#amap_txt_entercik').val();
+        if (obj && cik!="")
+        {
+            $.post("/companies/mapaccounts/mapspecific", 
+                "match=" + obj.val() + "&cik=" + cik, 
+                function(data)
+                {
+                    fnpopselectedaccounts($("#amap_div_accountlabel"), data);
+                }
+            );
+        }
+    };
+    
+    $(document).ready(function(data)
+    {
+        
+        // populate amap0_list_commonaccounts
+        $.get(baseurl.concat('10010'), function(data)
+            {
+                fnpopaccounts($("#amap_list_matches"), data, 0, 1);
+            }
+        );
+
+        $('#amap_btn_findcik').click(function()
+        {
+            $("#lblaccountvalue").html("");
+            $("amap_div_accountlabel").empty();
+            var val = $("#amap_txt_entercik").val();
+            $('#amap_list_companyaccounts').empty();
+            if (val != "")
+            {
+                $.get(baseurl.concat('10012/').concat(val), function(data, s)
+                {
+                    fnpopcoaccount($('#amap_list_companyaccounts'), data);
+                });
+            }
+        });
+        
+        $('#amap_list_companyaccounts').dblclick(function(e)
+        {
+            if (e.target.tagName == "OPTION")
+            {
+                var t = $(e.target);
+                var cik = $('#amap_txt_entercik').val();
+                $.post('/companies/mapaccounts/mapspecific/add', 
+                "caccount=" + $('#amap_list_matches').val() + "&account=" + t.val() + "&cik=" + cik, 
+                function(data, s)
+                {
+                    if (s == "success")
+                    {
+                        var html = '<div class="ui-state-default" style="padding : 2px;" xbrlid="' + t.val() + '"' + 
+                            'title="' + t.attr("title") + '">' +
+                            '<span class="amap_span_deleteaccount">&cross;</span>' +
+                            '<span xbrlid="' + t.val() + '" class="amap_span_realccount">' + t.text() + '</span>' +
+                            '</div>';
+                        $("#amap_div_accountlabel").append(html);
+                    }
+                });
+            }
+        });
+        
+        var fnloadaccountvalue = function(cik, xbrlid)
+        {
+            $("#lblaccountvalue").html("");
+            var data = [];
+            data.push("cik=" + cik);
+            data.push("xid=" + xbrlid);
+            $.post(baseurl.concat('16'), data.join("&"))
+                .done(function(d)
+                {
+                    console.log(d);
+                    var html = [];
+                    html.push(d["value"]["FY"] + " for FY " + d["year"]);
+                    html.push("<br>");
+                    html.push(d["value"]["Q1"] + " for Q1");
+                    html.push(" / ");
+                    html.push(d["value"]["Q2"] + " for Q1");
+                    html.push(" / ");
+                    html.push(d["value"]["Q3"] + " for Q3");
+                    html.push(" / ");
+                    html.push(d["value"]["Q4"] + " for Q4");
+                    $("#lblaccountvalue").css("color", "black");
+                    $("#lblaccountvalue").html(html);
+                })
+                .error(function(x)
+                {
+                    //alert("Error");
+                    $("#lblaccountvalue").css("color", "red");
+                    $("#lblaccountvalue").html("Matching account not found. Choose an account from 'Company Accounts'.");
+                });
+        };
+    
+        $('#amap_list_matches').change(function()
+        {
+            $("#lblaccountvalue").html("");
+            fnloadselectedaccounts();
+            fnloadaccountvalue($("#amap_txt_entercik").val(), $(this).val());
+        });
+        
+        $('#amap_div_accountlabel').click(function(e)
+        {
+            if ("amap_span_deleteaccount" == e.target.getAttribute("class"))
+            {
+                /*
+                 * to convert to jquery, sorround a $(..) to dom object
+                 * to get a dom object, simply look for the first array element. $(x)[0];
+                 */
+                if (confirm("Do you want to delete this account ?"))
+                {
+                    var cik = $('#amap_txt_entercik').val();
+                    $.post('/companies/mapaccounts/mapspecific/remove', 
+                    "caccount=" + $('#amap_list_matches').val() + "&account=" + $(e.target).parent().attr("xbrlid") + "&cik=" + cik, 
+                    function(data, s)
+                    {
+                        if (s == "success")
+                        {
+                            $(e.target).parent().remove();
+                        }
+                    });
+                }
+            }
+        });
+        
+        $("#amap_div_accountlabel").sortable( { update : function(event, ui)
+            {
+                var prioritizedXbrlIds = [];
+                $(".amap_span_realccount").each(function()
+                {
+                    prioritizedXbrlIds.push($(this).attr("xbrlid"));
+                });
+                var cik = $('#amap_txt_entercik').val();
+                $.post('/companies/mapaccounts/mapspecific/sort', 
+                    "caccount=" + $('#amap_list_matches').val() + "&cik=" + cik + "&accounts=" + prioritizedXbrlIds.join("|")) 
+                .done(function()
+                {
+                    console.log("done");
+                })
+                .error(function()
+                {
+                    console.log("failed");
+                    fnloadselectedaccounts();
+                });
+            }
+        });
+        $("#amap_div_accountlabel").disableSelection();
+        
+        
+        
+    });
+    
+</script>
+
+
+<div id="amap_div_content">
+    <div id="amap_div_searchcik">
+        <label id="amap_lbl_entercik" for="amap_txt_entercik">Enter CIK: </label>
+        <input id="amap_txt_entercik" type="text"/>
+        <button id="amap_btn_findcik">Find</button>
+    </div>
+    <div id="amap_div_inputs">
+        <div id="amap_mappingview">
+            <table style="width:100%;">
+                <tr>
+                    <td width="33%" style="max-width=33%">
+                        Match Accounts
+                    </td>
+                    <td width="33%" style="max-width=33%">
+                        Company Accounts
+                    </td>
+                    <td width="33%" style="max-width=33%">
+                        Selected Accounts
+                    </td>
+                </tr>
+                <tr>
+                    <td style="max-width=33%">
+                        <select id="amap_list_matches" size="20"></select>                        
+                    </td>
+                    <td style="overflow:auto;max-width=33%">
+                        <select id="amap_list_companyaccounts" size="20">
+                        </select>
+                    </td>
+                    <td style="max-width=33%">
+                        <div id="amap_div_accountlabel">
+                        </div>
+                        <div>
+                            <p id="lblaccountvalue" style="font-size:smaller;margin: 5px;border: silver ridge thin">Account Value:
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>     
+        </div>
+    </div>
+</div>
+
+<% c++ } %>
+
+
+<% end template %>
+<% end view %>
+<% end skin %>
+

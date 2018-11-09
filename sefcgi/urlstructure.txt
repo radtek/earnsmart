@@ -1,0 +1,13 @@
+
+The SE fcgi application accepts the urls in the following format:
+
+http://server/../segw.jac/[moduleid]/[functionid]/[optional parameters]
+
+Defined modules and functions:
+
+Modules
+    1.  1   : xbrl
+    Functions 
+        1   : getcompanyinfo
+        2   : getperformance
+    

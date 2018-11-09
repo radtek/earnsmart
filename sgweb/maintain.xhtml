@@ -1,0 +1,51 @@
+<% c++ #include "models.h" %>
+<% skin  sgskin %>
+<% view MaintainView uses sg::web::models::Master %>
+
+<% template render() %>
+<html>
+    <head>
+        <title> 
+            <%= Title %> 
+        </title>
+        <link href="/blob/style.css" rel="stylesheet" type="text/css" media="screen"/>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="/blob/ui.core.js"></script>
+        <script type="text/javascript" src="/blob/ui.combobox.js"></script>
+        <script language="javascript" src="/blob/se.js"></script>
+        <link rel="shortcut icon" href="/blob/favicon.ico" />
+        <link rel="icon" href="/blob/favicon.ico" />
+        <script src="/blob/masteronly.js" lang="javascript"></script>
+    </head>
+    <body>
+        <div id="m_header_section">
+    <div>
+        <div id="header_logo">
+            <h1><a href="/"><span>Smart</span>Earn</a></h1>
+            <p>By SmartGaze<font color="red" title="This application is a development version. The financial numbers displayed may not be accurate in some cases since they are not completely tested/verified.">( Pre-Alpha )</font></p>
+        </div>
+        
+        <div id="header_outer_div">
+            <p>Copyright 2014 <a href="/about">Smartgaze LLC, New Jersey, USA.</a> | <a href="/sitemap">Sitemap</a></p>
+        </div>
+    </div>
+        </div>
+        <div id="m_main_section">
+            <div id="m_main_content">
+                <div style="padding:10pt">
+                    <h3>Web site Maintenance Schedule</h3>
+                    <div style="padding: 30pt; color: green">
+                    <%= get_Error() %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="m_footer_section">   
+            <% include render() using FooterView with footer %>
+        </div>        
+    </body>
+</html>
+<% end template %>
+<% end view %>
+<% end skin %>

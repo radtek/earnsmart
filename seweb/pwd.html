@@ -1,0 +1,53 @@
+<% c++ #include "../sewebmodels/CPwd.h" %>
+<% skin  skdefault %>
+<% view PwdView uses CPwd extends MasterView %>
+
+<% template title() %>Earn Smart | Sign On<% end %>
+
+
+<% template mainContent() %>
+
+<div id="dvSigonControls">
+    
+    <h2>Change Password</h2>
+    <h4>Your email address is <%=EmailAddress%>. Change your password below.</h4>
+    <label class="requireslabel">* - required</label>
+    <div>
+        <div>
+            <input name="signPwd" type="password" placeholder='current password' title="Enter current password">
+            <label class="requireslabel"><%=RequiredStr%></label>
+        </div>
+        <div>
+            <input name="signNewPwd" type="password" placeholder='password' title="Enter new password characters between 8 and 25 characters">
+            <label class="requireslabel"><%=RequiredStr%></label>
+        </div>
+        <div>
+            <input name="signNewPwdConfirm" type="password" placeholder='confirm password' title="Confirm new password">
+            <label class="requireslabel"><%=RequiredStr%></label>
+        </div>
+        <div>
+            <button>Change Password</button>
+        </div>
+        <% if not get_IsValid() %>
+        <% c++ string s = content.CommonValidationText(); %>
+        <% c++ if (!s.empty()) { %>
+        <div>
+            <label class="validationtextlabel"><% c++ out() << s; %></label>
+        </div>
+        <% c++ } %>
+        <% end %>
+        <div>
+            <hr>
+            <h4>
+            Do you want to reset password again ? 
+            </h4>
+            Click <a href="/resetpwd">here</a> to reset your password again.
+        </div>
+    </div>
+</div>
+
+<% end template %>
+
+
+<% end view %>
+<% end skin %>

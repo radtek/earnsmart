@@ -1,0 +1,225 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanySummaryView uses sg::web::models::CompanySummary %>
+<% template render() %>
+<div id="fdm_subsection_header">
+
+    <div class="fdmcosumcontainer">
+        <div>
+            <div class="fdmcosumformula_selected">
+                <script>
+                    function drawVisualization0() 
+                    {
+                        
+                        var url = location.protocol.concat("//").
+                                concat(window.location.hostname).concat(":").
+                                concat(location.port).concat('/gj/7/<%= ProductId %>');
+                        
+                        $.getJSON(url, function(findata)
+                        {
+                            if (findata.length && findata.length < 2)
+                            {
+                                document.getElementById('cchart0').style.visibility = "hidden";
+                                return;
+                            }
+                            
+                            var data = google.visualization.arrayToDataTable(findata);                        
+                        
+                            var options = 
+                            {
+                                title : '',
+                                vAxis: {title: ""},
+                                hAxis: {title: "", allowContainerBoundaryTextCufoff : true},
+                                seriesType: "bars",
+                                series: {
+                                    0 : { color : "blue" }, 
+                                    1 : { color : "red" }, 
+                                    2 : {type: "line", curveType : "function", pointSize : 2, color: "green", targetAxisIndex : 1 } 
+                                },
+                                vAxes:{ 1 : { title:'Cash/Eqv.', textStyle:{color: 'green'} } }
+                            };
+
+                            var chart0 = new google.visualization.ComboChart(document.getElementById('cchart0'));
+                            chart0.draw(data, options);
+                            
+                        });
+                     
+                    }
+                     
+                    google.setOnLoadCallback(drawVisualization0);                    
+                     
+                </script>
+                <div class="floatbox">
+                    <text class="fdmcosumformula_header">Balance Sheet</text>
+                    <div class="fdmcosumformula_config" id="dashboard0">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="fdmcosumchart" id="cchart0">Loading chart...</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+                
+                <script>
+                    function drawVisualization1() 
+                    {
+                        
+                        var url = location.protocol.concat("//").
+                                concat(window.location.hostname).concat(":").
+                                concat(location.port).concat('/gj/8/<%= ProductId %>');
+                        
+                        $.getJSON(url, function(findata)
+                        {
+                            if (findata.length && findata.length < 2)
+                            {
+                                document.getElementById('cchart1').style.visibility = "hidden";
+                                return;
+                            }
+                            
+                            var data = google.visualization.arrayToDataTable(findata);                        
+                        
+                            var options = 
+                            {
+                                title : '',
+                                vAxis: {title: ""},
+                                hAxis: {title: ""},
+                                seriesType: "bars",
+                                series: {
+                                    0 : { color : "blue" }, 
+                                    1 : { color : "red" }, 
+                                    2 : { type: "line", curveType : "function", color: "green", pointSize : 2, targetAxisIndex : 1 } 
+                                },
+                                vAxes:{ 1 : { title:'Profit', textStyle:{color: 'green'} } }
+                            };
+
+                            var chart1 = new google.visualization.ComboChart(document.getElementById('cchart1'));
+                            chart1.draw(data, options);
+                            
+                        });
+                     
+                    }
+                     
+                    google.setOnLoadCallback(drawVisualization1);                    
+                     
+                </script>
+                <div class="floatbox">
+                    <text class="fdmcosumformula_header">Income</text>
+                    <div class="fdmcosumformula_config" id="dashboard1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="fdmcosumchart" id="cchart1">Loading chart...</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+                
+                <script>
+                    function drawVisualization2() 
+                    {
+                        
+                        var url = location.protocol.concat("//").
+                                concat(window.location.hostname).concat(":").
+                                concat(location.port).concat('/gj/9/<%= ProductId %>');
+                        
+                        $.getJSON(url, function(findata)
+                        {
+                            if (findata.length && findata.length < 2)
+                            {
+                                document.getElementById('fdmchartcashflow').style.visibility = "hidden";
+                                document.getElementById('fdmchartshares').style.visibility = "hidden";
+                                return;
+                            }
+                            
+                            
+                            var data = google.visualization.arrayToDataTable(findata);                        
+                            var data0 = data.clone();
+                            
+                            if (data0.getNumberOfColumns() > 4)
+                                data0.removeColumns(4, 2);
+                            
+                            var options = 
+                            {
+                                title : 'Net cash used in ... ',
+                                vAxis: {title: ""},
+                                hAxis: {title: ""},
+                                seriesType: "line",
+                                pointSize : 2, 
+                                series: {
+                                    0 : { color : "blue", curveType: "function" }, 
+                                    1 : { color : "red", curveType: "function"  }, 
+                                    2 : {color: "green", curveType: "function" } 
+                                }
+                            };
+
+                            var chart = new google.visualization.ComboChart(document.getElementById('cchart2'));
+                            chart.draw(data0, options);
+                            
+                            if (data.getNumberOfColumns() < 5 )
+                            {
+                                document.getElementById('fdmchartshares').style.visibility = "hidden";
+                                return;
+                            }
+                            
+                            var data1 = data.clone();
+                            data1.removeColumns(1, 3);
+                            
+                            var options1 = 
+                            {
+                                title : "",
+                                vAxis: {title: ""},
+                                hAxis: {title: ""},
+                                seriesType: "bars",
+                                series: 
+                                    {
+                                        0 : { color : "blue"},
+                                        1 : { type : "line", curveType : "function", pointSize : 2,  color : "green", targetAxisIndex : 1 }
+                                    },
+                                vAxes:{ 1 : { title:'EPS', textStyle: {color: 'green'} } }                                    
+                            };
+                            var chart1 = new google.visualization.ComboChart(document.getElementById('cchart3'));
+                            chart1.draw(data1, options1);
+                            
+                            
+                        });
+                     
+                    }
+                     
+                    google.setOnLoadCallback(drawVisualization2);                    
+                     
+                </script>
+                <div class="floatbox" id="fdmchartcashflow">
+                    <text class="fdmcosumformula_header">Cash Flow</text>
+                    <div class="fdmcosumformula_config" id="dashboard2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="fdmcosumchart" id="cchart2">Loading chart...</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="floatbox" id="fdmchartshares">
+                    <text class="fdmcosumformula_header">Shares</text>
+                    <div class="fdmcosumformula_config" id="dashboard3">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="fdmcosumchart" id="cchart3">Loading chart...</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

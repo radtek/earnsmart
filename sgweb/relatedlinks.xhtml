@@ -1,0 +1,21 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view RelatedLinksView uses sg::web::models::Master %>
+<% template render() %>
+    <text class="sidebarheader">Related Links</text>
+    <div class="se_div_box_with_border">
+        <table class="recentfinds">
+            <% foreach pair in relatedLinks %>
+            <% item %>
+            <tr>
+                <td class="recentfinds">
+                    <a href="<%= pair.second %>" target="_blank"><%= pair.first %></a>
+                </td>
+            </tr>
+            <% end %>
+            <% end %>
+        </table>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

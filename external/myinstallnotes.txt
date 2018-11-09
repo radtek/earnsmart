@@ -1,0 +1,4 @@
+./configure --prefix=/usr --with-mysql-lib=/usr/lib/x86_64-linux-gnu
+make
+sudo make install
+

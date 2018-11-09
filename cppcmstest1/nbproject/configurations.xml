@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>content.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="Images" projectFiles="true">
+      <itemPath>favicon.ico</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>intro.tmpl</itemPath>
+      <itemPath>master.tmpl</itemPath>
+      <itemPath>message.tmpl</itemPath>
+      <itemPath>news.tmpl</itemPath>
+      <itemPath>page.tmpl</itemPath>
+      <itemPath>sggreen.css</itemPath>
+      <itemPath>sgscript.js</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.cpp</itemPath>
+      <itemPath>my_skin.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>config.js</itemPath>
+    </logicalFolder>
+    <itemPath>fcgiconfig.js</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/include/mysql++</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>log4cxx</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>zmq</linkerLibLibItem>
+            <linkerLibLibItem>mysqlpp</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>mysqlclient</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="content.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="favicon.ico" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fcgiconfig.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="intro.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="master.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="message.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="my_skin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="news.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="page.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sggreen.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sgscript.js" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="content.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="favicon.ico" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fcgiconfig.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="intro.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="master.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="message.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="my_skin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="news.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="page.tmpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sggreen.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sgscript.js" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

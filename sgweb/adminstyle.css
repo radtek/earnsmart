@@ -1,0 +1,435 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2014, 10:23:42 AM
+    Author     : santony
+*/
+
+
+body 
+{
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    padding: 0;
+    color: #616161;
+    background: white;
+    font: 0.8em arial, helvetica, sans-serif;
+}
+
+h1, h2, h3 
+{
+    margin-top: 0;
+    color: #014421;
+}
+
+h1 
+{
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+h2 
+{
+    font-size: 1.6em;
+}
+
+h3 
+{
+    font-size: 1em;
+}
+
+a 
+{
+    text-decoration: none;
+    color: #014421;
+}
+
+a:hover 
+{
+    border-bottom: none;
+}
+
+#amap_selections
+{
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    height: 30px;
+}
+
+#amap_selections ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+#amap_selections li 
+{
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+#amap_div_content
+{
+    position: absolute;
+    left : 10px;
+    right : 10px;
+    top: 150px;
+    bottom: 10px;
+    width: 100%;
+}
+
+#amap_div_searchcik
+{
+    position: absolute;
+    left: 5px;
+    top:5px;
+    right: 5px;
+    height: 50px;
+}
+
+#amap_lbl_entercik
+{
+    position: absolute;
+    left: 5px;
+    top : 5px;
+    text-align: right;
+    width: 75px;
+}
+
+#amap_txt_entercik
+{
+    position: absolute;
+    left:85px;
+    top:5px;
+    width: 100px;
+}
+
+#amap_btn_findcik
+{
+    position: absolute;
+    left:190px;
+    top:5px;
+    width: 50px;
+}
+
+#amap_div_inputs
+{
+    position: absolute;
+    left : 5px;
+    right: 5px;
+    bottom: 5px;
+    top: 50px;
+    width: 100%;
+}
+
+#amap_lbl_selectmatch
+{
+    position: absolute;
+    text-align: right;
+    left:5px;
+    width: 200px;
+    top: 10px;
+}
+
+#amap_cmb_selectmatch
+{
+    position: absolute;
+    top: 10px;
+    left: 210px;
+    width : 200px;
+}
+
+#amap_managematches
+{
+    position: absolute;
+    top: 10px;
+    left : 415px;
+}
+
+#amap_mappingview
+{
+    position: absolute;
+    left: 10px;
+    top : 80px;
+    right: 10px;
+    bottom: 10px;
+}
+
+#amap_lbl_matches
+{
+    position: absolute;
+    left: 10px;
+    top : 10px;
+}
+
+#amap_list_matches
+{
+    min-height: 300px;
+    width : 100%;
+    resize: both;
+}
+
+#amap_lbl_companyaccounts
+{
+    position: absolute;
+    top : 10px;
+    left : 375px;
+}
+
+#amap_list_companyaccounts
+{
+    min-height: 300px;
+    width: 100%;
+    max-width: 600px;
+    resize: both;
+    overflow: auto;
+}
+
+#amap_lbl_accountlabel
+{
+    position: absolute;
+    top : 350px;
+    left: 10px;
+    width : 410px;
+    height: 75px;
+}
+
+#amap_btn_savemapping
+{
+    position: absolute;
+    top : 0px;
+    left: 530px;
+    width :75px;
+}
+
+#amap0_lbl_commonaccounts
+{
+    position: absolute;
+    left: 10px;
+    top : 50px;
+    width : 150px;
+    height: 25px;
+}
+
+#amap0_list_commonaccounts
+{
+    position: absolute;
+    left: 10px;
+    top : 80px;
+    width : 250px;
+    height: 400px;
+}
+
+#amap0_btn_add
+{
+    position: absolute;
+    left: 270px;
+    top : 50px;
+    width : 75px;
+}
+
+#amap0_btn_cancel
+{
+    position: absolute;
+    left: 360px;
+    top : 50px;
+    width : 75px;
+    visibility: hidden;
+}
+
+#amap0_txt_accountname
+{
+    position: absolute;
+    left: 270px;
+    top : 90px;
+    width : 300px;
+}
+
+#amap_div_accountlabel
+{
+    min-height: 300px;
+    width : 100%;
+    overflow: auto;
+    border: thin lightblue solid;
+    padding: 5px;
+    resize: both;
+
+}
+
+#amap_div_accountlabel div
+{
+    border: 1px solid lightgray;
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.5em; 
+}
+#amap_lbl_selections
+{
+    position: absolute;
+    top : 10px;
+    left: 645px;
+}
+
+.amap_span_deleteaccount
+{
+    cursor: pointer;
+}
+
+.amap_span_realccount
+{
+}
+
+.amap_div_selectedaccountscontainer
+{
+    padding : 2px;
+}
+
+#amap_div_accountlabel span
+{
+    margin: 3px;
+}
+
+.ui-tabs
+{
+    border: thin solid lightgray;
+}
+
+.ui-tabs-nav
+{
+}
+
+.ui-tabs-active
+{
+    background: gray;
+}
+
+.ui-tabs-panel
+{
+    background-color: gray;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+.ui-tabs-active a
+{
+    color: white;
+}
+
+.pred_tab_panel
+{
+    background: lightgray;
+}
+
+.olindicatorselections .ui-selecting 
+{ 
+    background: #FECA40; 
+}
+
+.olindicatorselections .ui-selected 
+{ 
+    background: #F39814; 
+    color: white; 
+}
+
+.olindicatorselections 
+{ 
+    margin: 0; 
+    padding: 0; 
+}
+
+.draggableportet
+{
+    margin: 0 1em 1em 0;
+    padding: 0.3em;    
+    float: left; 
+    width: 220px; 
+    height: 150px; 
+}
+
+.dvdragableitem 
+{ 
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;    
+    text-align: center; 
+    text-wrap: normal;
+}
+
+ .draggableportletcontent 
+ {
+    padding: 0.4em;
+ }
+
+.draggablepanel .ui-widget-content
+{
+    background: lightgray;
+}
+
+.droppedattributepanel
+{
+    border: thin solid lightgray;
+    font-size: smaller;
+    height: 100%;
+    width:100%;
+}
+
+.pred_cmbselectsetup
+{
+    width : 300px;
+    height: 28px;
+}
+
+.pred_btnsave 
+{
+    height: 28px;
+    font-size: smaller;
+}
+
+.predtie_borderline
+{
+    border-left: solid thin lightgray;
+}
+
+.predtie_cmb
+{
+    min-width: 100px;
+    width: auto;
+}
+
+.accounts_cmb
+{
+    min-width: 100px;
+    width: auto;
+}
+
+#lblCompanyDetails
+{
+    width: available;
+    height: 300px;
+    overflow: auto;
+}
+
+.EcoDataGridOddRow
+{
+    background-color: lightgray;
+}
+
+.EcoDataGridHoverRow
+{
+    color: #014421;
+}
+
+
+.btneupdate
+{
+    
+}

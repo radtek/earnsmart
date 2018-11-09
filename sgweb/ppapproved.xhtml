@@ -1,0 +1,203 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view PPApprovedView uses sg::web::models::Register  %>
+<% template render() %>
+    <div style="padding:20pt">
+        <style>
+             .reg_inputcontrols 
+             {
+                 width: 200pt;
+             }
+
+             .reg_btns 
+             {
+                 width: 100pt;
+                 margin: 10pt;
+             }
+
+             div.cls_reg_dvInputRed 
+             {
+                 border-right-color: red;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+             }
+
+             div.cls_reg_dvInputYellow 
+             {
+                 border-right-color: yellow;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+             }
+
+             div.cls_reg_dvInputOrange
+             {
+                 border-right-color: orange;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+             }
+
+             div.cls_reg_dvInputGreen 
+             {
+                 border-right-color: green;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+             }
+
+             div.cls_reg_dvInput
+             {
+                 border-right-width: 0px;
+             }
+
+             label.cls_reg_validity
+             {
+                 font-size: small;
+             }
+             
+             td.cls_reg_cell_lbl
+             {
+                 width:220pt;
+             }
+             
+             td.cls_reg_cell_ipt
+             {
+                 width:150pt;
+             }
+        </style>
+
+        <script>
+            // cache
+            var sfirstname = "<%= get_User()->get_FirstName() %>", 
+                slastname = "<%= get_User()->get_LastName() %>";
+                var sstreet1 = "<%= get_UserAddress()->get_Street() %>", 
+                sstreet2 = "<%= get_UserAddress()->get_Street2() %>", 
+                scity  = "<%= get_UserAddress()->get_City() %>", 
+                sstate = "<%= get_UserAddress()->get_State() %>", 
+                scountry = "<%= get_UserAddress()->get_Country() %>", 
+                spcode = "<%= get_UserAddress()->get_PostalCode() %>";
+        
+            var baseurl = "";
+
+        </script>
+        
+        <script src="/blob/ppapproved.js"></script>
+
+        <form id="ppapprove_form" method="post">
+        	<input type="hidden" id="reg_hdedit" name="hdedit" value=""/>
+            <h3>User Registration - Review Information</h3>
+            <div style="padding-left:10pt;padding-right:10pt">
+                Thank you for accepting trial subscription service. Please review your
+                information provided below. If they are not correct, click 
+                <a href="javascript::void()" onclick="alloweditdetails()">here</a> to make changes.
+            </div>
+            <div style="padding:10pt">
+                <h4 style="text-decoration:underline">Name</h4>
+                <div style="padding:10pt">
+                    <table>
+                       <tr>
+                           <td class="cls_reg_cell_lbl">First Name (Required): </td>
+                           <td class="cls_reg_cell_ipt">
+                               <div id="dv_reg_firstname" class="cls_reg_dvInput">
+                               </div>
+                           </td>
+                           <td>
+                               <label class="cls_reg_validity" id="ppa_lblfirstname"> </label>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td class="cls_reg_cell_lbl">Last Name (Required): </td>
+                           <td class="cls_reg_cell_ipt">
+                               <div id="dv_reg_lastname" class="cls_reg_dvInput">
+                                   
+                               </div>
+                           </td>
+                           <td>
+                               <label class="cls_reg_validity" id="ppa_lbllastname"> </label>
+                           </td>
+                       </tr>
+                    </table>
+                </div>
+            </div>
+             <div id="reg_dvaddress" style="padding:10pt">
+                 <h4 style="text-decoration:underline">Address</h4>
+                 <div style="padding:10pt;">
+                     <table>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 Street1 (Required):
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_street1" class="cls_reg_dvInput">
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 Street2:
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_street2" class="cls_reg_dvInput">
+                                     
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 City (Required):
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_city" class="cls_reg_dvInput">
+                                     
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 Country (Required):
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_countries" class="cls_reg_dvInput">
+                                    
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 State/Province (Required):
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_states" class="cls_reg_dvInput">
+                                    
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="cls_reg_cell_lbl">
+                                 Postal Code (Required):
+                             </td>
+                             <td class="cls_reg_cell_ipt">
+                                 <div id="dv_reg_pcode" class="cls_reg_dvInput">
+                                     
+                                 </div>
+                             </td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+            <div style="padding: 10pt">
+                Please click 'Next' below to save your information and start a trial subscription profile with Paypal. 
+                Click 'Cancel' button if you think you're not ready yet for a trial subscription. 
+                Your trial subscription profile will not be saved when you cancel.
+            </div>                
+            <div style="padding:10pt; border-top: 2px solid #014421">
+                <table style="padding:10pt">
+                    <tr>
+                        <td align="left" style="width:100pt"><button id="ppa_btnCancel" class="reg_btns">Cancel</button></td>
+                        <td align="right"style="width:100pt"><button id="ppa_btnNext" disabled class="reg_btns">Next</button></td>
+                    </tr>
+                </table>
+            </div>
+         </form>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

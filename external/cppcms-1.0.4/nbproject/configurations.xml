@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="booster">
+        <df name="lib">
+          <df name="aio">
+            <df name="src">
+              <in>acceptor.cpp</in>
+              <in>aio_category.cpp</in>
+              <in>basic_io_device.cpp</in>
+              <in>basic_socket.cpp</in>
+              <in>deadline_timer.cpp</in>
+              <in>endpoint.cpp</in>
+              <in>io_service.cpp</in>
+              <in>reactor.cpp</in>
+              <in>select_iterrupter.cpp</in>
+              <in>stream_socket.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_endpoint.cpp</in>
+              <in>test_event_loop.cpp</in>
+              <in>test_prefork.cpp</in>
+              <in>test_reactor.cpp</in>
+              <in>test_socket.cpp</in>
+              <in>test_timer.cpp</in>
+            </df>
+          </df>
+          <df name="backtrace">
+            <df name="src">
+              <in>backtrace.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_backtrace.cpp</in>
+            </df>
+          </df>
+          <df name="function">
+            <df name="test">
+              <in>test_callback.cpp</in>
+              <in>test_function.cpp</in>
+            </df>
+          </df>
+          <df name="iostreams">
+            <df name="src">
+              <in>streambuf.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_streambuf.cpp</in>
+            </df>
+          </df>
+          <df name="locale">
+            <df name="src">
+              <df name="encoding">
+                <in>codepage.cpp</in>
+              </df>
+              <df name="icu">
+                <in>boundary.cpp</in>
+                <in>codecvt.cpp</in>
+                <in>collator.cpp</in>
+                <in>conversion.cpp</in>
+                <in>date_time.cpp</in>
+                <in>formatter.cpp</in>
+                <in>icu_backend.cpp</in>
+                <in>numeric.cpp</in>
+                <in>time_zone.cpp</in>
+              </df>
+              <df name="posix">
+                <in>codecvt.cpp</in>
+                <in>collate.cpp</in>
+                <in>converter.cpp</in>
+                <in>numeric.cpp</in>
+                <in>posix_backend.cpp</in>
+              </df>
+              <df name="shared">
+                <in>date_time.cpp</in>
+                <in>format.cpp</in>
+                <in>formatting.cpp</in>
+                <in>generator.cpp</in>
+                <in>ids.cpp</in>
+                <in>localization_backend.cpp</in>
+                <in>message.cpp</in>
+                <in>mo_lambda.cpp</in>
+              </df>
+              <df name="std">
+                <in>codecvt.cpp</in>
+                <in>collate.cpp</in>
+                <in>converter.cpp</in>
+                <in>numeric.cpp</in>
+                <in>std_backend.cpp</in>
+              </df>
+              <df name="util">
+                <in>codecvt_converter.cpp</in>
+                <in>default_locale.cpp</in>
+                <in>gregorian.cpp</in>
+                <in>info.cpp</in>
+                <in>locale_data.cpp</in>
+              </df>
+            </df>
+            <df name="test">
+              <in>test_boundary.cpp</in>
+              <in>test_codepage.cpp</in>
+              <in>test_codepage_converter.cpp</in>
+              <in>test_collate.cpp</in>
+              <in>test_config.cpp</in>
+              <in>test_convert.cpp</in>
+              <in>test_date_time.cpp</in>
+              <in>test_formatting.cpp</in>
+              <in>test_generator.cpp</in>
+              <in>test_icu_vs_os_timezone.cpp</in>
+              <in>test_ios_prop.cpp</in>
+              <in>test_message.cpp</in>
+              <in>test_posix_collate.cpp</in>
+              <in>test_posix_convert.cpp</in>
+              <in>test_posix_formatting.cpp</in>
+              <in>test_std_collate.cpp</in>
+              <in>test_std_convert.cpp</in>
+              <in>test_std_formatting.cpp</in>
+              <in>test_utf.cpp</in>
+            </df>
+          </df>
+          <df name="log">
+            <df name="src">
+              <in>log.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_log.cpp</in>
+            </df>
+          </df>
+          <df name="nowide">
+            <df name="src">
+              <in>convert.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_nowide.cpp</in>
+            </df>
+          </df>
+          <df name="ptime">
+            <df name="src">
+              <in>ctime.cpp</in>
+              <in>posix_time.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_posix_time.cpp</in>
+            </df>
+          </df>
+          <df name="regex">
+            <df name="src">
+              <in>pcre_regex.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_regex.cpp</in>
+            </df>
+          </df>
+          <df name="shared_object">
+            <df name="src">
+              <in>shared_object.cpp</in>
+            </df>
+          </df>
+          <df name="smart_ptr">
+            <df name="src">
+              <in>atomic_counter.cpp</in>
+              <in>sp_counted_base.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_atomic_counter.cpp</in>
+              <in>test_shared_ptr.cpp</in>
+              <in>test_sp_counter.cpp</in>
+            </df>
+          </df>
+          <df name="system">
+            <df name="src">
+              <in>posix_error.cpp</in>
+              <in>windows_error.cpp</in>
+            </df>
+          </df>
+          <df name="thread">
+            <df name="src">
+              <in>pthread.cpp</in>
+            </df>
+            <df name="test">
+              <in>test_fork.cpp</in>
+              <in>test_thread.cpp</in>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="cppcms_boost">
+        <df name="src">
+          <in>gzip.cpp</in>
+          <in>zlib.cpp</in>
+        </df>
+      </df>
+      <df name="src">
+        <in>aes.cpp</in>
+        <in>aes_encryptor.cpp</in>
+        <in>application.cpp</in>
+        <in>applications_pool.cpp</in>
+        <in>archive.cpp</in>
+        <in>base64.cpp</in>
+        <in>base_content.cpp</in>
+        <in>base_view.cpp</in>
+        <in>cache_interface.cpp</in>
+        <in>cache_over_ip.cpp</in>
+        <in>cache_pool.cpp</in>
+        <in>cache_server_main.cpp</in>
+        <in>cache_storage.cpp</in>
+        <in>cgi_api.cpp</in>
+        <in>copy_filter.cpp</in>
+        <in>cppcms_config_find_param.cpp</in>
+        <in>cppcms_error.cpp</in>
+        <in>cppcms_error_category.cpp</in>
+        <in>crypto.cpp</in>
+        <in>daemonize.cpp</in>
+        <in>encoding.cpp</in>
+        <in>fastcgi_api.cpp</in>
+        <in>filters.cpp</in>
+        <in>form.cpp</in>
+        <in>forwarder.cpp</in>
+        <in>hello_world.cpp</in>
+        <in>hmac_encryptor.cpp</in>
+        <in>http_api.cpp</in>
+        <in>http_content_type.cpp</in>
+        <in>http_context.cpp</in>
+        <in>http_cookie.cpp</in>
+        <in>http_file.cpp</in>
+        <in>http_request.cpp</in>
+        <in>http_response.cpp</in>
+        <in>internal_file_server.cpp</in>
+        <in>json.cpp</in>
+        <in>make_key.cpp</in>
+        <in>md5.cpp</in>
+        <in>mount_point.cpp</in>
+        <in>rpc_json.cpp</in>
+        <in>scgi_api.cpp</in>
+        <in>send_timeout.cpp</in>
+        <in>service.cpp</in>
+        <in>session_cookies.cpp</in>
+        <in>session_dual.cpp</in>
+        <in>session_interface.cpp</in>
+        <in>session_memory_storage.cpp</in>
+        <in>session_pool.cpp</in>
+        <in>session_posix_file_storage.cpp</in>
+        <in>session_sid.cpp</in>
+        <in>session_tcp_storage.cpp</in>
+        <in>tcp_cache_client.cpp</in>
+        <in>tcp_cache_server.cpp</in>
+        <in>tcp_connector.cpp</in>
+        <in>tcp_messenger.cpp</in>
+        <in>thread_pool.cpp</in>
+        <in>urandom.cpp</in>
+        <in>url_dispatcher.cpp</in>
+        <in>url_mapper.cpp</in>
+        <in>util.cpp</in>
+        <in>views_pool.cpp</in>
+        <in>xss.cpp</in>
+      </df>
+      <df name="tests">
+        <in>base64_test.cpp</in>
+        <in>cache_backend_test.cpp</in>
+        <in>cache_frontend_test.cpp</in>
+        <in>content_type_parser_test.cpp</in>
+        <in>cookie_test.cpp</in>
+        <in>copy_filter_test.cpp</in>
+        <in>cppcms_service_test.cpp</in>
+        <in>disco_test.cpp</in>
+        <in>encryptor_test.cpp</in>
+        <in>file_server_test.cpp</in>
+        <in>form_test.cpp</in>
+        <in>forwarder_test.cpp</in>
+        <in>gzip_test.cpp</in>
+        <in>http_timeouts_test.cpp</in>
+        <in>json_test.cpp</in>
+        <in>jsonrpc_test.cpp</in>
+        <in>loadable_storage.cpp</in>
+        <in>loadable_storage_test.cpp</in>
+        <in>mount_point_test.cpp</in>
+        <in>multipart_parser_test.cpp</in>
+        <in>proto_test.cpp</in>
+        <in>rewrite_test.cpp</in>
+        <in>secure_post_test.cpp</in>
+        <in>serialization_test.cpp</in>
+        <in>session_interface_test.cpp</in>
+        <in>status_test.cpp</in>
+        <in>storage_test.cpp</in>
+        <in>tc_test.cpp</in>
+        <in>url_mapper_test.cpp</in>
+        <in>xss_test.cpp</in>
+      </df>
+      <in>skin1.cpp</in>
+      <in>skin2.cpp</in>
+      <in>skin3.cpp</in>
+      <in>tc_skin.cpp</in>
+      <in>tc_skin_a.cpp</in>
+      <in>tc_skin_b.cpp</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=c++11"/>
+        <element flagsID="1" commonFlags="-std=c++11 -fPIC"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="booster/lib/aio/src/acceptor.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/aio_category.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/basic_io_device.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/basic_socket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/deadline_timer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/endpoint.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/io_service.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/reactor.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/select_iterrupter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/src/stream_socket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_endpoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_event_loop.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_prefork.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_reactor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_socket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/aio/test/test_timer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/backtrace/src/backtrace.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/backtrace/test/test_backtrace.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/function/test/test_callback.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/function/test/test_function.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/iostreams/src/streambuf.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/iostreams/test/test_streambuf.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/encoding/codepage.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/boundary.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/codecvt.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/collator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/conversion.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/date_time.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/formatter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/icu_backend.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/numeric.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/icu/time_zone.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/posix/codecvt.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/posix/collate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/posix/converter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/posix/numeric.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/posix/posix_backend.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/date_time.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/format.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/formatting.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/generator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/ids.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/localization_backend.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/message.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/shared/mo_lambda.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/std/codecvt.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/std/collate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/std/converter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/std/numeric.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/std/std_backend.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/util/codecvt_converter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/util/default_locale.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/util/gregorian.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/util/info.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/src/util/locale_data.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_boundary.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_codepage.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_codepage_converter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_collate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_config.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_convert.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_date_time.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_formatting.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_generator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_icu_vs_os_timezone.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_ios_prop.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_message.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_posix_collate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_posix_convert.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_posix_formatting.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_std_collate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_std_convert.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_std_formatting.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/locale/test/test_utf.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/log/src/log.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/log/test/test_log.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/nowide/src/convert.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/nowide/test/test_nowide.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/ptime/src/ctime.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/ptime/src/posix_time.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/ptime/test/test_posix_time.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/regex/src/pcre_regex.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/regex/test/test_regex.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/shared_object/src/shared_object.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/smart_ptr/src/atomic_counter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/smart_ptr/src/sp_counted_base.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/smart_ptr/test/test_atomic_counter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/smart_ptr/test/test_shared_ptr.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/smart_ptr/test/test_sp_counter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/system/src/posix_error.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/system/src/windows_error.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/thread/src/pthread.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/thread/test/test_fork.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="booster/lib/thread/test/test_thread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cppcms_boost/src/gzip.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="cppcms_boost/src/zlib.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <folder path="0">
+        <cTool>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
+      </folder>
+      <folder path="0/booster">
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>booster</pElem>
+            <pElem>booster/lib/test</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>BOOSTER_LOCALE_NO_WINAPI_BACKEND</Elem>
+            <Elem>BOOSTER_LOCALE_WITH_ICONV</Elem>
+            <Elem>BOOSTER_LOCALE_WITH_ICU</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/cppcms_boost">
+        <ccTool>
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src">
+        <ccTool>
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/tests">
+        <ccTool>
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <item path="skin1.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="skin2.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="skin3.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+            <Elem>DLL_EXPORT</Elem>
+            <Elem>skin3_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/aes.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/aes_encryptor.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/application.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/applications_pool.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/archive.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/base64.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/base_content.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/base_view.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cache_interface.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cache_over_ip.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cache_pool.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cache_server_main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cache_storage.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cgi_api.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/copy_filter.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/cppcms_config_find_param.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cppcms_error.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/cppcms_error_category.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/crypto.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/daemonize.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/encoding.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/fastcgi_api.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/filters.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/form.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/forwarder.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/hello_world.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/hmac_encryptor.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/http_api.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/http_content_type.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/http_context.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/http_cookie.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/http_file.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/http_request.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/http_response.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/internal_file_server.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/json.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/make_key.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/md5.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/mount_point.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/rpc_json.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/scgi_api.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/send_timeout.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/service.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/session_cookies.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_dual.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_interface.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_memory_storage.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_pool.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_posix_file_storage.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_sid.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/session_tcp_storage.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tcp_cache_client.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tcp_cache_server.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tcp_connector.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tcp_messenger.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/thread_pool.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/urandom.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/url_dispatcher.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/url_mapper.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/util.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/views_pool.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/xss.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>cppcms_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="tc_skin.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+            <Elem>tc_skin_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="tc_skin_a.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+            <Elem>tc_skin_a_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="tc_skin_b.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>booster</pElem>
+            <pElem>src</pElem>
+            <pElem>private</pElem>
+            <pElem>cppcms_boost</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CPPCMS_BOOST_ALL_NO_LIB</Elem>
+            <Elem>tc_skin_b_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="tests/base64_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/cache_backend_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/cache_frontend_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/content_type_parser_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/cookie_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/copy_filter_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/cppcms_service_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/disco_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/encryptor_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/file_server_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/form_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/forwarder_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/gzip_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/http_timeouts_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/json_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/jsonrpc_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/loadable_storage.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>loadable_storage_EXPORTS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="tests/loadable_storage_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/mount_point_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/multipart_parser_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/proto_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/rewrite_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/secure_post_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/serialization_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/session_interface_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/status_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/storage_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/tc_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/url_mapper_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/xss_test.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.cnd.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>seweb</name>
+            <c-extensions/>
+            <cpp-extensions>cpp</cpp-extensions>
+            <header-extensions>h</header-extensions>
+            <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects>
+                <make-dep-project>../semysql</make-dep-project>
+                <make-dep-project>../seeconomy</make-dep-project>
+                <make-dep-project>../sesecurities</make-dep-project>
+                <make-dep-project>../semain</make-dep-project>
+                <make-dep-project>../sewebmodels</make-dep-project>
+                <make-dep-project>../secubist</make-dep-project>
+                <make-dep-project>../setraining</make-dep-project>
+                <make-dep-project>../senet</make-dep-project>
+                <make-dep-project>../sexbrl</make-dep-project>
+                <make-dep-project>../seadmin</make-dep-project>
+                <make-dep-project>../seglobal</make-dep-project>
+                <make-dep-project>../external/mariadbpp</make-dep-project>
+                <make-dep-project>../seann</make-dep-project>
+            </make-dep-projects>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>Debug</name>
+                    <type>1</type>
+                </confElem>
+                <confElem>
+                    <name>Release</name>
+                    <type>1</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>

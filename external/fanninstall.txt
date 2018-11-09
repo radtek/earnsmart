@@ -1,0 +1,29 @@
+Installing FANN
+
+Copies of FANN can be obtained from our Download page.
+
+FANN is available under the terms of the GNU Lesser General Public License.
+
+FANN bindings to several other programming languages is also available from the Language Bindings page.
+
+Windows Installation
+FANN includes prebuilt DLL and LIB files as well as prebuilt executables for some of the examples. To use these in your own project, simply reference the DLL/LIB files as well as the header files.
+
+To compile FANN and the examples yourself, you will need Visual Studio 2010 or use the Cross Platform Install method described below.
+
+To build the library and examples with Visual Studio 2010, first navigate to the VS2010 directory in the FANN distribution and open the fann.sln solution. In the Visual Studio menu bar, choose “Build” -> “Build Solution”. When the build process is complete, the library and examples can be found in the “bin” directory.
+
+Cross Platform Install
+The FANN cross platform install system is based on CMAKE and have been tested on ubuntu Linux and Mac OSX, but should work on other platforms too. Once you have installed CMAKE, you can execute the following commands, in the FANN directory, to compile and install FANN.
+
+cmake .
+sudo make install
+
+Once you have installed the library you can test it out by going to the examples directory and type make runtest, which will compile the examples and run a few of them to test that everything is working.
+
+Sometimes you want to install to a different location than the default /usr/local. You can do that by adding the CMAKE_INSTALL_PREFIX to cmake, by for example installing to /usr like this cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr .
+
+When all else fails
+FANN is pretty simple and does not require a lot of extra stuff, so when all else fails, simply include the file doublefann.c or floatfann.c in your project and everything should work.
+
+An example of how this is done can be seen in the rundebugtest target in examples/Makefile.

@@ -1,0 +1,13 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view RecentFindsView uses sg::web::models::RecentFinds %>
+<% template render() %>
+    <text class="sidebarheader">Recent Finds</text>
+    <div class="se_div_box_with_border">
+    <table class="recentfinds">
+    <%= get_RecentFinds() | raw %>
+    </table>
+    </div>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,17 @@
+cp ${CND_BASEDIR}/../external/mariadbpp/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libmariadbpp.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../seglobal/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libseglobal.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../sedata/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsedata.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../semysql/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsemysql.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../semath/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsemath.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../seadmin/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libseadmin.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../seann/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libseann.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../secubist/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsecubist.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../seeconomy/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libseeconomy.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../seeoddata/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libseeoddata.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../senet/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsenet.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../setraining/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsetraining.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../sepredict/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsepredict.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../sesecurities/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsesecurities.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../sexbrl/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsexbrl.${CND_DLIB_EXT} ${CND_LIBDIR}
+cp ${CND_BASEDIR}/../semain/${CND_DISTDIR}/${CONF}/${CND_PLATFORM_${CONF}}/libsemain.${CND_DLIB_EXT} ${CND_LIBDIR}
+

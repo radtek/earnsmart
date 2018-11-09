@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>autoflag.h</itemPath>
+      <itemPath>beemutex.h</itemPath>
+      <itemPath>cmdline.h</itemPath>
+      <itemPath>common.h</itemPath>
+      <itemPath>comparable.h</itemPath>
+      <itemPath>connection.h</itemPath>
+      <itemPath>cpool.h</itemPath>
+      <itemPath>datetime.h</itemPath>
+      <itemPath>dbdriver.h</itemPath>
+      <itemPath>exceptions.h</itemPath>
+      <itemPath>field.h</itemPath>
+      <itemPath>field_names.h</itemPath>
+      <itemPath>field_types.h</itemPath>
+      <itemPath>insertpolicy.h</itemPath>
+      <itemPath>manip.h</itemPath>
+      <itemPath>myset.h</itemPath>
+      <itemPath>mysql++.h</itemPath>
+      <itemPath>mystring.h</itemPath>
+      <itemPath>noexceptions.h</itemPath>
+      <itemPath>null.h</itemPath>
+      <itemPath>options.h</itemPath>
+      <itemPath>qparms.h</itemPath>
+      <itemPath>query.h</itemPath>
+      <itemPath>querydef.h</itemPath>
+      <itemPath>refcounted.h</itemPath>
+      <itemPath>result.h</itemPath>
+      <itemPath>row.h</itemPath>
+      <itemPath>scopedconnection.h</itemPath>
+      <itemPath>sql_buffer.h</itemPath>
+      <itemPath>sql_types.h</itemPath>
+      <itemPath>sqlstream.h</itemPath>
+      <itemPath>ssqls.h</itemPath>
+      <itemPath>ssqls2.h</itemPath>
+      <itemPath>stadapter.h</itemPath>
+      <itemPath>stream2string.h</itemPath>
+      <itemPath>tcp_connection.h</itemPath>
+      <itemPath>tiny_int.h</itemPath>
+      <itemPath>transaction.h</itemPath>
+      <itemPath>type_info.h</itemPath>
+      <itemPath>uds_connection.h</itemPath>
+      <itemPath>utility.h</itemPath>
+      <itemPath>vallist.h</itemPath>
+      <itemPath>wnp_connection.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>beemutex.cpp</itemPath>
+      <itemPath>cmdline.cpp</itemPath>
+      <itemPath>connection.cpp</itemPath>
+      <itemPath>cpool.cpp</itemPath>
+      <itemPath>datetime.cpp</itemPath>
+      <itemPath>dbdriver.cpp</itemPath>
+      <itemPath>field_names.cpp</itemPath>
+      <itemPath>field_types.cpp</itemPath>
+      <itemPath>manip.cpp</itemPath>
+      <itemPath>myset.cpp</itemPath>
+      <itemPath>mysql++.cpp</itemPath>
+      <itemPath>mystring.cpp</itemPath>
+      <itemPath>null.cpp</itemPath>
+      <itemPath>options.cpp</itemPath>
+      <itemPath>qparms.cpp</itemPath>
+      <itemPath>query.cpp</itemPath>
+      <itemPath>result.cpp</itemPath>
+      <itemPath>row.cpp</itemPath>
+      <itemPath>scopedconnection.cpp</itemPath>
+      <itemPath>sql_buffer.cpp</itemPath>
+      <itemPath>sqlstream.cpp</itemPath>
+      <itemPath>ssqls2.cpp</itemPath>
+      <itemPath>stadapter.cpp</itemPath>
+      <itemPath>tcp_connection.cpp</itemPath>
+      <itemPath>transaction.cpp</itemPath>
+      <itemPath>type_info.cpp</itemPath>
+      <itemPath>uds_connection.cpp</itemPath>
+      <itemPath>utility.cpp</itemPath>
+      <itemPath>vallist.cpp</itemPath>
+      <itemPath>wnp_connection.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <architecture>2</architecture>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <commandLine>-fPIC</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mariadb</linkerLibLibItem>
+            <linkerLibLibItem>nsl</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="autoflag.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="beemutex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="beemutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cmdline.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cmdline.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comparable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cpool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datetime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="datetime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dbdriver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dbdriver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_names.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="field_names.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_types.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="field_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="insertpolicy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="manip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myset.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="myset.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql++.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mysql++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mystring.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mystring.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="noexceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="null.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="null.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="qparms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="qparms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="querydef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="refcounted.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="result.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="result.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="row.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="row.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="scopedconnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="scopedconnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_buffer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sql_buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sqlstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sqlstream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ssqls2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stadapter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stadapter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stream2string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tcp_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tcp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tiny_int.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="transaction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="transaction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="type_info.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="type_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uds_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="uds_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vallist.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vallist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wnp_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wnp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+            <pElem>${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mysqlclient</linkerLibLibItem>
+            <linkerLibLibItem>nsl</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="autoflag.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="beemutex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="beemutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cmdline.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cmdline.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comparable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cpool.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datetime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="datetime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dbdriver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dbdriver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_names.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="field_names.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_types.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="field_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="insertpolicy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="manip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myset.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="myset.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql++.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mysql++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mystring.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mystring.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="noexceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="null.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="null.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="qparms.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="qparms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="querydef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="refcounted.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="result.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="result.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="row.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="row.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="scopedconnection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="scopedconnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_buffer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sql_buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sqlstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sqlstream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ssqls2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stadapter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stadapter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stream2string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tcp_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tcp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tiny_int.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="transaction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="transaction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="type_info.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="type_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uds_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="uds_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vallist.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vallist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wnp_connection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wnp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+            <pElem>${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}/${CND_SOLUTIONDIR}/${CND_CONF}/${CND_PLATFORM}</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mysqlclient</linkerLibLibItem>
+            <linkerLibLibItem>nsl</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="autoflag.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="beemutex.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="beemutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cmdline.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="cmdline.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comparable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cpool.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="cpool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datetime.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="datetime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dbdriver.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="dbdriver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_names.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="field_names.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_types.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="field_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="insertpolicy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manip.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="manip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myset.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="myset.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql++.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="mysql++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mystring.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="mystring.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="noexceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="null.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="null.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="qparms.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="qparms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="querydef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="refcounted.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="result.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="result.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="row.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="row.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="scopedconnection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="scopedconnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_buffer.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sql_buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sqlstream.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sqlstream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls2.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ssqls2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stadapter.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="stadapter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stream2string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tcp_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="tcp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tiny_int.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="transaction.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="transaction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="type_info.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="type_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uds_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="uds_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vallist.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="vallist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wnp_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="wnp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <architecture>2</architecture>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <commandLine>-fPIC</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mysqlclient</linkerLibLibItem>
+            <linkerLibLibItem>nsl</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="autoflag.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="beemutex.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="beemutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cmdline.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="cmdline.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comparable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cpool.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="cpool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="datetime.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="datetime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dbdriver.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="dbdriver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_names.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="field_names.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="field_types.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="field_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="insertpolicy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manip.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="manip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myset.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="myset.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql++.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="mysql++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mystring.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="mystring.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="noexceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="null.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="null.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="qparms.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="qparms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="querydef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="refcounted.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="result.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="result.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="row.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="row.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="scopedconnection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="scopedconnection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_buffer.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sql_buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sql_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sqlstream.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sqlstream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssqls2.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ssqls2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stadapter.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="stadapter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stream2string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tcp_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="tcp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tiny_int.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="transaction.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="transaction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="type_info.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="type_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uds_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="uds_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vallist.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="vallist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wnp_connection.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="wnp_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

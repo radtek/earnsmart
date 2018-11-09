@@ -1,0 +1,11 @@
+<% c++ #include "../sewebmodels/CAppSearch.h" %>
+<% skin  skdefault %>
+<% view AppSearchView uses CAppSearch %>
+<% template render() %>
+<div id="dvAppSearch">
+    <label for="txtAppSearch" title="Enter a partial or complete text for a ticker, product name or any other information. A popup will then guide you to select the nearest match.">Search: </label>
+    <input type="text" id="txtAppSearch">
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,14 @@
+<% skin myskin %>
+<% view page uses se::model::page extends master %>
+<% template title() %>
+<% include master::title() %> :: <%= page_title %> 
+<% end template %>
+<% template page_content() %>
+<span>
+<%= page_content | raw  %>
+</span><span>
+<%= test.teststr  %>
+</span>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,147 @@
+{
+    "Menus": [
+        { 
+            "id"            :   1,
+            "Name"          :   "Home",
+            "Description"   :   "Visit Home Page",
+            "Url"           :   "/",
+            "Secured"       :   false
+        },
+        {
+            "id"            :   2,
+            "Name"          :   "Investment Products",
+            "Description"   :   "Visit Investment Products Home Page",
+            "Url"           :   "/investmentproducts",
+            "Secured"       :   false,
+            "Children"      :   [
+                {
+                    "id"            :   21,
+                    "Name"          :   "Stocks",
+                    "Description"   :   "Equity Stock Products",
+                    "Url"           :   "/investmentproducts/stocks",
+                    "Secured"       :   false,
+                    "Children"      : [
+                        {
+                            "id"            :   211,
+                            "Name"          :   "Predictions",
+                            "Description"   :   "View our predictions and setup your own predictions",
+                            "Url"           :   "/investmentproducts/stocks/predictions",
+                            "Secured"       :   true
+                        },
+                        {
+                            "id"            :   212,
+                            "Name"          :   "Charts",
+                            "Description"   :   "View custom charts",
+                            "Url"           :   "/investmentproducts/stocks/charts",
+                            "Secured"       :   true
+                        },
+                        {
+                            "id"            :   213,
+                            "Name"          :   "Performance Metrics",
+                            "Description"   :   "View technical, fundamental and other metrics",
+                            "Url"           :   "/investmentproducts/stocks/metrics",
+                            "Secured"       :   true
+                        },
+                        {
+                            "id"            :   214,
+                            "Name"          :   "Options",
+                            "Description"   :   "View options using this stock as underlying instrument",
+                            "Url"           :   "/investmentproducts/stocks/options",
+                            "Secured"       :   true,
+                            "Children"      :   [
+                                {
+                                    "id"            :   2141,
+                                    "Name"      :   "Valuations",
+                                    "Description"   :   "View options valuation models",
+                                    "Url"           :   "/investmentproducts/stocks/options/valuations",
+                                    "Secured"       :   true
+                                },
+                                {
+                                    "id"            :   2142,
+                                    "Name"      :   "Hedging",
+                                    "Description"   :   "View how this option can be used for hedging.",
+                                    "Url"           :   "/investmentproducts/stocks/options/hedging",
+                                    "Secured"       :   true
+                                }
+                            ]
+                        },
+                        {
+                            "id"            :   215,
+                            "Name"          :   "Fundamentals",
+                            "Description"   :   "View stock equity's fundamentals",
+                            "Url"           :   "/investmentproducts/stocks/fundamentals",
+                            "Secured"       :   true
+                        },
+                        {
+                            "id"            :   216,
+                            "Name"          :   "News",
+                            "Description"   :   "View news related to this stock",
+                            "Url"           :   "/investmentproducts/stocks/news",
+                            "Secured"       :   true
+                        }
+                    ]
+                },
+                {
+                    "id"            :   22,
+                    "Name"          :   "Futures",
+                    "Description"   :   "Futures Products",
+                    "Url"           :   "/investmentproducts/futures",
+                    "Secured"       :   false
+                },
+                {
+                    "id"            :   23,
+                    "Name"          :   "Options",
+                    "Description"   :   "Option Products",
+                    "Url"           :   "/investmentproducts/options",
+                    "Secured"       :   false
+                }
+            ]
+        },
+        {
+            "id"            :   3,
+            "Name"          :   "News",
+            "Description"   :   "View investment market and economic news",
+            "Url"           :   "/news",
+            "Secured"       :   false,
+            "Children"      :   [
+                {
+                    "id"            :   31,
+                    "Name"          :   "Investment Market News",
+                    "Description"   :   "View Investment Market News",
+                    "Url"           :   "/news/market",
+                    "Secured"       :   false
+                },
+                {
+                    "id"            :   32,
+                    "Name"          :   "Economic News",
+                    "Description"   :   "View National and International Economic News",
+                    "Url"           :   "/news/economy",
+                    "Secured"       :   false
+                }
+            ]
+        },
+        {
+            "id"            :   4,
+            "Name"          :   "About Us",
+            "Description"   :   "View the information about this website",
+            "Url"           :   "/info",
+            "Secured"       :   false,
+            "Children"      :   [
+                {
+                    "id"            :   41,
+                    "Name"          :   "About Us",
+                    "Description"   :   "View Information About This Site",
+                    "Url"           :   "/info/aboutus",
+                    "Secured"       :   false
+                },
+                {
+                    "id"            :   42,
+                    "Name"          :   "Contact Us",
+                    "Description"   :   "Submit your questions regarding our service",
+                    "Url"           :   "/info/contactus",
+                    "Secured"       :   false
+                }
+            ]
+        }
+    ]
+}

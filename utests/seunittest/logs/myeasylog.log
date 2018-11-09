@@ -1,0 +1,620 @@
+2015-12-30 22:09:37,183 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2015-12-31 15:17:08,865 INFO  [default] [static const string& CDirectory::GetExePath()] Process Path: /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/dist/Debug/GNU-Linux/
+2015-12-31 15:17:08,865 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2016-06-18 21:29:35,643 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2016-06-18 21:45:58,636 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2016-06-18 21:46:02,512 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2016-06-18 21:47:49,276 ERROR [default] [virtual long unsigned int CConfigurator::Init()] Configuration File (se.json) not found.
+2016-06-18 21:50:23,954 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 21:50:40,180 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:12:44,707 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:12:59,624 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:13:13,743 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2016-06-18 22:13:13,744 WARN  [default] Aborting application. Reason: Fatal log at [easylogging++.h:5583]
+2016-06-18 22:14:43,147 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:18:11,254 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:18:55,344 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:21:17,393 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:21:25,408 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:22:15,531 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:24:12,600 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:24:53,886 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:25:28,909 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:25:52,342 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:27:17,785 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:27:18,742 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:30:55,877 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:31:00,867 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:31:06,588 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::get_UserFromSessionUniqueID(const char*, se::admin::IUser**)] Unknown database 'seadmin'
+2016-06-18 22:32:22,091 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-18 22:32:26,163 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-18 22:32:35,894 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-18 22:32:35,894 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-18 22:32:35,894 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-18 22:32:35,894 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-18 22:32:35,894 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:871] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('0f865c0c-35c6-11e6-b4f7-64006a84f1cc', 0, NOW(), 1)
+2016-06-18 22:32:36,088 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-18 22:32:36,088 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-18 22:32:36,088 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-18 22:32:46,893 INFO  [default] [virtual long unsigned int se::admin::CAdminAPI::get_States(Json::Value&, const se::CSqlAst*)] select * from se_gbl_states where 0x7fffffffdc40 order by name
+2016-06-19 16:34:09,708 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 16:34:09,709 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 16:34:13,301 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:34:13,301 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:34:13,301 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 16:34:13,301 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 16:34:13,301 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:871] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('2d0d6bca-365d-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 16:34:13,310 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:34:13,310 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:34:13,310 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 16:34:52,784 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 16:34:52,785 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 16:34:55,318 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:34:55,318 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:34:55,318 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 16:34:55,318 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 16:34:55,318 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:871] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('46ba5704-365d-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 16:34:55,502 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:34:55,502 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:34:55,502 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 16:35:02,696 INFO  [default] [virtual long unsigned int se::admin::CAdminAPI::get_States(Json::Value&, se::CSqlAst*)] select * from se_gbl_states where  country_id  =  1 order by name
+2016-06-19 16:35:20,443 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-06-19 16:45:10,295 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 16:45:10,296 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 16:45:15,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:45:15,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:45:15,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 16:45:15,985 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 16:45:15,985 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:871] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('b6cb0754-365e-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 16:45:16,171 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 16:45:16,171 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 16:45:16,171 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 16:45:16,171 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "iaqqdzknst@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-06-19 17:26:02,070 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 17:26:02,070 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 17:26:02,105 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:26:02,105 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:26:02,105 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 17:26:02,105 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 17:26:02,105 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:872] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('6c2a1e6e-3664-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 17:26:02,274 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:26:02,274 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:26:02,274 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 17:26:02,274 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "ohzrwjttch@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-06-19 17:26:34,092 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1554] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates 0x7fffffffcc60
+2016-06-19 17:27:11,617 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 17:27:11,618 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 17:27:11,648 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:27:11,648 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:27:11,648 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 17:27:11,648 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 17:27:11,648 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:872] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('959e2df8-3664-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 17:27:11,657 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:27:11,657 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:27:11,657 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 17:27:11,657 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "tvqifgjpqb@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-06-19 17:27:28,536 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1554] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates  state_id  =  30 AND   country_id  =  1
+2016-06-19 17:27:39,053 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=  30 AND   country_id  =  1' at line 1
+2016-06-19 17:27:39,053 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] There is no state that matches state_id 30 for country with id 1
+2016-06-19 17:27:39,053 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-06-19 17:29:16,540 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 17:29:16,541 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 17:29:16,571 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:29:16,572 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:29:16,572 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 17:29:16,572 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 17:29:16,572 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:872] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('e013f958-3664-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 17:29:16,755 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:29:16,755 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:29:16,755 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 17:29:16,755 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "gmrzeljzba@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-06-19 17:29:23,776 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1554] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-06-19 17:29:26,738 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] Unknown field name: name
+2016-06-19 17:29:26,738 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] There is no state that matches state_id 30 for country with id 1
+2016-06-19 17:29:26,739 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-06-19 17:43:17,527 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-06-19 17:43:17,527 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-06-19 17:43:17,558 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:43:17,558 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:43:17,558 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-06-19 17:43:17,558 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-06-19 17:43:17,558 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:874] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('d5584d1e-3666-11e6-8160-64006a84f1cc', 0, NOW(), 1)
+2016-06-19 17:43:17,742 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-06-19 17:43:17,742 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-06-19 17:43:17,742 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-06-19 17:43:17,743 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "cluwcnwlbs@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-06-19 17:43:27,928 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1587] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-06-19 17:43:29,433 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:749] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-06-19 17:43:44,469 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('cluwcnwlbs@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'cluwcnwlbs@earn-smart.com', now(), 1, 6, 1, 'd5584d1e-3666-11e6-8160-64006a84f1cc', '0', now() )
+2016-06-19 17:45:30,783 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "RegStages" : 2,
+   "esid" : "d5584d1e-3666-11e6-8160-64006a84f1cc"
+}
+
+2016-06-19 17:45:42,808 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "RegStages" : 3,
+   "esid" : "d5584d1e-3666-11e6-8160-64006a84f1cc",
+   "ppprofileid" : "9000901222323243"
+}
+
+2016-06-19 17:46:08,088 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:652] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "RegStages" : 4,
+   "esid" : "d5584d1e-3666-11e6-8160-64006a84f1cc"
+}
+
+2016-06-19 17:46:10,352 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-07-10 09:18:49,560 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 09:18:49,583 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 09:18:54,279 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:18:54,279 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:18:54,279 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 09:18:54,279 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 09:18:54,279 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('d6eb4f06-46a0-11e6-abcf-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 09:18:54,465 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:18:54,465 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:18:54,465 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:18:54,465 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "rxtw@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 09:18:54,486 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 09:18:54,488 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 09:18:54,490 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('rxtw@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'rxtw@earn-smart.com', now(), 1, 6, 1, 'd6eb4f06-46a0-11e6-abcf-64006a84f1cc', '0', now() )
+2016-07-10 09:21:46,993 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 09:21:46,994 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 09:21:47,027 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:21:47,027 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:21:47,027 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 09:21:47,027 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 09:21:47,027 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('40aa110c-46a1-11e6-abcf-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 09:21:47,211 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:21:47,211 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:21:47,211 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:21:47,211 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "enbsfkixbn@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 09:21:47,225 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 09:21:47,226 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 09:21:47,227 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('enbsfkixbn@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'enbsfkixbn@earn-smart.com', now(), 1, 6, 1, '40aa110c-46a1-11e6-abcf-64006a84f1cc', '0', now() )
+2016-07-10 09:37:27,870 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 09:37:27,872 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 09:37:27,922 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:37:27,922 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:37:27,922 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 09:37:27,922 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 09:37:27,922 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('71789e64-46a3-11e6-abcf-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 09:37:27,931 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:37:27,931 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:37:27,931 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:37:27,931 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "lljti@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 09:37:27,975 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 09:37:27,976 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 09:37:27,977 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('lljti@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'lljti@earn-smart.com', now(), 1, 6, 1, '71789e64-46a3-11e6-abcf-64006a84f1cc', '0', now() )
+2016-07-10 09:41:59,776 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 09:41:59,813 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 09:41:59,848 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:41:59,848 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:41:59,848 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 09:41:59,848 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 09:41:59,848 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('138f7862-46a4-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 09:42:00,030 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:42:00,030 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:42:00,030 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:42:00,030 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "zgcxoopdlq@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 09:42:00,042 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 09:42:00,043 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 09:42:00,044 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('zgcxoopdlq@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'zgcxoopdlq@earn-smart.com', now(), 1, 6, 1, '138f7862-46a4-11e6-8cc4-64006a84f1cc', '0', now() )
+2016-07-10 09:42:07,589 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:42:36,731 ERROR [default] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] Failed to send email to zgcxoopdlq@earn-smart.com
+2016-07-10 09:42:53,514 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:42:53,514 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-07-10 09:43:23,954 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 09:43:23,955 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 09:43:23,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:43:23,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:43:23,985 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 09:43:23,985 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 09:43:23,985 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('45b690b4-46a4-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 09:43:23,993 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 09:43:23,993 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 09:43:23,993 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 09:43:23,993 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "ojzsunnvff@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 09:43:24,004 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 09:43:24,004 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 09:43:24,005 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('ojzsunnvff@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'ojzsunnvff@earn-smart.com', now(), 1, 6, 1, '45b690b4-46a4-11e6-8cc4-64006a84f1cc', '0', now() )
+2016-07-10 09:43:24,014 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:03:20,849 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 10:03:20,850 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 10:03:20,876 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:03:20,876 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:03:20,876 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 10:03:20,876 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 10:03:20,876 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('0f1e3f86-46a7-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 10:03:21,061 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:03:21,061 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:03:21,061 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 10:03:21,061 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "wrdcur@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 10:03:21,077 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 10:03:21,078 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 10:03:21,079 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('wrdcur@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'wrdcur@earn-smart.com', now(), 1, 6, 1, '0f1e3f86-46a7-11e6-8cc4-64006a84f1cc', '0', now() )
+2016-07-10 10:03:21,088 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:03:35,007 ERROR [default] [long unsigned int se::net::CSmtpClient::SendTemplateMail(const char*, const char*, const char*, const char*)] licensedregistration.html.0f1e3f86-46a7-11e6-8cc4-64006a84f1cc is empty.
+2016-07-10 10:07:19,899 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 10:07:19,900 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 10:07:19,928 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:07:19,928 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:07:19,928 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 10:07:19,928 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 10:07:19,928 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('9d9a6fbe-46a7-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 10:07:20,110 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:07:20,110 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:07:20,110 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 10:07:20,110 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "kfflskldxd@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 10:07:20,128 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 10:07:20,129 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 10:07:20,130 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('kfflskldxd@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'kfflskldxd@earn-smart.com', now(), 1, 6, 1, '9d9a6fbe-46a7-11e6-8cc4-64006a84f1cc', '0', now() )
+2016-07-10 10:07:20,155 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:11:55,206 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 10:11:55,206 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 10:11:55,236 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:11:55,236 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:11:55,236 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 10:11:55,236 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 10:11:55,236 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('41b2cd26-46a8-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 10:11:55,249 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:11:55,249 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:11:55,249 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 10:11:55,249 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 10:11:55,255 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 0
+2016-07-10 10:12:28,231 INFO  [default] [virtual long unsigned int CConfigurator::Init()] Configuration file found at /home/santony/Documents/smartearn/Linux/phases/phase3/utests/seunittest/se.json
+2016-07-10 10:12:28,231 DEBUG [default] [santony@unknown-host] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] [CApplication.cpp:218] [long unsigned int CApplication::ResetSession(const char*, se::ISession*)] OldSessionId: 
+2016-07-10 10:12:28,262 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:12:28,262 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:12:28,262 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 3
+2016-07-10 10:12:28,262 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 2
+2016-07-10 10:12:28,262 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] [CAdminAPI.cpp:849] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser()] INSERT INTO user_sessions (session_id, user_id, session_date, session_type ) VALUES ('55620f6c-46a8-11e6-8cc4-64006a84f1cc', 0, NOW(), 1)
+2016-07-10 10:12:28,270 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 1
+2016-07-10 10:12:28,270 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2
+2016-07-10 10:12:28,270 INFO  [default] [virtual void CSession::OnDec(short unsigned int)] 1
+2016-07-10 10:12:28,270 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:653] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+   "ConfirmPassword" : "aaaa",
+   "Country" : 1,
+   "EmailAddress" : "fp@earn-smart.com",
+   "FirsName" : "",
+   "FirstName" : "Saji",
+   "LastName" : "Antony",
+   "Password" : "aaaa",
+   "PostalCode" : "07410",
+   "RegStages" : 0,
+   "RegType" : "licensed",
+   "RememberMe" : false,
+   "State" : 30,
+   "StateProvince" : "New Jersey",
+   "Street1" : "1-34 17th Street",
+   "Street2" : "",
+   "Town" : "Fair Lawn"
+}
+
+2016-07-10 10:12:28,283 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] [CAdminAPI.cpp:1562] [virtual long unsigned int se::admin::CAdminAPI::get_State(Json::Value&, se::CSqlAst*)] select * from list_CountryStates where  state_id  =  30 AND   country_id  =  1
+2016-07-10 10:12:28,284 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:750] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] {
+	"code" : "NJ",
+	"country_code" : "US",
+	"country_code1" : "USA",
+	"country_id" : 1,
+	"country_ispaypalavailable" : "1",
+	"country_name" : "United States of America",
+	"countrykey" : 1,
+	"key" : 30,
+	"name" : "New Jersey"
+}
+2016-07-10 10:12:28,285 DEBUG [default] [santony@unknown-host] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] [CAdminAPI.cpp:768] [virtual long unsigned int se::admin::CAdminAPI::RegisterUser(const Json::Value&)] INSERT INTO saadmin.users (user_login, user_pass, user_firstname, user_lastname, user_email, user_registeredon, user_regstage, user_role, user_isactive, user_sessionid, user_remember, user_createdon) VALUES ('fp@earn-smart.com', AES_ENCRYPT('aaaa', 'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdWd17BPkX81r0PBKaX5X/0mAGpFOOt91LOlzLXnRhSulPjvWXCgtQT9h5fW6dnczu8o7/DFrfAfC86HNW8LrphYHUMb+SstPRPOUZLJGY3gslGDxtj4/N3c5XMH0GblCG/Y6mxxq+a6DPDjc6VpiZZ8DLBDL/5A9oUOLI3rv5P6W3yGQMmY/gUeFvk+5oDL9eiqbKw0DEe6x/2YaIhlxaXvpmsr+wv5ahGy1E4HJBSuIEgj22Xx9OR8bTL5+B8ha1iVxpwBImdXba42mZMlNN0gXTMMUvH3inwvrWXIT+sTwdpmtgEYoiB6Vaj/hlxt7WP0xjVywn057uCKIX0e/LAgMBAAECggEAdf8JyiKEhvf7bGb5o8GAvLbw6Zl/0XzCQvABt4fKknLUnMygrrtz/IQT6e+rn+oW7OnwwJVde7QVGR7xHU+G1CWPaAZ9ET6zG79SgXD4zHzRhBy/WchF6IBtFp2KiHsWAl/4Q3+wCgJl3vq9BiRThLOCWrcKWM7CR+GWg2341ozRQvrrDVk9x8OPYSAuxapNoUM2jDeHOq39zlsriJqyDPCz8U3pcOBMaPJ5AAF+/6c5uhTAj3YKXD+1sDkWA3aLMkByyD17QvEicAIDCpY9NZexTnzW45yOaE3yu+HeYRCiw3P0u2w9yEWFggjf9bc4bcaoJR53X8ow8rzfHRZEQQKBgQD5LUbwAHY4FpRIvdUceaUeDYXR2CF3QXt997FyFfopMBW8l4KtC1gQOXD17bUQ70ZcLzEzLgItQykiS4DETLtekrpRKN7Xo3S9fO4earYSf+tYARRMO9YqhsN3h3SLHHDyjJJgRb6bWMuBVJjLSemLkFYWvV7wibkj5o7EViLCZQKBgQDjaYefe+XTeNVJK1RdO07tJYP7s2S8qE3pCJbNT9tRxKzGNPDq2dudjSHZLR6bo+zFXo+DJRGLf2jX4gcYMxHqMWD5fG/yOnSyUvaen/eYH0pX9CARTePRDb0DjwEbr9gHw3GLE/xXCmXWPGDMKMRsvKBMt677UpZmpsQ+SrOubwKBgH/rw6hAxHBE/zlc44Rr2t3T2WiCiaO8pVZlC97i83ujqPUZ30dRNJOXuas3rqYUAM4gmCSLMSjler+VfXTJY8PIlghGcCjKTItfEKvi4rgancqfOzlr2qYYa0745lbocf/DNP5hr9n2uvsZYBu1RUWWAuxHqe7Y9Yg9u/uFsPCVAoGAUI1a2uUaHXQZqJdOhM+zP1EglRGQRzsejcLbF9KHj0kpIfQyuh19KyuIp9LRmrPP9IFwODXzJwR0cLPBa5L7b4caIIUxag3GtDuq27kyDJJY1RrGGRsL7Ur+froy3EnHLcjO+UKVCYfHVsGAUBDIsvOFnGcb9i3k1GuR67auOsUCgYBtsQEWsQ/TfXd/SGqVVdHaD5evRsKNkfVen07wRaym/IeV0S/qBRrJoK7kAgK7q2f3I7qZGJ3CuIEe6laVNtDh907R0z0MJE5PrqR6D6GDf9uVlXW80GhWsT21RhUtKhadit1WNRCG6nfhUm9uyzqhQVy7mJ3MHw6eafnB5KsZkg=='), 'Saji', 'Antony', 'fp@earn-smart.com', now(), 1, 6, 1, '55620f6c-46a8-11e6-8cc4-64006a84f1cc', '0', now() )
+2016-07-10 10:12:28,294 INFO  [default] [virtual void CSession::OnAdd(short unsigned int)] 2

@@ -1,0 +1,9 @@
+When using CTimer in debug environment, gets a SIG34 error.
+
+To solve this 
+
+a. Create a .gdbinit file in home directory. 
+b. add the folloing line
+	handle SIG34 nostop noprint pass
+
+this makes gdb ignore SIG-xx real-time signals

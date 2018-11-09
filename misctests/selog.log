@@ -1,0 +1,593 @@
+INFO 0x7ffff7fc7780 se.xbrl.statementparser - Beginning to parse the statement.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Start: Xbrl calculation parsing started.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation links
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as StatementCashFlows
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 43
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StatementCashFlows are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151255151_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151255291_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedFinancingActivities_1151255438_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	PurchasesPaymentsInvestments_1151305298_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151305298_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeShortTermInvestments_1151305368_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151305368_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AcquisitionDivestitureBusinessActivitiesNet_1151305426_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151305426_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	SaleInvestments_1151305512_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1151305512_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ProceedsIssuanceEquity_1151306876_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedFinancingActivities_1151306876_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	RepurchasePreferredCommonStock_1151306924_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedFinancingActivities_1151306924_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ProceedsIssuanceEquity_1151306954_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedFinancingActivities_1151306954_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1170155727_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1190956155_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1198789750_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedInvestingActivities_1198789903_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1198789903_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CashPaidForAcquisitions_1198789903_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashPaidForAcquisitions_1198789903_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1198789750_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CashReceivedFromAcquisitions_1198789750_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashReceivedFromAcquisitions_1198789750_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1190956155_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceCostCreditFacility_1190956155_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceCostCreditFacility_1190956155_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1170155727_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		InvestmentMadeInLeaseReceivable_1170155727_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of InvestmentMadeInLeaseReceivable_1170155727_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedFinancingActivities_1151306954_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsIssuanceCommonStock_1151306954_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceCommonStock_1151306954_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceEquity_1151306954_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsIssuanceCommonStock_1151306954_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceCommonStock_1151306954_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedFinancingActivities_1151306924_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RepurchaseCommonStock_1151306924_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RepurchaseCommonStock_1151306924_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RepurchasePreferredCommonStock_1151306924_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RepurchaseCommonStock_1151306924_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RepurchaseCommonStock_1151306924_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedFinancingActivities_1151306876_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsIssuanceTreasuryStock_1151306876_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceTreasuryStock_1151306876_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceEquity_1151306876_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsIssuanceTreasuryStock_1151306876_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsIssuanceTreasuryStock_1151306876_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151305512_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		SaleDebtEquitySecurities_1151305512_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SaleDebtEquitySecurities_1151305512_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SaleInvestments_1151305512_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		SaleDebtEquitySecurities_1151305512_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SaleDebtEquitySecurities_1151305512_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151305426_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AcquisitionBusinessesNetCashAcquired_1151305426_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AcquisitionBusinessesNetCashAcquired_1151305426_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AcquisitionDivestitureBusinessActivitiesNet_1151305426_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AcquisitionBusinessesNetCashAcquired_1151305426_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AcquisitionBusinessesNetCashAcquired_1151305426_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151305368_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsSaleShortTermInvestmentsNet_1151305368_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsSaleShortTermInvestmentsNet_1151305368_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeShortTermInvestments_1151305368_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProceedsSaleShortTermInvestmentsNet_1151305368_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProceedsSaleShortTermInvestmentsNet_1151305368_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151305298_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PurchaseInvestments_1151305298_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PurchaseInvestments_1151305298_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PurchasesPaymentsInvestments_1151305298_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PurchaseInvestments_1151305298_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PurchaseInvestments_1151305298_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedFinancingActivities_1151255438_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ExcessTaxBenefitsStockBasedCompensationFinancing_1151255438_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ExcessTaxBenefitsStockBasedCompensationFinancing_1151255438_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151255291_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PurchasesLongTermInvestmentsOtherAssets_1151255291_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PurchasesLongTermInvestmentsOtherAssets_1151255291_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedInvestingActivities_1151255151_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		MaturitiesShortTermInvestments_1151255151_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of MaturitiesShortTermInvestments_1151255151_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as CashFlowOperationsIndirect
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 65
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashFlowOperationsIndirect are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254287_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254372_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254537_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254777_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254880_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151254977_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151303503_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151303503_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151304784_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151304784_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151304826_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151304826_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeCurrentAssets_1151304875_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151304875_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeCurrentAssets_1151304910_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151304910_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeAccountsPayableAccruedExpenses_1151304947_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151304947_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151305021_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151305021_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeCurrentLiabilities_1151305103_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151305103_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ChangeCurrentLiabilities_1151305138_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1151305138_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalDepreciationAmortization_1151307759_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1170154200_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1170228705_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	IncreaseDecreaseProvisionRestructuringChanges_1175583575_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1175583575_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1175894242_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1198788905_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NetCashFlowsProvidedUsedOperatingActivities_1198789273_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1198789273_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeTradeOtherReceivables_1198789273_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeTradeOtherReceivables_1198789273_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1198788905_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProvisionForEstimatedReturns_1198788905_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProvisionForEstimatedReturns_1198788905_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1175894242_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DepreciationAmortizationAccretion_1175894242_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DepreciationAmortizationAccretion_1175894242_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1175583575_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RestructuringCharges_1175583575_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RestructuringCharges_1175583575_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IncreaseDecreaseProvisionRestructuringChanges_1175583575_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RestructuringCharges_1175583575_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RestructuringCharges_1175583575_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1170228705_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangePrepaidExpensesOtherCurrentAssets_1170228705_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangePrepaidExpensesOtherCurrentAssets_1170228705_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1170154200_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		GainLossRetirementPropertyPlantEquipment_1170154116_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of GainLossRetirementPropertyPlantEquipment_1170154116_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalDepreciationAmortization_1151307759_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AmortizationIntangibles_1151307759_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AmortizationIntangibles_1151307759_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151305138_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredRevenue_1151305138_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredRevenue_1151305138_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeCurrentLiabilities_1151305138_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredRevenue_1151305138_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredRevenue_1151305138_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151305103_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeIncomeTaxesPayable_1151305103_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeIncomeTaxesPayable_1151305103_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeCurrentLiabilities_1151305103_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeIncomeTaxesPayable_1151305103_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeIncomeTaxesPayable_1151305103_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151305021_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IncreaseDecreaseProvisionRestructuringChanges_1151305021_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IncreaseDecreaseProvisionRestructuringChanges_1151305021_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151305021_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IncreaseDecreaseProvisionRestructuringChanges_1151305021_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IncreaseDecreaseProvisionRestructuringChanges_1151305021_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151304947_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangesAccruedExpenses_1151304947_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangesAccruedExpenses_1151304947_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeAccountsPayableAccruedExpenses_1151304947_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangesAccruedExpenses_1151304947_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangesAccruedExpenses_1151304947_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151304910_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeOtherCurrentAssets_1151304910_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeOtherCurrentAssets_1151304910_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeCurrentAssets_1151304910_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeOtherCurrentAssets_1151304910_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeOtherCurrentAssets_1151304910_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151304875_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeReceivables_1151304875_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeReceivables_1151304875_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeCurrentAssets_1151304875_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeReceivables_1151304875_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeReceivables_1151304875_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151304826_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TaxBenefitExerciseStockOptions_1151304826_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TaxBenefitExerciseStockOptions_1151304826_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151304826_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TaxBenefitExerciseStockOptions_1151304826_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TaxBenefitExerciseStockOptions_1151304826_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151304784_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredIncomeTaxes_1151304784_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredIncomeTaxes_1151304784_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151304784_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredIncomeTaxes_1151304784_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredIncomeTaxes_1151304784_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151303503_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TotalDepreciationAmortization_1151303503_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalDepreciationAmortization_1151303503_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentsReconcileNetIncomeLossNetCashProvidedUsedOperations_1151303503_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TotalDepreciationAmortization_1151303503_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalDepreciationAmortization_1151303503_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254977_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangesTradeOtherPayables_1151254977_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangesTradeOtherPayables_1151254977_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254880_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		NetGainsLossesSalesImpairmentInvestments_1151254880_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetGainsLossesSalesImpairmentInvestments_1151254880_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254777_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AcquiredIncompleteTechnology_1151254777_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AcquiredIncompleteTechnology_1151254777_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254537_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ExcessTaxBenefitsStockBasedCompensationOperating_1151254537_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ExcessTaxBenefitsStockBasedCompensationOperating_1151254537_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254372_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ProvisionRecoveryOfLossesOnReceivables_1151254372_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ProvisionRecoveryOfLossesOnReceivables_1151254372_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NetCashFlowsProvidedUsedOperatingActivities_1151254287_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		StockBasedCompensation_1151254287_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockBasedCompensation_1151254287_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as TotalStockholdersEquityCalculation
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 29
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalStockholdersEquityCalculation are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169122763_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169122888_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169122908_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169122925_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169122943_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169123031_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169123046_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169123061_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169539136_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169539354_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1169539591_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockAcquired_1169544167_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1170227527_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	StockholdersEquityChanges_1198791761_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1198791761_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AdjustmentToValuationOfAcquisitionAssumedOptionsTotalStockholdersEquity_1198791761_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentToValuationOfAcquisitionAssumedOptionsTotalStockholdersEquity_1198791761_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1170227527_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CumulativeEffectSAB108TotalStockholdersEquity_1170227527_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CumulativeEffectSAB108TotalStockholdersEquity_1170227527_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockAcquired_1169544167_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TreasuryStockAcquiredValueVotingRightsDividendsTotalShareholdersEquity_1169544167_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockAcquiredValueVotingRightsDividendsTotalShareholdersEquity_1169544167_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169539591_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		StockCompensationTotalStockholdersEquity_1169539591_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockCompensationTotalStockholdersEquity_1169539591_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169539354_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		adbe_TaxBenefitFromEmployeeStockOptionPlansTotalStockholdersEquity_1169539354_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of adbe_TaxBenefitFromEmployeeStockOptionPlansTotalStockholdersEquity_1169539354_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169539136_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DividendsDeclaredTotalStockholdersEquity_1169539136_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DividendsDeclaredTotalStockholdersEquity_1169539136_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169123061_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredCompensationAmortizationTotalStockholdersEquity_1169123061_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredCompensationAmortizationTotalStockholdersEquity_1169123061_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169123046_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTotalStockholdersEquity_1169123046_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTotalStockholdersEquity_1169123046_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169123031_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansTotalStockholdersEquity_1169123031_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansTotalStockholdersEquity_1169123031_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169122943_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TotalComprehensiveIncomeNetOfTaxesTotalStockholdersEquity_1169122943_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalComprehensiveIncomeNetOfTaxesTotalStockholdersEquity_1169122943_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169122925_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTotalShareholdersEquity_1169122925_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTotalShareholdersEquity_1169122925_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169122908_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TreasuryStockAcquiredValueVotingRightsDividendsTotalShareholdersEquity_1169122908_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockAcquiredValueVotingRightsDividendsTotalShareholdersEquity_1169122908_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169122888_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeOtherComprehensiveIncomeOrLossNetofTaxesTotalStockholdersEquity_1169122888_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeOtherComprehensiveIncomeOrLossNetofTaxesTotalStockholdersEquity_1169122888_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockholdersEquityChanges_1169122763_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceCompensatoryStockTotalShareholdersEquity_1169122763_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceCompensatoryStockTotalShareholdersEquity_1169122763_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as StatementFinancialPosition
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 63
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StatementFinancialPosition are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1151251700_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Assets_1151251935_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CurrentLiabilities_1151252101_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CurrentLiabilities_1151252225_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Liabilities_1151252441_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CashCashEquivalentsShortTermInvestments_1151293409_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1151293409_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CashCashEquivalentsShortTermInvestments_1151293429_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1151293429_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AccountsNotesReceivableNet_1151293453_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1151293453_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ReceivablesNet_1151293489_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1151293489_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NoncurrentAssets_1151293644_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Assets_1151293644_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	IntangibleAssetsNet_1151293669_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Assets_1151293669_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	IntangibleAssetsNet_1151293698_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Assets_1151293698_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NoncurrentAssets_1151293732_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Assets_1151293732_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AccountsPayableAccruedExpenses_1151293901_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CurrentLiabilities_1151293901_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	DeferredLongTermLiabilityCharges_1151294217_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Liabilities_1151294217_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NoncurrentLiabilities_1151294271_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Liabilities_1151294271_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NoncurrentLiabilities_1151294333_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Liabilities_1151294333_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AccountsReceivableTradeNet_1169541139_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TotalCurrentAssets_1170149265_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1170149265_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CashCashEquivalentsShortTermInvestments_1170149265_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashCashEquivalentsShortTermInvestments_1170149265_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccountsReceivableTradeNet_1169541139_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AllowanceDoubtfulAccounts_1169541139_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AllowanceDoubtfulAccounts_1169541139_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Liabilities_1151294333_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherNoncurrentLiabilities_1151294333_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherNoncurrentLiabilities_1151294333_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NoncurrentLiabilities_1151294333_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherNoncurrentLiabilities_1151294333_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherNoncurrentLiabilities_1151294333_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Liabilities_1151294271_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredTaxLiabilityNoncurrent_1151294271_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredTaxLiabilityNoncurrent_1151294271_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NoncurrentLiabilities_1151294271_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredTaxLiabilityNoncurrent_1151294271_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredTaxLiabilityNoncurrent_1151294271_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Liabilities_1151294217_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredUnearnedRevenueLongTerm_1151294217_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredUnearnedRevenueLongTerm_1151294217_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredLongTermLiabilityCharges_1151294217_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredUnearnedRevenueLongTerm_1151294217_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredUnearnedRevenueLongTerm_1151294217_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CurrentLiabilities_1151293901_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccruedExpenses_1151293901_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccruedExpenses_1151293901_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccountsPayableAccruedExpenses_1151293901_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccruedExpenses_1151293901_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccruedExpenses_1151293901_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Assets_1151293732_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherAssetsNoncurrent_1151293732_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherAssetsNoncurrent_1151293732_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NoncurrentAssets_1151293732_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherAssetsNoncurrent_1151293732_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherAssetsNoncurrent_1151293732_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Assets_1151293698_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IntangibleAssetsExcludingGoodwillNet_1151293698_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsExcludingGoodwillNet_1151293698_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsNet_1151293698_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IntangibleAssetsExcludingGoodwillNet_1151293698_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsExcludingGoodwillNet_1151293698_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Assets_1151293669_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IntangibleAssetsGoodwill_1151293669_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsGoodwill_1151293669_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsNet_1151293669_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IntangibleAssetsGoodwill_1151293669_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IntangibleAssetsGoodwill_1151293669_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Assets_1151293644_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PropertyPlantEquipmentNet_1151293644_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PropertyPlantEquipmentNet_1151293644_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NoncurrentAssets_1151293644_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PropertyPlantEquipmentNet_1151293644_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PropertyPlantEquipmentNet_1151293644_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1151293489_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherReceivablesNet_1151293489_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherReceivablesNet_1151293489_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ReceivablesNet_1151293489_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		OtherReceivablesNet_1151293489_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OtherReceivablesNet_1151293489_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1151293453_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccountsReceivableTradeNet_1151293453_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccountsReceivableTradeNet_1151293453_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccountsNotesReceivableNet_1151293453_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccountsReceivableTradeNet_1151293453_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccountsReceivableTradeNet_1151293453_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1151293429_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ShortTermInvestments_1151293429_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ShortTermInvestments_1151293429_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashCashEquivalentsShortTermInvestments_1151293429_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ShortTermInvestments_1151293429_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ShortTermInvestments_1151293429_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1151293409_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CashCashEquivalents_1151293409_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashCashEquivalents_1151293409_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashCashEquivalentsShortTermInvestments_1151293409_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CashCashEquivalents_1151293409_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CashCashEquivalents_1151293409_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Liabilities_1151252441_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccruedRestructuringExpensesNonCurrent_1151252441_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccruedRestructuringExpensesNonCurrent_1151252441_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CurrentLiabilities_1151252225_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AccruedRestructuringExpensesCurrent_1151252225_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccruedRestructuringExpensesCurrent_1151252225_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CurrentLiabilities_1151252101_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TradeOtherPayables_1151252101_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TradeOtherPayables_1151252101_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Assets_1151251935_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		InvestmentLeaseReceivable_1151251935_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of InvestmentLeaseReceivable_1151251935_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TotalCurrentAssets_1151251700_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		PrepaidExpensesOtherCurrentAssets_1151251700_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of PrepaidExpensesOtherCurrentAssets_1151251700_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as IncomeStatement
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 23
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IncomeStatement are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	NonOperatingIncomeExpense_1151253035_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	Amortization_1151304223_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	OperatingExpenses_1151304223_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	ResearchDevelopmentExpenseIncludingProcess_1151304379_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	OperatingExpenses_1151304379_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	SellingGeneralAdministrativeExpenses_1151304406_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	OperatingExpenses_1151304406_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	SellingGeneralAdministrativeExpenses_1151304435_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	OperatingExpenses_1151304435_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	RestructuringRemediationImpairmentProvisions_1151304481_2
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	OperatingExpenses_1151304481_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OperatingExpenses_1151304481_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RestructuringCharges_1151304481_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RestructuringCharges_1151304481_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RestructuringRemediationImpairmentProvisions_1151304481_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		RestructuringCharges_1151304481_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RestructuringCharges_1151304481_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OperatingExpenses_1151304435_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		GeneralAdministrativeExpenses_1151304435_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of GeneralAdministrativeExpenses_1151304435_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SellingGeneralAdministrativeExpenses_1151304435_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		GeneralAdministrativeExpenses_1151304435_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of GeneralAdministrativeExpenses_1151304435_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OperatingExpenses_1151304406_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		SellingMarketingExpenses_1151304406_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SellingMarketingExpenses_1151304406_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SellingGeneralAdministrativeExpenses_1151304406_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		SellingMarketingExpenses_1151304406_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of SellingMarketingExpenses_1151304406_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OperatingExpenses_1151304379_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ResearchDevelopmentExpenseExcludingProcess_1151304379_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ResearchDevelopmentExpenseExcludingProcess_1151304379_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ResearchDevelopmentExpenseIncludingProcess_1151304379_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ResearchDevelopmentExpenseExcludingProcess_1151304379_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ResearchDevelopmentExpenseExcludingProcess_1151304379_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of OperatingExpenses_1151304223_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AmortizationIntangibles_1151304223_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AmortizationIntangibles_1151304223_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of Amortization_1151304223_2 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AmortizationIntangibles_1151304223_3
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AmortizationIntangibles_1151304223_3 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of NonOperatingIncomeExpense_1151253035_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		InvestmentGainLoss_1151253035_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of InvestmentGainLoss_1151253035_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Processing calculation link
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Entering to evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Captured calculation role name as StatementStockholdersEquity
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Starting to evaluate each calculation arc node.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Preparing a adjacent list graph structure.
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Number of vertices : 49
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StatementStockholdersEquity are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169120321_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169120664_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AccumulatedComprehensiveIncomeChanges_1169120891_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockNumberSharesChanges_1169121125_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockValueChanges_1169121210_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockNumberSharesChanges_1169121547_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockValueChanges_1169121612_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169187349_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169187368_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169187533_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockNumberSharesChanges_1169188751_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockNumberSharesChanges_1169188788_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockValueChanges_1169189261_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockValueChanges_1169189280_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CommonStockNumberSharesChanges_1169189958_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CommonStockNumberSharesChanges_1169189972_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CommonStockParChanges_1169190320_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	CommonStockParChanges_1169190339_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169538292_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1169538408_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	TreasuryStockValueChanges_1169543613_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1170227621_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	RetainedEarningsChanges_1170227671_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 	AdditionalPaidCapitalChanges_1198790996_0
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1198790996_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		AdjustmentToValuationOfAcquisitionAssumedOptionsAdditiionalPaidInCapital_1198790996_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdjustmentToValuationOfAcquisitionAssumedOptionsAdditiionalPaidInCapital_1198790996_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of RetainedEarningsChanges_1170227671_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CumulativeEffectSAB108RetainedEarnings_1170227671_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CumulativeEffectSAB108RetainedEarnings_1170227671_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1170227621_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		CumulativeEffectSAB108AdditionalPaidInCapital_1170227621_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CumulativeEffectSAB108AdditionalPaidInCapital_1170227621_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockValueChanges_1169543613_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TreasuryStockAcquiredValueVotingRightsDividendsTreasuryStockValue_1169543613_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockAcquiredValueVotingRightsDividendsTreasuryStockValue_1169543613_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169538408_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		StockCompensation_1169538408_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of StockCompensation_1169538408_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169538292_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		TaxBenefitFromEmployeeStockOptionPlans_1169538212_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TaxBenefitFromEmployeeStockOptionPlans_1169538212_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CommonStockParChanges_1169190339_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlanCommonStockAmount_1169190339_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlanCommonStockAmount_1169190339_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CommonStockParChanges_1169190320_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionCommonSharesAmount_1169190320_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionCommonSharesAmount_1169190320_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CommonStockNumberSharesChanges_1169189972_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionShares_1169189972_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionShares_1169189972_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of CommonStockNumberSharesChanges_1169189958_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlanCommonShares_1169189958_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlanCommonShares_1169189958_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockValueChanges_1169189280_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTreasuryStockAmount_1169189280_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTreasuryStockAmount_1169189280_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockValueChanges_1169189261_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansTreasuryStockValue_1169189261_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansTreasuryStockValue_1169189261_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockNumberSharesChanges_1169188788_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTreasuryStockShares_1169188458_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionTreasuryStockShares_1169188458_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockNumberSharesChanges_1169188751_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansSharesTreasuryShares_1169188441_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansSharesTreasuryShares_1169188441_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169187533_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		DeferredCompensationAmortizationAdditionalPaidInCapital_1169187533_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of DeferredCompensationAmortizationAdditionalPaidInCapital_1169187533_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169187368_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		adbe_IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionAdditioanlPaidInCapital_1169187368_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of adbe_IssuanceOfCommonStockAndReissuanceOfTreasuryStockForAcquisitionAdditioanlPaidInCapital_1169187368_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169187349_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansAdditionalPaidInCapital_1169187349_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceOfCommonStockAndReissuanceOfTreasuryStockUnderStockCompensationPlansAdditionalPaidInCapital_1169187349_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockValueChanges_1169121612_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTreasuryStockValue_1169121612_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTreasuryStockValue_1169121612_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockNumberSharesChanges_1169121547_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTreasuryStockShares_1169121547_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanTreasuryStockShares_1169121547_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockValueChanges_1169121210_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceCompensatoryStockTreasuryStockValue_1169121210_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceCompensatoryStockTreasuryStockValue_1169121210_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of TreasuryStockNumberSharesChanges_1169121125_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceCompensatoryStockTreasuryStockShares_1169121125_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceCompensatoryStockTreasuryStockShares_1169121125_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AccumulatedComprehensiveIncomeChanges_1169120891_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ChangeOtherComprehensiveIncomeOrLossNetofTaxesOtherAccumulatedComprehensiveIncome_1169120891_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ChangeOtherComprehensiveIncomeOrLossNetofTaxesOtherAccumulatedComprehensiveIncome_1169120891_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169120664_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanAdditionalPaidCapital_1169120664_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of ReissuanceTreasuryStockEmployeeStockPurchaseOptionPlanAdditionalPaidCapital_1169120664_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of AdditionalPaidCapitalChanges_1169120321_0 are: 
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - 		IssuanceCompensatoryStockAdditionalPaidCapital_1169120321_1
+INFO 0x7ffff7fc7780 se.xbrl.statementmodel - Adjacent vertex of IssuanceCompensatoryStockAdditionalPaidCapital_1169120321_1 are: 
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed evaluating all calculation arc nodes.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with evaluate a calculation link node.
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with processing calculation links
+INFO 0x7ffff7fc7780 se.xbrl.calculation - Completed with calculation xbrl file parsing.
+INFO 0x7ffff7fcb780 se.data.datatabletojsonformatter - creating an instance of jsonformattedoutput and returning the status code.
+INFO 0x7ffff7fcb780 se.data.jsondataformattedoutput - Initializing the json writer for datatable.

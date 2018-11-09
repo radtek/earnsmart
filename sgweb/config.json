@@ -1,0 +1,38 @@
+{
+    "service" : {
+            "ip" 	: "172.16.10.164",
+            "api" 	: "http",
+            "port" 	: 8900
+        },
+    "server" :
+        {
+            "mod" 	: "thread"
+        },
+    "http" : 
+        {
+            "script_names" : ["/"]
+        },
+    "cache" :
+        {
+            "backend" 	: "thread_shared",
+            "limit"	: 100000
+        },
+    "session" : 
+        {  
+            "expire" 	: "renew",  
+            "timeout" 	: 604800,  
+            "location" 	: "server",  
+            "server" 	:      
+                {  
+                    "storage" 	:        "files",  
+                    "dir"   	:   "./.session"
+                }      
+        },
+    "security" 		:	 
+        {
+            "csrf" 	: 
+            {
+                "enable" 	: "true"
+            }
+        }
+}

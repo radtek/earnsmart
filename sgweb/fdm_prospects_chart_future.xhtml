@@ -1,0 +1,130 @@
+<% c++ #include "models.h" %>
+<% c++ #include <iomanip> %>
+<% skin sgskin %>
+<% view CompanyProspectsFutureView uses sg::web::models::CProspectChartFuture %>
+
+<% template render() %>
+
+<script type="text/javascript">
+    
+    var url<%= chartid%> = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/<%= RefId %>');
+
+    var chart<%= chartid%> = null;
+    var data<%= chartid%> = null;
+
+    function errorHandler<%= chartid%>(err)
+    {
+        // err = { id , message, detailedMessage }
+    }
+    
+    function drawVisualization<%= chartid%>() 
+    {
+        console.log("Loading chart");
+        var postdata = [];
+        postdata.push("productid=" + <%= ProductId %>);
+        postdata.push("accounts=25");   // add comma seperated m (mappings) values.
+        $.post(url<%= chartid%>, postdata.join("&"))
+            .done(function(findata)
+            {
+                console.log("Data received");
+                if (findata.length && findata.length < 2)
+                {
+                    document.getElementById('cchart<%= chartid%>').style.visibility = "hidden";
+                    console.log("Nothing to load.");
+                    return;
+                }
+                
+                console.log("Loading datatable.");
+                data<%= chartid%> = new google.visualization.DataTable(findata);
+                var options = 
+                {
+                    title : '',
+                    pointSize : 1,
+                    curveType : "function",
+                    //focusTarget : "category",   // or datum
+                    enableInteractivity : true, // Whether the chart throws user-based events or reacts to user interaction. If false, the chart will not throw 'select' or other interaction-based events (but will throw ready or error events), and will not display hovertext or otherwise change depending on user input.
+                    series: 
+                        {
+                            0 : 
+                                { 
+                                    color : "green", 
+                                    annotations : 
+                                        { 
+                                            color : "blue" 
+                                        } 
+                                }
+                                /*
+                                , 
+                            1 : 
+                                { 
+                                    color: "green", 
+                                    annotations : 
+                                        { 
+                                            color : "green" 
+                                        }
+                                } 
+                                */
+                        }
+                };
+                console.log("drawing chart...");
+                chart<%= chartid%> = new google.visualization.LineChart(document.getElementById('cchart<%= chartid%>'));
+                chart<%= chartid%>.draw(data<%= chartid%>, options);
+                console.log("Done.");
+            })
+            .error(function(x)
+            {
+                console.log("Error:" + JSON.toString(x));
+                $("#cchart_<%= chartid%>").html("<font cpassword:olor='red'>Failed to draw chart. Data not available.</font>");
+            });
+    }
+
+    google.setOnLoadCallback(drawVisualization<%= chartid%>);       
+    
+</script>
+
+<div class="floatbox">
+    <text class="fdmcosumformula_header"><%= title %></text>
+    <div class="fdmcosumformula_config" id="dashboard<%= chartid%>">
+        <div>
+            Below is a future revenue estimate for <%= Prospects.get_SecurityInfo()->get_Symbol() %>:<%= Prospects.get_SecurityInfo()->get_Exchange() %> 
+            during the next earnings quarter
+            <% if (!content.Prospects.get_SecurityInfo()->get_NextEarningsReportDate().IsInvalid()) %>
+            &nbsp;reported on&nbsp;
+            <%  Prospects.get_SecurityInfo()->get_NextEarningsReportDate() %>.
+            <% end %>
+
+            <div class="fdmprospectsdisclaimer">
+                Disclaimer: <i> We are utilizing an internally developed mathematical model that is able to 
+                predict future revenues by analyzing macro economics data, non-systematic risk, 
+                competition data and the company fundamentals. The predicted result may not be correct in some cases. It is your responsibility
+                to compare the predicted result with publicly available analyst estimates before making any decision
+                to invest in the stock. We are offering this as a public service without taking any liability to losses
+                you may incur in your investments.</i>
+            </div>
+        </div>        
+        <table>
+            <tr>
+                <td>
+                    <% c++ if (!content.get_Error().empty()) { %>
+                        <div style="padding: 25pt; color: red">
+                        <%= get_Error() %>
+                        </div>
+                    <% c++ } else { %>
+                        <div class="fdmprospectschart" id="cchart<%= chartid%>">Loading chart...</div>
+                    <% c++ } %>
+                </td>
+            </tr>
+        </table>
+        <div>
+            Statistically calculated average quarterly revenue growth (upto 5yrs) is <% c++ out() << std::setprecision(2) << std::fixed << content.RevAvg; %>% with a growth risk (stddev) of &plusmn<%  c++ out() << std::setprecision(2) << std::fixed << content.Risk; %>%.<br>
+            The revenue growth predicted by our system for next quarter is <% c++ out() << std::setprecision(2) << std::fixed << content.PredRevGrowth; %>%.<br>
+            This difference should be noted in your decision on investing in this company.
+        </div>        
+    </div>       
+</div>
+
+<% end template %>
+<% end view %>
+<% end skin %>

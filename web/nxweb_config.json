@@ -1,0 +1,104 @@
+/* NXWEB sample config file */
+{
+    "load":[ // load custom C modules compiled into shared libraries
+          {"so":"libserpc.so"}
+        ],
+    "listen":[ // interfaces can be overriden by command - line arguments
+        //{
+        //    "interface":":8080", 
+        //    "backlog":4096, 
+        //    "secure" : false 
+        //},
+        {
+            "interface":":8081", 
+            "backlog":1024, 
+            "secure":false,
+            "cert":"ssl/es.crt", 
+            "key":"ssl/es.key"
+        }
+    ],
+    // uncomment if needed
+    // "drop_privileges":{ // these settings can be overriden by command - line arguments
+        //   "group":"www-data", "user":"www-data",
+    // },
+    //"backends":{
+    //  "backend1":{"connect":"localhost:8000"},
+    //  "backend2":{"connect":"localhost:8080"}
+    //},
+    "logging":{
+        // can't set error log here; it is opened before parsing this config file; use command line switch for that
+        "log_level":"INFO"
+        "access_log":"logs/nxweb_access_log"
+    },
+    "modules":{
+        "image_filter":{
+            "allowed_cmds":[
+                {"cmd":"scale", "width":50, "height":50}, // eg. /path/to/image.50x50.jpg
+                {"cmd":"crop", "width":50, "height":50}, // eg. /path/to/image.c50x50.jpg
+                {"cmd":"scale", "width":100, "height":100}, // eg. /path/to/image.100x100.jpg
+                {"cmd":"crop", "width":100, "height":100}, // eg. /path/to/image.c100x100.jpg
+                {"cmd":"crop", "width":200, "height":100}, // eg. /path/to/image.c200x100.jpg
+                {"cmd":"fill", "width":100, "height":100, "bgcolor":"#FF8800"}, // eg. /path/to/image.f100x100xFF8800.jpg
+                {"cmd":"fill", "width":500, "height":500, "bgcolor":"#FF8800"}  // eg. /path/to/image.f500x500xFF8800.jpg
+            ],
+            // don't forget to change secret key in your setup
+            "sign_key":"xbLBZeqSsUgfKWooMKoh0r1gjzqG856yVCMLf1pz"
+        },
+        "draw_filter":{
+            "font_file":"fonts/Sansation/Sansation_Bold.ttf"
+        },
+        "SEAppModule": {
+            "key" : ""
+        }
+    },
+    "routing":[
+        {
+            "prefix":null, // null matches all requests
+            "handler":"sendfile",
+            // "vhost":".some.host.com", // match only at this host
+            "secure_only":false, // match under https connection only
+            // "insecure_only":true, // match under http (not https) connection only
+            "dir":"www", // aka document root
+            "memcache":true, // cache small files in memory
+            "charset":"utf-8", // charset for text files
+            "index_file":"master.html", // directory index
+            "filters":[
+                {
+                    "type":"templates"
+                },
+                {
+                    "type":"ssi"
+                },
+                {
+                    "type":"image", 
+                    "cache_dir":"cache/img"
+                },
+                {
+                    "type":"gzip", 
+                    "compression":4, 
+                    "cache_dir":"cache/gzip"
+                }
+            ]
+        },
+        {
+            "prefix":"/rpc", // null matches all requests
+            "handler":"rpc",
+            "secure_only":false, // match under https connection only
+            //"insecure_only":false, // match under http (not https) connection only
+            "dir":"www", // aka document root
+            "memcache":true, // cache small files in memory
+            "charset":"utf-8", // charset for text files
+            "filters":[
+                {
+                    "type":"gzip", 
+                    "compression":4, 
+                    "cache_dir":"cache/gzip"
+                }
+                //,
+                //{
+                //    "type":"SessionFilter"
+                //}
+            ]
+        }
+    ]
+}

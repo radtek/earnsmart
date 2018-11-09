@@ -1,0 +1,235 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view EconomyView uses sg::web::models::Economy  %>
+<% template render() %>
+    <script type="text/javascript">
+        ////////////////////////////////ECONOMYPAGE////////////////////////////////////////////
+        $(document).ready(function ()
+        {
+            var panelspeed = 500; //panel animate speed in milliseconds
+            var defaultopenpanel = 0; //leave 0 for no panel open
+            var accordian = true; //set panels to behave like an accordian, with one panel only ever open at once
+            var panelheight = new Array();
+            var currentpanel = defaultopenpanel;
+            var iconheight = parseInt($('.eco_icon-close-open').css('height'));
+            var highlightopen = true;
+            var urlprefix = "";
+
+            //Initialise collapsible panels
+            function panelinit()
+            {
+                $(".eco_expandable-panel").each(function (index)
+                {
+                    var content = $(this).find('.eco_expandable-panel-content');
+                    panelheight[index] = parseInt(content.css('height'));
+                    content.css('margin-top', -panelheight[index]);
+                    if (defaultopenpanel == index)
+                    {
+                        $(this).find('.eco_icon-close-open').css('background-position', '0px -' + iconheight + 'px');
+                        $(this).find('.eco_expandable-panel-content').css('margin-top', 0);
+                        content.find('.eco_lblchart').css("display", "block");
+                        var ecid = $(this).find('.eco_expandable-panel-heading').attr("eciid");
+                        $.getJSON(urlprefix + ecid, function(d)
+                        {
+                            var data = google.visualization.arrayToDataTable(d);
+                            var options = 
+                                    { 
+                                        curveType : "function", 
+                                        title: '', 
+                                        hAxis : { title : "Period", slantedTextAngle : 90, viewWindowMode : "maximized" }, 
+                                        vAxis : { title : "Value"} 
+                                    };
+                            var elmtId = 'chart_div_' + ecid;
+                            var chart = new google.visualization.LineChart(document.getElementById(elmtId));
+                            chart.draw(data, options);
+                        }).fail(function()
+                        {
+
+                        });
+                    }
+                });
+            }
+
+
+            $('.eco_expandable-panel-heading').click(function ()
+            {
+                var obj = $(this).next();
+                var objid = $('.eco_expandable-panel').index($(this).parent());
+                currentpanel = objid;
+
+                if (accordian == true)
+                    resetpanels();
+
+                if (parseInt(obj.css('margin-top')) <= (panelheight[objid] * -1))
+                {
+                    obj.clearQueue();
+                    obj.stop();
+                    obj.prev().find('.eco_icon-close-open').css('background-position', '0px -' + iconheight + 'px');
+                    obj.animate({ 'margin-top': 0 }, panelspeed);
+                    if (highlightopen == true)
+                    {
+                        $(this).addClass('eco_header-active');
+                    }
+                    //obj.find('.eco_lblchart').delay(800).fadeIn(1000);
+                    obj.find('.eco_lblchart').css("display", "inline");
+                    var ecid = $(this).attr("eciid");
+                    $.getJSON(urlprefix + ecid, function(d)
+                    {
+                        var data = google.visualization.arrayToDataTable(d);
+                        var options = 
+                                { 
+                                    curveType : "function", 
+                                    title: '', 
+                                    width: 600,
+                                    height: 500,
+                                    hAxis : { title : "Period", slantedTextAngle : 90, viewWindowMode : "maximized" }, 
+                                    vAxis : { title : "Value"} 
+                                };
+                        var elmtId = 'chart_div_' + ecid;
+                        var chart = new google.visualization.LineChart(document.getElementById(elmtId));
+                        chart.draw(data, options);
+                    }).fail(function()
+                    {
+
+                    });
+                }
+                else
+                {
+                    obj.clearQueue();
+                    obj.stop();
+                    obj.prev().find('.eco_icon-close-open').css('background-position', '0px 0px');
+                    obj.animate({ 'margin-top': (panelheight[objid] * -1) }, panelspeed);
+                    if (highlightopen == true) {
+                        $(this).removeClass('eco_header-active');
+                    }
+                    obj.find('.eco_lblchart').css("display", "none");
+                }
+            });
+
+            function resetpanels()
+            {
+                $(".eco_expandable-panel").each(function (index)
+                {
+                    if (currentpanel != index)
+                    {
+                        $(this).find('.eco_icon-close-open').css('background-position', '0px 0px');
+                        var content = $(this).find('.eco_expandable-panel-content');
+                        content.animate({ 'margin-top': -panelheight[index] }, panelspeed);
+                        content.find('.eco_lblchart').css("display", "none");
+                        if (highlightopen == true)
+                            $(this).find(".eco_expandable-panel-heading").removeClass('eco_header-active');
+                    }
+                });
+            }
+
+            $("#eco_chk_acordian").click(function ()
+            {
+                if ($("#eco_chk_acordian").val() == "yes")
+                    $("#eco_chk_acordian").val("no");
+                else
+                    $("#eco_chk_acordian").val("yes");
+                accordian = $("#eco_chk_acordian").val() == "yes";
+                panelinit();
+            });
+
+
+            $("#fdm_ul").click(function(e)
+            {
+                if (e.bubbles)
+                {
+                    if (e.target.tagName == "A")
+                    {
+                        var catId = e.target.getAttribute("catid");
+                        $("#fdm_sel").val(catId);
+                        $("#form_economy").submit();
+                        return false;
+                    }
+                }
+            });                
+
+            accordian = $("#eco_chk_acordian").val() == "yes";
+            urlprefix = location.protocol.concat("//").concat(window.location.hostname).concat(":").concat(location.port).concat("/gj/5/");
+            panelinit();
+
+        }); 
+        
+    </script>
+    <form action="" id ="form_economy" name="form_economy" method="post" >
+        <div class="fdm_header" id="fdm_div_header">
+            <input type="hidden" name="fdm_sel" id="fdm_sel" value="<%= getSelectedCategoryId() %>"/>
+            <ul id="fdm_ul">
+            <% foreach category in *getCategories() %>
+                <% item %>
+                    <% if (content.getSelectedCategoryId() == category->get_Id()) %>
+                    <li id="fdm_li_summary" class="fdm_tab_selected">
+                        <a catid="<%= category->get_Id() %>" href="javascript:void()">
+                            <%= category->get_Name() %>
+                        </a>
+                    </li>
+                    <% else %>
+                    <li id="fdm_li_financials" >
+                        <a catid="<%= category->get_Id() %>" href="javascript:void()">
+                            <%= category->get_Name() %>
+                        </a>
+                    </li>
+                    <% end %>
+                <% end %>
+            <% end %>
+            </ul>
+        </div>        
+        <div id="eco_container">
+            <div style="width:100%;padding-top: 10pt;padding-bottom: 10pt">
+                <input id="eco_chk_acordian" type="checkbox" checked value="yes"/>Expand only one panel at a time.
+            </div>
+            <% foreach indicator in *getIndicators() %>
+                <% item %>
+                <div class="eco_expandable-panel" id="a">
+                    <div class="eco_expandable-panel-heading" eciid="<%= indicator->get_Id() %>">
+                        <table class="eco_titletable">
+                            <tr>
+                                <td>
+                                    <label class="eco_paneltitlelabel">
+                                        <%= indicator->get_Name() %>
+                                    </label>
+                                </td>
+                                <td rowspan="2" valign="top">
+                                    <span class="eco_icon-close-open"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="eco_titledescription">
+                                    Published <%= indicator->get_PublishPeriod() %>.&nbsp;
+                                    <% if (indicator->get_LatestValue().first.Year != 0) %>
+                                        For <%= indicator->get_LatestValue().first %> : 
+                                        <%= indicator->get_LatestValue().second %>
+                                    <% end %>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="eco_expandable-panel-content">
+                        <table>
+                            <tr>
+                                <td width="50%">
+                                    <p>
+                                        <%= indicator->get_Description() %>
+                                    </p>
+                                </td>
+                                <td width="50%">
+                                    <label class="eco_lblchart" id="chart_div_<%= indicator->get_Id() %>"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <% end %>
+                <% empty %>
+                <div>
+                    No economic indicators under this category.
+                </div>
+            <% end %>
+        </div>
+    </form>
+<% end template %>
+<% end view %>
+<% end skin %>

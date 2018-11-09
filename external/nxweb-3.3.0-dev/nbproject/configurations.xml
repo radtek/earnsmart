@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="sample_config">
+        <df name="modules">
+          <in>benchmark.c</in>
+          <in>hello.c</in>
+          <in>subrequests.c</in>
+          <in>upload.c</in>
+        </df>
+      </df>
+      <df name="src">
+        <df name="bin">
+          <in>main.c</in>
+        </df>
+        <df name="lib">
+          <df name="deps">
+            <df name="sha1-c">
+              <in>sha1.c</in>
+            </df>
+            <df name="ulib">
+              <in>hash.c</in>
+            </df>
+          </df>
+          <df name="filters">
+            <in>cors_filter.c</in>
+            <in>draw_filter.c</in>
+            <in>file_cache_filter.c</in>
+            <in>gzip_filter.c</in>
+            <in>image_filter.c</in>
+            <in>ssi_filter.c</in>
+            <in>templates_filter.c</in>
+          </df>
+          <df name="modules">
+            <in>host_redirect.c</in>
+            <in>http_proxy.c</in>
+            <in>python.c</in>
+            <in>sendfile.c</in>
+          </df>
+          <in>access_log.c</in>
+          <in>cache.c</in>
+          <in>daemon.c</in>
+          <in>http_server.c</in>
+          <in>http_subrequest.c</in>
+          <in>http_utils.c</in>
+          <in>json_config.c</in>
+          <in>main_stub.c</in>
+          <in>mime.c</in>
+          <in>misc.c</in>
+          <in>nx_buffer.c</in>
+          <in>nx_event.c</in>
+          <in>nx_file_reader.c</in>
+          <in>nx_pool.c</in>
+          <in>nx_workers.c</in>
+          <in>nxd_buffer.c</in>
+          <in>nxd_http_client_proto.c</in>
+          <in>nxd_http_proxy.c</in>
+          <in>nxd_http_server_proto.c</in>
+          <in>nxd_http_server_proto_subrequest.c</in>
+          <in>nxd_socket.c</in>
+          <in>nxd_ssl_socket.c</in>
+          <in>nxd_streamer.c</in>
+          <in>nxjson.c</in>
+          <in>templates.c</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-fPIC"/>
+        <element flagsID="1"
+                 commonFlags="-mtune=generic -march=x86-64 -g -O2 -fopenmp -fPIC -fstack-protector-strong"/>
+        <element flagsID="2"
+                 commonFlags="-mtune=generic -march=x86-64 -g -O2 -fopenmp -fstack-protector-strong"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure --with-imagemagick --with-gnutls --with-python --disable-certificates
+#./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <folder path="0/sample_config">
+        <cTool>
+          <incDir>
+            <pElem>src/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src">
+        <cTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src/bin">
+        <cTool>
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/include</pElem>
+            <pElem>src/bin</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/lib/deps/sha1-c">
+        <cTool>
+          <incDir>
+            <pElem>src/lib/deps/sha1-c</pElem>
+            <pElem>src/include/nxweb/deps/sha1-c</pElem>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/lib/deps/ulib">
+        <cTool>
+          <incDir>
+            <pElem>src/lib/deps/ulib</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/lib/filters">
+        <cTool>
+          <incDir>
+            <pElem>src/lib/filters</pElem>
+            <pElem>src/include/nxweb</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/lib/modules">
+        <cTool>
+          <incDir>
+            <pElem>src/lib/modules</pElem>
+            <pElem>src/include/nxweb</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="sample_config/modules/benchmark.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="sample_config/modules/hello.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="sample_config/modules/subrequests.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="sample_config/modules/upload.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/bin/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="src/lib/access_log.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/cache.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/include/nxweb/deps/ulib</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/daemon.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/deps/sha1-c/sha1.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/lib/deps/ulib/hash.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/lib/filters/cors_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/draw_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/include/ImageMagick-6/wand</pElem>
+            <pElem>/usr/include/ImageMagick-6/magick</pElem>
+            <pElem>/usr/include/ImageMagick-6</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/file_cache_filter.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/gzip_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/image_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>/usr/include/ImageMagick-6/wand</pElem>
+            <pElem>/usr/include/ImageMagick-6/magick</pElem>
+            <pElem>src/include/nxweb/deps/sha1-c</pElem>
+            <pElem>/usr/include/ImageMagick-6</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/ssi_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/filters/templates_filter.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/http_server.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/http_subrequest.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/include</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/http_utils.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/json_config.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/main_stub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/mime.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/include/nxweb/deps/ulib</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/misc.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/modules/host_redirect.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/modules/http_proxy.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/modules/python.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>/usr/include/python2.7</pElem>
+            <pElem>src/include</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/modules/sendfile.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nx_buffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nx_event.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nx_file_reader.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nx_pool.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nx_workers.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_buffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_http_client_proto.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_http_proxy.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_http_server_proto.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_http_server_proto_subrequest.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_socket.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_ssl_socket.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxd_streamer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/nxjson.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="2">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="src/lib/templates.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src/include/nxweb</pElem>
+            <pElem>src/include</pElem>
+            <pElem>src/lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

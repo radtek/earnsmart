@@ -1,0 +1,137 @@
+{
+    "name": "sebgpd",
+    "functions" :
+            [
+                {
+                    "name" : "mapsymboltocik",
+                    "active" : "0",
+                    "params" : "",
+                    "interval" : 
+                            {
+                                "freq" : "continuous",
+                                "factor" : "5"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "segment",
+                    "interval" : 
+                            {
+                                "freq" : "once",
+                                "factor" : "1"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "fixfinyear",
+                    "interval" : 
+                            {
+                                "freq" : "once",
+                                "factor" : "1"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "updateperformance",
+                    "interval" : 
+                            {
+                                "freq" : "daily",
+                                "factor" : "01:01:00"
+                            }
+                },
+                {
+                    "name" : "processstatements",
+                    "active" : "0",
+                    "params" : "",
+                    "instances" : 3,
+                    "interval" : 
+                            {
+                                "freq" : "continuous",
+                                "factor" : "2"
+                            }
+                },
+                {
+                    "name" : "parseformindex",
+                    "active" : "0",
+                    "params" : "10-Q;10-K;10-Q/A;10-K/A;10-QT;10-KT;20-F;20-F/A;6-K;6-K/A",
+                    "interval" : 
+                            {
+                                "freq" : "once",
+                                "factor" : "1"
+                            }
+                },
+                {
+                    "name" : "pricehistory",
+                    "active" : "0",
+                    "params" : "1",
+                    "interval" : 
+                            {
+                                "freq" : "daily",
+                                "factor" : "23:35:00"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "economicnewsprocessor",
+                    "interval" : 
+                            {
+                                "freq" : "continuous",
+                                "factor" : "3600"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "sourceeconomicsdata",
+                    "interval" : 
+                            {
+                                "freq" : "once"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "1",
+                    "params" : "gicsrevenuegrowth",
+                    "interval" : 
+                            {
+                                "freq" : "once",
+                                "when" : "20",
+                                "time" : "14:29:00"
+                            }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "updateearningscalendar",
+                    "interval" : 
+                        {
+                            "freq" : "monthly",
+                            "when" : "21",
+                            "time" : "12:30:00"
+                        }
+                },
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "processproductkeystats",
+                    "interval" : 
+                        {
+                            "freq" : "once"
+                        }
+                }                
+,
+                {
+                    "name" : "repeateddbaction",
+                    "active" : "0",
+                    "params" : "publishseclist",
+                    "interval" : 
+                        {
+                            "freq" : "once"
+                        }
+                }                
+            ]
+}

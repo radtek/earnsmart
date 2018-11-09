@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns:if="Wt.WTemplate.conditions">
+
+<!--LAYOUT message blocks-->
+  <message id="layout-intro">
+    <p class="lead">Layout &#8212; building blocks for organizing your
+    application as a tree of widgets</p>
+  </message>
+
+</messages>

@@ -1,0 +1,245 @@
+Making all in src/include
+make[1]: Entering directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/include'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/include'
+Making all in src/lib
+make[1]: Entering directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/lib'
+depbase=`echo cache.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT cache.lo -MD -MP -MF $depbase.Tpo -c -o cache.lo cache.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT cache.lo -MD -MP -MF .deps/cache.Tpo -c cache.c  -fPIC -DPIC -o .libs/cache.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT cache.lo -MD -MP -MF .deps/cache.Tpo -c cache.c -o cache.o >/dev/null 2>&1
+depbase=`echo daemon.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT daemon.lo -MD -MP -MF $depbase.Tpo -c -o daemon.lo daemon.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT daemon.lo -MD -MP -MF .deps/daemon.Tpo -c daemon.c  -fPIC -DPIC -o .libs/daemon.o
+daemon.c: In function 'nxweb_drop_privileges':
+daemon.c:199:9: warning: implicit declaration of function 'setresgid' [-Wimplicit-function-declaration]
+     if (setresgid(gid, gid, gid)==-1) {
+         ^
+daemon.c:203:9: warning: implicit declaration of function 'setresuid' [-Wimplicit-function-declaration]
+     if (setresuid(uid, uid, uid)==-1) {
+         ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT daemon.lo -MD -MP -MF .deps/daemon.Tpo -c daemon.c -o daemon.o >/dev/null 2>&1
+depbase=`echo http_server.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT http_server.lo -MD -MP -MF $depbase.Tpo -c -o http_server.lo http_server.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_server.lo -MD -MP -MF .deps/http_server.Tpo -c http_server.c  -fPIC -DPIC -o .libs/http_server.o
+http_server.c: In function 'invoke_request_handler':
+http_server.c:411:33: warning: 'return' with no value, in function returning non-void
+   if (conn->connection_closing) return; // do not process if already closing
+                                 ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_server.lo -MD -MP -MF .deps/http_server.Tpo -c http_server.c -o http_server.o >/dev/null 2>&1
+depbase=`echo http_utils.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT http_utils.lo -MD -MP -MF $depbase.Tpo -c -o http_utils.lo http_utils.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_utils.lo -MD -MP -MF .deps/http_utils.Tpo -c http_utils.c  -fPIC -DPIC -o .libs/http_utils.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_utils.lo -MD -MP -MF .deps/http_utils.Tpo -c http_utils.c -o http_utils.o >/dev/null 2>&1
+depbase=`echo mime.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT mime.lo -MD -MP -MF $depbase.Tpo -c -o mime.lo mime.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT mime.lo -MD -MP -MF .deps/mime.Tpo -c mime.c  -fPIC -DPIC -o .libs/mime.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT mime.lo -MD -MP -MF .deps/mime.Tpo -c mime.c -o mime.o >/dev/null 2>&1
+depbase=`echo misc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT misc.lo -MD -MP -MF $depbase.Tpo -c -o misc.lo misc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c misc.c  -fPIC -DPIC -o .libs/misc.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c misc.c -o misc.o >/dev/null 2>&1
+depbase=`echo nx_buffer.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nx_buffer.lo -MD -MP -MF $depbase.Tpo -c -o nx_buffer.lo nx_buffer.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_buffer.lo -MD -MP -MF .deps/nx_buffer.Tpo -c nx_buffer.c  -fPIC -DPIC -o .libs/nx_buffer.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_buffer.lo -MD -MP -MF .deps/nx_buffer.Tpo -c nx_buffer.c -o nx_buffer.o >/dev/null 2>&1
+depbase=`echo nxd_buffer.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_buffer.lo -MD -MP -MF $depbase.Tpo -c -o nxd_buffer.lo nxd_buffer.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_buffer.lo -MD -MP -MF .deps/nxd_buffer.Tpo -c nxd_buffer.c  -fPIC -DPIC -o .libs/nxd_buffer.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_buffer.lo -MD -MP -MF .deps/nxd_buffer.Tpo -c nxd_buffer.c -o nxd_buffer.o >/dev/null 2>&1
+depbase=`echo nxd_http_client_proto.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_http_client_proto.lo -MD -MP -MF $depbase.Tpo -c -o nxd_http_client_proto.lo nxd_http_client_proto.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_client_proto.lo -MD -MP -MF .deps/nxd_http_client_proto.Tpo -c nxd_http_client_proto.c  -fPIC -DPIC -o .libs/nxd_http_client_proto.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_client_proto.lo -MD -MP -MF .deps/nxd_http_client_proto.Tpo -c nxd_http_client_proto.c -o nxd_http_client_proto.o >/dev/null 2>&1
+depbase=`echo nxd_http_proxy.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_http_proxy.lo -MD -MP -MF $depbase.Tpo -c -o nxd_http_proxy.lo nxd_http_proxy.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_proxy.lo -MD -MP -MF .deps/nxd_http_proxy.Tpo -c nxd_http_proxy.c  -fPIC -DPIC -o .libs/nxd_http_proxy.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_proxy.lo -MD -MP -MF .deps/nxd_http_proxy.Tpo -c nxd_http_proxy.c -o nxd_http_proxy.o >/dev/null 2>&1
+depbase=`echo nxd_http_server_proto.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_http_server_proto.lo -MD -MP -MF $depbase.Tpo -c -o nxd_http_server_proto.lo nxd_http_server_proto.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_server_proto.lo -MD -MP -MF .deps/nxd_http_server_proto.Tpo -c nxd_http_server_proto.c  -fPIC -DPIC -o .libs/nxd_http_server_proto.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_server_proto.lo -MD -MP -MF .deps/nxd_http_server_proto.Tpo -c nxd_http_server_proto.c -o nxd_http_server_proto.o >/dev/null 2>&1
+depbase=`echo nxd_http_server_proto_subrequest.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_http_server_proto_subrequest.lo -MD -MP -MF $depbase.Tpo -c -o nxd_http_server_proto_subrequest.lo nxd_http_server_proto_subrequest.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_server_proto_subrequest.lo -MD -MP -MF .deps/nxd_http_server_proto_subrequest.Tpo -c nxd_http_server_proto_subrequest.c  -fPIC -DPIC -o .libs/nxd_http_server_proto_subrequest.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_http_server_proto_subrequest.lo -MD -MP -MF .deps/nxd_http_server_proto_subrequest.Tpo -c nxd_http_server_proto_subrequest.c -o nxd_http_server_proto_subrequest.o >/dev/null 2>&1
+depbase=`echo nxd_socket.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_socket.lo -MD -MP -MF $depbase.Tpo -c -o nxd_socket.lo nxd_socket.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_socket.lo -MD -MP -MF .deps/nxd_socket.Tpo -c nxd_socket.c  -fPIC -DPIC -o .libs/nxd_socket.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_socket.lo -MD -MP -MF .deps/nxd_socket.Tpo -c nxd_socket.c -o nxd_socket.o >/dev/null 2>&1
+depbase=`echo nxd_ssl_socket.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_ssl_socket.lo -MD -MP -MF $depbase.Tpo -c -o nxd_ssl_socket.lo nxd_ssl_socket.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_ssl_socket.lo -MD -MP -MF .deps/nxd_ssl_socket.Tpo -c nxd_ssl_socket.c  -fPIC -DPIC -o .libs/nxd_ssl_socket.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_ssl_socket.lo -MD -MP -MF .deps/nxd_ssl_socket.Tpo -c nxd_ssl_socket.c -o nxd_ssl_socket.o >/dev/null 2>&1
+depbase=`echo nxd_streamer.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxd_streamer.lo -MD -MP -MF $depbase.Tpo -c -o nxd_streamer.lo nxd_streamer.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_streamer.lo -MD -MP -MF .deps/nxd_streamer.Tpo -c nxd_streamer.c  -fPIC -DPIC -o .libs/nxd_streamer.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxd_streamer.lo -MD -MP -MF .deps/nxd_streamer.Tpo -c nxd_streamer.c -o nxd_streamer.o >/dev/null 2>&1
+depbase=`echo nx_event.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nx_event.lo -MD -MP -MF $depbase.Tpo -c -o nx_event.lo nx_event.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_event.lo -MD -MP -MF .deps/nx_event.Tpo -c nx_event.c  -fPIC -DPIC -o .libs/nx_event.o
+nx_event.c: In function 'nxe_get_current_http_time_str':
+nx_event.c:583:5: warning: implicit declaration of function 'nxweb_format_http_time' [-Wimplicit-function-declaration]
+     nxweb_format_http_time(loop->http_time_str, &tm);
+     ^
+nx_event.c: In function 'nxe_get_current_iso8601_time_str':
+nx_event.c:593:5: warning: implicit declaration of function 'nxweb_format_iso8601_time' [-Wimplicit-function-declaration]
+     nxweb_format_iso8601_time(loop->iso8601_time_str, &tm);
+     ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_event.lo -MD -MP -MF .deps/nx_event.Tpo -c nx_event.c -o nx_event.o >/dev/null 2>&1
+depbase=`echo nx_file_reader.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nx_file_reader.lo -MD -MP -MF $depbase.Tpo -c -o nx_file_reader.lo nx_file_reader.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_file_reader.lo -MD -MP -MF .deps/nx_file_reader.Tpo -c nx_file_reader.c  -fPIC -DPIC -o .libs/nx_file_reader.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_file_reader.lo -MD -MP -MF .deps/nx_file_reader.Tpo -c nx_file_reader.c -o nx_file_reader.o >/dev/null 2>&1
+depbase=`echo nx_pool.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nx_pool.lo -MD -MP -MF $depbase.Tpo -c -o nx_pool.lo nx_pool.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_pool.lo -MD -MP -MF .deps/nx_pool.Tpo -c nx_pool.c  -fPIC -DPIC -o .libs/nx_pool.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_pool.lo -MD -MP -MF .deps/nx_pool.Tpo -c nx_pool.c -o nx_pool.o >/dev/null 2>&1
+depbase=`echo nx_workers.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nx_workers.lo -MD -MP -MF $depbase.Tpo -c -o nx_workers.lo nx_workers.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_workers.lo -MD -MP -MF .deps/nx_workers.Tpo -c nx_workers.c  -fPIC -DPIC -o .libs/nx_workers.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nx_workers.lo -MD -MP -MF .deps/nx_workers.Tpo -c nx_workers.c -o nx_workers.o >/dev/null 2>&1
+depbase=`echo http_subrequest.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT http_subrequest.lo -MD -MP -MF $depbase.Tpo -c -o http_subrequest.lo http_subrequest.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_subrequest.lo -MD -MP -MF .deps/http_subrequest.Tpo -c http_subrequest.c  -fPIC -DPIC -o .libs/http_subrequest.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT http_subrequest.lo -MD -MP -MF .deps/http_subrequest.Tpo -c http_subrequest.c -o http_subrequest.o >/dev/null 2>&1
+depbase=`echo templates.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT templates.lo -MD -MP -MF $depbase.Tpo -c -o templates.lo templates.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT templates.lo -MD -MP -MF .deps/templates.Tpo -c templates.c  -fPIC -DPIC -o .libs/templates.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT templates.lo -MD -MP -MF .deps/templates.Tpo -c templates.c -o templates.o >/dev/null 2>&1
+depbase=`echo access_log.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT access_log.lo -MD -MP -MF $depbase.Tpo -c -o access_log.lo access_log.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT access_log.lo -MD -MP -MF .deps/access_log.Tpo -c access_log.c  -fPIC -DPIC -o .libs/access_log.o
+access_log.c: In function 'nxweb_access_log_thread_flush':
+access_log.c:68:9: warning: implicit declaration of function 'flock' [-Wimplicit-function-declaration]
+     if (flock(fd, LOCK_EX)==0) {
+         ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT access_log.lo -MD -MP -MF .deps/access_log.Tpo -c access_log.c -o access_log.o >/dev/null 2>&1
+depbase=`echo main_stub.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT main_stub.lo -MD -MP -MF $depbase.Tpo -c -o main_stub.lo main_stub.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT main_stub.lo -MD -MP -MF .deps/main_stub.Tpo -c main_stub.c  -fPIC -DPIC -o .libs/main_stub.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT main_stub.lo -MD -MP -MF .deps/main_stub.Tpo -c main_stub.c -o main_stub.o >/dev/null 2>&1
+depbase=`echo nxjson.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT nxjson.lo -MD -MP -MF $depbase.Tpo -c -o nxjson.lo nxjson.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxjson.lo -MD -MP -MF .deps/nxjson.Tpo -c nxjson.c  -fPIC -DPIC -o .libs/nxjson.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT nxjson.lo -MD -MP -MF .deps/nxjson.Tpo -c nxjson.c -o nxjson.o >/dev/null 2>&1
+depbase=`echo json_config.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT json_config.lo -MD -MP -MF $depbase.Tpo -c -o json_config.lo json_config.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT json_config.lo -MD -MP -MF .deps/json_config.Tpo -c json_config.c  -fPIC -DPIC -o .libs/json_config.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT json_config.lo -MD -MP -MF .deps/json_config.Tpo -c json_config.c -o json_config.o >/dev/null 2>&1
+depbase=`echo modules/http_proxy.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT modules/http_proxy.lo -MD -MP -MF $depbase.Tpo -c -o modules/http_proxy.lo modules/http_proxy.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/http_proxy.lo -MD -MP -MF modules/.deps/http_proxy.Tpo -c modules/http_proxy.c  -fPIC -DPIC -o modules/.libs/http_proxy.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/http_proxy.lo -MD -MP -MF modules/.deps/http_proxy.Tpo -c modules/http_proxy.c -o modules/http_proxy.o >/dev/null 2>&1
+depbase=`echo modules/sendfile.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT modules/sendfile.lo -MD -MP -MF $depbase.Tpo -c -o modules/sendfile.lo modules/sendfile.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/sendfile.lo -MD -MP -MF modules/.deps/sendfile.Tpo -c modules/sendfile.c  -fPIC -DPIC -o modules/.libs/sendfile.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/sendfile.lo -MD -MP -MF modules/.deps/sendfile.Tpo -c modules/sendfile.c -o modules/sendfile.o >/dev/null 2>&1
+depbase=`echo modules/host_redirect.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT modules/host_redirect.lo -MD -MP -MF $depbase.Tpo -c -o modules/host_redirect.lo modules/host_redirect.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/host_redirect.lo -MD -MP -MF modules/.deps/host_redirect.Tpo -c modules/host_redirect.c  -fPIC -DPIC -o modules/.libs/host_redirect.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT modules/host_redirect.lo -MD -MP -MF modules/.deps/host_redirect.Tpo -c modules/host_redirect.c -o modules/host_redirect.o >/dev/null 2>&1
+depbase=`echo filters/ssi_filter.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT filters/ssi_filter.lo -MD -MP -MF $depbase.Tpo -c -o filters/ssi_filter.lo filters/ssi_filter.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/ssi_filter.lo -MD -MP -MF filters/.deps/ssi_filter.Tpo -c filters/ssi_filter.c  -fPIC -DPIC -o filters/.libs/ssi_filter.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/ssi_filter.lo -MD -MP -MF filters/.deps/ssi_filter.Tpo -c filters/ssi_filter.c -o filters/ssi_filter.o >/dev/null 2>&1
+depbase=`echo filters/templates_filter.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT filters/templates_filter.lo -MD -MP -MF $depbase.Tpo -c -o filters/templates_filter.lo filters/templates_filter.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/templates_filter.lo -MD -MP -MF filters/.deps/templates_filter.Tpo -c filters/templates_filter.c  -fPIC -DPIC -o filters/.libs/templates_filter.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/templates_filter.lo -MD -MP -MF filters/.deps/templates_filter.Tpo -c filters/templates_filter.c -o filters/templates_filter.o >/dev/null 2>&1
+depbase=`echo filters/file_cache_filter.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT filters/file_cache_filter.lo -MD -MP -MF $depbase.Tpo -c -o filters/file_cache_filter.lo filters/file_cache_filter.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/file_cache_filter.lo -MD -MP -MF filters/.deps/file_cache_filter.Tpo -c filters/file_cache_filter.c  -fPIC -DPIC -o filters/.libs/file_cache_filter.o
+filters/file_cache_filter.c: In function 'fc_store_close':
+filters/file_cache_filter.c:289:3: warning: implicit declaration of function 'futimes' [-Wimplicit-function-declaration]
+   futimes(fcdata->fd, mtimes);
+   ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/file_cache_filter.lo -MD -MP -MF filters/.deps/file_cache_filter.Tpo -c filters/file_cache_filter.c -o filters/file_cache_filter.o >/dev/null 2>&1
+depbase=`echo filters/cors_filter.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT filters/cors_filter.lo -MD -MP -MF $depbase.Tpo -c -o filters/cors_filter.lo filters/cors_filter.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/cors_filter.lo -MD -MP -MF filters/.deps/cors_filter.Tpo -c filters/cors_filter.c  -fPIC -DPIC -o filters/.libs/cors_filter.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/cors_filter.lo -MD -MP -MF filters/.deps/cors_filter.Tpo -c filters/cors_filter.c -o filters/cors_filter.o >/dev/null 2>&1
+depbase=`echo deps/ulib/hash.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT deps/ulib/hash.lo -MD -MP -MF $depbase.Tpo -c -o deps/ulib/hash.lo deps/ulib/hash.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT deps/ulib/hash.lo -MD -MP -MF deps/ulib/.deps/hash.Tpo -c deps/ulib/hash.c  -fPIC -DPIC -o deps/ulib/.libs/hash.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT deps/ulib/hash.lo -MD -MP -MF deps/ulib/.deps/hash.Tpo -c deps/ulib/hash.c -o deps/ulib/hash.o >/dev/null 2>&1
+depbase=`echo deps/sha1-c/sha1.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT deps/sha1-c/sha1.lo -MD -MP -MF $depbase.Tpo -c -o deps/sha1-c/sha1.lo deps/sha1-c/sha1.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT deps/sha1-c/sha1.lo -MD -MP -MF deps/sha1-c/.deps/sha1.Tpo -c deps/sha1-c/sha1.c  -fPIC -DPIC -o deps/sha1-c/.libs/sha1.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT deps/sha1-c/sha1.lo -MD -MP -MF deps/sha1-c/.deps/sha1.Tpo -c deps/sha1-c/sha1.c -o deps/sha1-c/sha1.o >/dev/null 2>&1
+depbase=`echo filters/gzip_filter.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include -I../../src/include/nxweb  -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -MT filters/gzip_filter.lo -MD -MP -MF $depbase.Tpo -c -o filters/gzip_filter.lo filters/gzip_filter.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/gzip_filter.lo -MD -MP -MF filters/.deps/gzip_filter.Tpo -c filters/gzip_filter.c  -fPIC -DPIC -o filters/.libs/gzip_filter.o
+filters/gzip_filter.c: In function 'gzip_do_filter':
+filters/gzip_filter.c:304:20: warning: implicit declaration of function '_nxweb_fc_revalidate' [-Wimplicit-function-declaration]
+     nxweb_result r=_nxweb_fc_revalidate(conn, req, resp, fdata->fcache);
+                    ^
+filters/gzip_filter.c:358:25: warning: implicit declaration of function '_nxweb_fc_store' [-Wimplicit-function-declaration]
+   return fdata->fcache? _nxweb_fc_store(conn, req, resp, fdata->fcache) : NXWEB_OK;
+                         ^
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb -I../../src/include -I../../src/include/nxweb -pthread -DNXWEB_SYSCONFDIR=\"/usr/local/etc/nxweb\" -DNXWEB_LIBDIR=\"/usr/local/lib/nxweb\" -g3 -gdwarf-2 -MT filters/gzip_filter.lo -MD -MP -MF filters/.deps/gzip_filter.Tpo -c filters/gzip_filter.c -o filters/gzip_filter.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread   -DNXWEB_SYSCONFDIR='"/usr/local/etc/nxweb"' -DNXWEB_LIBDIR='"/usr/local/lib/nxweb"'  -g3 -gdwarf-2 -version-info 0:0:0  -o libnxweb.la -rpath /usr/local/lib cache.lo daemon.lo http_server.lo http_utils.lo mime.lo misc.lo nx_buffer.lo nxd_buffer.lo nxd_http_client_proto.lo nxd_http_proxy.lo nxd_http_server_proto.lo nxd_http_server_proto_subrequest.lo nxd_socket.lo nxd_ssl_socket.lo nxd_streamer.lo nx_event.lo nx_file_reader.lo nx_pool.lo nx_workers.lo http_subrequest.lo templates.lo access_log.lo main_stub.lo nxjson.lo json_config.lo modules/http_proxy.lo modules/sendfile.lo modules/host_redirect.lo filters/ssi_filter.lo filters/templates_filter.lo filters/file_cache_filter.lo filters/cors_filter.lo deps/ulib/hash.lo deps/sha1-c/sha1.lo filters/gzip_filter.lo    
+libtool: link: /usr/bin/gcc -shared  -fPIC -DPIC  .libs/cache.o .libs/daemon.o .libs/http_server.o .libs/http_utils.o .libs/mime.o .libs/misc.o .libs/nx_buffer.o .libs/nxd_buffer.o .libs/nxd_http_client_proto.o .libs/nxd_http_proxy.o .libs/nxd_http_server_proto.o .libs/nxd_http_server_proto_subrequest.o .libs/nxd_socket.o .libs/nxd_ssl_socket.o .libs/nxd_streamer.o .libs/nx_event.o .libs/nx_file_reader.o .libs/nx_pool.o .libs/nx_workers.o .libs/http_subrequest.o .libs/templates.o .libs/access_log.o .libs/main_stub.o .libs/nxjson.o .libs/json_config.o modules/.libs/http_proxy.o modules/.libs/sendfile.o modules/.libs/host_redirect.o filters/.libs/ssi_filter.o filters/.libs/templates_filter.o filters/.libs/file_cache_filter.o filters/.libs/cors_filter.o deps/ulib/.libs/hash.o deps/sha1-c/.libs/sha1.o filters/.libs/gzip_filter.o    -pthread   -pthread -Wl,-soname -Wl,libnxweb.so.0 -o .libs/libnxweb.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libnxweb.so.0" && ln -s "libnxweb.so.0.0.0" "libnxweb.so.0")
+libtool: link: (cd ".libs" && rm -f "libnxweb.so" && ln -s "libnxweb.so.0.0.0" "libnxweb.so")
+libtool: link: ar cru .libs/libnxweb.a  cache.o daemon.o http_server.o http_utils.o mime.o misc.o nx_buffer.o nxd_buffer.o nxd_http_client_proto.o nxd_http_proxy.o nxd_http_server_proto.o nxd_http_server_proto_subrequest.o nxd_socket.o nxd_ssl_socket.o nxd_streamer.o nx_event.o nx_file_reader.o nx_pool.o nx_workers.o http_subrequest.o templates.o access_log.o main_stub.o nxjson.o json_config.o modules/http_proxy.o modules/sendfile.o modules/host_redirect.o filters/ssi_filter.o filters/templates_filter.o filters/file_cache_filter.o filters/cors_filter.o deps/ulib/hash.o deps/sha1-c/sha1.o filters/gzip_filter.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libnxweb.a
+libtool: link: ( cd ".libs" && rm -f "libnxweb.la" && ln -s "../libnxweb.la" "libnxweb.la" )
+make[1]: Leaving directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/lib'
+Making all in src/bin
+make[1]: Entering directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/bin'
+depbase=`echo main.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src/include/nxweb  -I../../src/include  -pthread   -g3 -gdwarf-2 -MT main.o -MD -MP -MF $depbase.Tpo -c -o main.o main.c &&\
+mv -f $depbase.Tpo $depbase.Po
+main.c: In function ‘server_config’:
+main.c:26:7: warning: implicit declaration of function ‘nxweb_load_config’ [-Wimplicit-function-declaration]
+   if (nxweb_load_config(nxweb_main_args.config_file)==-1) return;
+       ^
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread   -g3 -gdwarf-2 -L../../src/lib  -o nxweb main.o -lnxweb -lz -ldl -lrt -lpthread  
+libtool: link: /usr/bin/gcc -pthread -g3 -gdwarf-2 -o .libs/nxweb main.o  -L../../src/lib /home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/lib/.libs/libnxweb.so -lz -ldl -lrt -lpthread -pthread
+cd ../.. && /bin/bash ./config.status src/bin/nxwebc
+config.status: creating src/bin/nxwebc
+make[1]: Leaving directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/src/bin'
+Making all in sample_config/modules
+make[1]: Entering directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/sample_config/modules'
+gcc -I../../src/include -pthread    benchmark.c hello.c subrequests.c upload.c -fPIC -shared -o sample_modules.so
+make[1]: Leaving directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev/sample_config/modules'
+make[1]: Entering directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/santony/Documents/smartearn/Linux/phases/phase2/external/nxweb-3.3.0-dev'

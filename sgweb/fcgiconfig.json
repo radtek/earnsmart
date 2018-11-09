@@ -1,0 +1,37 @@
+{
+    "service" : 
+    {
+            "api" 	 : "fastcgi",
+            "socket" :  "stdin",
+            "disable_global_exit_handling" : true
+    },
+    "server" :
+    {
+        "mod" : "thread"
+    },
+    "http" : 
+    {
+            "script_names" : ["/"]
+    },
+    "cache" :
+    {
+        "backend" : "thread_shared",
+        "limit" : 100000
+    },
+    "session" : 
+    {  
+        "expire" : "renew",  
+        "timeout" : 604800,  
+        "location" : "server",  
+        "server" :      
+        {  
+            "storage" :        "files",  
+            "dir"   :   "/home/santony/Documents/smartearn/Linux/libraries/sgweb/.session"
+        }      
+    },
+    "security" : 
+            {
+                "csrf" : { "enable" : "true" }
+            }
+    
+}

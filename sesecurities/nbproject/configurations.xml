@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="DataProviders" projectFiles="true">
+      <itemPath>CEodDataProvider.cpp</itemPath>
+      <itemPath>CEodDataProvider.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CEarningCalendar.h</itemPath>
+      <itemPath>CEconomincallyAdjustedPrices.h</itemPath>
+      <itemPath>CGICList.h</itemPath>
+      <itemPath>CMarketDataProvider.h</itemPath>
+      <itemPath>COptionFeeder.h</itemPath>
+      <itemPath>COptionPricing.h</itemPath>
+      <itemPath>COptionYahooFeeder.h</itemPath>
+      <itemPath>CParseCompanyProfile.h</itemPath>
+      <itemPath>CPublicCompanyInfoList.h</itemPath>
+      <itemPath>CSecurityNews.h</itemPath>
+      <itemPath>CSecurityPrice.h</itemPath>
+      <itemPath>CSecurityPriceRSSFeed.h</itemPath>
+      <itemPath>CSecuritySelectionStatistics.h</itemPath>
+      <itemPath>GICSInfo.h</itemPath>
+      <itemPath>PublicCompanyInfo.h</itemPath>
+      <itemPath>Security.h</itemPath>
+      <itemPath>SecurityAPI.h</itemPath>
+      <itemPath>internal.h</itemPath>
+      <itemPath>sesecuritiesapi.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>calendarnotes.html</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CEarningCalendar.cpp</itemPath>
+      <itemPath>CEconomincallyAdjustedPrices.cpp</itemPath>
+      <itemPath>CGICList.cpp</itemPath>
+      <itemPath>CMarketDataProvider.cpp</itemPath>
+      <itemPath>COptionFeeder.cpp</itemPath>
+      <itemPath>COptionPricing.cpp</itemPath>
+      <itemPath>COptionYahooFeeder.cpp</itemPath>
+      <itemPath>CParseCompanyProfile.cpp</itemPath>
+      <itemPath>CPublicCompanyInfoList.cpp</itemPath>
+      <itemPath>CSecurityNews.cpp</itemPath>
+      <itemPath>CSecurityPrice.cpp</itemPath>
+      <itemPath>CSecurityPriceRSSFeed.cpp</itemPath>
+      <itemPath>CSecuritySelectionStatistics.cpp</itemPath>
+      <itemPath>ExposedStructures.cpp</itemPath>
+      <itemPath>GICSInfo.cpp</itemPath>
+      <itemPath>PublicCompanyInfo.cpp</itemPath>
+      <itemPath>Security.cpp</itemPath>
+      <itemPath>SecurityAPI.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>tidy</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEarningCalendar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEarningCalendar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGICList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CGICList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionPricing.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionPricing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityNews.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityNews.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExposedStructures.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GICSInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GICSInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Security.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Security.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SecurityAPI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calendarnotes.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sesecuritiesapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>boost_locale</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>tidy</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEarningCalendar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEarningCalendar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGICList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CGICList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionPricing.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionPricing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityNews.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityNews.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExposedStructures.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GICSInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GICSInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Security.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Security.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SecurityAPI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SecurityAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calendarnotes.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sesecuritiesapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>tidy</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEarningCalendar.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEarningCalendar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEodDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGICList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CGICList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CMarketDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionPricing.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionPricing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionYahooFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CParseCompanyProfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CPublicCompanyInfoList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityNews.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityNews.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityPrice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityPriceRSSFeed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecuritySelectionStatistics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExposedStructures.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="GICSInfo.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="GICSInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="PublicCompanyInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Security.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="Security.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SecurityAPI.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="SecurityAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calendarnotes.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sesecuritiesapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../external/mariadbpp</pElem>
+          </incDir>
+          <commandLine>-fPIC</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semath"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semath"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>boost_locale</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>tidy</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEarningCalendar.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEarningCalendar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomincallyAdjustedPrices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEodDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGICList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CGICList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMarketDataProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CMarketDataProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionPricing.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionPricing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptionYahooFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="COptionYahooFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CParseCompanyProfile.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CParseCompanyProfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPublicCompanyInfoList.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CPublicCompanyInfoList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityNews.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityNews.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPrice.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityPrice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityPriceRSSFeed.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityPriceRSSFeed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecuritySelectionStatistics.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecuritySelectionStatistics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExposedStructures.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="GICSInfo.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="GICSInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PublicCompanyInfo.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="PublicCompanyInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Security.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="Security.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SecurityAPI.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="SecurityAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="calendarnotes.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="sesecuritiesapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

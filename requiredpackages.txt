@@ -1,0 +1,27 @@
+1. libmysqlclient-dev, libmysql++3, libmysql++-dev and mysql-client/mysql-server
+2. libpthread-workqueue-dev (and libpthread-workqueue0)
+3. libxml2, libxml++2.6-dev
+REMOVED 4. libnanohttp1 and libnanohttp-dev
+5. liblog4cxx10-dev libraries
+REMOVED 6. ncurses (libncurses and libncurses++)
+REMOVED 7. libxmlrpc-c++4 and libxmlrpc-core-c3 and libxmlrpc-c3-dev and libxmlrpc-c++4
+8. libboost1.50-all-dev
+9. libcgicc5-dev and related.
+10. libfcgi-dev required for fastcgi
+11. libjsoncpp0 and libjsoncpp-dev
+12. libglib2.0-dev (note that in netbeans, compile should have additional directories /usr/include/glib-2.0 and /usr/lib/x86-64-linux-gnu/glib-2.0/include and linker to include /usr/lib/x86-64-linux-gnu/libglib-2.0.so (the former required to for glibconfig.h
+13. extract and install zmq and iconv which are in "smartearn/externals" folder. Use usual approach to install
+	./configure --prefix=/usr/local
+	make 
+	sudo make install
+14. libtar-dev
+15. libcurl4-openssl-dev
+16. Python mysqldb lib : python-mysqldb-dbg
+17. mrss (libmrss)
+
+////////////////// other applications ///////////////////////////
+1. incron - this is used as a system notifier for file change notifications
+
+2. gnome-shell for gnome's own nice desktop.
+
+3. subversion tools

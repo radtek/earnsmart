@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CXbrlCalculation.h</itemPath>
+      <itemPath>CXbrlDoc.h</itemPath>
+      <itemPath>CXbrlElement.h</itemPath>
+      <itemPath>CXbrlLine.h</itemPath>
+      <itemPath>CXbrlStatementModel.h</itemPath>
+      <itemPath>CXbrlStatementParser.h</itemPath>
+      <itemPath>CXbrlStatementPersistor.h</itemPath>
+      <itemPath>c_algorithms.h</itemPath>
+      <itemPath>c_array.h</itemPath>
+      <itemPath>c_deque.h</itemPath>
+      <itemPath>c_errors.h</itemPath>
+      <itemPath>c_iterator.h</itemPath>
+      <itemPath>c_lib.h</itemPath>
+      <itemPath>c_map.h</itemPath>
+      <itemPath>c_rb.h</itemPath>
+      <itemPath>c_set.h</itemPath>
+      <itemPath>c_slist.h</itemPath>
+      <itemPath>pugixml.hpp</itemPath>
+      <itemPath>sexbrlinternal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CXbrlCalculation.cpp</itemPath>
+      <itemPath>CXbrlDoc.cpp</itemPath>
+      <itemPath>CXbrlElement.cpp</itemPath>
+      <itemPath>CXbrlLine.cpp</itemPath>
+      <itemPath>CXbrlStatementModel.cpp</itemPath>
+      <itemPath>CXbrlStatementParser.cpp</itemPath>
+      <itemPath>CXbrlStatementPersistor.cpp</itemPath>
+      <itemPath>c_algorithms.c</itemPath>
+      <itemPath>c_array.c</itemPath>
+      <itemPath>c_deque.c</itemPath>
+      <itemPath>c_map.c</itemPath>
+      <itemPath>c_rb.c</itemPath>
+      <itemPath>c_set.c</itemPath>
+      <itemPath>c_slist.c</itemPath>
+      <itemPath>c_util.c</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>pugixml.cpp</itemPath>
+      <itemPath>xbrlcalparsingtest.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../../../external/google/cstl</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>../../../external/google/cstl</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sedata"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>boost_regex-mt</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>pthread_workqueue</linkerLibLibItem>
+            <linkerLibLibItem>log4cxx</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

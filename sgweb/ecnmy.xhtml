@@ -1,0 +1,129 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view EconomyView uses sg::web::models::Economy  %>
+<% template render() %>
+    <script type="text/javascript">
+        ////////////////////////////////ECONOMYPAGE////////////////////////////////////////////
+        var urlprefix = location.protocol.concat("//").concat(window.location.hostname).concat(":").concat(location.port).concat("/gj/5/");
+        
+    </script>
+    <form action="" id ="form_economy" name="form_economy" method="post" >
+        <div class="fdm_header" id="fdm_div_header">
+            <input type="hidden" name="fdm_sel" id="fdm_sel" value="<%= getSelectedCategoryId() %>"/>
+            <ul id="fdm_ul">
+                <% if (content.getSelectedCategoryId() == 0) %>
+                    <li id="fdm_li_summary" class="fdm_tab_selected">
+                <% else %>
+                    <li id="fdm_li_summary">
+                <% end %>
+                        <a catid="0" href="/economy/0">
+                            News
+                        </a>
+                    </li>
+            <% foreach category in *getCategories() %>
+                <% item %>
+                    <% if (category->get_IsDisplayed()) %>
+                        <% if (content.getSelectedCategoryId() == category->get_Id()) %>
+                        <li id="fdm_li_summary" class="fdm_tab_selected">
+                            <a catid="<%= category->get_Id() %>" href="/economy/<%= category->get_Id() %>">
+                                <%= category->get_Name() %>
+                            </a>
+                        </li>
+                        <% else %>
+                        <li id="fdm_li_financials" >
+                            <a catid="<%= category->get_Id() %>" href="/economy/<%= category->get_Id() %>">
+                                <%= category->get_Name() %>
+                            </a>
+                        </li>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            <% end %>
+            </ul>
+        </div>        
+        <div id="eco_container">
+            <% c++ if (content.getSelectedCategoryId() == 0) { %>
+                <% include render() using EconomicNewsView with News %>
+            <% c++ } else { %>
+                <% foreach indicator in *getIndicators() %>
+                    <% item %>
+                        <% if (indicator->get_IsDisplayed()) %>
+                            <div class="eco_floatbox" id="eco<%= indicator->get_Id() %>">
+                                <text class="eco_float_header">
+                                    <%= indicator->get_Name() %>
+                                </text>
+                                <div class="eco_float_details" >
+                                    <table class="eco_float_table">
+                                        <!--
+                                        <tr>
+                                            <td>
+                                                <div >
+                                                    <%= indicator->get_Description() %>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        -->
+                                        <tr>
+                                            <td>
+                                                <script>
+                                                    google.setOnLoadCallback(
+                                                    function()
+                                                    {
+                                                        $.getJSON(urlprefix + "<%= indicator->get_Id() %>", function(d)
+                                                        {
+                                                            if (d == null || !d.length || d.length == 1)   // has only headers
+                                                            {
+                                                                $("#eco<%= indicator->get_Id() %>").css("display", "none");
+                                                                return;
+                                                            }
+                                                            var data = google.visualization.arrayToDataTable(d);
+                                                            var options = 
+                                                                    { 
+                                                                        curveType : "function", 
+                                                                        title: '', 
+                                                                        hAxis : { 
+                                                                            title : "Period", 
+                                                                            maxAlternation : 3,
+                                                                            allowContainerBoundaryTextCufoff : true,
+                                                                            textStyle : { fontSize : 8 }
+                                                                        }, 
+                                                                        vAxis : { title : "Value"},
+                                                                        legend : { 'position' : 'none'},
+                                                                        width : 340,
+                                                                        height : 295
+                                                                    };
+                                                            var elmtId = 'chart_div_' + <%= indicator->get_Id() %>;
+                                                            var chart = new google.visualization.LineChart(document.getElementById(elmtId));
+                                                            chart.draw(data, options);
+                                                        }).fail(function()
+                                                        {
+                                                            $("#eco<%= indicator->get_Id() %>").css("display", "none");
+                                                        });
+                                                    }());
+
+                                                </script>
+                                                <div 
+                                                    class="eco_lblchart" 
+                                                    id="chart_div_<%= indicator->get_Id() %>">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>                    
+                                <label class="eco_copyright">
+                                    &copy;<%= indicator->get_CopyRight() | raw %>
+                                </label>
+                            </div>
+                        <% end %>
+                    <% end %>
+                    <% empty %>
+                    <div>
+                        No economic indicators under this category.
+                    </div>
+                <% end %>
+            <% c++ } %>
+        </div>
+    </form>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="|home|santony|Documents|smartearn|Linux|libraries|external|cppcms-1.0.4|CMakeLists.txt">
+        <attr name="NetBeansAttrArguments" serialvalue="aced0005757200135b4c6a6176612e6c616e672e537472696e673badd256e7e91d7b470200007870000000017400df2d472022556e6978204d616b6566696c657322202d44434d414b455f4255494c445f545950453d4465627567202d44434d414b455f435f434f4d50494c45523d2f7573722f62696e2f676363202d44434d414b455f4358585f434f4d50494c45523d2f7573722f62696e2f672b2b202d44434d414b455f435f464c4147535f44454255473d222d6733202d6764776172662d3222202d44434d414b455f4358585f464c4147535f44454255473d222d6733202d6764776172662d3222202d44434d414b455f4558504f52545f434f4d50494c455f434f4d4d414e44533d4f4e"/>
+        <attr name="NetBeansAttrEnvironment" serialvalue="aced0005757200135b4c6a6176612e6c616e672e537472696e673badd256e7e91d7b47020000787000000000"/>
+        <attr name="rundirectory" stringvalue="/home/santony/Documents/smartearn/Linux/libraries/external/cppcms-1.0.4"/>
+    </fileobject>
+    <fileobject name="|home|santony|Documents|smartearn|Linux|libraries|external|cppcms-1.0.4|Makefile">
+        <attr name="NetBeansAttrEnvironment" serialvalue="aced0005757200135b4c6a6176612e6c616e672e537472696e673badd256e7e91d7b47020000787000000000"/>
+        <attr name="buildDirectory" stringvalue="/home/santony/Documents/smartearn/Linux/libraries/external/cppcms-1.0.4"/>
+    </fileobject>
+</attributes>

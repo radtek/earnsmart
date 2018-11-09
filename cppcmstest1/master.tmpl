@@ -1,0 +1,28 @@
+<% c++ #include "content.h" %>
+<% skin myskin %>
+<% view master uses se::model::master %>
+<% template title() %>
+    <%= title%>
+<% end template %>
+<% template page_content() %> Override me <% end template %>
+<% template render() %>
+<html>
+    <head>
+        <title> <% include title() %> </title>
+        <link href="/hello/style" rel="stylesheet" type="text/css" media="screen"/>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script language="javascript" src="/hello/script"></script>
+	<link rel="shortcut icon" href="/hello/images/favicon.ico" />
+        <link rel="icon" href="/hello/images/favicon.ico" />
+    </head>
+    <body>
+        <h1> <% include title() %> </h1>
+        <img src="/hello/images/favicon.ico" />
+        <div id="content">
+            <% include page_content() %>
+        </div>
+    </body>
+</html>
+<% end template %>
+<% end view %>
+<% end skin %>   

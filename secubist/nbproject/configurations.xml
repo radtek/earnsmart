@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAttribute.h</itemPath>
+      <itemPath>CAttributeList.h</itemPath>
+      <itemPath>CCubist.h</itemPath>
+      <itemPath>COptions.h</itemPath>
+      <itemPath>defns.h</itemPath>
+      <itemPath>extern.h</itemPath>
+      <itemPath>internal.h</itemPath>
+      <itemPath>text.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAttribute.cpp</itemPath>
+      <itemPath>CAttributeList.cpp</itemPath>
+      <itemPath>CCubist.cpp</itemPath>
+      <itemPath>COptions.cpp</itemPath>
+      <itemPath>construct.cpp</itemPath>
+      <itemPath>contin.cpp</itemPath>
+      <itemPath>cubist.cpp</itemPath>
+      <itemPath>discr.cpp</itemPath>
+      <itemPath>formrules.cpp</itemPath>
+      <itemPath>formtree.cpp</itemPath>
+      <itemPath>getdata.cpp</itemPath>
+      <itemPath>getnames.cpp</itemPath>
+      <itemPath>global.cpp</itemPath>
+      <itemPath>implicitatt.cpp</itemPath>
+      <itemPath>instance.cpp</itemPath>
+      <itemPath>modelfiles.cpp</itemPath>
+      <itemPath>predict.cpp</itemPath>
+      <itemPath>prunetree.cpp</itemPath>
+      <itemPath>regress.cpp</itemPath>
+      <itemPath>rules.cpp</itemPath>
+      <itemPath>sort.cpp</itemPath>
+      <itemPath>stats.cpp</itemPath>
+      <itemPath>trees.cpp</itemPath>
+      <itemPath>update.cpp</itemPath>
+      <itemPath>utility.cpp</itemPath>
+      <itemPath>xval.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <commandLine>-fPIC</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <commandLine>-fPIC</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttribute.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttribute.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAttributeList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCubist.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCubist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="construct.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="contin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="defns.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="discr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="extern.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="formrules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="formtree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getdata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getnames.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="global.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="implicitatt.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="instance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modelfiles.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="predict.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="prunetree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="regress.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="rules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sort.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stats.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="text.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="trees.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="update.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="xval.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <commandLine>-fPIC</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <commandLine>-fPIC</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttribute.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttribute.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAttributeList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCubist.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCubist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="COptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="COptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="construct.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="contin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="defns.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="discr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="extern.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="formrules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="formtree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getdata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getnames.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="global.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="implicitatt.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="instance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modelfiles.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="predict.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="prunetree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="regress.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="rules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sort.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stats.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="text.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="trees.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="update.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="xval.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAttributeDescription.h</itemPath>
+      <itemPath>CBayesianDataProcessor.h</itemPath>
+      <itemPath>CMVLRProcessor.h</itemPath>
+      <itemPath>CPredictor.h</itemPath>
+      <itemPath>CProductDescription.h</itemPath>
+      <itemPath>CResult.h</itemPath>
+      <itemPath>CTimeSeriesBuilder.h</itemPath>
+      <itemPath>CTrainingSet.h</itemPath>
+      <itemPath>CXXXAlgoProcessBase.h</itemPath>
+      <itemPath>sepredictapi.h</itemPath>
+      <itemPath>sepredictinternal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAttributeDescription.cpp</itemPath>
+      <itemPath>CBayesianDataProcessor.cpp</itemPath>
+      <itemPath>CMVLRProcessor.cpp</itemPath>
+      <itemPath>CPredictor.cpp</itemPath>
+      <itemPath>CProductDescription.cpp</itemPath>
+      <itemPath>CResult.cpp</itemPath>
+      <itemPath>CTimeSeriesBuilder.cpp</itemPath>
+      <itemPath>CTrainingSet.cpp</itemPath>
+      <itemPath>CXXXAlgoProcessBase.cpp</itemPath>
+      <itemPath>sepredictapi.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <incDir>
+            <pElem>/usr/include/bsoncxx/v0.2/bsoncxx</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>../config/../external/mariadbpp</pElem>
+            <pElem>/usr/include/bsoncxx/v0.2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttributeDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProductDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProductDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResult.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTrainingSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTrainingSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sepredictapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+            <pElem>../config/../external/mariadbpp</pElem>
+            <pElem>/usr/include/bsoncxx/v0.2</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttributeDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProductDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProductDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResult.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTrainingSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTrainingSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sepredictapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <incDir>
+            <pElem>/usr/include/bsoncxx/v0.2/bsoncxx</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../config/../external/mariadbpp</pElem>
+            <pElem>/usr/include/bsoncxx/v0.2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttributeDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProductDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProductDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResult.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTrainingSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTrainingSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sepredictapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>../config/../external/mariadbpp</pElem>
+            <pElem>/usr/include/bsoncxx/v0.2</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAttributeDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAttributeDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBayesianDataProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMVLRProcessor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CProductDescription.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CProductDescription.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResult.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResult.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTimeSeriesBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CTrainingSet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CTrainingSet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXXXAlgoProcessBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sepredictapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sepredictinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

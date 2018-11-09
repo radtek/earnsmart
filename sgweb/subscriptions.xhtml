@@ -1,0 +1,84 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view SubscriptionsView uses sg::web::models::Subscriptions %>
+<% template render() %>
+    <h1 class="title">Part I - Subscriptions</h1>
+    <div class="entry">
+        <h2><input type="radio" id="rbasic" name="user" value="Basic subscriber">Basic subscriber<br></h2>
+			<p style="color: #014421;font-size: 16px;">There is no subscription fee. You can select up to five of your most favorite financial instruments 
+and get to know all the currently available features. You can also experience any new features we 
+offer in future. If you think it is worth, you can convert your basic subscription to a paid 
+subscription at very low monthly fees and financially support this unique initiative.</p>
+			<div id="basic">
+				<form action="/smartgaze/buser/" method="post"><% csrf %>
+                <table style="color: #014421;"><tr><td><label for="username">User name:</label>  </td>
+                <td><input type="text" name="product" value="" id="product"></td></tr>
+            <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="text" name="product1" value="" id="product1"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="product2" value="" id="product2"></td>
+            </tr>
+            <tr><td><input type="checkbox" name="Terms" value='True' >Accept terms and conditions<br></td></tr>	
+            <tr>
+            <td>
+            <input type="submit" style="background-color:#014421;color: white;border: 1px" value="login" />
+            <input type="hidden" name="next" value="{{ next|escape }}" />
+            </td>
+            </tr>	
+            </table>
+            </form>	
+			</div>
+			<h2><input type="radio" name="user" id="rsub" value="Paid subscriber">Paid subscriber<br></h2>
+		<p style="color: #014421;font-size: 16px;">As a paid subscriber, you can select unlimited number of financial instrument products. You can 
+manage multiple virtual portfolios to watch how your favorite companies are performing. You will also be part of our future product initiatives. You can opt out or cancel your paid subscription any 
+time from your Accounts page.</p>		
+		<div id="sub">
+			<form action="/smartgaze/signin/" method="post"><% csrf %>
+				<table width="300" style="color: #014421;">
+				<tr>
+			<td><label for="username">User name:</label> </td> 	
+	    	<td><input type="text" name="product" value="" id="product"></td>
+	    	</tr>
+	    	<tr>
+	    	<td><label for="email">Email:</label></td>
+	    	<td><input type="text" name="product1" value="" id="product1"></td>
+	    	</tr>
+	    	<tr>
+	    	<td><label for="password">Password:</label></td>
+	    	<td><input type="password" name="product2" value="" id="product2"></td>
+	    	</tr>
+					<tr>
+						<td>Street1:</td><td><input type="text" name="Street1" value='' id="Street1"></td>
+					</tr>
+					<tr>
+						<td>Street2:</td><td> <input type="text" name="Street2" value='' id="Street2"></td>
+					</tr>
+					<tr>
+						<td>City:</td><td><input type="text" name="city" value='' id="city"></td>
+					</tr>
+					<tr><td>State:</td><td><input type="text" name="state" value='' id="state"></td>
+						
+					</tr>
+					<tr>
+						<td>Postalcode:</td><td><input type="text" name="Postalcode" value='' id="Postalcode"></td>
+					</tr>
+					<tr>
+						<td>Phone:</td><td><input type="text" name="phone" value='' id="phone"></td>
+					</tr>
+					
+				</table>
+			
+			<p style="color: #014421; font-size: 16px;"><input type="checkbox" name="Terms" value='True' style="color: #014421;">Accept terms and conditions<br></p>
+	    	
+	    	<input type="submit" style="background-color:#014421;color: white;border: 1px" value="login" />
+	    	<input type="hidden" name="next" value="{{ next|escape }}" />
+	    	
+	    	
+	       	</form> 
+    </div>
+<% end template %> 
+<% end view %>
+<% end skin %>

@@ -1,0 +1,14 @@
+<% c++ #include "../sewebmodels/CLoginOrRegister.h" %>
+<% skin  skdefault %>
+<% view LoginOrRegisterView uses CLoginOrRegister %>
+<% template render() %>
+<div id="dvLoginRegister">
+    <% c++ if (!content.UserSession or content.get_IsAnon()){ %>
+    <a href="/register">Register</a><a href="/signon">Log on</a>
+    <% c++ } else { %>
+    <a href="/account"><%= UserSession->get_User()->get_FullName() %> </a><a href="/logout">Exit</a>
+    <% c++ } %>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,58 @@
+<div id="dvSigonControls">
+    <h2>Welcome</h2>
+    <h3>Sign into your account</h3>
+    <form name="signinform" novalidate>
+    <div>
+        <div>
+            <input 
+                name="signEmail" 
+                type="email"
+                ng-model="emailAddress"
+                placeholder="email address"
+                title="Enter your sign-in email address"
+                required
+            >
+            <span class="errorlabel" ng-show="signinform.signEmail.$invalid">*required.</span>
+        </div>
+        <div>
+            <input 
+                name="signPwd" 
+                type="password"
+                required
+                placeholder='password' 
+                title="Enter a password between 8 and 25 characters"
+                ng-model="pwd"
+                >
+            <span class="errorlabel" ng-show="signinform.signPwd.$invalid">*required.</span>
+        </div>
+        <div>
+            <input 
+                name="signRem" 
+                type="checkbox" 
+                value="Remember" 
+                ng-model="rememberMe"
+                checked>Remember me
+        </div>
+        <div>
+            <button 
+                ng-disabled="signinform.signPwd.$invalid || signinform.signEmail.$invalid" 
+                ng-click="logincall()"
+            >
+                Login
+            </button>
+        </div>
+        <div class="errorlabel" >{{errorMsg}}</div>
+        <div>
+            <h4>
+            Have you forgot your password? 
+            </h4>
+            Click <a ng-href="#/resetpwd">here</a> to reset your password.
+            <hr>
+            <h4>
+            Don't have an account yet? 
+            </h4>
+            Click <a ng-href="#/register">here</a> to register.
+        </div>
+    </div>
+</form>
+</div>

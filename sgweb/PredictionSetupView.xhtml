@@ -1,0 +1,1702 @@
+<% c++ #include "admmodels.h" %>
+<% skin sgskin %>
+<% view PredictionSetupView uses sg::web::adm::PredictionSetupModel  %>
+
+<% template render() %>
+
+<% c++ using namespace sg::web::adm; %>
+
+<% c++ if (content.PageSelection == PredictionSetupModel::GeneralSetup ) { %>
+
+<style>
+    .ui-menu { position: absolute; width: 100px; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+    label, input, textarea { display:block; }
+    input.text { width:95%; padding: 2px; }
+    fieldset { padding:0; border:0; margin-top:5px; overflow: hidden;}
+    textarea { width: 95%; padding : 2px; }
+</style>
+
+<script type="text/javascript">
+
+    var baseurl = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/');
+    var updateselection = 0;
+    var updateselectiontitle = '';
+    var vzData = null;
+    var vzTable = null;
+    var tablePageIndex = 0;
+    var ecodataeditdata = {};
+    var ecodataeditindex = -1;
+
+
+    function btneupdateclick()
+    {
+        var jobj = $(event.target);
+        updateselection = jobj.parent().parent().parent().attr("eid");
+        updateselectiontitle = jobj.parent().parent().parent().children().first().text();
+        console.log(updateselectiontitle);
+        $("#dlgUpdateEconomicsData").dialog("open");
+    };
+    
+    function editecogriddata(index)
+    {
+        event.preventDefault();
+        ecodataeditindex = index;
+        ecodataeditdata = {};
+        console.log(vzData.getValue(index, 2));
+        ecodataeditdata.period = vzData.getValue(index, 0); 
+        ecodataeditdata.value = vzData.getValue(index, 1); 
+        //ecodataeditdata.change = vzData.getValue(index, 2); 
+        $("#dlgAddEconomicsData").dialog("open");
+    }
+    
+    function onclickcross()
+    {
+        console.log("onclickcross=" + event.currentTarget);
+        var jtarget = $(event.currentTarget);
+        var jdroppedparent = jtarget.parents("div").filter("#droppedattributepanel, #droppedresultpanel, #perf_tabs, #eco_tabs");
+        if (jdroppedparent)
+        {
+            console.log("onclickcross= dropped parent found");
+            var obj = jtarget.parents("div").filter(".draggableportet");
+            var source = obj.attr("source");
+            var dropback;
+            if (source == "E")
+                dropback= "eco" + obj.attr("iid");
+            else if (source == "P")
+                dropback= "perf" + obj.attr("iid");
+            obj.appendTo($("#" + dropback));
+        }
+    }
+    
+    function checkRegexp( val, regexp ) 
+    {
+        if ( !( regexp.test( val ) ) ) 
+        {
+            return false;
+        } 
+        else 
+        {
+            return true;
+        }
+    }
+
+    function predictValue()
+    {
+        var postdata = {};
+        postdata.eid = updateselection;
+        postdata.countryid = $("#dlgAddCountry").val();
+        postdata.stateid = $("#dlgAddState").val();
+        postdata.year = $("#dlgAddtxtYear").val();
+        postdata.month = $("#dlgAddtxtMonth").val();
+        postdata.day = $("#dlgAddtxtDay").val();
+        postdata.predalgo =  $("#dlgSelPredAlgo").val();
+        
+        console.log("predictVal = " + JSON.stringify(postdata));
+        
+        $.post("/economy/manage/getpredictedvalue", "params=" + JSON.stringify(postdata))
+            .done(function(d)
+            {
+                $("#dlgAddValue").val(d);
+            })
+            .error(function(x)
+            {
+                alert("Error");
+            });
+    }
+    
+
+    $(document).ready(function()
+    {
+        
+        var szPredName = $("#dlg1txtPredName");
+        var szPredDesc = $("#dlg1txtDesc");
+        var szAlgo = $("#dlg1cmbAlgo");
+        var szIsDefault = $("#dlgchkisdefault");
+        var allFields = $([]).add(szPredName).add(szPredDesc);
+        var tips = $(".validateTips");
+        var currentTrainingSet = null;
+        var chosenSetId = 0;
+        
+        
+        function updateTips(t) 
+        {
+            tips.text( t ).addClass( "ui-state-highlight" );
+            setTimeout(function() 
+            {
+                tips.removeClass( "ui-state-highlight", 1500 );
+            }, 500 );
+        };
+        
+        
+        var fnpopindicators  = function(panel)
+        {
+            var iid = panel.attr('indicatorid');
+            $.get(baseurl.concat("4/").concat(iid))
+                .done(function(data)
+                {
+                    if (data.length > 1)
+                    {
+                        var html = [];
+                        var ulid= "eco" + panel.attr("id");
+                        html.push("<div id='" + ulid + "' class='olindicatorselections ui-helper-reset ui-helper-clearfix'>");
+                        for (var i=1; i != data.length; ++i)
+                        {
+                            var item = "dvitemeco" + data[i][0];
+                            html.push("<div id='" + item + "' eid='" + data[i][0] + "' source='E' iid='" + panel.attr("id") + "' class='draggableportet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>");
+                            html.push("<div class='dvdragableitem ui-widget-header ui-corner-all'><a target='_blank' href='" + data[i][8] + "'>" + data[i][1] + "</a>");
+                            html.push("<span onclick='onclickcross();' class='ui-icon ui-icon-closethick portlet-toggle' style='float:right;cursor:pointer;'></span>");
+                            html.push("</div>");
+                            html.push("<div class='draggableportletcontent'>");
+                            html.push("<div>Period: " + data[i][5] + "</div>");
+                            html.push("<div>Value: " + data[i][6] + "</div>");
+                            //html.push("<div>Change: " + data[i][7] + "</div>");
+                            html.push("<div style='float:right;'><button onclick='event.preventDefault();btneupdateclick();' class='btneupdate'>Update</button></div>");
+                            html.push("</div>");
+                            html.push("</div>");
+                        }
+                        html.push("</div>");
+                        panel.html(html.join(""));
+                        $(".draggableportet").draggable(
+                            { 
+                                revert : "invalid", 
+                                appendTo : "body", 
+                                containment : "window", 
+                                snap : true, 
+                                snapMode : "both",
+                                helper: "clone",
+                                cursor: "move"
+                            });
+                        $("#" + ulid).droppable(
+                            {
+                                accept: ".draggableportet",
+                                drop : function(event, ui)
+                                {
+                                    var dropback = "eco" + ui.draggable.attr("iid");
+                                    ui.draggable.appendTo($("#" + dropback));
+                                }
+                            }
+                        );
+                
+                        $("#eco_tabs").tabs("refresh");
+                        $("#pred_tabs").tabs("refresh");
+                    }
+                })
+                .error(function(x)
+                {
+
+                });
+        };
+
+        var fnpopratios = function(panel)
+        {
+            var iid = panel.attr('indicatorid');
+            $.get(baseurl.concat("13/").concat(iid))
+                .done(function(data)
+                {
+                    if (data.length > 1)
+                    {
+                        var html = [];
+                        var ulid= "perf" + panel.attr("id");
+                        html.push("<div id='" + ulid + "' class='olindicatorselections ui-helper-reset ui-helper-clearfix'>");
+                        for (var i=1; i != data.length; ++i)
+                        {
+                            var item = "dvitemperf" + data[i][0];
+                            html.push("<div id='" + item + "' eid='" + data[i][0] + "' source='P' iid='" + panel.attr("id") + "' class='draggableportet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>");
+                            html.push("<div class='dvdragableitem ui-widget-header ui-corner-all'>" + data[i][1]);
+                            html.push("<span onclick='onclickcross();' class='ui-icon ui-icon-closethick portlet-toggle' style='float:right;cursor:pointer;'></span>");
+                            html.push("</div>");
+                            html.push("<div class='draggableportletcontent'>");
+                            //html.push("<div>Period: " + data[i][5] + "</div>");
+                            //html.push("<div>Value: " + data[i][6] + "</div>");
+                            //html.push("<div>Change: " + data[i][7] + "</div>");
+                            html.push("</div>");
+                            html.push("</div>");
+                            
+                        }
+                        html.push("</div>");
+                        panel.html(html.join(""));
+                        $(".draggableportet").draggable(
+                            { 
+                                revert : "invalid", 
+                                appendTo : "body", 
+                                containment : "window", 
+                                snap : true, 
+                                snapMode : "both",
+                                helper: "clone",
+                                cursor: "move"
+                            });
+                        $("#" + ulid).droppable(
+                            {
+                                accept: ".draggableportet",
+                                drop : function(event, ui)
+                                {
+                                    var dropback = "perf" + ui.draggable.attr("iid");
+                                    ui.draggable.appendTo($("#" + dropback));
+                                }
+                            }
+                        );
+                
+                        $("#perf_tabs").tabs("refresh");
+                        $("#pred_tabs").tabs("refresh");
+                    }
+                })
+                .error(function(x)
+                {
+
+                });
+        };
+        
+        var fnpopselbox = function(data, str)
+        {
+            var jdata = data;
+            var box = $("#pred_cmbselectsetup");
+            box.empty();
+            if (str != null && str.length)
+                box.append('<option value="0">New</option>');
+            else
+                box.append('<option value="0" selected>New</option>');
+            if  (jdata.length > 1)
+            {
+                for (var i=1; i != jdata.length; ++i)
+                {
+                    box.append('<option value="' + jdata[i][0] + '" title="' + jdata[i][2] + '" algo="' + jdata[i][3] + '" isdefault="' + jdata[i][4] + '" >' + jdata[i][1] + (jdata[i][4]==true?'(Default)':'') + '</option>');
+                }
+            }            
+            if (str != null && str.length)
+            {
+                console.log(str);
+                //$("#pred_cmbselectsetup option:contains('" + str + "')").attr("selected", "selected");
+                $("#pred_cmbselectsetup option").filter(function()
+                    {
+                        return $(this).text() == str;
+                    }).attr("selected", "selected");
+            }
+            
+            fnapplytrainingsetdetails($("#pred_cmbselectsetup").val());
+        };
+        
+        var fngettrainingdetailsasjson = function()
+        {
+            var jdata = {};
+            jdata.setid = $("#pred_cmbselectsetup").val();
+            jdata.result = {};
+            var resultobj = $("#droppedresultpanel").children().first();
+            jdata.result.type = resultobj.attr("source");
+            jdata.result.value = resultobj.attr("eid");
+            jdata.attribs = [];
+            $("#droppedattributepanel").children().each(function()
+            {
+                var attribobj = $(this);
+                var attrib = {};
+                attrib.type = attribobj.attr("source");
+                attrib.value = attribobj.attr("eid");
+                console.log(attribobj.attr("id") + " =  { T : " + attrib.type + ", I: " + attrib.value +  " }");
+                if (attrib.type != null && attrib.value != null)
+                    jdata.attribs.push(attrib);
+            });
+            return jdata;
+        };
+        
+        
+        
+        var fnapplytrainingsetdetails = function(setid)
+        {
+            
+            // clear
+            $("#droppedattributepanel").children().each(function()
+            {
+                console.log("Returning " + $(this).attr("id") + " to original panel");
+                var source = $(this).attr("source");
+                var dropback;
+                if (source == "E")
+                    dropback= "eco" + $(this).attr("iid");
+                else if (source == "P")
+                    dropback= "perf" + $(this).attr("iid");
+                $(this).appendTo($("#" + dropback));
+            });
+            
+            $("#droppedresultpanel").children().each(function()
+            {
+                console.log("Returning " + $(this).attr("id") + " to original panel");
+                var source = $(this).attr("source");
+                var dropback;
+                if (source == "E")
+                    dropback= "eco" + $(this).attr("iid");
+                else if (source == "P")
+                    dropback= "perf" + $(this).attr("iid");
+                $(this).appendTo($("#" + dropback));
+            });
+            
+            if (!setid)
+                return ;
+            
+            $.get(baseurl.concat("10015/").concat(setid))
+                .done(function(data)
+                {
+                    console.log("got trainingsetdetails for " + setid);
+                    if (setid == 0)
+                        return;
+                    
+                    currentTrainingSet = data;
+                    for (var i=0; i!=currentTrainingSet.attribs.length; ++i)
+                    {
+                        // find the panel which has attribute eid=x and source = source.
+                        var attr = currentTrainingSet.attribs[i];
+                        var divtag = $("div[eid=" + attr.value + "][source=" + attr.type + "]");
+                        var effectoptions = {};
+                        effectoptions.to = "#droppedattributepanel";
+                        effectoptions.className = "ui-effects-transfer";
+                        $("#pred_tabs").effect("transfer", effectoptions, 100, function()
+                        {
+                            console.log("Effects callback is called.");
+                        });                        
+                        divtag.appendTo($("#droppedattributepanel"));
+                    }
+                    var divtag = $("div[eid=" + currentTrainingSet.result.value + "][source=" + currentTrainingSet.result.type + "]");
+                    var effectoptions = {};
+                    effectoptions.to = "#droppedresultpanel";
+                    effectoptions.className = "ui-effects-transfer";
+                    console.log("Trying out transfer effects");
+                    $("#pred_tabs").effect("transfer", effectoptions, 100, function()
+                    {
+                        console.log("Effects callback is called.");
+                    });
+                    divtag.appendTo($("#droppedresultpanel"));
+                })
+                .error(function(x)
+                {
+                    
+                });
+        };
+        
+        $.get(baseurl.concat("3"))
+            .done(function(data)
+            {
+                var jobj = data;
+                if (jobj.length > 1)
+                {
+                    for (var i=1; i != jobj.length; ++i)
+                    {
+                        var hr = "ecotab" + jobj[i][0];
+                        $("#ecotabitems").append('<li><a href="#' + hr + '">' + jobj[i][1] + '</a></li>');
+                        // create a div tab as panel
+                        $("#eco_tabs").append('<div id="' + hr + '" class="draggablepanel" indicatorid="' + jobj[i][0] + '"></div>');
+                        // create panels for each tab
+                        fnpopindicators( $(document.getElementById(hr)) );
+                    }
+                    $("#eco_tabs").tabs({heightStyle : "auto"});
+                    $("#pred_tabs").tabs("option", "heightStyle", "auto");
+                }
+            })
+            .error(function(x)
+            {
+
+            });
+
+        $.get(baseurl.concat("12"))
+            .done(function(data)
+            {
+                var jobj = data;
+                if (jobj.length > 1)
+                {
+                    for (var i=1; i != jobj.length; ++i)
+                    {
+                        var hr = "perftab" + jobj[i][0];
+                        $("#perftabitems").append('<li><a href="#' + hr + '">' + jobj[i][1] + '</a></li>');
+                        // create a div tab as panel
+                        $("#perf_tabs").append('<div id="' + hr + '" class="draggablepanel" indicatorid="' + jobj[i][0] + '"></div>');
+                        // create panels for each tab
+                        fnpopratios( $(document.getElementById(hr)) );
+                    }
+                    $("#perf_tabs").tabs({heightStyle : "auto"});
+                    $("#pred_tabs").tabs("option", "heightStyle", "auto");
+                }
+            })
+            .error(function(x)
+            {
+
+            });
+        
+        
+        $("#pred_tabs").tabs();
+
+        $(".droppedattributepanel").droppable(
+            { 
+                accept: ".draggableportet" ,
+                activeClass : "ui-state-highlight",
+                drop : function(event, ui)
+                {
+                    if ($(this).attr("id") == "droppedresultpanel" && $(this).children().length == 1)
+                    {
+                        event.preventDefault();
+                        return;
+                    }
+                    ui.draggable.appendTo($(this));
+                }
+            }
+        );
+
+        $( "#dlgPredictionSetup").dialog({
+              autoOpen: false,
+              height: 380,
+              width: 450,
+              modal: true,
+              open : function(event, ui)
+              {
+                  allFields.val( "" ).removeClass( "ui-state-error" );
+                  if (chosenSetId == "0")    //new
+                  {
+                  }
+                  else
+                  {
+                      console.log("Editing");
+                      var opt = $("#pred_cmbselectsetup option:selected");
+                      szPredName.val(opt.text().replace("(Default)", "").trim());
+                      szPredDesc.val(opt.attr("title"));
+                      szAlgo.find("option:selected").removeAttr("selected");
+                      szAlgo.find("option[value='" + opt.attr("algo") + "']").attr("selected", "selected");
+                      console.log("isdefault=" + opt.attr("isdefault"));
+                      szIsDefault.attr("checked", opt.attr("isdefault")==true?"checked":"");
+                      console.log("Edit-Opened");
+                  }
+              },
+              buttons: 
+                {
+                    "Save": function() 
+                    {
+                        var bValid = true;
+                        allFields.removeClass( "ui-state-error" );
+                        bValid = szPredName.val() != "";
+                        if ( bValid ) 
+                        {
+                            var pdata = [];
+                            pdata.push("SetId=" + chosenSetId);
+                            pdata.push("SetName=" + szPredName.val());
+                            pdata.push("SetDesc=" + szPredDesc.val());
+                            pdata.push("SetDetails=" + JSON.stringify(fngettrainingdetailsasjson()));
+                            pdata.push("SetAlgo=" + szAlgo.val());
+                            console.log(szIsDefault.is(":checked"));
+                            pdata.push("SetIsDefault=" + szIsDefault.is(":checked") );
+                            console.log(pdata);
+                            $.ajax(
+                                    {
+                                        url: "/companies/prediction/setup",
+                                        async: false,
+                                        data : pdata.join("&"),
+                                        type: 'POST'
+                                    }
+                                ).done(function()
+                                {
+                                    fnloadpredictions(szPredName.val());
+                                }).error(function()
+                                {
+                                    updateTips("Prediction Setup information wasn't successfuly saved. Try again." );
+                                });
+                                $( this ).dialog( "close" );
+                        }
+                        else
+                        {
+                            szPredName.addClass( "ui-state-error" );
+                            updateTips("Prediction Setup Name field must be provided." );
+                        }
+                    },
+                    Cancel: function() 
+                    {
+                      $( this ).dialog( "close" );
+                    }
+                },
+              close: function() 
+              {
+                    allFields.val( "" ).removeClass( "ui-state-error" );
+              }
+            });
+
+        $("#btnsave").button().click(function()
+        {
+            chosenSetId = $("#pred_cmbselectsetup").val();
+            if (!$("#droppedattributepanel").children().length || !$("#droppedresultpanel").children().length)
+            {
+                $( "#dlgMessageBox" ).dialog(
+                    {
+                        height: 140,
+                        modal: true,
+                        title : "Cannot Proceed",
+                        open : function()
+                        {
+                            updateTips("Prediction Setup is not ready. No attribute and/or result are selected.");
+                        }
+                    });
+            }
+            else
+            {
+                $("#dlgPredictionSetup").dialog("open");
+            }
+        })
+        .next()
+        .button({
+            text: false,
+            icons: {
+              primary: "ui-icon-triangle-1-s"
+            }
+        })
+        .click(function() 
+        {
+            var menu = $(this).parent().next().show().position(
+            {
+              my: "left top",
+              at: "left bottom",
+              of: this
+            });
+            $(document).one( "click", function()
+            {
+                menu.hide();
+            });
+            return false;
+        })
+        .parent()
+        .buttonset()
+        .next()
+        .hide()
+        .menu().click(function(event)
+        {
+            var jq = $(event.target);
+            var menuId = jq.attr("id");
+            console.log(jq.attr("id"));
+            if (menuId == "btnDelete")
+            {
+                if ($("#pred_cmbselectsetup").val() == "0")
+                {
+                    $( "#dlgMessageBox" ).dialog(
+                    {
+                        height: 140,
+                        modal: true,
+                        title : "Cannot Proceed",
+                        open : function()
+                        {
+                            updateTips("Select a prediction setup from the dropdown to delete.");
+                        }
+                    });
+                }
+                else
+                {
+                    $("#dlgConfirmBox").dialog("open");
+                }
+            }
+            else if (menuId == "btnSaveAs")
+            {
+                if (!$("#droppedattributepanel").children().length || !$("#droppedresultpanel").children().length)
+                {
+                    chosenSetId = 0;
+                    $( "#dlgMessageBox" ).dialog(
+                        {
+                            height: 140,
+                            modal: true,
+                            title : "Cannot Proceed",
+                            open : function()
+                            {
+                                updateTips("Prediction Setup is not ready. No attribute and/or result are selected.");
+                            }
+                        });
+                }
+                else
+                    $("#dlgPredictionSetup").dialog("open");
+            }
+        });
+
+        var fnloadpredictions = function(str)
+        {
+            $.get(baseurl.concat('10014'))
+                .done(function(data)
+                {
+                    fnpopselbox(data, str);
+                    console.log("Populated pred_cmbselectsetup");
+                })
+                .error(function(x)
+                {
+
+                });
+        };
+        
+        $("#pred_cmbselectsetup").change(function()
+        {
+            fnapplytrainingsetdetails($(this).val());
+        });
+        
+        var dlgecodatagridoptions = 
+                                {
+                                    showRowNumber : true, 
+                                    alternatingRowStyle : true, 
+                                    allowHtml : true,  
+                                    page : 'enable',
+                                    pageSize : 25,
+                                    pagingSymbols : { prev : 'Prev', next : 'Next' },
+                                    pagingButtonsConfiguration : 'auto',
+                                    cssClassNames : 
+                                        {
+                                            oddTableRow : 'EcoDataGridOddRow',
+                                            hoverTableRow : 'EcoDataGridHoverRow'
+                                        }
+                                };
+        
+        var fnsetupEcoDataGrid = function()
+        {
+            vzData = new google.visualization.DataTable();
+            vzData.addColumn('string', 'Period');
+            vzData.addColumn('number', 'Value');
+            //vzData.addColumn('number', 'Change');        
+            vzData.addColumn('string', '');        
+            vzTable = new google.visualization.Table(document.getElementById("dlgUpdEcoDataGrid"));
+            google.visualization.events.addListener(vzTable, 'page', function(p)
+            {
+                tablePageIndex = p.page;
+            });
+        };
+        
+        fnsetupEcoDataGrid();
+        
+        $("#dlgUpdateEconomicsData").dialog(
+                {
+                    autoOpen : false,
+                    resizable : true,
+                    minWidth : 700,
+                    minHeight : 600,
+                    modal : true,
+                    closeOnEscape : true,
+                    title : 'Manage Economics Data',
+                    buttons : 
+                            {
+                                "Add Record" : function()
+                                {
+                                    ecodataeditdata = null;
+                                    $("#dlgAddEconomicsData").dialog("open");
+                                }
+                            },
+                    open : function()
+                    {
+                        $("#dlgUpdateEconomicsData").dialog('option', 'title', "Manage : " + updateselectiontitle);
+                        
+                        $.get(baseurl.concat("5/").concat(updateselection)).done(function(data)
+                        {
+                            vzData.removeRows(0, vzData.getNumberOfRows());
+                            if (data.length > 1)
+                            {
+                                for (var i=1; i != data.length; ++i)
+                                {
+                                    var index = i-1;
+                                    data[i].push('<a href="javascript::void()" onclick="editecogriddata(' + index + ');">Edit</a>');
+                                    vzData.addRow(data[i]);
+                                }
+                            }
+                            vzTable.draw(vzData, dlgecodatagridoptions);
+                            
+                        }).error(function(x)
+                        {
+                            
+                        });
+                    },
+                    resize : function()
+                    {
+                        dlgecodatagridoptions.startPage = tablePageIndex;
+                        vzTable.draw(vzData, dlgecodatagridoptions);
+                    }
+                });
+                
+        $("#dlgAddEconomicsData").dialog(
+                {
+                    autoOpen : false,
+                    resizable : false,
+                    minWidth : 300,
+                    minHeight : 450,
+                    modal : true,
+                    closeOnEscape : false,
+                    title : 'Add Economics Data',
+                    position : {my : 'center', at : 'center', of : window },
+                    buttons : 
+                            {
+                                "Submit" : function()
+                                {
+                                    // validate
+                                    if (
+                                            !checkRegexp($("#dlgAddCountry").val(), /^[\d]{1,3}$/i) || 
+                                            !checkRegexp($("#dlgAddState").val(), /^[\d]{1,3}$/i) || 
+                                            !checkRegexp($("#dlgAddtxtYear").val(), /^[\d]{4}$/i) || 
+                                            !checkRegexp($("#dlgAddtxtMonth").val(), /^[\d]{1,2}$/i) || 
+                                            !checkRegexp($("#dlgAddtxtDay").val(), /^[\d]{1,2}$/i) || 
+                                            !checkRegexp($("#dlgAddValue").val(), /^(-)?([\d])*(.)?([\d]+)$/i)
+                                        )
+                                    {
+                                        alert("Not all values are given or are in incorrect format. All values except change are required.");
+                                        return;
+                                    }
+                                    
+                                    var pdata = [];
+                                    pdata.push("eid=" + updateselection);
+                                    pdata.push("countryid=" + $("#dlgAddCountry").val());
+                                    pdata.push("stateid=" + $("#dlgAddState").val());
+                                    pdata.push("year=" + $("#dlgAddtxtYear").val());
+                                    pdata.push("month=" + $("#dlgAddtxtMonth").val());
+                                    pdata.push("day=" + $("#dlgAddtxtDay").val());
+                                    pdata.push("value=" + $("#dlgAddValue").val());
+                                    //pdata.push("change=" + $("#dlgAddChange").val());
+                                    if (ecodataeditdata == null)    // add
+                                    {
+                                        $.ajax(
+                                                {
+                                                    url: "/economy/manage/add",
+                                                    async: false,
+                                                    data : pdata.join("&"),
+                                                    type: 'POST'
+                                                }
+                                            ).done(function(change)
+                                            {
+                                                var rw = [];
+                                                rw.push($("#dlgAddtxtYear").val() + "-" + $("#dlgAddtxtMonth").val() + "-" + $("#dlgAddtxtDay").val());
+                                                rw.push(parseFloat($("#dlgAddValue").val()));
+                                                //rw.push(parseFloat(change));
+                                                rw.push('<a href="javascript::void()" onclick="editecogriddata(' + vzData.getNumberOfRows() + ');">Edit</a>');
+                                                
+                                                vzData.addRow(rw);
+                                                dlgecodatagridoptions.startPage = tablePageIndex;
+                                                vzTable.draw(vzData, dlgecodatagridoptions);
+                                                
+                                                $("#dlgAddEconomicsData").dialog( "close" );
+                                                
+                                            }).error(function()
+                                            {
+                                                alert("Failed to submit.");
+                                            });
+                                        
+                                    }
+                                    else
+                                    {
+                                        $.ajax(
+                                                {
+                                                    url: "/economy/manage/edit",
+                                                    async: false,
+                                                    data : pdata.join("&"),
+                                                    type: 'POST'
+                                                }
+                                            ).done(function(change)
+                                            {
+                                                vzData.setValue(ecodataeditindex, 1, $("#dlgAddValue").val());
+                                                //vzData.setValue(ecodataeditindex, 2, change);
+                                                dlgecodatagridoptions.startPage = tablePageIndex;
+                                                vzTable.draw(vzData, dlgecodatagridoptions);
+                                                
+                                                $("#dlgAddEconomicsData").dialog( "close" );
+                                            
+                                            }).error(function()
+                                            {
+                                                alert("Failed to submit.");
+                                            });
+                                    }
+                                }
+                            },
+                    open : function()
+                    {
+                        if (ecodataeditdata == null)    // add
+                        {
+                            //$("#dlgAddChange").val("");
+                            $("#dlgAddValue").val("");
+                            $("#dlgAddtxtYear").val("");
+                            $("#dlgAddtxtMonth").val("");
+                            $("#dlgAddtxtDay").val("");
+                            $("#dlgAPredValue").css("visibility", "visible");
+                            $("#dlgSelPredAlgo").css("visibility", "visible");
+                            
+                            $("#dlgAddEconomicsData").dialog("option", "title", "Add Economics Data");
+                        }
+                        else
+                        {
+                            $("#dlgAddEconomicsData").dialog("option", "title", "Edit Economics Data");
+                            //$("#dlgAddChange").val(ecodataeditdata.change);
+                            $("#dlgAddValue").val(ecodataeditdata.value);
+                            var splt = ecodataeditdata.period.split('-');
+                            $("#dlgAddtxtYear").val(splt[0]);
+                            $("#dlgAddtxtMonth").val(splt[1]);
+                            $("#dlgAddtxtDay").val(splt[2]);
+                            
+                            $("#dlgAddtxtYear").attr("disabled", "disabled");
+                            $("#dlgAddtxtMonth").attr("disabled", "disabled");
+                            $("#dlgAddtxtDay").attr("disabled", "disabled");
+                            $("#dlgAddCountry").attr("disabled", "disabled");
+                            $("#dlgAddState").attr("disabled", "disabled");
+                            $("#dlgAPredValue").css("visibility", "hidden");
+                            $("#dlgSelPredAlgo").css("visibility", "hidden");
+                        }
+                    },
+                    close : function()
+                    {
+                        $("#dlgAddtxtYear").removeAttr("disabled");
+                        $("#dlgAddtxtMonth").removeAttr("disabled");
+                        $("#dlgAddtxtDay").removeAttr("disabled");
+                        $("#dlgAddCountry").removeAttr("disabled");
+                        $("#dlgAddState").removeAttr("disabled");
+                    }
+                });
+
+        
+        $("#dlgConfirmBox").dialog(
+            {
+                autoOpen: false,
+                resizable: false,
+                width:300,
+                height:200,
+                modal: true,
+                title : "Delete Prediction Setup",
+                buttons: 
+                {
+                    "Delete Prediction Setup": function() 
+                    {
+                        $.ajax(
+                            {
+                                url: "/companies/prediction/delete",
+                                async: false,
+                                data : "SetId=" + $("#pred_cmbselectsetup").val(),
+                                type: 'POST'
+                            }
+                        ).done(function()
+                        {
+                            fnloadpredictions(null);
+                        }).error(function()
+                        {
+                            updateTips("Failed to delete prediction setup. Try again." );
+                        });
+                        $( this ).dialog( "close" );
+                    },
+                    Cancel: function() 
+                    {
+                        $( this ).dialog( "close" );
+                    }
+                },
+                open : function()
+                {
+                    updateTips("Are you sure you want to delete selected prediction setup ?");
+                }
+            }
+        );
+
+        fnloadpredictions(null);
+
+    }); 
+    
+</script>
+
+<div id="dlgUpdateEconomicsData">
+    <div id="dlgUpdEcoDataGrid" style="width:available;"></div>
+</div>
+
+<div id="dlgAddEconomicsData">
+    <p>
+        <label>CountryId</label>
+        <input type="text" id="dlgAddCountry" value="1" style="width:100px">
+    </p>
+    <p>
+        <label>State</label>
+        <input type="text" id="dlgAddState" value="0" style="width:100px">
+    </p>
+    <p>
+        <label>Year/Month/Day</label>
+        <table>
+            <tr>
+                <td>
+                    <input id="dlgAddtxtYear" style="width:50px;" type="text" value="">
+                </td>
+                <td>/</td>
+                <td>
+                    <input id="dlgAddtxtMonth" style="width:30px;" type="text" value="">
+                </td>
+                <td>/</td>
+                <td>
+                    <input id="dlgAddtxtDay" style="width:30px;" type="text" value="">
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <label>Value</label>
+        <input type="text" id="dlgAddValue" value="" style="width:100px">
+        <a id="dlgAPredValue" href="javascript::void()" onclick="predictValue();">Predict Value</a> using
+        <select id="dlgSelPredAlgo">
+            <option value="LR" selected>Linear Regression</option>
+            <option value="WLR">Weighted Linear Regression</option>
+            <option value="QR">Quadratic (Non-Linear) Regression</option>
+            <option value="RLR">Robust Linear Regression</option>
+        </select>
+    </p>
+    <!--
+    <p>
+        <label>Change</label>
+        <input type="text" id="dlgAddChange" value="" style="width:100px">
+    </p>
+    -->
+</div>
+
+
+<div id="dlgMessageBox" title="">
+    <p class="validateTips"></p>
+</div>
+
+<div id="dlgConfirmBox" title="">
+    <p class="validateTips">
+      <span class="ui-icon ui-icon-question" 
+          style="float:left; margin:0 7px 20px 0;">
+      </span>
+    </p>
+</div>
+
+
+<div id="dlgPredictionSetup" title="Save Prediction Setup" style="overflow: hidden">
+    <p class="validateTips">Prediction Name is required.</p>
+    <form>
+        <fieldset>
+            <label for="dlg1txtPredName">Prediction Name:</label>
+            <input type="text" name="dlg1txtPredName" id="dlg1txtPredName" class="text ui-widget-content ui-corner-all">
+            <label for="dlg1txtDesc">Description</label>
+            <textarea name="dlg1txtDesc" id="dlg1txtDesc" value="" class="text ui-widget-content ui-corner-all"></textarea>
+            <label for="dlg1cmbAlgo">Prediction Name:</label>
+            <select name="dlg1cmbAlgo" id="dlg1cmbAlgo" class="text ui-widget-content ui-corner-all">
+                <option value="mvreg" selected>Multi-variate Regression</option>
+                <option value="ann">Artificial Neural Network</option>
+            </select>
+            <label for="dlgchkisdefault">Default Setup</label>
+            <input type="checkbox" name="dlgchkisdefault" id="dlgchkisdefault">
+        </fieldset>
+    </form>
+</div>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/prediction/general"><b>General Setup</b></a></li>
+        <li>|</li>
+        <li><a href="/companies/prediction/tie">Tie to a Sector/industry/Company</a></li>
+        <li>|</li>
+        <li><a href="/companies/prediction/test">Test Model</a></li>
+    </ul>
+</div>
+
+<div>
+    <div id="pred_tabs">
+        <ul>
+          <li><a href="#pred_tabs_1">Economic Indicators</a></li>
+          <li><a href="#pred_tabs_2">Performance Ratios</a></li>
+        </ul>
+        <div id="pred_tabs_1">
+            <div id="eco_tabs">
+                <ul id="ecotabitems"></ul>
+            </div>
+        </div>
+        <div id="pred_tabs_2">
+            <div id="perf_tabs">
+                <ul id="perftabitems"></ul>
+            </div>
+        </div>
+    </div>    
+    <div style="width:100%;height: auto;min-height: 500px;border-top: thin gray solid;padding-top: 10px;">
+        <table style="width:100%;height:100%">
+            <caption style="text-align:left;border-bottom: thin gray solid;">
+                <select id="pred_cmbselectsetup" class="pred_cmbselectsetup">
+                    <option value="0" selected>New</option>
+                </select>
+                <span>
+                    <button id="btnsave" class="pred_btnsave">Save...</button>
+                    <button id="btnsaveactions" class="pred_btnsave">Select an action</button>
+                </span>
+                <ul>
+                  <li><a id="btnSaveAs" href="#">Save As...</a></li>
+                  <li><a id="btnDelete" href="#">Delete</a></li>
+                </ul>
+            </caption>
+            <thead>
+                <tr>
+                <th>
+                    Attributes
+                </th>
+                <th>
+                    Result
+                </th>
+                </tr>
+            </thead>
+            <tr  style="height: auto">
+                <td width="80%">
+                    <div id="droppedattributepanel" class="droppedattributepanel" >
+                    </div>
+                </td>
+                <td width="20%">
+                    <div id="droppedresultpanel" class="droppedattributepanel" ></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+
+
+    
+</div>
+
+
+<% c++ } else if (content.PageSelection == PredictionSetupModel::Tie ) { %>
+
+<style>
+    .btns
+    {
+        width: 100px;
+        height: 25px;
+        font-size:smaller;
+    }
+</style>
+
+<script type="text/javascript">
+    
+    var baseurl = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/');
+
+    $(document).ready(function()
+    {
+        var productid = 0;
+        var gicsid = 0;
+        
+        var fnloadtree = function(parentid)
+        {
+            $.get(baseurl.concat("11/").concat(parentid))
+                .done(function(data)
+                {
+                    var jobj = data;
+                    if (jobj.length > 1)
+                    {
+                        for (var i=1; i != jobj.length; ++i)
+                        {
+                            fnloadtree(jobj[i][0]);
+                        }
+                    }
+                })
+                .error(function(x)
+                {
+
+                });
+        };
+        
+        var updateallconfig = function()
+        {
+            $.post("/companies/prediction/listall", "matchid=" + $("#cmbAllAccounts").val()).done(function(data)
+            {
+                var jdata = data;
+                if (jdata.length == 1)
+                {
+                    $("#cmbPredictions option[value='0']").attr("selected", "selected");
+                }
+                else if (jdata.length > 1)
+                {
+                    $("#cmbPredictions option[value='" + jdata[1][1] + "']").attr("selected", "selected");
+                }
+
+            }).error(function(x){});
+        };
+        
+        var fnpopselbox = function(data, str)
+        {
+            var jdata = data;
+            var box = $(".predtie_cmb");
+            box.empty();
+            if (str != null && str.length)
+                box.append('<option value="0"></option>');
+            else
+                box.append('<option value="0" selected></option>');
+            if  (jdata.length > 1)
+            {
+                for (var i=1; i != jdata.length; ++i)
+                {
+                    box.append('<option value="' + jdata[i][0] + '" title="' + jdata[i][2] + '" algo="' + jdata[i][3] + '" isdefault="' + jdata[i][4] + '" >' + jdata[i][1] + (jdata[i][4]==true?'(Default)':'') + '</option>');
+                }
+            }            
+            if (str != null && str.length)
+            {
+                console.log(str);
+                //$("#pred_cmbselectsetup option:contains('" + str + "')").attr("selected", "selected");
+                $(".predtie_cmb option").filter(function()
+                    {
+                        return $(this).text() == str;
+                    }).attr("selected", "selected");
+            }
+        };
+        
+        var fnpopcommonaccounts = function(data)
+        {
+            var jdata = data;
+            if (jdata.length <= 1)    // first is always header
+            {
+                return;
+            }
+            $('.accounts_cmb').empty();
+            $('.accounts_cmb').append('<option value="0">--For Any Account--</option>');
+            for (var i=1; i != jdata.length; ++i)
+            {
+                $('.accounts_cmb').append('<option value="' + jdata[i][0] + '">' + jdata[i][1] + '</option>');
+            }
+            
+            updateallconfig();
+            
+        };
+        
+        
+        $.get(baseurl.concat('10010'), function(data)
+            {
+                fnpopcommonaccounts(data);
+            }
+        );
+        
+        var fnloadpredictions = function(str)
+        {
+            $.get(baseurl.concat('10014'))
+                .done(function(data)
+                {
+                    fnpopselbox(data, str);
+                    console.log("Populated pred_cmbselectsetup");
+                })
+                .error(function(x)
+                {
+
+                });
+        };
+        
+        
+        
+        $('#jstree').jstree();
+        
+        fnloadpredictions(null);
+        
+        
+        var updategicsconfig = function(gicsid)
+        {
+            $.post("/companies/prediction/listgics", "gicsid=" + gicsid + "&matchid=" + $("#cmbGAccounts").val()).done(function(data)
+            {
+                var jdata = data;
+                if (jdata.length > 1)
+                {
+                    $("#cmbGAccounts option[value='" + jdata[1][1] + "'").attr("selected", "selected");
+                    $("#cmbGPred1 option[value='" + jdata[1][2] + "']").attr("selected", "selected");
+                    if (jdata.length > 2)
+                        $("#cmbGPred2 option[value='" + jdata[2][2] + "']").attr("selected", "selected");
+                    if (jdata.length > 3)
+                        $("#cmbGPred3 option[value='" + jdata[3][2] + "']").attr("selected", "selected");
+                }
+
+            }).error(function(x){});
+        };
+        
+        $("#cmbAllAccounts").change(function()
+        {
+            updategicsconfig(gicsid);
+        });
+        
+        $('#jstree').on("before_open.jstree", function(e, node)
+        {
+            console.log(node);
+        });
+
+        $('#jstree').on("changed.jstree", function (e, data) 
+        {
+            console.log(data);
+            gicsid = data.node.li_attr.iid;
+            console.log("Selected Gics Id:" + gicsid);
+            
+            $(".predtie_cmb[id^='cmbGPred']").each(function()
+            {
+               $(this).find("option[value='0']").attr("selected", "selected");
+            });
+            
+            updategicsconfig(gicsid);
+            
+        });
+        
+        
+        $("#btnFindCo").button( {icons : { primary: "ui-icon-search"}} ).click(function(event)
+        {
+            event.preventDefault();
+            if ($("#txtSymbol").val()=="")
+            {
+                return;
+            }
+            
+            var jdata = {};
+            jdata.xchange = $("#xchange option:selected").text().trim();
+            jdata.country = "US";
+            jdata.symbol = $("#txtSymbol").val().trim();
+            $.post(baseurl.concat("15"), "param=" + JSON.stringify(jdata))
+                .done(function(data)
+                {
+                    $("#lblCompanyDetails").empty();
+                    $("#lblCompanyDetails").append("<p><label>Cik:</label>" + data.cik + "</p><p><label>Name:</label>" + data.name + "</p>");
+                    
+                    //use productid to retrieve prediction set.
+                    productid = data.id;
+
+                    $(".predtie_cmb[id^='cmbPPred']").each(function()
+                    {
+                       $(this).find("option[value='0']").attr("selected", "selected");
+                    });
+                    $.post("/companies/prediction/listproduct", "prodid=" + data.id).done(function(data)
+                    {
+                        var jdata = data;
+                        if (jdata.length > 1)
+                        {
+                            $("#cmbPPred1 option[value='" + jdata[1] + "']").attr("selected", "selected");
+                            if (jdata.length > 2)
+                                $("#cmbPPred2 option[value='" + jdata[2] + "']").attr("selected", "selected");
+                            if (jdata.length > 3)
+                                $("#cmbPPred3 option[value='" + jdata[3] + "']").attr("selected", "selected");
+                        }
+                        
+                    }).error(function(x)
+                    {
+                        
+                    });
+                    
+                })
+                .error(function(x)
+                {
+                    $("#lblCompanyDetails").empty();
+                    $("#lblCompanyDetails").append("<p style='color:red;'>Not found</p>");
+                });
+        });
+        
+        $("#btnPPredSave").button( {icons : { primary: "ui-icon-disk"}} ).click(function(event)
+        {
+            event.preventDefault();
+            var jdata = {};
+            jdata.setids = [];
+            jdata.productid = productid;
+            if ($("#cmbPPred1").val()!="0")
+                jdata.setids.push($("#cmbPPred1").val());
+            if ($("#cmbPPred2").val()!="0")
+                jdata.setids.push($("#cmbPPred2").val());
+            if ($("#cmbPPred3").val()!="0")
+                jdata.setids.push($("#cmbPPred3").val());
+            jdata.matchid = $("#cmbPAccounts").val();
+            $.post("/companies/prediction/saveproduct", "data=" + JSON.stringify(jdata)).done(function(data)
+            {
+                $("#lblPSave").text("Saved");
+            }).error(function(x)
+            {
+                $("#lblPSave").text("Save failed.");
+            });
+        });        
+
+        $("#btnGPredSave").button( {icons : { primary: "ui-icon-disk"}} ).click(function(event)
+        {
+            event.preventDefault();
+            var jdata = {};
+            jdata.setids = [];
+            jdata.gicsid = gicsid;
+            if ($("#cmbGPred1").val()!="0")
+                jdata.setids.push($("#cmbGPred1").val());
+            if ($("#cmbGPred2").val()!="0")
+                jdata.setids.push($("#cmbGPred2").val());
+            if ($("#cmbGPred3").val()!="0")
+                jdata.setids.push($("#cmbGPred3").val());
+            jdata.matchid = $("#cmbGAccounts").val();
+            $.post("/companies/prediction/savegics", "data=" + JSON.stringify(jdata)).done(function(data)
+            {
+                $("#lblGSave").text("Saved");
+            }).error(function(x)
+            {
+                $("#lblGSave").text("Save failed.");
+            });
+        });        
+        
+        $("#cmbAllAccounts").change(function()
+        {
+            event.preventDefault();
+            updateallconfig();
+        });
+        
+        $("#cmbPredictions").change(function()
+        {
+            event.preventDefault();
+            var jdata = {};
+            if ($("#cmbPredictions").val()!="0")
+                jdata.setid = $("#cmbPredictions").val();
+            jdata.matchid = $("#cmbAllAccounts").val();
+            $.post("/companies/prediction/saveall", "data=" + JSON.stringify(jdata)).done(function(data)
+            {
+            }).error(function(x)
+            {
+            });
+        });
+        
+        fnloadtree(0);
+       
+    });
+    
+</script>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/prediction/general">General Setup</a></li>
+        <li>|</li>
+        <li><a href="/companies/prediction/tie"><b>Tie to a Sector/industry/Company</b></a></li>
+        <li>|</li>
+        <li><a href="/companies/prediction/test">Test Model</a></li>
+    </ul>
+</div>
+
+<div>
+    <hr>
+    <div>
+        <label>Default Level: Assign Account&nbsp;
+            <select id="cmbAllAccounts" class="accounts_cmb ui-widget-content ui-corner-all">
+            </select>
+            for&nbsp;
+            <select id="cmbPredictions" class="predtie_cmb ui-widget-content ui-corner-all">
+            </select>.
+    </div>
+    <table style="width:100%">
+        <tr>
+            <thead>
+                <th style="width:50%;background-color: lightgray;color:white;" >
+                    Tie with Sector/Industry
+                </th>
+                <th style="width:50%;background-color: lightgray;color:white;">
+                    Tie with a Company
+                </th>
+            </thead>
+        </tr>
+        <tr>
+            <td class="predtie_borderline" valign="top">
+                <span id="jstree" style="float:left;width:50%;">
+                    <!-- in this example the tree is populated from inline HTML -->
+                    <% c++ out() << content.GicsTree.str(); %>
+                </span>
+                <span style="float:left;width:50%">
+                    <label>Choose Account :</label>
+                    <select id="cmbGAccounts"  class="accounts_cmb ui-widget-content ui-corner-all"></select>
+                    <br>
+                    <fieldset>
+                        <label for="cmbGPred1">Prediction Setup 1 :</label>
+                        <select id="cmbGPred1" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                        <br>
+                        <label for="cmbGPred2">Prediction Setup 2 :</label>
+                        <select id="cmbGPred2" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                        <br>
+                        <label for="cmbGPred3">Prediction Setup 3 :</label>
+                        <select id="cmbGPred3" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                    </fieldset>
+                    <input id="btnGPredSave" class="btns ui-widget ui-button-text-icon-primary" value="Save"><label id="lblGSave"></label>
+                </span>
+            </td>
+            <td class="predtie_borderline" valign="top">
+                <span style="float:left;width:50%">
+                    <fieldset>
+                        <label for="txtSymbol">Enter Symbol :</label>
+                        <select id="xchange" class="ui-widget-content ui-corner-all">
+                            <option>NYSE</option>
+                            <option>NASDAQ</option>
+                            <option>AMEX</option>
+                            <option>OTC</option>
+                        </select> 
+                        <input type="text" id="txtSymbol" style="width: 100px;" class="ui-widget-content ui-corner-all">
+                        <input id="btnFindCo" class="btns ui-widget ui-button-text-icon-primary" value="Find">
+                    </fieldset>
+                    <br>
+                    <label id="lblCompanyDetails"></label>
+                </span>
+                <span style="float:left;width:50%">
+                    <label>Choose Account :</label>
+                    <select id="cmbPAccounts"  class="accounts_cmb ui-widget-content ui-corner-all"></select>
+                    <br>
+                    <fieldset>
+                        <label for="cmbPPred1">Prediction Setup 1 :</label>
+                        <select id="cmbPPred1" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                        <br>
+                        <label for="cmbPPred2">Prediction Setup 2 :</label>
+                        <select id="cmbPPred2" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                        <br>
+                        <label for="cmbPPred3">Prediction Setup 3 :</label>
+                        <select id="cmbPPred3" class="predtie_cmb ui-widget-content ui-corner-all"></select>
+                    </fieldset>
+                    <input id="btnPPredSave" class="btns ui-widget ui-button-text-icon-primary" value="Save"><label id="lblPSave"></label>
+                </span>
+                
+            </td>
+        </tr>
+        
+    </table>
+    
+    
+</div>
+
+<% c++ } else { %>
+
+<style>
+    .btns
+    {
+        width: 100px;
+        height: 25px;
+        font-size:smaller;
+    }
+</style>
+
+
+<script type="text/javascript">
+    
+    var vzData = null;
+    var vzTable = null;
+    var jproductinfo = {};
+    var ruleid = 0;
+    var baseurl = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/');
+    var tableoptions = {showRowNumber : true, allowHtml : true};
+
+    function openfuturevalueeditor()
+    {
+        event.preventDefault();
+        $("#dlgEnterPeriods").dialog("open");
+        return;
+    }
+    
+    function runStep3()
+    {
+        
+    }
+    
+    function fnpredictiondetails(setid)
+    {
+        $.get(baseurl.concat("10015/").concat(setid))
+            .done(function(data)
+            {
+                /*
+                console.log("got trainingsetdetails for " + setid);
+                currentTrainingSet = JSON.parse(data);
+                for (var i=0; i!=currentTrainingSet.attribs.length; ++i)
+                {
+                    // find the panel which has attribute eid=x and source = source.
+                    var attr = currentTrainingSet.attribs[i];
+                    var divtag = $("div[eid=" + attr.value + "][source=" + attr.type + "]");
+                    var effectoptions = {};
+                    effectoptions.to = "#droppedattributepanel";
+                    effectoptions.className = "ui-effects-transfer";
+                    $("#pred_tabs").effect("transfer", effectoptions, 100, function()
+                    {
+                        console.log("Effects callback is called.");
+                    });                        
+                    divtag.appendTo($("#droppedattributepanel"));
+                }
+                var divtag = $("div[eid=" + currentTrainingSet.result.value + "][source=" + currentTrainingSet.result.type + "]");
+                var effectoptions = {};
+                effectoptions.to = "#droppedresultpanel";
+                effectoptions.className = "ui-effects-transfer";
+                console.log("Trying out transfer effects");
+                $("#pred_tabs").effect("transfer", effectoptions, 100, function()
+                {
+                    console.log("Effects callback is called.");
+                });
+                divtag.appendTo($("#droppedresultpanel"));
+                */
+            })
+            .error(function(x)
+            {
+
+            });
+    };
+    
+    $(document).ready(function()
+    {
+        $("#btnTestStart").button( {icons : { primary: "ui-icon-play"}} ).click(function(event)
+        {
+            event.preventDefault();
+            vzData.removeRows(0, vzData.getNumberOfRows());
+
+            if ( $("#txtTestSymbol").val() == "")
+            {
+                vzData.addRow(['Error', 'No symbol name provided.', false]);
+                vzTable.draw(vzData, tableoptions);
+            }
+            else
+            {
+                vzData.addRow(['Company', 'Getting company details for symbl ' +  $("#txtTestSymbol").val() + '. Please wait....', true]);
+                vzTable.draw(vzData, tableoptions);
+                    
+                jproductinfo.xchange = $("#cmbTestxchanges option:selected").text().trim();
+                jproductinfo.country = "US";
+                jproductinfo.symbol = $("#txtTestSymbol").val().trim();
+                
+                $.post(baseurl.concat("15"), "param=" + JSON.stringify(jproductinfo))
+                    .done(function(data)
+                    {
+                        vzData.addRow(['Company', 'Received company details for ' + jproductinfo.symbol + '. ' + data.name, true]);
+                        vzData.addRow(['Step 1: ', 'Fetching training records for the security ....', true]);
+                        vzTable.draw(vzData, tableoptions);
+                        //data.cik
+                        //data.name
+                        //data.id;
+                        
+                        jproductinfo.productid = data.id;
+                        jproductinfo.name = data.name;
+                        jproductinfo.cik = data.cik;
+                        
+                        console.log(jproductinfo);
+                        
+                        $.post("/companies/prediction/testmodel", "step=1&prodid=" + jproductinfo.productid)
+                            .done(function(data)
+                            {
+                                vzData.addRow(['Step 1: ', 'Succeeded in fetching training records...', true]);
+                                vzData.addRow(['Step 2: ', 'Executing prediction model, obtaining rulesets ....', true]);
+                                vzTable.draw(vzData, tableoptions);
+                                $.post("/companies/prediction/testmodel", "step=2&prodid=" + jproductinfo.productid)
+                                    .done(function(data)
+                                    {
+                                        var jinfo = data;
+                                        ruleid = jinfo["setid"];
+                                        vzData.addRow(['Step 2: ', 'Received the ruleset for ' + jinfo["setname"] + '. Printing below:', true]);
+                                        vzData.addRow(['Ruleset: ', jinfo["ruleset"], true]);
+                                        vzData.addRow(['Last Known Result: ', jinfo["knownresult"].toString() , true]);
+                                        vzData.addRow(['Predicted Result: ', jinfo["predictedValue"].toString() , true]);
+                                        vzTable.draw(vzData, tableoptions);
+                                    })
+                                    .error(function()
+                                    {
+                                        vzData.addRow(['Step 2: ', 'Failed to run prediction model.', false]);
+                                        vzTable.draw(vzData, tableoptions);
+                                    });
+                            }).error(function(x)
+                            {
+                                vzData.addRow(['Step 1: ', 'Failed to fetch training records.', false]);
+                                vzTable.draw(vzData, tableoptions);
+                            });
+
+                    })
+                    .error(function(x)
+                    {
+                        vzData.addRow(['Error', 'No matching company found.', false]);
+                        vzTable.draw(vzData, tableoptions);
+                    });
+
+            }
+            
+                        
+        });
+
+        var fntable = function()
+        {
+            vzData = new google.visualization.DataTable();
+            vzData.addColumn('string', 'Case');
+            vzData.addColumn('string', 'Description');
+            vzData.addColumn('boolean', 'Status');        
+
+            vzTable = new google.visualization.Table(document.getElementById("dvTestResult"));
+            vzTable.draw(vzData, {showRowNumber : true });
+        };
+        
+        $("#dlgEnterPeriods").dialog(
+            {
+                autoOpen: false,
+                resizable: true,
+                width:800,
+                height:750,
+                modal: true,
+                title : "Enter Future Trainingdata",
+                buttons: 
+                {
+                    "Submit Future Data": function() 
+                    {
+                        /*
+                        $.ajax(
+                            {
+                                url: "/companies/prediction/delete",
+                                async: false,
+                                data : "SetId=" + $("#pred_cmbselectsetup").val(),
+                                type: 'POST'
+                            }
+                        ).done(function()
+                        {
+                            fnloadpredictions(null);
+                        }).error(function()
+                        {
+                            updateTips("Failed to delete prediction setup. Try again." );
+                        });
+                        */
+                        $( this ).dialog( "close" );
+                    },
+                    Cancel: function() 
+                    {
+                        $( this ).dialog( "close" );
+                    }
+                },
+                open : function()
+                {
+                    
+                }
+            }
+        );
+
+
+
+        fntable();
+
+        
+    });
+        
+    
+</script>
+
+<div id="dlgEnterPeriods">
+    <div style="padding: 4px">
+        <div class="ui-widget-header ui-corner-all">Result - Available Range</div>
+        <div style="padding: 4px">
+
+        </div>
+    </div>
+    <div style="padding: 4px">
+        <div class="ui-widget-header ui-corner-all">Enter Range:</div>
+        <table style="width:available;">
+
+        </table>
+    </div>
+</div>
+
+<div id="amap_selections">
+    <ul>
+        <li><a href="/companies/prediction/general">General Setup</a></li>
+        <li>|</li>
+        <li><a href="/companies/prediction/tie">Tie to a Sector/industry/Company</a></li>
+        <li>|</li>  
+        <li><a href="/companies/prediction/test"><b>Test Model</b></a></li>
+    </ul>
+</div>
+
+<div>
+    <div id="dvTestSelection">
+        <table>
+            <tr>
+                <td style="text-align:right">
+                    Select Company: 
+                </td>
+                <td>
+                    <select id="cmbTestxchanges" class="ui-widget ui-widget-content ui-corner-all">
+                        <option>NYSE</option>
+                        <option>NASDAQ</option>
+                        <option>AMEX</option>
+                        <option>OTC</option>
+                    </select>
+                    <input type="text" id="txtTestSymbol" class="ui-widget ui-widget-content ui-corner-all">
+                        <input id="btnTestStart" type="button" class="btns ui-widget ui-button-text-icon-primary" value="Start">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="dvTestResult">
+    </div>
+</div>
+
+<% c++ } %>
+
+<% end template %>
+<% end view %>
+<% end skin %>
+

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAccount.h</itemPath>
+      <itemPath>CAppSearch.h</itemPath>
+      <itemPath>CError.h</itemPath>
+      <itemPath>CFooter.h</itemPath>
+      <itemPath>CHeader.h</itemPath>
+      <itemPath>CHome.h</itemPath>
+      <itemPath>CLogOn.h</itemPath>
+      <itemPath>CLoginOrRegister.h</itemPath>
+      <itemPath>CMaster.h</itemPath>
+      <itemPath>CModelBase.h</itemPath>
+      <itemPath>CPwd.h</itemPath>
+      <itemPath>CRegistration.h</itemPath>
+      <itemPath>CResetPwd.h</itemPath>
+      <itemPath>CSecurityCharts.h</itemPath>
+      <itemPath>CSerializationTraits.h</itemPath>
+      <itemPath>CSessionManageMethods.h</itemPath>
+      <itemPath>CToolbar.h</itemPath>
+      <itemPath>CValidationMethods.h</itemPath>
+      <itemPath>CWebControl.h</itemPath>
+      <itemPath>common.h</itemPath>
+      <itemPath>cppcmsfilters.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAccount.cpp</itemPath>
+      <itemPath>CAppSearch.cpp</itemPath>
+      <itemPath>CError.cpp</itemPath>
+      <itemPath>CFooter.cpp</itemPath>
+      <itemPath>CHeader.cpp</itemPath>
+      <itemPath>CHome.cpp</itemPath>
+      <itemPath>CLogOn.cpp</itemPath>
+      <itemPath>CLoginOrRegister.cpp</itemPath>
+      <itemPath>CMaster.cpp</itemPath>
+      <itemPath>CModelBase.cpp</itemPath>
+      <itemPath>CPwd.cpp</itemPath>
+      <itemPath>CRegistration.cpp</itemPath>
+      <itemPath>CResetPwd.cpp</itemPath>
+      <itemPath>CSecurityCharts.cpp</itemPath>
+      <itemPath>CSerializationTraits.cpp</itemPath>
+      <itemPath>CSessionManageMethods.cpp</itemPath>
+      <itemPath>CToolbar.cpp</itemPath>
+      <itemPath>CValidationMethods.cpp</itemPath>
+      <itemPath>CWebControl.cpp</itemPath>
+      <itemPath>cppcmsfilters.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CAccount.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAccount.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppSearch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppSearch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CError.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CError.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFooter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFooter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHeader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHome.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHome.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CLogOn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLogOn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CLoginOrRegister.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLoginOrRegister.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMaster.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMaster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CModelBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CModelBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPwd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPwd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRegistration.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRegistration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResetPwd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResetPwd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityCharts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityCharts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSerializationTraits.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSerializationTraits.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSessionManageMethods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSessionManageMethods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CToolbar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CToolbar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CValidationMethods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CValidationMethods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWebControl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CWebControl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cppcmsfilters.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cppcmsfilters.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CAccount.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAccount.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppSearch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppSearch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CError.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CError.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFooter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFooter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHeader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHome.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHome.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CLogOn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLogOn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CLoginOrRegister.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLoginOrRegister.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMaster.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMaster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CModelBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CModelBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPwd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPwd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CRegistration.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRegistration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CResetPwd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CResetPwd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityCharts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityCharts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSerializationTraits.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSerializationTraits.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSessionManageMethods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSessionManageMethods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CToolbar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CToolbar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CValidationMethods.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CValidationMethods.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWebControl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CWebControl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cppcmsfilters.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cppcmsfilters.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

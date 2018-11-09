@@ -1,0 +1,92 @@
+<html class="no-js lt-ie9 lt-ie8" ng-app="earnsmartApp" lang="en" ng-controller="MasterController">
+    <head >
+        <title ng-bind-template={{Title}}></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/eulerlogo.png">
+        <link rel="shortcut icon" href="/images/eulerlogo.png">
+        <script src="/js/modernzr.js" ></script>
+        <link rel="stylesheet" href="/css/jquery-ui.structure.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.theme.css" type="text/css">
+        <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" href="/css/earnsmart.css" type="text/css">
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-cookies.js"></script>
+    </head>
+    <body ng-controller="MasterController">
+        <div id="dvMaster">
+            <header id="header">
+                <div id="dvHeaderTb">
+                    <div id="dvHeader" ng-controller="HeaderController">
+                        <div id="dvLogo">
+                            <span class="logoGreen spLogoE">e<sup id="fontLogoS" class="logoRed">$</sup>
+                            </span>
+                            <div id="dvLogoName">
+                                <span class="logoGreen">Earn</span><span class="splogonamedash">-</span><span class="logoRed">Smart</span>
+                            </div>
+                        </div>
+                        <div id="dvSiteName">
+                            <a href="/">
+                                <span class="logoGreen">Earn</span><span class="splogonamedash">-</span><span class="logoRed">Smart</span>
+                            </a>
+                            <br>
+                            <span id="spSiteMotto">A Better Path to Security Analysis</span>
+                        </div>
+                        <div id="dvAppSearch">
+                            <label for="txtAppSearch" title="Enter a partial or complete text for a ticker, product name or any other information. A popup will then guide you to select the nearest match.">Search: </label>
+                            <input type="text" id="txtAppSearch">
+                        </div>
+                        <div id="dvLoginRegister">
+                            <div ng-if="isauth==false">
+                                <a href="#/register">Register</a><a href="#/signon">Log on</a>
+                            </div>
+                            <div ng-if="isauth==true">
+                                <a href="#/account" ng-bind-template="{{firstName}}"></a><a href="#/logout">Exit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dvToolbar" ng-controller="ToolbarController">
+                        <div id="dvToolbar">
+                            <nav>
+                                <a ng-repeat="topmenu in menus" ng-if="topmenu.Children==null" id="{{topmenu.id}}" href="#/{{topmenu.Url}}" ng-bind-template="{{topmenu.Name}}"></a> 
+                                <a ng-repeat="topmenu in menus" 
+                                   ng-if="topmenu.Children!=null" 
+                                   id="{{topmenu.id}}" href="#/{{topmenu.Url}}" 
+                                   submenu="{{topmenu.id}}"
+                                   ng-bind-template="{{topmenu.Name}}"></a>
+                                   &nbsp;&nbsp;
+
+                                <ul ng-repeat="topmenu in menus" id='topsubmenu{{topmenu.id}}' ng-if="topmenu.Children!=null" style="min-width:150px;visibility:hidden;position:absolute">
+                                    <li ng-repeat="submenu in topmenu" href='{{submenu.Url}}'>{{submenu.Name}}</li>
+                                </ul>        
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+           <div title="Content" id="dvContent" ng-view></div>
+        </div>
+        <footer id="footer">
+            <div id="dvFooter" ng-controller="FooterController">
+                <div id="dvDiscl">
+                    &COPY; 2015 Smartgaze LLC, New Jersey, USA. | Sitemap
+                </div>
+            </div>
+        </footer>
+        <!--
+        <script src="/ext/js-webshim/dev/polyfiller.js"></script>
+        <script src="/js/oboe-browser.js"></script>
+        <script>
+            webshims.polyfill("canvas es5 forms forms-ext mediaelement");
+        </script>
+        -->
+        <!--<script src="/js/earnsmart.js"></script>-->
+
+        <script src="js/earnsmartpre.js"></script>
+    </body>
+</html>

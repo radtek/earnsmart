@@ -1,0 +1,12 @@
+platform=1434707591000
+cluster.nb=1434707557000
+cluster.ide=1434707593000
+cluster.harness=1416339518000
+cluster.cnd=1434707591000
+cluster.dlight=1434707591000
+user=1434707593000
+crc=7
+locale=en_US
+branding=nb
+java.version=1.7.0_79
+java.vm.version=24.79-b02

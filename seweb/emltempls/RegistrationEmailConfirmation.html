@@ -1,0 +1,40 @@
+<% c++ #include "../sewebmodels/CRegistration.h" %>
+<% skin  skdefemailtemplates %>
+
+<% view RegistrationEmailConfirmationView uses CRegistration %>
+
+
+<% template render() %>
+
+
+<html>
+    <body>
+        <p>
+            Dear <%=Data.FirstName%>,
+        </p>
+        <p>
+            Thank you for joining Earnsmart. As a <% if Data.Basic %> basic member you can enjoy the free analytical products we offer at the site 
+            <% else %> licensed member you can enjoy advanced analytical products we offer at the site <% end %>
+            and make clear decisions on what investment products that you should trade from time to time. 
+            The projected information you get from this site will possibly assist you to eliminate you of risks 
+            by diversification and hedging of your investment portfolio.
+        </p>
+        <p>
+            To complete the registration, click the below link to verify your email address.
+        </p>
+        <p>
+            <a href="<%=get_RootUrl()%>/register/1/<%=Data.Guid%>">http://www.earn-smart.com/register/1/<%=Data.Guid%></a>
+        </p>
+        <p>
+            Thank you once again.
+        </p>
+        <p>
+            Earnsmart Team.
+        </p>
+    </body>
+</html>
+
+
+<% end template %>
+<% end view %>
+<% end skin %>

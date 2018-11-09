@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="config" projectFiles="true">
+      <itemPath>easylogging.conf</itemPath>
+      <itemPath>../../backend/se.json</itemPath>
+      <itemPath>../../backend/sgweb.key</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAdminAPITest.h</itemPath>
+      <itemPath>CCryptoTest.h</itemPath>
+      <itemPath>CEmailTemplateTest.h</itemPath>
+      <itemPath>CEodDataTest.h</itemPath>
+      <itemPath>CExceptionTest.h</itemPath>
+      <itemPath>CHelpDocTreeTest.h</itemPath>
+      <itemPath>CMonteCarloTests.h</itemPath>
+      <itemPath>CPredictionsTest.h</itemPath>
+      <itemPath>CSecurityAPITest.h</itemPath>
+      <itemPath>CSqlAstTest.h</itemPath>
+      <itemPath>CUnitTestBase.h</itemPath>
+      <itemPath>CUtilityTest.h</itemPath>
+      <itemPath>CXbrlProcessingTests.h</itemPath>
+      <itemPath>utcommon.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAdminAPITest.cpp</itemPath>
+      <itemPath>CCryptoTest.cpp</itemPath>
+      <itemPath>CEmailTemplateTest.cpp</itemPath>
+      <itemPath>CEodDataTest.cpp</itemPath>
+      <itemPath>CExceptionTest.cpp</itemPath>
+      <itemPath>CHelpDocTreeTest.cpp</itemPath>
+      <itemPath>CMonteCarloTests.cpp</itemPath>
+      <itemPath>CPredictionsTest.cpp</itemPath>
+      <itemPath>CSecurityAPITest.cpp</itemPath>
+      <itemPath>CSqlAstTest.cpp</itemPath>
+      <itemPath>CUnitTestBase.cpp</itemPath>
+      <itemPath>CUtilityTest.cpp</itemPath>
+      <itemPath>CXbrlProcessingTests.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sesecurities"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seeoddata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seeoddata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sepredict"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../sepredict"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seann"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seann"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semath"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sedata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>mariadb</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>rt</linkerLibLibItem>
+            <linkerLibLibItem>cppunit</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../../backend/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../backend/sgweb.key" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminAPITest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCryptoTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCryptoTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEmailTemplateTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEmailTemplateTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodDataTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExceptionTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CExceptionTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMonteCarloTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMonteCarloTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictionsTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictionsTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityAPITest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSqlAstTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSqlAstTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUnitTestBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUnitTestBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUtilityTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUtilityTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlProcessingTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlProcessingTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easylogging.conf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utcommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="../../backend/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../backend/sgweb.key" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminAPITest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCryptoTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCryptoTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEmailTemplateTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEmailTemplateTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodDataTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExceptionTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CExceptionTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMonteCarloTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMonteCarloTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictionsTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPredictionsTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityAPITest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSecurityAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSqlAstTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSqlAstTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUnitTestBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUnitTestBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUtilityTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUtilityTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlProcessingTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CXbrlProcessingTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easylogging.conf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="utcommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>./</pElem>
+          </linkerDynSerch>
+          <linkerDepDynSerchKind>0</linkerDepDynSerchKind>
+          <linkerCopySharedLibs>true</linkerCopySharedLibs>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semain"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../external/mariadbpp"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seadmin"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seeconomy"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sesecurities"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seeoddata"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../../seeoddata"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sexbrl"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sepredict"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../sepredict"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../setraining"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../senet"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seann"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../seann"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semysql"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../semath"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../../semath"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../sedata"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../sedata"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>z</linkerLibLibItem>
+            <linkerLibLibItem>rt</linkerLibLibItem>
+            <linkerLibLibItem>cppunit</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemain.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libmariadbpp.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseadmin.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeconomy.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsesecurities.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeoddata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsexbrl.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsepredict.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsetraining.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsenet.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseann.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsecubist.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemysql.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemath.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsedata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseglobal.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemain.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libmariadbpp.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseadmin.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeconomy.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsesecurities.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeoddata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsexbrl.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsepredict.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsetraining.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsenet.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseann.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsecubist.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemysql.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemath.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsedata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseglobal.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemain.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libmariadbpp.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseadmin.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeconomy.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsesecurities.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeoddata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsexbrl.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsepredict.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsetraining.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsenet.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseann.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsecubist.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemysql.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemath.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsedata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseglobal.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemain.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libmariadbpp.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseadmin.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeconomy.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsesecurities.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseeoddata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeoddata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsexbrl.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsepredict.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsepredict.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsetraining.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsenet.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseann.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsecubist.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemysql.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsemath.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemath.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libsedata.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsedata.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libseglobal.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="../../backend/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../backend/sgweb.key" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminAPITest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CAdminAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CCryptoTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CCryptoTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEmailTemplateTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEmailTemplateTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodDataTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEodDataTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CExceptionTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CExceptionTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CHelpDocTreeTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CHelpDocTreeTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMonteCarloTests.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CMonteCarloTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPredictionsTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CPredictionsTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSecurityAPITest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSecurityAPITest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSqlAstTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CSqlAstTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUnitTestBase.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CUnitTestBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUtilityTest.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CUtilityTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CXbrlProcessingTests.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CXbrlProcessingTests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easylogging.conf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="utcommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

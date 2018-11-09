@@ -1,0 +1,299 @@
+<% c++ #include "admmodels.h" %>
+<% skin sgskin %>
+<% view EconomicIndicatorManageView uses sg::web::adm::EconomicIndicatorManagementModel %>
+
+<% template render() %>
+
+<script type="text/javascript">
+    var indicators = null;
+    var vzData = null;
+    var vzTable = null;
+    var bIsEdit = true;
+    var tablePageIndex = 0;
+    var currRow = -1;
+    
+    var baseurl = location.protocol.concat("//").
+        concat(window.location.hostname).concat(":").
+        concat(location.port).concat('/gj/');
+
+    var tableoptions = 
+        {
+            showRowNumber : false, 
+            allowHtml : true,
+            page : 'enable',
+            pageSize : 40,
+            pagingSymbols : { prev : 'Prev', next : 'Next' },
+            pagingButtonsConfiguration : 'auto',
+        };
+        
+    function editclick()
+    {
+        bIsEdit = true;
+        console.log(indicators[currRow+1][1]);
+        $("#dlgMecoAddEdit").dialog("open");
+    }
+
+    function addclick()
+    {
+        bIsEdit = false;
+        $("#dlgMecoAddEdit").dialog("open");
+    }
+    
+    $(document).ready(function()
+    {
+        $.get(baseurl.concat('4/0'))
+            .done(function(data)
+            {
+                indicators = data;
+                if (data.length > 1)
+                {
+                    for (var i=1; i!=data.length; ++i)
+                    {
+                        var r = data[i];
+                        var sname = '<a href="javascript::void()" onclick="editclick();">' + r[1] + '</a>';
+                        vzData.addRow([ r[0], sname, r[9], r[12], r[10], r[4], r[3], r[11] ]);
+                    }
+                    vzTable.draw(vzData, tableoptions);
+                }                
+            });
+            
+        $.get(baseurl.concat('3'))
+            .done(function(data)
+            {
+                if (data.length > 1)
+                {
+                    for (var i=1; i!=data.length; ++i)
+                        $("#cmbMecoCategories").append('<option value="' + data[i][0] + '">' + data[i][1] + '</option>');
+                }
+            });
+            
+            
+        var fntable = function()
+        {
+            vzData = new google.visualization.DataTable();
+            vzData.addColumn('number', 'Indicator id');
+            vzData.addColumn('string', 'Name');
+            vzData.addColumn('string', 'Category');        
+            vzData.addColumn('string', 'Provider');        
+            vzData.addColumn('string', 'Table Name');        
+            vzData.addColumn('string', 'Publish Period');        
+            vzData.addColumn('boolean', 'Is Displayed?');        
+            vzData.addColumn('boolean', 'Is Seasonal?'); 
+
+            vzTable = new google.visualization.Table(document.getElementById("divMecoList"));
+            vzTable.draw(vzData, tableoptions);
+        };
+        
+        $("#dlgMecoAddEdit").dialog(
+                {
+                    autoOpen : false,
+                    resizable : true,
+                    minWidth : 400,
+                    minHeight : 600,
+                    modal : true,
+                    closeOnEscape : true,
+                    title : 'Add/Edit Economic Indicator',
+                    position : { my : 'center', at : 'center', of : window },
+                    buttons : 
+                            {
+                                Submit : function()
+                                {
+                                    var postdata = [];
+                                    if (bIsEdit)
+                                    {
+                                        var row = indicators[currRow+1];
+                                        postdata.push("eiid=" + row[0]);
+                                    }
+                                    else
+                                    {
+                                        postdata.push("eiid=0");
+                                    }
+                                    postdata.push("name=" + encodeURIComponent($("#txtMecoName").val()));
+                                    postdata.push("desc=" + encodeURIComponent($("#txtMecoDesc").val()));
+                                    postdata.push("tablename=" + encodeURIComponent($("#txtMecoTableName").val()));
+                                    postdata.push("copyright=" + encodeURIComponent($("#txtMecoCopyright").val()));
+                                    postdata.push("sourcelink=" + encodeURIComponent($("#txtMecoSourceLink").val()));
+                                    postdata.push("downloadlink=" + encodeURIComponent($("#txtMecoDownloadLink").val()));
+                                    postdata.push("releaseday=" + encodeURIComponent($("#txtMecoReleaseDay").val()));
+                                    postdata.push("isdisplayed=" + $("#chkMecoIsDisplayed").is(":checked"));
+                                    postdata.push("isseasonal=" + $("#chkMecoIsSeasonal").is(":checked"));
+                                    postdata.push("category=" + $("#cmbMecoCategories").val());
+                                    postdata.push("publishperiod=" + $("#cmbMecoPublishPeriod").val());
+                                    postdata.push("determiner=" + $("#chkMecoDeterminer").val());
+                                    var spdata = postdata.join("&");
+                                    console.log(spdata);
+                                    $.ajax(
+                                    {
+                                        url: "/indicators/economy/manage",
+                                        async: false,
+                                        data : spdata,
+                                        type: 'POST'
+                                    }).done(function(data)
+                                    {
+                                        console.log("adding newly created record.");
+                                        if (data.length == 2)
+                                        {
+                                            var r = data[1];
+                                            var sname = '<a href="javascript::void()" onclick="editclick();">' + r[1] + '</a>';
+                                            vzData.addRow([ r[0], sname, r[9], r[12], r[10], r[4], r[3], r[11] ]);
+                                            vzTable.draw(vzData, tableoptions);
+                                            console.log("newly created record is added.");
+                                        }                
+                                    });
+                                    $("#dlgMecoAddEdit").dialog("close");
+                                },
+                            },
+                    open : function()
+                    {
+                        if (bIsEdit)
+                        {
+                            var row = indicators[currRow+1];
+                            console.log("Edit mode.");
+                            $("#txtMecoTableName").attr("disabled", true);
+                            $("#txtMecoTableName").val(row[10]);
+                            $("#txtMecoName").val(row[1]);
+                            $("#txtMecoDesc").val(row[2]);
+                            $("#txtMecoCopyright").val(row[12]);
+                            $("#txtMecoSourceLink").val(row[8]);
+                            $("#txtMecoDownloadLink").val(row[13]);
+                            $("#txtMecoReleaseDay").val(row[14]);
+                            if (row[3])
+                                $("#chkMecoIsDisplayed").attr("checked", true);
+                            else
+                                $("#chkMecoIsDisplayed").attr("checked", false);
+                            if (row[11])
+                                $("#chkMecoIsSeasonal").attr("checked", true);
+                            else
+                                $("#chkMecoIsSeasonal").attr("checked", false);
+                            $("#cmbMecoCategories").find("option[value='" + row[15] + "']").attr("selected", "selected");
+                            $("#cmbMecoPublishPeriod").find("option[value='" + row[4] + "']").attr("selected", "selected");
+                            $("#chkMecoDeterminer").find("option[value='0']").attr("selected", "selected");
+                            $("#chkMecoDeterminer").find("option[value='" + row[16] + "']").attr("selected", "selected");
+                        }
+                        else
+                        {
+                            currRow = -1;
+                            $("#txtMecoTableName").attr("disabled", false);
+                            $("#txtMecoTableName").val("");
+                            $("#txtMecoName").val("");
+                            $("#txtMecoDesc").val("");
+                            $("#txtMecoCopyright").val("");
+                            $("#txtMecoSourceLink").val("");
+                            $("#txtMecoDownloadLink").val("");
+                            $("#txtMecoReleaseDay").val("");
+                            $("#chkMecoIsDisplayed").attr("checked", false);
+                            $("#chkMecoIsSeasonal").attr("checked", false);
+                        }
+                    },
+                    close : function()
+                    {
+                        
+                    }
+                }
+            );
+    
+        fntable();
+        
+        google.visualization.events.addListener(vzTable, 'select', function()
+        {
+            try
+            {
+                var sel = vzTable.getSelection();
+                console.log(sel[0].row);
+                currRow = sel[0].row;
+            }
+            catch(err)
+            {
+            }
+        });      
+            
+    });    
+    
+    $(window).resize(function()
+    {
+        vzTable.draw(vzData, tableoptions);
+    });
+    
+    
+</script>
+
+<div id="dlgMecoAddEdit">
+    <p>
+        <label>Name: </label>
+        <br>
+        <input type="text" id="txtMecoName" style="width:350px">
+    </p>
+    <p>
+        <label>Description: </label>
+        <br>
+        <textarea id="txtMecoDesc" style="height: 75px;width: 350px;"></textarea>
+    </p>
+    <p>
+        <label>Table Name:</label>
+        <br>
+        <input type="text"id="txtMecoTableName" style="width:350px">
+    </p>
+    <p>
+        <label>Publish Period:</label>
+        <br>
+        <select id="cmbMecoPublishPeriod">
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Annually">Annually</option>
+        </select>
+    </p>
+    <p>
+        <label>Copyright:</label>
+        <br>
+        <input type="text"id="txtMecoCopyright" style="width:350px">
+    </p>
+    <p>
+        <label>Source Link:</label>
+        <br>
+        <input type="text"id="txtMecoSourceLink" style="width:350px">
+    </p>
+    <p>
+        <label>Download Link:</label>
+        <br>
+        <input type="text"id="txtMecoDownloadLink" style="width:350px">
+    </p>
+    <p>
+        <label>Release Day:</label>
+        <br>
+        <input type="text"id="txtMecoReleaseDay" style="width:50px">
+    </p>
+    <p>
+        <label>Category:</label>
+        <br>
+        <select id="cmbMecoCategories">
+        </select>
+    </p>
+    <p>
+        <label>Is Displayed:</label>
+        <input type="checkbox" id="chkMecoIsDisplayed">
+    </p>
+    <p>
+        <label>Is Seasonal:</label>
+        <input type="checkbox" id="chkMecoIsSeasonal">
+    </p>
+    <p>
+        <label>Determiner:</label>
+        <select id="chkMecoDeterminer">
+            <option value="0">None</option>
+            <option value="4">Quantity</option>
+            <option value="8">Rate<option>
+        </select>
+    </p>
+</div>
+
+<div>
+    <button onclick="addclick();" style="padding: 2px;">Add Indicator</button>
+    <div id="divMecoList">
+    </div>
+</div>
+
+<% end template %>
+<% end view %>
+<% end skin %>

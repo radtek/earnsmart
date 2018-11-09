@@ -1,0 +1,149 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view RegisterView uses sg::web::models::Register  %>
+<% template render() %>
+
+    <div style="padding:20pt">
+         <style>
+             .reg_inputcontrols 
+             {
+                 width: 200pt;
+             }
+
+             .reg_btns {
+                 width: 100pt;
+                 margin: 10pt;
+             }
+
+             #reg_taaggrement
+             {
+                 width:400pt;
+                 height:150pt;
+                 font-size:xx-small;
+             }
+
+             div.cls_reg_dvInputRed 
+             {
+                 border-right-color: red;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+            }
+
+             div.cls_reg_dvInputYellow 
+             {
+                 border-right-color: yellow;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+         }
+
+             div.cls_reg_dvInputOrange
+             {
+                 border-right-color: orange;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+         }
+
+             div.cls_reg_dvInputGreen 
+             {
+                 border-right-color: green;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+         }
+
+
+             div.cls_reg_dvInput
+             {
+                 border-right-width: 0px;
+             }
+
+             label.cls_reg_validity
+             {
+                 font-size: small;
+             }
+
+         </style>
+         <form id="reg_form" method="post">
+             <script src="/blob/register.js"></script>
+             <input type="hidden" name="reg_hdsubmittype" value="cancel" />
+             <h3>User Registration - Start a trial subscription</h3>
+             <div style="padding-left:10pt;padding-right:10pt">You can try our site for 30 days. If you are satisfied with what the site offers, you can automatically convert your account to a paid subscription account when the trial period ends. 
+             You will be charged $10.00 as a subscription fee for choosing Fundamental product package. Use 'My Account' link (which will be visible after you create your account) to cancel your subscription any time.</div>
+             <div>
+                 <h4 style="text-decoration:underline">1. Create Account</h4>
+                 <div style="padding-left:10pt;padding-right:10pt">
+                     <table>
+                         <tr>
+                             <td style="width:220pt">Email Address (Required): </td>
+                             <td style="width:150pt"><div class="cls_reg_dvInput"><input class="reg_inputcontrols" title="Enter email address (required)" name="reg_txtemail" type="text" /></div></td>
+                             <td><label class="cls_reg_validity" id="reg_lblEmail"> </label></td>
+                         </tr>
+                         <tr>
+                             <td>Password (Required): </td>
+                             <td><div class="cls_reg_dvInput"><input class="reg_inputcontrols" type="password" name="reg_txtpassword" title="Enter password (required)" /></div></td>
+                             <td><label class="cls_reg_validity" id="reg_lblPwdMeter"> </label></td>
+                         </tr>
+                         <tr>
+                             <td>Confirm Password (Required): </td>
+                             <td><div class="cls_reg_dvInput"><input class="reg_inputcontrols" type="password" name="reg_txtpasswordagain" title="Confirm password (required)" /></div></td>
+                             <td><label class="cls_reg_validity" id="reg_lblPwdConfirm"> </label></td>
+                         </tr>
+                     </table>
+                         <div style="padding-top:10pt">If you are already registered, please click <a href="/signin">here</a>.</div>
+                 </div>
+             </div>
+             <div id="reg_dvaggrement" >
+                 <h4 style="text-decoration:underline">2. Agreement</h4>
+                 <div style="padding-left:10pt;padding-right:10pt">
+                    <textarea id="reg_taaggrement" readonly style="width:370pt"><%= get_Agreement() %></textarea>
+                    <div style="padding-left: 10pt;padding-right:10pt">
+                        <table>
+                            <tr>
+                                <td style="padding:10pt">
+                                    <input type="radio" id="reg_rdaggreed" name="reg_rdaggree" value="Yes" />I agree
+                                </td>
+                                <td style ="padding:10pt">
+                                    <input type="radio" id="reg_rdnotaggreed" name="reg_rdaggree" value="No" />I do not agree
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+             </div>
+             <div>
+                 <div id="reg_payment">
+                     <h4 style="text-decoration:underline">3. Trial Subscription</h4>
+                     <div style="padding-left: 10pt;padding-right:10pt"> 
+                     Trial subscription is for 30 days from today. You may cancel your account anytime during trial period by going to 'My Account' link. After 30 days you will be
+                     charged $10 monthly for Fundamentals product package. Payments are securely processed by your Paypal account. Please click 'Next' to visit Paypal authorization page.
+                     </div>
+                     <div style="padding:10pt;height:40pt;">
+                         <!-- PayPal Logo -->
+                         <table border="0" cellpadding="0" cellspacing="0" align="left" >
+                             <tr>
+                                 <td align="center">
+                                     <a href="https://www.paypal.com/webapps/mpp/paypal-popup" 
+                                        title="How PayPal Works" 
+                                        onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">
+                                         <img height="50" src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
+                                     </a>
+                                 </td>
+                             </tr>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+             <div style="border-top: 2px solid #014421">
+                 <table style="padding:10pt">
+                     <tr>
+                         <td align="left" style="width:100pt"><button id="reg_btnCancel" class="reg_btns">Cancel</button></td>
+                         <td align="right"style="width:100pt"><button id="reg_btnNext" disabled class="reg_btns">Next</button></td>
+                     </tr>
+                 </table>
+             </div>
+         </form>
+     </div>
+
+
+<% end template %>
+<% end view %>
+<% end skin %>

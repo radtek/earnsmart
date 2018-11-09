@@ -1,0 +1,254 @@
+<% c++ #include "../sewebmodels/CRegistration.h" %>
+<% skin  skdefault %>
+<% view RegistrationView uses CRegistration extends MasterView %>
+
+<% template title() %>Earn Smart | Register<% end %>
+
+
+<% template mainContent() %>
+
+<div id="dvSigonControls">
+    <input type="hidden" name="regStage" value="<% c++ out() << (I32)content.Data.Stage; %>"/>
+    <% c++ if ((I32)content.Data.Stage == (I32)CRegistration::RegStages::UserTypeAndAddress) { %>
+    <h2>Welcome</h2>
+    <h3>Register as a basic or licensed customer</h3>
+    <label class="requireslabel">* - required</label>
+    <div>
+        <ul>
+            <li>
+                <% if Data.Basic %>
+                <input type="radio" name="regUsertype" value="Basic" checked>Basic
+                <% else %>
+                <input type="radio" name="regUsertype" value="Basic">Basic
+                <% end %>
+                <div>
+                    A basic user provides an email address and a password to login to the site.
+                    Basic user can view advanced predictions on the performance of publicly listed companies
+                    registered in the USA and build portfolios based on fundamental performance.
+                </div>
+            </li>
+            <li>
+                <% if Data.Basic %>
+                <input type="radio" name="regUsertype" value="Licensed">Licensed
+                <% else %>
+                <input type="radio" name="regUsertype" value="Licensed" checked>Licensed
+                <% end %>
+                <div>
+                    A licensed user is a monthly paid subscriber. While registering as a licensed user, the user
+                    is also simultaneously registering with an exchange market data provider for 
+                    daily end of the day market prices. The exchanges are selected in the process the user.
+                    The licensed user will provide an email address and password to login to the site 
+                    in addition to full address and a Paypal subscription account. The account can be 
+                    closed or switched to a basic account at any time by going to the user's accounts page.
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <input name="regFirstName" type="text" placeholder="first name" value="<%=Data.FirstName%>" title="Enter First Name.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=FirstNameValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="regLastName" type="text" placeholder="last name" value="<%=Data.LastName%>" title="Enter Last Name.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=SecondNameValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="regEmail" type="email" placeholder="email address" value="<%=Data.EmailAddress%>" title="Enter a valid email address.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <label id="lblRegEmail" class="validationtextlabel"><%=EmailValidationText()%></label>
+        </div>
+        <div>
+            <input name="regPwd" type="password" placeholder='password' title="Enter a password between 8 and 25 characters">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=PwdValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="regPwdConfirm" type="password" placeholder='confirm password' title="Confirm new password">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=PwdConfirmValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <% if Data.Remember %>
+            <input name="regRem" type="checkbox" checked value="rem">Remember me
+            <% else %>
+            <input name="regRem" type="checkbox"  value="rem">Remember me
+            <% end %>
+        </div>
+        <% c++ if (!content.Data.Basic) { %>
+        <div>
+            <input name="regStreet1" type="text" placeholder="house/apt/street" value="<%=Data.Street1%>" title="Enter House or Apartment # and Street Name.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=Street1ValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="regStreet2" type="text" placeholder="optional address" value="<%=Data.Street2%>" title="Optinally Enter Additional Address Line.">
+        </div>
+        <div>
+            <input name="regTown" type="text" placeholder="town or city" value="<%=Data.Town%>" title="Enter Town or City Name.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=TownValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <div><label for="regCountries">Country:</label></div>
+            <select name="regCountries" title="Select Country">
+                <option value="">--Not Selected--</option>
+                <% if Countries %>
+                <% foreach country in *Countries %>
+                <% item %>
+                <option value="<%= country->get_TwoCharCode()%>" <% c++ (content.Data.Country == country->get_TwoCharCode() ? out() << " selected " : out() << ""); %> >
+                    <%= country->get_Name()%>
+                </option>
+                <% end %>
+                <% end %>
+                <% end %>
+            </select>
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=CountryValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <div><label for="regStates">State:</label></div>
+            <select name="regStates" title="Select State">
+                <option value="">--Not Selected--</option>
+                <% if States %>
+                <% foreach state in *States %>
+                <% item %>
+                <option value="<%= state->get_Code()%>" <% c++ (content.Data.State == state->get_Code() ? out() << " selected " : out() << ""); %> >
+                    <%= state->get_Name()%>
+                </option>
+                <% end %>
+                <% end %>
+                <% end %>
+            </select>
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=StateValidationText()%></label>
+            <% end %>
+        </div>
+        <div>
+            <input name="regPostalCode" type="text" placeholder="postal code" value="<%=Data.PostalCode%>" title="Enter Postal Code.">
+            <label class="requireslabel"><%=RequiredStr%></label>
+            <% if not get_IsValid() %>
+            <label class="validationtextlabel"><%=PostalCodeValidationText()%></label>
+            <% end %>
+        </div>
+        <% c++ } %>
+        
+        
+        <div>
+            <button id="btnRegSteps" type="button">Register</button>
+        </div>
+        
+        <% if not get_IsValid() %>
+        <% c++ string s = content.CommonValidationText(); %>
+        <% c++ if (!s.empty()) { %>
+        <div>
+            <label class="validationtextlabel"><% c++ out() << s; %></label>
+        </div>
+        <% c++ } %>
+        <% end %>
+        <div>
+            <hr>
+            <h4>
+            Already registered ? 
+            </h4>
+            Click <a href="/signon">here</a> to sign in page.
+        </div>
+    </div>
+    <% c++ } else if ( (I32)content.Data.Stage == (I32)CRegistration::RegStages::SendEmail ) { %>
+    <h2>Registration</h2>
+    <h3>Email Confirmation</h3>
+    <p>
+        An email verification is dispatched to your email address <%= Data.EmailAddress %>. 
+        Please click the registration link in the email message to open it in your default internet browser, 
+        or copy that link on a browser address input box to continue with registration.
+    </p>
+    <p>
+        If the email address is wrong, click <a href="/register/<%= Data.Guid%>">here</a> to return to 
+        registration page and provide correct email address.
+    </p>
+    <% c++ } else if ( (I32)content.Data.Stage == (I32)CRegistration::RegStages::EmailConfirmation ) { %>
+    <% if Data.Basic %>
+    <h2>Registration</h2>
+    <h3>Register as a basic customer</h3>
+    <div>
+        <p>
+            Your email address <%=Data.EmailAddress%> is confirmed. You have successfully registered as a basic user. 
+        </p>
+        <p>
+            Please click <a href="/signon">here</a> to sign in.
+        </p>
+    </div>
+    <% else %>
+    <h2>Registration</h2>
+    <h3>Register as a licensed customer</h3>
+    <div>
+        <p>
+            Your email address <%= Data.EmailAddress %> is confirmed. 
+        </p>
+        <p>
+            To become a licensed user, please chose below the exchanges you would like
+            data from. We pay a license fee to the selected exchanges on your behalf.
+            The amount that you will pay monthly to us as a licensee will be summed at the total
+            line in the table below.
+        </p>
+        <table>
+            <caption>Select Services/Exchanges</caption>
+            <thead>
+                <th>
+                </th>
+                <th>
+                    Services/Exchanges
+                </th>
+                <th>
+                    Fee
+                </th>
+            </thead>
+            <tr>
+                <td colspan="2">Total</td>
+                <td></td>
+            </tr>
+        </table>
+        <p>
+            After making selections above, please click below to provide the payment information. 
+            At the moment only Paypal payment gateway is supported.
+        </p>
+        <p>
+            Your subscription will begin immediately after completion of registration steps. 
+            You may cancel your service any time. After cancellation, you can continue
+            using our service until the end of the billing cycle.
+        </p>
+        <div>
+            <figure>
+                <img id="btnRegSteps" src="/images/paypal_btn_subscribeCC_LG.gif" title="Paypal subscription">
+            </figure>
+        </div>
+        
+    </div>
+    <% end %>
+    <% c++ } else if ( !content.Data.Basic and (I32)content.Data.Stage == (I32)CRegistration::RegStages::Payment ) { %>
+    <% c++ } else if ( (I32)content.Data.Stage == (I32)CRegistration::RegStages::Completed ) { %>
+    <% c++ } %>
+</div>
+
+<% end template %>
+
+
+<% end view %>
+<% end skin %>

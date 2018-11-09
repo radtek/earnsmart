@@ -1,0 +1,394 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view PortfolioWizView uses sg::web::models::PortfolioWiz %>
+<% template render() %>
+
+<style>
+    
+#pf_chart_container
+{
+    position: relative;
+    width : auto;
+    border-bottom: solid #014421 1px;
+}
+
+#pf_table_div 
+{
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+#pf_hack_chart_div 
+{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+#screener_ResultTable
+{
+    position: absolute;
+}
+
+</style>
+    
+
+<script type="text/javascript">
+    
+    var urlpfx = location.protocol.concat("//")
+            .concat(window.location.hostname).concat(":")
+            .concat(location.port).concat("/gj/");
+    
+    var line, bubble;
+    var filtereddata, tableview;
+    var tablePageIndex = 0;
+    var y0 = <%= RiskFreeRate %>;
+    
+    //var linedata = [['x', 'y'],[0, 0], [100, 100]];
+    var linedata = [ ['x', 'y'], [0.0, y0], [10.0, 10.0] ];
+    var ticksx = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+    var ticksy = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+    var params = {};
+    
+    var tableoptions = 
+        {
+            'showRowNumber': true, 
+            'alternatingRowStyle' : true, 
+            'allowHtml' : true,
+            'cssClassNames' : 
+                {
+                    oddTableRow : 'screenerResultTableOddRow',
+                    hoverTableRow : 'screenerResultTableHoverRow'
+                }
+        };
+        
+    var fnresizecontents = function()
+    {
+        $("#pf_chart_container").width($(".companypicks_title").innerWidth());
+        $("#pf_chart_container").height($("#pf_chart_container").width() * 1/2);
+        
+        // set chart width/height to the container.
+        $("#pf_table_div").width($("#pf_chart_container").innerWidth());
+        $("#pf_table_div").height($("#pf_chart_container").innerHeight());
+        $("#pf_hack_chart_div").width($("#pf_chart_container").innerWidth());
+        $("#pf_hack_chart_div").height($("#pf_chart_container").innerHeight());
+        
+        
+        if (line)
+            line.draw();
+        if (bubble)
+            bubble.draw();
+
+        $("#screener_ResultTable").width($("#pf_chart_container").width());
+        $("#screener_ResultTable").position( {my: "left top", at: "left bottom+5", of : "#pf_chart_container" } );
+        
+    }
+
+ 
+    
+    
+    
+    function RenewList()
+    {
+        var postdata = [];
+        postdata.push("selsize=0");
+        postdata.push("seltype=renew");
+        $.post(urlpfx.concat("11000"), postdata.join("&") ).done(function(d)
+        {
+            var data = google.visualization.arrayToDataTable(d);
+            bubble.setDataTable(data);
+            bubble.draw();
+        });        
+    }
+    
+    function fnResultTable(data, err)
+    {
+        if (data != null)
+        {
+            filtereddata = new google.visualization.DataTable(data);
+            tableview = 
+                    new google.visualization.Table(document.getElementById('screener_ResultTable'));
+            tableview.draw(filtereddata, tableoptions);
+            google.visualization.events.addListener(tableview, 'page', function(p)
+            {
+                tablePageIndex = p.page;
+            });
+        }
+        else if (err != null)
+        {
+
+        }
+    }
+    
+    var fnRiskSelect = function(e)
+    {
+        var cli = line.getChart().getChartLayoutInterface();
+        var m_posx = 0, m_posy = 0, e_posx = 0, e_posy = 0;
+        var xoffset, yoffset;
+        var obj = $("#pf_hack_chart_div")[0];
+        //get mouse position on document crossbrowser
+        if (!e)
+        {
+            e = window.event;
+        }
+        if (e.pageX || e.pageY)
+        {
+            m_posx = e.pageX;
+            m_posy = e.pageY;
+        } 
+        else if (e.clientX || e.clientY)
+        {
+            m_posx = e.clientX + document.body.scrollLeft
+                     + document.documentElement.scrollLeft;
+            m_posy = e.clientY + document.body.scrollTop
+                     + document.documentElement.scrollTop;
+        }
+        //get parent element position in document
+        if (obj.offsetParent)
+        {
+            do 
+            { 
+                e_posx += obj.offsetLeft;
+                e_posy += obj.offsetTop;
+            } 
+            while (obj = obj.offsetParent);
+        }
+
+        xoffset = m_posx-e_posx;
+        yoffset = m_posy-e_posy;
+        // mouse position minus elm position is mouseposition relative to element:
+        console.log(' X Position: ' + xoffset + ' Y Position: ' + yoffset ); 
+        xoffset = cli.getHAxisValue(xoffset);
+        yoffset = cli.getVAxisValue(yoffset);
+        console.log(' X Position: ' + xoffset + ' Y Position: ' + yoffset ); 
+
+        if (xoffset < 0 || yoffset < 0)
+            return;
+
+        linedata[2][0] = xoffset;
+        linedata[2][1] = yoffset;
+
+        // we will post x0, y0, x1 and y1
+        var eqdata = {};
+        eqdata.x0 = 0;
+        eqdata.y0 = y0;
+        eqdata.x1 = xoffset;
+        eqdata.y1 = yoffset;
+
+        var postdata = {};
+        postdata.fn = "fill";
+        postdata.params = {};
+        //postdata.push("selsize=" + 2000);
+        postdata.params = eqdata;
+
+        $.post(urlpfx.concat("11000"), "postdata=" + JSON.stringify(postdata)).done(function(d)
+        {
+            console.log(d);
+            fnResultTable(d, null);
+        }).error(function(err)
+        {
+            fnResultTable(null, err);
+        });            
+        line.setDataTable(google.visualization.arrayToDataTable(linedata));
+        line.draw();            
+    };    
+
+    function drawChart () 
+    {
+        
+        var postdata = {};
+        postdata.fn = "plot";
+        postdata.params = {};
+        //postdata.push("selsize=" + 2000);
+        postdata.params.selsize = 0;
+        postdata.params.seltype = "fresh";
+        postdata.params["exch"] = params["exch"].join();
+        
+        console.log(postdata);
+        
+        $.post(urlpfx.concat("11000"), "postdata=" + JSON.stringify(postdata) ).done(function(d)
+        {
+            var data = google.visualization.arrayToDataTable(d);
+            bubble = new google.visualization.ChartWrapper({
+                chartType: 'ScatterChart',
+                containerId: 'pf_table_div',
+                dataTable: data,
+                options: 
+                {
+                    backgroundColor: 'transparent',
+                    chartArea : { left : 55, top : 10, bottom: 0},
+                    //bubble: {opacity: 0.2, stroke: 'transparent'},
+                    hAxis: {minValue: 0, maxValue: 100, ticks: ticksx, title : "Risk/Volatility" },
+                    vAxis: {minValue: 0, maxValue: 100, ticks: ticksy, title : "Estimated Return"},
+                    //colors: ['blue','red','green'],
+                    animation: {duration:1500, easing:'out'},
+                    //sizeAxis: {minSize: 2, minValue: 5, maxSize: 30},
+                    legend : 
+                    { 
+                        //textStyle : { fontSize : 9 } 
+                        position: 'none'
+                    }
+                }
+            });
+            if (line == null)
+            {
+                line = new google.visualization.ChartWrapper({
+                    chartType: 'LineChart',
+                    containerId: 'pf_hack_chart_div',
+                    dataTable: linedata,
+                    options: 
+                    {
+                        backgroundColor: 'transparent',
+                        chartArea : { left : 55, top : 10, bottom : 0},
+                        hAxis: {
+                            minValue: 0,
+                            maxValue: 100,
+                            textPosition: 'none',
+                            gridlines: 
+                            {
+                                count: 0
+                            },
+                            baselineColor: 'none'
+                        },
+                        vAxis: {
+                            minValue: 0,
+                            maxValue: 100,
+                            textPosition: 'none',
+                            gridlines: 
+                            {
+                                count: 0
+                            },
+                            baselineColor: 'none'
+                        },
+                        colors: ['black'],
+                        pointSize: 3,
+                        lineWidth: 2,
+                        enableInteractivity: true,
+                        legend: 
+                        {
+                            position: 'none'
+                        }
+                    }
+                });
+
+
+                fnresizecontents();
+                fnRiskSelect(null);
+            }
+            
+            
+            
+        });
+        
+
+        
+        $("#pf_chart_container").click(function(e)
+        {
+            fnRiskSelect(e);
+        });
+        
+    }
+    
+    //google.setOnLoadCallback(drawChart);
+    
+    $(window).resize(function()
+    {
+        fnresizecontents();
+        if (tableview && filtereddata && tableoptions)
+        {
+            console.log("Current page: " + tablePageIndex);
+            tableoptions.startPage = tablePageIndex;
+            tableview.draw(filtereddata, tableoptions);  
+        }
+    });
+    
+    
+   $(document).ready(function()
+    {
+        params["pfid"] = 0;
+        params["return"] = {};
+        params["risk"] = {};
+        params["return"]["min"] = y0;
+        params["return"]["max"] = 10.0;
+        params["risk"]["min"] = 0.0;
+        params["risk"]["max"] = 10.0;
+        params["exch"] = [];
+
+        tableoptions['page'] = 'enable';
+        tableoptions['pageSize'] = 25;
+        tableoptions['pagingSymbols'] = {prev: 'prev', next: 'next'};
+        tableoptions['pagingButtonsConfiguration'] = 'auto';        
+        tableoptions['width'] = null;
+        tableoptions['height'] = null;
+        
+        
+        $(".company_picks_exchanges").each(function()
+        {
+            if ($(this).is(":checked"))
+            {
+                var exid = $(this).attr("exchange");
+                params["exch"].push(exid);
+            }
+        });
+        
+        fnresizecontents();
+
+        drawChart();
+        
+        $(".company_picks_exchanges").change(function()
+        {
+           var exid = $(this).attr("exchange");
+           if ($(this).is(":checked"))
+                params["exch"].push(exid);
+            else
+            {
+                for (var i = 0; i < params["exch"].length; ++i)
+                    if (params["exch"][i] == exid)
+                        params["exch"].splice(i, 1);
+            }
+            
+            drawChart();
+        });
+        
+    });
+        
+    
+    
+</script>
+<!--<button onclick="RenewList();" >Renew</button>-->
+<div class="screener_container">
+    <div class="companypicks_title">
+        <span class="companypicks_coname">Screener Based On Future Revenue</span><br>
+        <i>Click on a point in the scatter plot to draw a capital allocation line according to your expected return (y-axis)
+            of the asset and the maximum risk (x-axis) you are prepared for. A table will be created below to list 
+            all the assets which match or better your expectation (sweeps all points above the capital allocation line upto the
+            maximum risk you can take to the right of the graph).
+        </i>
+    </div>
+    <br>
+        <% if get_Exchanges() %>
+        <div>
+            <label>Select Exchanges: </label>
+            <% foreach exch in *get_Exchanges() %>
+            <% item %>
+            <% c++ if (exch->get_Id() == 1 or exch->get_Id() == 2) { %>
+            <input class="company_picks_exchanges" type="checkbox" exchange="<%= exch->get_Id() %>" checked><%= exch->get_Name() %> &nbsp;
+            <% c++ } else { %>
+            <input  class="company_picks_exchanges" type="checkbox" exchange="<%= exch->get_Id() %>"><%= exch->get_Name() %> &nbsp;
+            <% c++ } %>
+            <% end %>
+            <% end %>
+        </div>
+        <% end %>
+    <div id="pf_chart_container">
+        <div id="pf_table_div"></div>
+        <div id="pf_hack_chart_div"></div>
+    </div>
+    <div id="screener_ResultTable">
+    </div>
+</div>
+
+<% end template %>
+<% end view %>
+<% end skin %>

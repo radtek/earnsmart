@@ -1,0 +1,124 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view AboutView uses sg::web::models::About  %>
+<% template render() %>
+
+    <h1 class="title">Contact Us</h1>
+    <% if (content.Done) %>
+    <div class="entry" >
+        <p>
+            Your message has been submitted. If your message requires contacting you, we will be touch with you as soon as possible. 
+        </p>
+        <p>
+            Thank you.
+        </p>
+    </div>    
+    <% else %>
+    <div class="entry" >
+        If you have any suggestions, questions or concerns, please contact us by submitting the below form.
+        <hr/>
+        <br/>
+        <form name="about_contactus" method="post">
+            <div class="about_contactus">
+                <label class="<%= StatusLabelClass %>"><%= get_Error() %></label>
+                <table>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_name">Name: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_name" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_email">Email Address: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_email" size="75">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_org">Organization: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_org" size="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_street">Street: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_street" size="25">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_city">City: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_city" size="25">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_state">State & Zip: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_state" size="10">
+                            <input type="text" name="contact_txt_zip" size="5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_country">Country: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_country" size="20">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="contact_txt_subject">Subject: *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="contact_txt_subject" size="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="contact_txt_message">Message: *</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textArea name="contact_txt_message" cols="100" rows="10" wrap="soft" maxlength="2000"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right">
+                            <input type="submit">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        
+    </div>
+    <% end %>
+
+<% end template %>
+<% end view %>
+<% end skin %>

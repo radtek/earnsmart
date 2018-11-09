@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAbstractFeeder.h</itemPath>
+      <itemPath>CEconomicIndicator.h</itemPath>
+      <itemPath>CEconomicIndicatorFeeder.h</itemPath>
+      <itemPath>CEconomicNewsFeeds.h</itemPath>
+      <itemPath>CEconomicNewsStorageProvider.h</itemPath>
+      <itemPath>CEconomyAPI.h</itemPath>
+      <itemPath>CFredDataSource.h</itemPath>
+      <itemPath>CFredFeeder.h</itemPath>
+      <itemPath>CIndicatorCategory.h</itemPath>
+      <itemPath>CNcdcFeeder.h</itemPath>
+      <itemPath>seecconinternal.h</itemPath>
+      <itemPath>seeconomapi.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAbstractFeeder.cpp</itemPath>
+      <itemPath>CEconomicIndicator.cpp</itemPath>
+      <itemPath>CEconomicIndicatorFeeder.cpp</itemPath>
+      <itemPath>CEconomicNewsFeeds.cpp</itemPath>
+      <itemPath>CEconomicNewsStorageProvider.cpp</itemPath>
+      <itemPath>CEconomyAPI.cpp</itemPath>
+      <itemPath>CFredDataSource.cpp</itemPath>
+      <itemPath>CFredFeeder.cpp</itemPath>
+      <itemPath>CIndicatorCategory.cpp</itemPath>
+      <itemPath>CNcdcFeeder.cpp</itemPath>
+      <itemPath>seeconomyapi.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>gsl</linkerLibLibItem>
+            <linkerLibLibItem>gslcblas</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAbstractFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAbstractFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredDataSource.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFredDataSource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFredFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seecconinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomyapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>gsl</linkerLibLibItem>
+            <linkerLibLibItem>gslcblas</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAbstractFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAbstractFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredDataSource.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFredDataSource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CFredFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seecconinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomyapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>gsl</linkerLibLibItem>
+            <linkerLibLibItem>gslcblas</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAbstractFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CAbstractFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicIndicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicIndicatorFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicNewsFeeds.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicNewsStorageProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomyAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredDataSource.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFredDataSource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFredFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CIndicatorCategory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CNcdcFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seecconinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomyapi.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>gsl</linkerLibLibItem>
+            <linkerLibLibItem>gslcblas</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fPIC -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="CAbstractFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CAbstractFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicator.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicIndicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicIndicatorFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicIndicatorFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsFeeds.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicNewsFeeds.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomicNewsStorageProvider.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomicNewsStorageProvider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEconomyAPI.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEconomyAPI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredDataSource.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFredDataSource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CFredFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CFredFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CIndicatorCategory.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CIndicatorCategory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CNcdcFeeder.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CNcdcFeeder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seecconinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeconomyapi.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

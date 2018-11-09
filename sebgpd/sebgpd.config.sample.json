@@ -1,0 +1,59 @@
+{
+    "name": "sebgpd",
+    "functions" :
+            [
+                {
+                    "name" : "mapsymboltocik",
+                    "active" : "0",
+                    "params" : "",
+                    "interval" : 
+                            {
+                                "freq" : "once",
+                                "factor" : "1"
+                            }
+                },
+                {
+                    "name" : "processstatements",
+                    "active" : "0",
+                    "params" : "",
+                    "instances" : 1,
+                    "interval" : 
+                            {
+                                "freq" : "continuous",
+                                "factor" : "2"
+                            }
+                },
+                {
+                    "name" : "parseformindex",
+                    "active" : "1",
+                    "params" : "10-Q;10-K",
+                    "interval" : 
+                            {
+                                "freq" : "weekly",
+                                "factor" : "00:02:00",
+                                "days" : "Saturday, Sunday"
+                            }
+                },
+                {
+                    "name" : "pricehistory",
+                    "active" : "0",
+                    "params" : "1",
+                    "interval" : 
+                            {
+                                "freq" : "daily",
+                                "factor" : "00:02:00"
+                            }
+                },
+                {
+                    "name": "eoddata",
+                    "active": "1",
+                    "params": "NYSE,NASDAQ,AMEX,OTCBB,CBOT,NYBOT,NYMEX,OPRA,CBOT,CFE,CME,KCBT,MGEX,WCE",
+                    "interval": {
+                        "freq": "weekly",
+                        "factor": "20:00:00",
+                        "days": "Monday, Tuesday, Wednesday, Thursday, Friday"
+                    }
+                }
+                
+            ]
+}

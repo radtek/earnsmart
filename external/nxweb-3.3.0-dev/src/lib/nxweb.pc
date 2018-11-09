@@ -1,0 +1,19 @@
+# pkg-config descriptor for NXWEB.
+#
+# After installing this file the following command can be used
+# to compile and link modules to libnxweb:
+#  gcc -O2 -g main.c modules/*.c -o mynxweb `pkg-config --cflags --libs nxweb`
+
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: nxweb
+Description: NXWEB - ultra-fast and super-lightweight web server
+URL: https://bitbucket.org/yarosla/nxweb/
+Version: 3.3.0-dev
+Libs: -L${libdir} -lnxweb -lgnutls  -lMagickWand-6.Q16 -lMagickCore-6.Q16  -lz -ldl -lrt -lpthread -L/usr/lib -lpython2.7
+# Libs.private: -lgnutls  -lMagickWand-6.Q16 -lMagickCore-6.Q16  -lz -ldl -lrt -lpthread -L/usr/lib -lpython2.7
+Cflags: -I${includedir} -I/usr/include/p11-kit-1  -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6  -I/usr/include/python2.7

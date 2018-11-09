@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CEODDataWrappers.h</itemPath>
+      <itemPath>CEodData.h</itemPath>
+      <itemPath>CWSClientSession.h</itemPath>
+      <itemPath>ReadEodFile.h</itemPath>
+      <itemPath>ReadExchanges.h</itemPath>
+      <itemPath>env.h</itemPath>
+      <itemPath>envH.h</itemPath>
+      <itemPath>nsDataSoapProxy.h</itemPath>
+      <itemPath>nsH.h</itemPath>
+      <itemPath>nsStub.h</itemPath>
+      <itemPath>seeoddata.h</itemPath>
+      <itemPath>seeoddataint.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>DataSoap.CountryList.req.xml</itemPath>
+      <itemPath>DataSoap.CountryList.res.xml</itemPath>
+      <itemPath>DataSoap.DataClientLatestVersion.req.xml</itemPath>
+      <itemPath>DataSoap.DataClientLatestVersion.res.xml</itemPath>
+      <itemPath>DataSoap.DataFormats.req.xml</itemPath>
+      <itemPath>DataSoap.DataFormats.res.xml</itemPath>
+      <itemPath>DataSoap.ExchangeGet.req.xml</itemPath>
+      <itemPath>DataSoap.ExchangeGet.res.xml</itemPath>
+      <itemPath>DataSoap.ExchangeList.req.xml</itemPath>
+      <itemPath>DataSoap.ExchangeList.res.xml</itemPath>
+      <itemPath>DataSoap.ExchangeMonths.req.xml</itemPath>
+      <itemPath>DataSoap.ExchangeMonths.res.xml</itemPath>
+      <itemPath>DataSoap.FundamentalList.req.xml</itemPath>
+      <itemPath>DataSoap.FundamentalList.res.xml</itemPath>
+      <itemPath>DataSoap.Login.req.xml</itemPath>
+      <itemPath>DataSoap.Login.res.xml</itemPath>
+      <itemPath>DataSoap.Login2.req.xml</itemPath>
+      <itemPath>DataSoap.Login2.res.xml</itemPath>
+      <itemPath>DataSoap.Membership.req.xml</itemPath>
+      <itemPath>DataSoap.Membership.res.xml</itemPath>
+      <itemPath>DataSoap.NewsList.req.xml</itemPath>
+      <itemPath>DataSoap.NewsList.res.xml</itemPath>
+      <itemPath>DataSoap.NewsListBySymbol.req.xml</itemPath>
+      <itemPath>DataSoap.NewsListBySymbol.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteGet.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteGet.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteList.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteList.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteList2.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteList2.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDate.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDate.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDate2.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDate2.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDatePeriod.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDatePeriod.res.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDatePeriod2.req.xml</itemPath>
+      <itemPath>DataSoap.QuoteListByDatePeriod2.res.xml</itemPath>
+      <itemPath>DataSoap.SplitListByExchange.req.xml</itemPath>
+      <itemPath>DataSoap.SplitListByExchange.res.xml</itemPath>
+      <itemPath>DataSoap.SplitListBySymbol.req.xml</itemPath>
+      <itemPath>DataSoap.SplitListBySymbol.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolChangesByExchange.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolChangesByExchange.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolChart.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolChart.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolGet.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolGet.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistory.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistory.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistoryPeriod.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistoryPeriod.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistoryPeriodByDateRange.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolHistoryPeriodByDateRange.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolList.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolList.res.xml</itemPath>
+      <itemPath>DataSoap.SymbolList2.req.xml</itemPath>
+      <itemPath>DataSoap.SymbolList2.res.xml</itemPath>
+      <itemPath>DataSoap.TechnicalList.req.xml</itemPath>
+      <itemPath>DataSoap.TechnicalList.res.xml</itemPath>
+      <itemPath>DataSoap.Top10Gains.req.xml</itemPath>
+      <itemPath>DataSoap.Top10Gains.res.xml</itemPath>
+      <itemPath>DataSoap.Top10Losses.req.xml</itemPath>
+      <itemPath>DataSoap.Top10Losses.res.xml</itemPath>
+      <itemPath>DataSoap.UpdateDataFormat.req.xml</itemPath>
+      <itemPath>DataSoap.UpdateDataFormat.res.xml</itemPath>
+      <itemPath>DataSoap.ValidateAccess.req.xml</itemPath>
+      <itemPath>DataSoap.ValidateAccess.res.xml</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CEODDataWrappers.cpp</itemPath>
+      <itemPath>CEodData.cpp</itemPath>
+      <itemPath>CWSClientSession.cpp</itemPath>
+      <itemPath>ReadEodFile.cpp</itemPath>
+      <itemPath>ReadExchanges.cpp</itemPath>
+      <itemPath>envC.cpp</itemPath>
+      <itemPath>nsC.cpp</itemPath>
+      <itemPath>nsDataSoapProxy.cpp</itemPath>
+      <itemPath>seeoddata.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug"
+                            CC="${MAKE} CND_SOLUTIONDIR=/home/santony/Documents/smartearn/Linux/phases/phase3/lib -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>gsoapssl</linkerLibLibItem>
+            <linkerLibLibItem>gsoapssl++</linkerLibLibItem>
+            <linkerLibLibItem>gsoap</linkerLibLibItem>
+            <linkerLibLibItem>gsoap++</linkerLibLibItem>
+            <linkerLibLibItem>gsoapck</linkerLibLibItem>
+            <linkerLibLibItem>gsoapck++</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEODDataWrappers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEODDataWrappers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWSClientSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CWSClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadEodFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadEodFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadExchanges.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadExchanges.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="env.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="envC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="envH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nsDataSoapProxy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nsDataSoapProxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="seeoddata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddataint.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mariadb</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoap++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoap.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapck++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapck.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapssl++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapssl.so</linkerLibFileItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEODDataWrappers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEODDataWrappers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CEodData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWSClientSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CWSClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadEodFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadEodFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadExchanges.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ReadExchanges.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="env.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="envC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="envH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nsDataSoapProxy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nsDataSoapProxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddata.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="seeoddata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddataint.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_mysql" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug_mysql"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Debug_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>gsoapssl</linkerLibLibItem>
+            <linkerLibLibItem>gsoapssl++</linkerLibLibItem>
+            <linkerLibLibItem>gsoap</linkerLibLibItem>
+            <linkerLibLibItem>gsoap++</linkerLibLibItem>
+            <linkerLibLibItem>gsoapck</linkerLibLibItem>
+            <linkerLibLibItem>gsoapck++</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEODDataWrappers.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEODDataWrappers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodData.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEodData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWSClientSession.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CWSClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadEodFile.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ReadEodFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadExchanges.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ReadExchanges.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="env.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="envC.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="envH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsC.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="nsDataSoapProxy.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="nsDataSoapProxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddata.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="seeoddata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddataint.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_mysql" type="2">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>11</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu/</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release_mysql"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release_mysql"
+                            CC="${MAKE}  -f Makefile CONF=Release_mysql clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoap++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoap.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapck++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapck.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapssl++.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libgsoapssl.so</linkerLibFileItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CEODDataWrappers.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEODDataWrappers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CEodData.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CEodData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CWSClientSession.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="CWSClientSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.CountryList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataClientLatestVersion.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.DataFormats.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ExchangeMonths.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.FundamentalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Login2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Membership.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.NewsListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDate2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.QuoteListByDatePeriod2.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SplitListBySymbol.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChangesByExchange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolChart.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolGet.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistory.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriod.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.req.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolHistoryPeriodByDateRange.res.xml"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.SymbolList2.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.TechnicalList.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Gains.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.Top10Losses.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.UpdateDataFormat.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.req.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DataSoap.ValidateAccess.res.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadEodFile.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ReadEodFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReadExchanges.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="ReadExchanges.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="env.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="envC.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="envH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsC.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="nsDataSoapProxy.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="nsDataSoapProxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsH.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nsStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddata.cpp" ex="false" tool="1" flavor2="11">
+      </item>
+      <item path="seeoddata.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seeoddataint.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

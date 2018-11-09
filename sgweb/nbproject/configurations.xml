@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="config" projectFiles="true">
+      <itemPath>config.json</itemPath>
+      <itemPath>../config/easylogging.cfg</itemPath>
+      <itemPath>fcgiconfig.json</itemPath>
+      <itemPath>../config/se.json</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="fs" projectFiles="true">
+      <itemPath>admin.js</itemPath>
+      <itemPath>adminstyle.css</itemPath>
+      <itemPath>agreement.txt</itemPath>
+      <itemPath>fixedtable.js</itemPath>
+      <itemPath>footer.css</itemPath>
+      <itemPath>ie.css</itemPath>
+      <itemPath>jquery-ui-1.10.4.custom.css</itemPath>
+      <itemPath>jquery-ui-1.10.4.custom.js</itemPath>
+      <itemPath>jquery-ui-1.10.4.custom.min.css</itemPath>
+      <itemPath>jquery-ui-1.10.4.custom.min.js</itemPath>
+      <itemPath>jquery-ui-1.10.4.overcast.css</itemPath>
+      <itemPath>jquery-ui-1.10.4.overcast.js</itemPath>
+      <itemPath>jquery-ui.min.css</itemPath>
+      <itemPath>jquery-ui.min.js</itemPath>
+      <itemPath>jquery-ui.structure.min.css</itemPath>
+      <itemPath>jquery-ui.theme.min.css</itemPath>
+      <itemPath>jquery.js</itemPath>
+      <itemPath>jquery.selectbox-0.2.js</itemPath>
+      <itemPath>jquery.selectbox-0.2.min.js</itemPath>
+      <itemPath>jquery.selectbox.css</itemPath>
+      <itemPath>jtree.js</itemPath>
+      <itemPath>jtree.style.css</itemPath>
+      <itemPath>modernizr.js</itemPath>
+      <itemPath>modernizr.js.txt</itemPath>
+      <itemPath>nav.css</itemPath>
+      <itemPath>portfoliodata.json</itemPath>
+      <itemPath>ppapproved.js</itemPath>
+      <itemPath>register.js</itemPath>
+      <itemPath>se.js</itemPath>
+      <itemPath>signin.js</itemPath>
+      <itemPath>style.css</itemPath>
+      <itemPath>uxpasswordmeter.js</itemPath>
+      <itemPath>vis.js</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAdminApp.h</itemPath>
+      <itemPath>CBaseApplication.h</itemPath>
+      <itemPath>CBaseContent.h</itemPath>
+      <itemPath>CFundamentalsApp.h</itemPath>
+      <itemPath>CSPSerializable.h</itemPath>
+      <itemPath>CSearchController.h</itemPath>
+      <itemPath>CSession.h</itemPath>
+      <itemPath>CSmartearnApp.h</itemPath>
+      <itemPath>admmodels.h</itemPath>
+      <itemPath>models.h</itemPath>
+      <itemPath>sgwebinternal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="images" projectFiles="true">
+      <itemPath>animated-overlay.gif</itemPath>
+      <itemPath>favicon.ico</itemPath>
+      <itemPath>imagecharts.jpg</itemPath>
+      <itemPath>imageratios.jpg</itemPath>
+      <itemPath>imagerevestimate.jpg</itemPath>
+      <itemPath>imagescatterplot.jpg</itemPath>
+      <itemPath>imagestatements.jpg</itemPath>
+      <itemPath>img01.jpg</itemPath>
+      <itemPath>img02.gif</itemPath>
+      <itemPath>img02.jpg</itemPath>
+      <itemPath>img03.jpg</itemPath>
+      <itemPath>img04.jpg</itemPath>
+      <itemPath>img05.jpg</itemPath>
+      <itemPath>indicator.png</itemPath>
+      <itemPath>jtree.32px.png</itemPath>
+      <itemPath>jtree.40px.png</itemPath>
+      <itemPath>jtree.throbber.gif</itemPath>
+      <itemPath>minusplus.png</itemPath>
+      <itemPath>navBG.gif</itemPath>
+      <itemPath>navLeft.gif</itemPath>
+      <itemPath>navLeftIE.gif</itemPath>
+      <itemPath>navOverBG.gif</itemPath>
+      <itemPath>navOverBG2.gif</itemPath>
+      <itemPath>navOverLeft.gif</itemPath>
+      <itemPath>navRight.gif</itemPath>
+      <itemPath>select-icons.png</itemPath>
+      <itemPath>smartearn.png</itemPath>
+      <itemPath>subOverBG.png</itemPath>
+      <itemPath>subnavBG.png</itemPath>
+      <itemPath>ui-bg_diagonals-small_0_aaaaaa_40x40.png</itemPath>
+      <itemPath>ui-bg_diagonals-thick_15_444444_40x40.png</itemPath>
+      <itemPath>ui-bg_diagonals-thick_95_ffdc2e_40x40.png</itemPath>
+      <itemPath>ui-bg_flat_0_aaaaaa_40x100.png</itemPath>
+      <itemPath>ui-bg_flat_0_eeeeee_40x100.png</itemPath>
+      <itemPath>ui-bg_flat_55_c0402a_40x100.png</itemPath>
+      <itemPath>ui-bg_flat_55_eeeeee_40x100.png</itemPath>
+      <itemPath>ui-bg_glass_100_f8f8f8_1x400.png</itemPath>
+      <itemPath>ui-bg_glass_35_dddddd_1x400.png</itemPath>
+      <itemPath>ui-bg_glass_55_fbf5d0_1x400.png</itemPath>
+      <itemPath>ui-bg_glass_55_fcf0ba_1x400.png</itemPath>
+      <itemPath>ui-bg_glass_60_eeeeee_1x400.png</itemPath>
+      <itemPath>ui-bg_gloss-wave_100_ece8da_500x100.png</itemPath>
+      <itemPath>ui-bg_highlight-hard_100_f5f3e5_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-hard_100_fafaf4_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-hard_15_014421_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-hard_15_459e00_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-hard_30_285c00_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_25_014421_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_25_67b021_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_33_3a8104_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_50_4eb305_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_60_4ca20b_1x100.png</itemPath>
+      <itemPath>ui-bg_highlight-soft_95_ffedad_1x100.png</itemPath>
+      <itemPath>ui-bg_inset-hard_75_999999_1x100.png</itemPath>
+      <itemPath>ui-bg_inset-soft_10_285c00_1x100.png</itemPath>
+      <itemPath>ui-bg_inset-soft_50_c9c9c9_1x100.png</itemPath>
+      <itemPath>ui-icons_3383bb_256x240.png</itemPath>
+      <itemPath>ui-icons_454545_256x240.png</itemPath>
+      <itemPath>ui-icons_4eb305_256x240.png</itemPath>
+      <itemPath>ui-icons_70b2e1_256x240.png</itemPath>
+      <itemPath>ui-icons_72b42d_256x240.png</itemPath>
+      <itemPath>ui-icons_808080_256x240.png</itemPath>
+      <itemPath>ui-icons_999999_256x240.png</itemPath>
+      <itemPath>ui-icons_cd0a0a_256x240.png</itemPath>
+      <itemPath>ui-icons_eeeeee_256x240.png</itemPath>
+      <itemPath>ui-icons_fbc856_256x240.png</itemPath>
+      <itemPath>ui-icons_ffffff_256x240.png</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>AdminAccountMapView.xhtml</itemPath>
+      <itemPath>AdminHomeView.xhtml</itemPath>
+      <itemPath>AdminView.xhtml</itemPath>
+      <itemPath>PredictionSetupView.xhtml</itemPath>
+      <itemPath>about.xhtml</itemPath>
+      <itemPath>companypicks.xhtml</itemPath>
+      <itemPath>companyscreener.xhtml</itemPath>
+      <itemPath>compsearch.xhtml</itemPath>
+      <itemPath>ecnmy.xhtml</itemPath>
+      <itemPath>ecnmynews.xhtml</itemPath>
+      <itemPath>economy.xhtml</itemPath>
+      <itemPath>eindicators.xhtml</itemPath>
+      <itemPath>error.xhtml</itemPath>
+      <itemPath>fdm_allyears.xhtml</itemPath>
+      <itemPath>fdm_cosummary.xhtml</itemPath>
+      <itemPath>fdm_news.xhtml</itemPath>
+      <itemPath>fdm_perf.xhtml</itemPath>
+      <itemPath>fdm_prospects.xhtml</itemPath>
+      <itemPath>fdm_prospects_chart_future.xhtml</itemPath>
+      <itemPath>fdm_prospects_chart_sector.xhtml</itemPath>
+      <itemPath>footer.xhtml</itemPath>
+      <itemPath>fundamentals.xhtml</itemPath>
+      <itemPath>header.xhtml</itemPath>
+      <itemPath>home.xhtml</itemPath>
+      <itemPath>htmltestfile.html</itemPath>
+      <itemPath>jsontest.json</itemPath>
+      <itemPath>maintain.xhtml</itemPath>
+      <itemPath>manageecoindicators.xhtml</itemPath>
+      <itemPath>master.xhtml</itemPath>
+      <itemPath>myaccount.xhtml</itemPath>
+      <itemPath>portfoliowiz.xhtml</itemPath>
+      <itemPath>ppapproved.xhtml</itemPath>
+      <itemPath>ppcancel.xhtml</itemPath>
+      <itemPath>ppfinal.xhtml</itemPath>
+      <itemPath>recentfinds.xhtml</itemPath>
+      <itemPath>register.xhtml</itemPath>
+      <itemPath>relatedlinks.xhtml</itemPath>
+      <itemPath>search.xhtml</itemPath>
+      <itemPath>seclastprice.xhtml</itemPath>
+      <itemPath>secpricehistory.xhtml</itemPath>
+      <itemPath>signin.xhtml</itemPath>
+      <itemPath>signout.xhtml</itemPath>
+      <itemPath>sitemap.xhtml</itemPath>
+      <itemPath>stockpriceboxview.xhtml</itemPath>
+      <itemPath>subscriptions.xhtml</itemPath>
+      <itemPath>test.html</itemPath>
+      <itemPath>tmplcc.sh</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>About.cpp</itemPath>
+      <itemPath>CAdminApp.cpp</itemPath>
+      <itemPath>CBaseApplication.cpp</itemPath>
+      <itemPath>CBaseContent.cpp</itemPath>
+      <itemPath>CFundamentalsApp.cpp</itemPath>
+      <itemPath>CSPSerializable.cpp</itemPath>
+      <itemPath>CSearchController.cpp</itemPath>
+      <itemPath>CSession.cpp</itemPath>
+      <itemPath>CSmartearnApp.cpp</itemPath>
+      <itemPath>CompSearch.cpp</itemPath>
+      <itemPath>CompanyFinancials.cpp</itemPath>
+      <itemPath>CompanyPerformance.cpp</itemPath>
+      <itemPath>CompanyProspects.cpp</itemPath>
+      <itemPath>CompanySummary.cpp</itemPath>
+      <itemPath>Economy.cpp</itemPath>
+      <itemPath>FinancialStatement.cpp</itemPath>
+      <itemPath>Footer.cpp</itemPath>
+      <itemPath>Fundamentals.cpp</itemPath>
+      <itemPath>Header.cpp</itemPath>
+      <itemPath>Home.cpp</itemPath>
+      <itemPath>Master.cpp</itemPath>
+      <itemPath>MyAccount.cpp</itemPath>
+      <itemPath>PortfolioWiz.cpp</itemPath>
+      <itemPath>RecentFinds.cpp</itemPath>
+      <itemPath>SGSkin.cpp</itemPath>
+      <itemPath>Search.cpp</itemPath>
+      <itemPath>Sitemap.cpp</itemPath>
+      <itemPath>StockPicks.cpp</itemPath>
+      <itemPath>Subscriptions.cpp</itemPath>
+      <itemPath>UserManageModels.cpp</itemPath>
+      <itemPath>admmodels.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/include/jsoncpp</pElem>
+            <pElem>/usr/include/libxml++-2.6</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+            <Elem>__PAID__</Elem>
+          </preprocessorList>
+          <useLinkerLibraries>false</useLinkerLibraries>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sgweb</output>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sesecurities"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seann"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seann"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>boost_iostreams</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>tar</linkerLibLibItem>
+            <linkerLibLibItem>PocoNet</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>cgicc</linkerLibLibItem>
+            <linkerLibLibItem>mariadbclient_r</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../config/easylogging.cfg" ex="false" tool="3" flavor2="0">
+        <customTool>
+          <customToolCommandline>cp ../config/easylogging.cfg ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}</customToolCommandline>
+        </customTool>
+      </item>
+      <item path="../config/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="About.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AdminAccountMapView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AdminHomeView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AdminView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBaseApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBaseApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBaseContent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBaseContent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSPSerializable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSPSerializable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSearchController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSearchController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSmartearnApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSmartearnApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CompSearch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyFinancials.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyPerformance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyProspects.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanySummary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Economy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FinancialStatement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Footer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fundamentals.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Header.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Home.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Master.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyAccount.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PortfolioWiz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PredictionSetupView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RecentFinds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SGSkin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Search.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sitemap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StockPicks.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Subscriptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UserManageModels.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="admin.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="adminstyle.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="admmodels.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="admmodels.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="agreement.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="animated-overlay.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="companypicks.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="companyscreener.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compsearch.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecnmy.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecnmynews.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="economy.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eindicators.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="error.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="favicon.ico" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fcgiconfig.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_allyears.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_cosummary.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_news.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_perf.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects_chart_future.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects_chart_sector.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fixedtable.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fundamentals.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="home.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="htmltestfile.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ie.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagecharts.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imageratios.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagerevestimate.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagescatterplot.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagestatements.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img01.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img02.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img02.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img03.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img04.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img05.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="indicator.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.overcast.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.overcast.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.structure.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.theme.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox-0.2.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox-0.2.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jsontest.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.32px.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.40px.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.style.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.throbber.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maintain.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manageecoindicators.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="master.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="minusplus.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="models.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modernizr.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modernizr.js.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myaccount.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nav.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navBG.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navLeft.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navLeftIE.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverBG.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverBG2.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverLeft.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navRight.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="portfoliodata.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="portfoliowiz.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppapproved.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppapproved.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppcancel.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppfinal.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="recentfinds.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="register.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="register.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="relatedlinks.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="se.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="search.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seclastprice.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secpricehistory.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="select-icons.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sgwebinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signin.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signin.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signout.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sitemap.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="smartearn.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stockpriceboxview.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="style.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subOverBG.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subnavBG.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subscriptions.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tmplcc.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-small_0_aaaaaa_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-thick_15_444444_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-thick_95_ffdc2e_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_flat_0_aaaaaa_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_0_eeeeee_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_55_c0402a_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_55_eeeeee_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_100_f8f8f8_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_35_dddddd_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_55_fbf5d0_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_55_fcf0ba_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_60_eeeeee_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_gloss-wave_100_ece8da_500x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_100_f5f3e5_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_100_fafaf4_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_15_014421_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_15_459e00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_30_285c00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_25_014421_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_25_67b021_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_33_3a8104_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_50_4eb305_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_60_4ca20b_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_95_ffedad_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-hard_75_999999_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-soft_10_285c00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-soft_50_c9c9c9_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-icons_3383bb_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_454545_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_4eb305_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_70b2e1_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_72b42d_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_808080_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_999999_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_cd0a0a_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_eeeeee_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_fbc856_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_ffffff_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uxpasswordmeter.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vis.js" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>6</developmentMode>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <developmentMode>6</developmentMode>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/include/libxml2</pElem>
+            <pElem>/usr/include/jsoncpp</pElem>
+            <pElem>/usr/include/libxml++-2.6</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>6</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>6</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/lib/x86_64-linux-gnu</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sesecurities"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seann"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seann"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="3"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>xml2</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>boost_iostreams</linkerLibLibItem>
+            <linkerLibLibItem>boost_date_time</linkerLibLibItem>
+            <linkerLibLibItem>boost_regex</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>tar</linkerLibLibItem>
+            <linkerLibLibItem>PocoNet</linkerLibLibItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>cgicc</linkerLibLibItem>
+            <linkerLibLibItem>mariadbclient_r</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../config/easylogging.cfg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="About.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AdminAccountMapView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AdminHomeView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AdminView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAdminApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAdminApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBaseApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBaseApplication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBaseContent.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBaseContent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSPSerializable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSPSerializable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSearchController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSearchController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSmartearnApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSmartearnApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CompSearch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyFinancials.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyPerformance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanyProspects.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CompanySummary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Economy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FinancialStatement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Footer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fundamentals.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Header.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Home.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Master.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyAccount.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PortfolioWiz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PredictionSetupView.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RecentFinds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SGSkin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Search.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sitemap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StockPicks.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Subscriptions.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UserManageModels.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="about.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="admin.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="adminstyle.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="admmodels.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="admmodels.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="agreement.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="animated-overlay.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="companypicks.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="companyscreener.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compsearch.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecnmy.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecnmynews.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="economy.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eindicators.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="error.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="favicon.ico" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fcgiconfig.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_allyears.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_cosummary.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_news.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_perf.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects_chart_future.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fdm_prospects_chart_sector.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fixedtable.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="fundamentals.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="home.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="htmltestfile.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ie.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagecharts.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imageratios.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagerevestimate.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagescatterplot.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imagestatements.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img01.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img02.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img02.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img03.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img04.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="img05.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="indicator.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.custom.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.overcast.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui-1.10.4.overcast.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.structure.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery-ui.theme.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox-0.2.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox-0.2.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jquery.selectbox.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jsontest.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.32px.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.40px.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.style.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jtree.throbber.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maintain.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="manageecoindicators.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="master.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="minusplus.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="models.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modernizr.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modernizr.js.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="myaccount.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nav.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navBG.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navLeft.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navLeftIE.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverBG.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverBG2.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navOverLeft.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="navRight.gif" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="portfoliodata.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="portfoliowiz.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppapproved.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppapproved.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppcancel.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ppfinal.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="recentfinds.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="register.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="register.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="relatedlinks.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="se.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="search.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="seclastprice.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secpricehistory.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="select-icons.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sgwebinternal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signin.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signin.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signout.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sitemap.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="smartearn.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stockpriceboxview.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="style.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subOverBG.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subnavBG.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="subscriptions.xhtml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tmplcc.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-small_0_aaaaaa_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-thick_15_444444_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_diagonals-thick_95_ffdc2e_40x40.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_flat_0_aaaaaa_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_0_eeeeee_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_55_c0402a_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_flat_55_eeeeee_40x100.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_100_f8f8f8_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_35_dddddd_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_55_fbf5d0_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_55_fcf0ba_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_glass_60_eeeeee_1x400.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-bg_gloss-wave_100_ece8da_500x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_100_f5f3e5_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_100_fafaf4_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_15_014421_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_15_459e00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-hard_30_285c00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_25_014421_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_25_67b021_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_33_3a8104_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_50_4eb305_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_60_4ca20b_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_highlight-soft_95_ffedad_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-hard_75_999999_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-soft_10_285c00_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-bg_inset-soft_50_c9c9c9_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ui-icons_3383bb_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_454545_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_4eb305_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_70b2e1_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_72b42d_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_808080_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_999999_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_cd0a0a_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_eeeeee_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_fbc856_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui-icons_ffffff_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uxpasswordmeter.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="vis.js" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

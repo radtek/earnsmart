@@ -1,0 +1,499 @@
+/* m
+ * File:   CParseFormIndexFunction.cpp
+ * Author: santony
+ * 
+ * Created on October 12, 2012, 6:17 PM
+ */
+
+#include <string.h>
+
+#include "../secommon.h"
+#include "CParseFormIndexFunction.h"
+#include <log4cxx/logger.h>
+#include <log4cxx/propertyconfigurator.h>
+#include <mysql++.h>
+#include <mysql++/ssqls.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
+
+
+#include "../semysql/CSEConnections.h"
+
+using namespace mysqlpp;
+using namespace log4cxx;
+using namespace se::data;
+using namespace se::xbrl;
+
+static LoggerPtr _logger = Logger::getLogger("se.bg.formindexer");
+
+#define SEDBCONN        CSEConnections::GetMain()
+
+
+CParseFormIndexFunction::CParseFormIndexFunction(CSTR formType) 
+{
+    CSTR tok = 0;
+    char* sTypes = const_cast<char*>(formType);
+    tok = strtok(sTypes, ";");
+    LOG4CXX_INFO(_logger, "Function will index ");
+    while (tok != 0)
+    {
+        LOG4CXX_INFO(_logger, tok << " ");
+        _formTypes.push_back(tok);
+        tok = strtok(0, ";");
+    }
+    LOG4CXX_INFO(_logger, "form types.");
+}
+
+CParseFormIndexFunction::CParseFormIndexFunction(const CParseFormIndexFunction& orig) 
+{
+    
+}
+
+CParseFormIndexFunction::~CParseFormIndexFunction() 
+{
+    
+}
+
+#include <map>
+
+#include <boost/date_time/gregorian/gregorian.hpp>
+#include <iosfwd>
+#include "../seglobal/CQuarter.h"
+#include "../senet/senetapi.h"
+
+#include <fstream>
+
+
+ErrorId CParseFormIndexFunction::Execute()
+{
+    LOG4CXX_INFO(_logger, "Begin to execute form indexing function.");
+    
+    /* 
+     * 1. Check the last entry in forms table (quarter, year)
+     * 2. We will save those values. 
+     * 3. Construct a permutation of quarters and years from current year until 2008.
+     * 4. loop this vector of permutation
+     * 5. download ftp file from the folder in sec server (always over-write earlier file downloaded).
+     * 6. begin a transaction
+     * 7. read lines in the file, look for lines which contains 
+     *          form types _formTypes vector.
+     * 8. insert row.
+     * 9. once the file is complete, close the transaction.
+     * 10. delete the downloaded file to save server disk space
+     * 11. if there is any error, rollback transaction.
+     */
+    
+    CSmartConnection conn(SEDBCONN);
+    try
+    {
+        // check last entry by sorting by year and period in the descending order.
+        /*
+         * show columns in se_edgar_formrecs;
+        +--------------+---------------+------+-----+---------+----------------+
+        | Field        | Type          | Null | Key | Default | Extra          |
+        +--------------+---------------+------+-----+---------+----------------+
+        | rec_id       | bigint(20)    | NO   | PRI | NULL    | auto_increment |
+        | cik          | int(11)       | NO   |     | NULL    |                |
+        | form_type_id | bigint(11)    | NO   | MUL | NULL    |                |
+        | filedate     | date          | NO   | MUL | NULL    |                |
+        | location     | varchar(2048) | NO   |     | NULL    |                |
+        | is_processed | int           | NO   |     | -1      |                |
+        | processed_on | datetime      | NO   |     | NULL    |                |
+        +--------------+---------------+------+-----+---------+----------------+
+         */
+        
+        ErrorId errCode = E_NotImpl;
+        typedef map<std::string, Date> LASTPERIODS;
+        LASTPERIODS lastperiods;
+        
+        using namespace boost::gregorian;
+        date dt = day_clock::local_day();
+//        CSTR loc = "2013-06-27";
+//
+//        date dt(from_string(loc));
+        
+                                        
+        I16 year=0, qtr=0;
+        string sql = "SELECT year,qtr,lastfedon FROM se_edgar_feedstats";
+        auto res = conn->query(sql).use();
+        
+        CQuarter cQtr (CDate(dt.year(), dt.month(), dt.day()));
+        
+        if (res)
+        {
+            Row row = res.fetch_row();
+            if (row)
+            {
+                year=row[0];
+                qtr = row[1];
+                
+                
+                CSTR lastdate = (CSTR)row[2];
+                
+                date dat(from_string(lastdate));
+                
+                CQuarter lQtr (CDate(dat.year(), dat.month(), dat.day()));
+                if(dat.year() == dt.year() && cQtr.get_Quarter() == lQtr.get_Quarter())
+                {
+                    year = dt.year();
+                    qtr = cQtr.get_Quarter();
+                    LOG4CXX_INFO(_logger, "Searching Same Qtr.");
+                }
+                else
+                {
+                        
+                    if(qtr==4)
+                    {
+                        year += 1;
+                        qtr = 1;
+                    }
+                    else 
+                    {
+                        qtr += 1;
+                    }
+                    
+                }
+            }
+            else
+            {
+                year = 2008;
+                qtr = 1;
+            }
+        }
+        
+        
+        
+        if (year > dt.year() || (year == dt.year() && qtr > cQtr.get_Quarter()))
+        {
+            return S_Success;
+        }
+        
+        
+        /* start from the last recorded quarter and year */
+
+        /*
+         * Since we are using transactions, we can assume all files are 
+         * successfully processed for all the past quarters.
+         * However current quarter file can be partial until SEC completely updates it
+         * That update completion may continue to the next quarter. So it is safer to 
+         * scan upto a month past the quarter end period.
+         * eg: if current month is January, there is a chance that
+         * last year's last quarterly idx file (Oct-Dec) will only be completed in current year January.
+         * so during the first month of the new quarter, we should scan the last quarter's
+         * idx file.
+         * This means, there will be an extra job in january because we will have to scan
+         * last quarter's file in addition to the current quarter's idx file.
+         */
+
+
+        /*
+         * 1. if current month is start month of a quarter then
+         *  a. scan last quarter's file
+         *  b. scan this  quarter's file.
+         * 2. else scan this quarter's file only.
+         */
+        string sftp = "ftp://ftp.sec.gov/";
+        stringstream sstrm(stringstream::in|stringstream::out);
+        // construct the url for ftp download
+        sstrm << "edgar/full-index/" ;
+        sstrm << year;
+        sstrm << "/";
+        switch (qtr)
+        {
+            case 1:
+                sstrm << "QTR1";
+                break;
+            case 2:
+                sstrm << "QTR2";
+                break;
+            case 3:
+                sstrm << "QTR3";
+                break;
+            case 4:
+                sstrm << "QTR4";
+                break;
+        }
+        sstrm << "/xbrl.idx";
+
+        string sOutStrm ;
+        sstrm >> sOutStrm;
+        string sUrl = sftp + sOutStrm;
+        string sOut;
+        struct passwd* pPwd = getpwuid(getuid()); 
+        sOut = pPwd->pw_dir;
+        char tmpFileBuff[TMP_MAX];
+        sOut += tmpnam(tmpFileBuff);
+        sOut += "/" + sOutStrm;
+
+        using namespace se::net;
+        CFtpClient ftpClient;
+        ftpClient.GetFile(sUrl.c_str(), sOut.c_str());
+
+        errCode = ProcessForm(year, qtr, sOut.c_str());
+        
+        // delete temp directory.
+
+        LOG4CXX_INFO(_logger, "Successfully ended with executing form indexing function.");
+
+        return errCode;
+    }
+    catch(...)
+    {
+        LOG4CXX_ERROR(_logger, "Failed to end executing form indexing function.");
+        return E_FORMINDEXING;
+    }
+    
+}
+
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <functional>
+#include <boost/algorithm/string/replace.hpp>
+#include <boost/algorithm/string/erase.hpp>
+#include <boost/algorithm/string/find_iterator.hpp>
+//#include <c++/4.6/bits/algorithmfwd.h>
+
+sql_create_6(se_edgar_formrecs, 1, 0,
+        sql_int,cik,
+        sql_bigint, form_type_id,
+        sql_date,filedate,
+        sql_varchar,location,
+        sql_int, is_processed,
+        sql_datetime_null, processed_on
+        );
+
+sql_create_3(se_edgar_feedstats,1,0,
+        sql_smallint, year,
+        sql_smallint, qtr,
+        sql_timestamp,lastfedon
+        
+);
+
+
+ErrorId CParseFormIndexFunction::ProcessForm(I16 Year,I16 qtr,CSTR filepath)
+{
+
+    LOG4CXX_INFO(_logger, "Entering ProcessForm.");
+    
+    CSmartConnection conn(SEDBCONN);
+
+    try
+    {
+        conn.BeginTransaction();
+        ifstream fin;
+        fin.open(filepath);       
+
+        /*
+         * CIK|Company Name|Form Type|Date Filed|Filename
+        --------------------------------------------------------------------------------
+        1004155|AGL RESOURCES INC|8-K/A|2008-02-13|edgar/data/1004155/0001140361-08-003746.txt
+        101829|UNITED TECHNOLOGIES CORP /DE/|8-K|2008-01-23|edgar/data/101829/0001193125-08-010089.txt
+        1045309|W R GRACE & CO|8-K|2008-03-20|edgar/data/1045309/0001104659-08-018716.txt
+        1045309|W R GRACE & CO|8-K|2008-03-20|edgar/data/1045309/0001104659-08-018717.txt
+         */
+
+        using namespace boost;
+        typedef tokenizer< char_separator<char> > Tokenizer;
+        typedef vector<string> TokenVector;
+        TokenVector vec;
+        char_separator<char> sep("|", "", keep_empty_tokens);
+        
+        
+        /* we are looking for formtypes that are in _formtypes vector*/
+        string line;
+        size_t seekPos;
+        
+        while (getline(fin, line))
+        {
+            trim(line);
+            // ignore the following types of lines
+            // run until "CIK|" is found
+            if (line.substr(0, 4) == "CIK|")
+            {
+                // go to next line
+                getline(fin, line);     // to avoid ------ (see above sample of file content)
+                break;
+            }
+        }
+        
+        // cache a relationship between form type and its id.
+        auto res = conn->query("select doc_id, doc_name from se_edgar_doctypes").use();
+        typedef map<string, CIK> FormTypes ;  
+        typedef pair<string, CIK> Pair;
+        FormTypes docTypes ;
+        if (!res)
+        {
+            
+            //LOG AND RETURN
+            return E_UnknownError ;
+        }
+        
+        Row row ;
+        while ( (row = res.fetch_row()) )
+        {
+            // we need to repalce all - and / in doc_name
+            string str = (CSTR) row[1];           
+            replace_all(str, "-", "");
+            replace_all(str, "/", "");
+            Pair p(str, row[0]);
+            docTypes.insert(p);
+        }
+        
+        // must exit if map contains no data
+        if (!docTypes.size())
+        {
+            return E_UnknownError;
+        }
+        
+        
+        Query qInsert = conn->query();
+        // not start from next line
+       
+        while (getline(fin, line))  //start idx
+        {           
+            trim(line);
+            // tokenize the line
+            Tokenizer tok(line, sep);
+            vec.assign(tok.begin(), tok.end());
+            
+           
+            // what we need from the vector are
+            /*
+             * File type, CIK, SUBMISSION DATE and PATH to the xbrl files.
+             */
+
+             //1004155|AGL RESOURCES INC|8-K/A|2008-02-13|edgar/data/1004155/0001140361-08-003746.txt
+            string frmtype = vec[2];
+            replace_all(frmtype, "-", "");
+            replace_all(frmtype, "/", "");
+            
+            // if formtypes are not the one in our requirement, then skip
+            //if (find(_formTypes.begin(), _formTypes.end(), frmtype) != _formTypes.end())
+            //FORMTYPES::iterator it = find_if(_formTypes.begin(), _formTypes.end(), [frmtype](string f)->bool{ return (f == frmtype); } );
+            //if (it == _formTypes.end())
+            //    continue;
+            
+            if (docTypes.find(frmtype) == docTypes.end())
+            {
+                continue;
+            }
+
+            string cik = vec[0];
+            string submitdate = vec[3];
+            string folder = vec[4];
+            // remove - and .txt from the folder.
+            replace_all(folder, "-", "");
+            erase_last(folder, ".txt");
+
+            // insert
+            I64 form_type_id;
+            {
+                string sqlFind = "select doc_id, doc_name from se_edgar_doctypes where doc_name = '" + frmtype + "'";
+                auto qRes = conn->query(sqlFind).use();
+                if (qRes && (row = qRes.fetch_row()))
+                {
+                    form_type_id = row[0];
+                }
+            }
+            
+            {
+                Query q = conn->query();
+                q << "select rec_id from se_edgar_formrecs where cik = " << quote 
+                        <<  cik << quote << " and form_type_id = " << quote <<  form_type_id 
+                        << quote << " and filedate = " << quote << submitdate << " and location = " << quote <<  folder ;
+                auto qRes = q.use();
+                if (qRes && (row = qRes.fetch_row()))
+                {
+                    LOG4CXX_INFO(_logger, "Already contain in formrec table");
+                }
+                else
+                {
+                    se_edgar_formrecs formrecs;
+                    formrecs.instance_table("se_edgar_formrecs");
+
+                    formrecs.cik = atoi(cik.c_str());
+
+                    sql_date sqlDt(submitdate);
+                    formrecs.filedate = sqlDt;
+
+                    formrecs.form_type_id =form_type_id;
+
+                    formrecs.location = folder;           
+                    formrecs.is_processed = -1;
+                    formrecs.processed_on = NULL;
+
+                    qInsert.insert(formrecs);
+
+                    qInsert.execute();
+                }
+            }
+            
+            
+            
+            //conn.CommitTransaction();
+        }        //end idx
+    
+       
+        qInsert = conn->query();
+       
+        se_edgar_feedstats feedstats; 
+        feedstats.instance_table("se_edgar_feedstats");
+        
+        vector<se_edgar_feedstats> stat;
+        Query qUpdate = conn->query("select * from se_edgar_feedstats");
+        StoreQueryResult res1 = qUpdate.store();
+        if (res1 && res1.size())
+        {
+            se_edgar_feedstats orig = res1[0];
+            se_edgar_feedstats toupdate = orig;
+            toupdate.qtr = qtr;
+            toupdate.year = Year;
+            
+            qUpdate.update(orig, toupdate);
+            qUpdate.execute();
+        }
+        else
+        {
+            feedstats.year = Year;
+            feedstats.qtr = qtr;
+            qInsert.insert(feedstats);
+            qInsert.execute();
+        }
+
+       // commit entire document to the table.
+        conn.CommitTransaction();
+       
+    }
+    catch (const mysqlpp::BadQuery& er) 
+    {
+        conn.RollbackTransaction();
+        LOG4CXX_ERROR(_logger, "Query Error: " << er.what());
+    }
+    catch (const mysqlpp::BadConversion& er) 
+    {
+        conn.RollbackTransaction();
+        LOG4CXX_ERROR(_logger, "Conversion Error: " << er.what());
+       
+    }
+    catch (const mysqlpp::Exception& er) 
+    {
+        conn.RollbackTransaction();
+        LOG4CXX_ERROR(_logger, "Error: " << er.what());
+        
+    }
+    catch (const std::exception& er)
+    {
+        conn.RollbackTransaction();
+        LOG4CXX_ERROR(_logger, "Error: " << er.what());
+    }
+ 
+    LOG4CXX_INFO(_logger, "Exiting ProcessForm.");
+    
+    return S_Success;
+}
+
+void CParseFormIndexFunction::Interrupt()
+{
+    
+}

@@ -1,0 +1,27 @@
+<% c++ #include "../sewebmodels/CToolbar.h" %>
+<% skin  skdefault %>
+<% view ToolbarView uses CToolbar %>
+<% template render() %>
+<div id="dvToolbar">
+    <nav>
+        <% c++ for (const Json::Value& menu : content.RootMenu["Menus"]) { %>
+        <% c++ if (menu["id"].asInt() == 1) /* home page */ { %>
+            <a id='topmenu<% c++ out() << menu["id"].asInt(); %>' href='<% c++ out() << menu["Url"].asString(); %>'><% c++ out() << menu["Name"].asString(); %></a> &nbsp; &nbsp;
+        <% c++ } else { %>
+            <a id='topmenu<% c++ out() << menu["id"].asInt(); %>' submenu='topsubmenu<% c++ out() << menu["id"].asInt(); %>' href='<% c++ out() << menu["Url"].asString(); %>'><% c++ out() << menu["Name"].asString(); %></a> &nbsp; &nbsp;
+        <% c++ } %>
+        <% c++ } %>
+        
+        <% c++ for (const Json::Value& menu : content.RootMenu["Menus"]) { %>
+        <% c++ if (menu["id"].asInt() == 1) continue; %>
+        <ul id='topsubmenu<% c++ out() << menu["id"].asInt(); %>' style="min-width:150px;visibility:hidden;position:absolute">
+            <% c++ for (const Json::Value& child : menu["Children"]) { %>
+            <li href='<% c++ out() << child["Url"].asString(); %>'><% c++ out() << child["Name"].asString(); %></li>
+            <% c++ } %>
+        </ul>        
+        <% c++ } %>
+    </nav>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

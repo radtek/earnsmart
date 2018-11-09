@@ -1,0 +1,74 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyNewsView uses sg::web::models::CompanyNews %>
+<% template render() %>
+<% c++ using namespace sg::web::models; %>
+
+
+<div id="fdm_subsection_header">
+    <% if not HasNews %>
+    <div class="fdmcosumcontainer">
+        <div>
+            <div class="fdmcosumformula_selected">
+                <div style="padding: 25pt; color: red">
+                    Sorry. We have no latest news that is directly or indirectly relevant to this company or security.
+                </div>
+            </div>
+        </div>
+    </div>
+    <% else %>
+    <div id="fdm_news_accordion">
+        <% foreach news in *get_News() %>
+        <% item %>
+        <h3 class="fdm_news_header" newsId="<%= news->get_Id() %>">
+            <%= news->get_Date() %> 
+            &nbsp;&colon;&nbsp;
+            <%= news->get_Title() | raw %> 
+        </h3>
+        <div>
+            Loading...
+        </div>
+        <% end %>
+        <% end %>
+    </div>
+    <% end %>
+    
+    <script type="text/javascript">
+    
+        var fdm_news_content_url = "/gj/11002/<%= ProductId%>";
+
+        $(function() 
+        {
+            $("#fdm_news_accordion").accordion( 
+                {
+                    active : false,
+                    collapsible : true,
+                    heightStyle : "content"
+                });
+
+            $( "#fdm_news_accordion" ).on("accordionbeforeactivate", function( event, ui ) 
+            {
+                if (ui.oldHeader)
+                    ui.oldHeader.removeClass("fdm_news_header_selected").addClass("fdm_news_header");
+                ui.newHeader.removeClass("fdm_news_header").addClass("fdm_news_header_selected");
+                // set content if not already
+                if (ui.newPanel.text().trim()=="Loading...")
+                {
+                    $.post(fdm_news_content_url, "newsId=" + ui.newHeader.attr("newsId")).done(function(data)
+                    {
+                        ui.newPanel.text("");
+                        ui.newPanel.append(data);
+                    });
+                }
+            });
+        });
+        
+    </script>
+    <div class="disclaim" style="margin: 3px;">
+        News Source: NASDAQ's <a href="http://www.nasdaq.com/services/rss.aspx" target="_blank">RSS feeds</a>.
+    </div>
+</div>                
+
+<% end template %>
+<% end view %>
+<% end skin %>

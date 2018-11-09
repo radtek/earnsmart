@@ -1,0 +1,25 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyPicksView uses sg::web::models::CompanyPicks %>
+<% template render() %>
+<form id ="form_fdm" name="form_fdm" method="post" >
+    <div class="fdm_header" id="fdm_div_header">
+        <% if (content.SubViewName == "CompanyScreenerView") %>
+        <ul id="fdm_ul">
+            <li id="fdm_li_summary" class="fdm_tab_selected"><a id="a0" href="/fundamentals/screener">Screener Using Ratios</a></li>
+            <li id="fdm_li_financials" ><a id="a1" href="/fundamentals/portfolio">Screener Using Predicted Future Revenue</a></li>
+        </ul>
+        <% elif (content.SubViewName == "PortfolioWizView") %>
+        <ul id="fdm_ul">
+            <li id="fdm_li_summary" ><a id="a0" href="/fundamentals/screener">Screener Using Ratios</a></li>
+            <li id="fdm_li_financials" class="fdm_tab_selected" href="/fundamentals/portfolio"><a id="a1">Screener Using Predicted Future Revenue</a></li>
+        </ul>
+        <% end %>
+    </div>
+    <div class="fdm_content" id="fdm_<%= SubViewName %>">
+        <% render SubViewName %> 
+    </div>
+</form>
+<% end template %>
+<% end view %>
+<% end skin %>

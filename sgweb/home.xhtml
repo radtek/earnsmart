@@ -1,0 +1,83 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view HomeView uses sg::web::models::Home %>
+<% template render() %>
+
+<div class=WordSection1>
+
+<p align=center style='text-align:center;background:white'><b><span
+style='font-size:18.0pt;font-family:"Arial","sans-serif";color:#616161'>Future
+of Fundamentals</span></b></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>We have found a novel way for value investment. We all love to
+trade in stock, bond or option of a publicly listed company. But our ride on
+the road to successful investments is not safe if we don't know the inner
+truths of how a company may perform in the future given a number of
+circumstances, internal or external to the company.</span></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>This is what this site is good at doing. We have built an excellent
+prediction algorithm. This algorithm has the ability to rummage through
+innumerable macro-economics and micro-economics data, the company
+and its competitors fundamentals and many more, then build a complex graph and come to a conclusion
+on how a company may end up in a future quarter, quarters or years.</span></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>This is how our revenue estimate looks like for a company</span></p>
+
+<p style='background:white'>
+    <a href="/fundamentals/p/prospects/<%= ProductId %>">
+    <img width=569 height=316 id="Picture 1"
+         src="/blob/imagerevestimate.jpg"></a></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>But how do we quickly identify the companies which may perform
+better in future? That is where our </span><a
+href="/fundamentals/portfolio"><span style='font-size:
+10.0pt;font-family:"Arial","sans-serif"'>basic portfolio builder</span></a><span
+style='font-size:10.0pt;font-family:"Arial","sans-serif";color:#616161'> comes
+in handy. See the picture below.</span></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>
+        <a href="/fundamentals/portfolio">
+        <img border=0 width=623 height=399 id="Picture 3"
+             src="/blob/imagescatterplot.jpg"></a></span></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>Just click on a point inside the densely populated area on the
+scatter plot and you will draw a line between the return of a risk-free asset to
+the return-risk position you choose on the graph (y and x axes). A table captures all the
+potential companies that may be safe to invest in. It is suggested to have a
+protective put in case the prediction failed - which is a possibility for a few
+a companies.</span></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>We also provide other traditional fundamentals data stuff such
+as financial ratios, charts and statements. Examples are below:</span></p>
+
+<p style='background:white'>
+    <a href="/fundamentals/p/performance/<%= ProductId %>">
+    <img border=0 width=163 height=112 id="Picture 4"
+         src="/blob/imageratios.jpg"></a>
+    <a href="/fundamentals/p/summary/<%= ProductId %>"><img border=0 width=353
+height=97 id="Picture 5" src="/blob/imagecharts.jpg"></a></p>
+
+    <p style='background:white'><a href="/fundamentals/p/financials/<%= ProductId %>"><img border=0 width=338 height=167 id="Picture 6"
+    src="/blob/imagestatements.jpg"></a></p>
+
+<p style='background:white'><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+color:#616161'>Enjoy the returns of your investments. Please also read our 
+        <u title="Smartearn website or its company Smartgaze LLC shall not be liable to 
+           any type of financial loss, cost or damage arising from the use of our predicted or otherwise fundamental financial data. 
+           Smartgaze does not guarantee that the numbers returned from our prediction algorithms 
+           or other financial numbers and data published on the website are not liable to failure or mistakes. 
+           We suggest our users to utilize publicly available analyst estimates and compare them with our data 
+           before making the investment decisions.">disclaimer</u>.</span></p>
+
+</div>
+
+<% end template %> 
+<% end view %>
+<% end skin %>

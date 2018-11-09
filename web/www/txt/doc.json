@@ -1,0 +1,87 @@
+{
+  "Title": "Financial System and Market",
+  "Subjects": [
+      {
+        "Title": "Economics",
+        "Subjects": [
+          {
+            "Title": "Goods",
+            "Subjects": [
+              {
+                "Title": "Consumer Goods",
+                "Subjects": [
+                  {
+                    "Title": "Product or Goods Market",
+                    "Description": "It is the market for the goods and services to consumers."
+                  }
+                ]
+              },
+              {
+                "Title": "Producer Goods",
+                "Subjects": [
+                  {
+                    "Title": "Factor Market",
+                    "Description": "It is the market for different factors of production such as raw materials, goods, services, etc used in the production or manufacturing."
+                  }
+                ]
+              },
+              {
+                "Title": "Intermediate Goods",
+                "Description" :  "Goods or services used in the production of final goods. Example: Computer chip used in personal computers."
+              }
+            ]
+          },
+          {
+            "Title": "Demand and Supply",
+            "Description": "The relationship between price and quantity based on demand and supply of a product.",
+            "Subjects": [
+              {
+                "Title": "Demand",
+                "Description": "The quantity demanded by a consumer for the product will be higher when its price is lower.",
+                "Subjects": [
+                  {
+                    "Title": "Demand Function",
+                    "Description" :  "It is the quantity demanded as a function of price of the good and other relevant data such as personal income."
+                  }
+                ]
+              },
+              {
+                "Title": "Supply",
+                "Description": "The quantity supplied by the producer will be higher when the market price of the product is higher.",
+                "Subjects": [
+                  {
+                    "Title": "Supply Function",
+                    "Description" :  "It is the quantity supplied as a function of price of the good/service and other relevant data such as technology, raw inputs, etc."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+
+          }
+        ]
+      },
+      {
+        "Title": "Saving"
+      },
+      {
+        "Title": "Borrowing"
+      },
+      {
+        "Title": "Raise Capital"
+      },
+      {
+        "Title": "Manage Risk"
+      },
+      {
+        "Title": "Asset Exchange"
+      },
+      {
+        "Title": "Trading as a Business"
+      },
+      {
+        "Title": "Price Discovery"
+      }
+    ]
+}

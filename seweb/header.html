@@ -1,0 +1,28 @@
+<% c++ #include "../sewebmodels/CHeader.h" %>
+<% skin  skdefault %>
+<% view HeaderView uses CHeader %>
+<% template render() %>
+<div id="dvHeader">
+    <div id="dvLogo">
+        <span class="logoGreen spLogoE">e<sup id="fontLogoS" class="logoRed">$</sup>
+        </span>
+        <div id="dvLogoName">
+            <span class="logoGreen">Earn</span><span class="splogonamedash">-</span><span class="logoRed">Smart</span>
+        </div>
+    </div>
+    <div id="dvSiteName">
+        <a href="/">
+            <span class="logoGreen">Earn</span><span class="splogonamedash">-</span><span class="logoRed">Smart</span>
+        </a>
+        <br>
+        <span id="spSiteMotto">A Better Path to Security Analysis</span>
+    </div>
+
+    <% include render() using AppSearchView with AppSearch %>
+
+    <% include render() using LoginOrRegisterView with LoginOrRegister %>
+    
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

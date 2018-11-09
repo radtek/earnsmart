@@ -1,0 +1,33 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view SearchView uses sg::web::models::Search %>
+<% template render() %>
+<div style="padding:10pt">
+    <h1 class="title">Part I - Fundamentals</h1>
+    <h4>Search Results - <%= get_List()->get_Count() %> Companies Matched</h4>
+    <table width="100%">
+        <tr>
+            <th width="20%" style="text-align: left">Ticker</th>
+            <th width="40%" style="text-align: left">Company</th>
+            <th width="40%" style="text-align: left">Exchange</th>
+        </tr>
+        <% foreach security in *get_List() %>
+            <% item %>
+                <tr>
+                    <td>
+                        <a href="/fundamentals/p/summary/<%= security->get_Id()%>">
+                         <%= security->get_Symbol() %> 
+                        </a>
+                    </td>
+                    <td> <%= security->get_Name() %> </td>
+                    <td> <%= security->get_Exchange() %> </td>
+                </tr>
+            <% end %>
+        <% empty %>
+            Your search result is empty.
+        <% end %>
+    </table>
+</div>
+<% end template %> 
+<% end view %>
+<% end skin %>

@@ -1,0 +1,707 @@
+/* 
+ * File:   main.cpp
+ * Author: santony
+ *
+ * Created on November 14, 2012, 7:20 AM
+ */
+
+#include <cstdlib>
+#include <unistd.h>
+#include <string>
+#include <stdio.h>
+#include <iostream>
+
+//#include "xbrlcalparsingtest.c"
+#include "sexbrlinternal.h"
+//#include "CXbrlCalculation.h";
+#include <boost/filesystem.hpp>
+#include <log4cxx/log4cxx.h>
+#include <log4cxx/logger.h>
+#include <log4cxx/basicconfigurator.h>
+#include <log4cxx/propertyconfigurator.h>
+#include <log4cxx/helpers/exception.h>
+
+//#include "CXbrlCalculation.h"
+#include "CXbrlPresentation.h"
+
+#include "../sedata/sedataheaders.h"
+#include "../seadmin/seadminapi.h"
+
+#include <jsoncpp/json/json.h>
+
+#include <mysql++/mysql++.h>
+#include <mysql++/ssqls.h>
+
+#include "../semain/semain.h"
+#include "../semysql/CSEConnections.h"
+#include "../seglobal/CDirectory.h"
+#include "../senet/CFtpClient.h"
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
+
+#include <map>
+
+#define SEDBCONN        CSEConnections::GetMain()
+
+using namespace std;
+using namespace se;
+using namespace se::xbrl;
+using namespace se::data;
+using namespace se::net;
+
+
+void OnParseCompleted(ErrorId status);
+void DatatableTests();
+void DataTableToJsonConversionTest(CDataTable* datatable);
+void TestJsonSerialization();
+void XbrlTests();
+void ParseEdgarHtml();
+
+
+
+struct properties
+{
+  	string fieldDate;
+  	string ChangeDate; 
+	string CompanyName; 
+    string IncState;    //incorporated state
+	string cikValue;
+	string sik; // remove it.
+    std::pair<int, string> sic;
+	string ips; //rename this to taxid
+	string FYearEnd;
+	string TYPE;
+	string BStreet1;
+	string MStreet1;
+	string  BStreet2;
+	string  MStreet2;
+	string  City;
+	string  MCity;
+	string  State;
+	string  MState;
+	string  ZIP;
+	string  MZIP;
+	string  Phone;
+	string  MPhone;
+    typedef std::map<string,string>  XBRLDOCS;
+    XBRLDOCS xbrlDocs;
+};
+void ParseEdgarHtmlData(CSTR path,properties &ppt1);
+
+
+/*
+ * 
+ */
+int main(int argc, char** argv) 
+{
+    
+      //parsing html
+    SP<se::IApp> pApp;
+    SEGetApp(&pApp);
+    
+    SP<se::config::IConfigurator> pConfig;
+    pApp->get_Configurator(&pConfig);
+    pConfig->InitLog();
+    pConfig->InitDb();    
+    
+    log4cxx::LoggerPtr logger = log4cxx::Logger::getLogger("misctests::main");
+    
+    
+    ParseEdgarHtml();
+    
+    
+    
+    //DatatableTests();
+    //XbrlTests();
+  
+    LOG4CXX_INFO(logger, "Starting to test json serialization.");
+    
+    //TestJsonSerialization();
+    
+    
+    return 0;
+}
+
+#include "../seglobal/CJsonSerializedData.h"
+
+void TestJsonSerialization()
+{
+    using namespace se::admin;
+    SP<IUser> pNewUser ;
+    CreateUser(&pNewUser);
+    SP<IList<USERGROUPS>> pUg;
+    pNewUser->get_UserGroups(&pUg);
+    pUg->Add(UserGroup_Admin);
+    
+    // SERIALIZE
+    SP<ISerializedData<>> pSerilizer ;
+    CJsonSerializedData::Create(&pSerilizer);
+    
+    pNewUser->Serialize(pSerilizer);
+    SP<IString> pOutput;
+    pSerilizer->get_Output(&pOutput);
+    cout << pOutput->get_Buffer() << endl;
+
+    // create jsoncpp value
+    Json::Reader reader;
+    Json::Value userdata;
+    if(reader.parse(pOutput->get_Buffer(), userdata, false ))
+    {
+        cout << userdata["FirstName"] << endl;
+        
+        userdata["FirstName"] = "Arun";
+        userdata["LastName"] = "Ashok";
+        
+        Json::FastWriter writer;
+        CSTR updateduser = writer.write(userdata).c_str();
+        
+        cout << updateduser << endl;
+        
+        // deserialize user object
+        pSerilizer.Clear();
+        if (S_Success == CJsonSerializedData::Create(updateduser, &pSerilizer))
+        {
+            pNewUser->Deserialize(pSerilizer);
+        }
+    }
+}
+
+void XbrlTests()
+{
+    //ParseCalXbrlFile("/home/santony/Documents/xbrl/adbe-20071130_cal.xml");
+  
+    //CSTR location = "/home/santony/Documents/xbrl/schema/";
+    
+//    CXbrlCalculation calculate;
+//    calculate.Parse("/home/aashok/Documents/xbrl/schema/");
+    
+    CXbrlPresentation Presentation;
+    Presentation.Parse("/home/aashok/Documents/xbrl/schema/");
+    
+}
+
+void DatatableTests()
+{
+    // create a datatable
+    CDataTable table("IncomeStatement");
+    table.Acquire();
+    // enable fields
+    CDataFieldList& fields = table.get_Fields();
+    // fields are added in place.
+    fields.AddField("AccountName", se::DT_STR); // this is index 0
+    fields.AddField("Children", se::DT_POINTER);    // this is index 1 and so on  below
+    fields.AddField("YEAR1", se::DT_R8);
+    fields.AddField("YEAR2", se::DT_R8);
+    fields.AddField("YEAR3", se::DT_R8);
+    
+    // adding some rows. 
+    // since fields are added to the datable, we create a new datarow from CDAtaTable
+    CDataRow row = table.get_NewRow();
+    if (row)
+    {
+        row.set("AccountName", (string)"Assets");
+        row.set(1, (CDataTable*) nullptr);
+        row.set(2, 123.00);
+        row.set(3, 113.00);
+        row.set("Year3", 0.00);
+        table.get_Rows().AddRow(row);
+        
+        // get values
+        
+        string accName;
+        if (row.get("AccountName", accName))
+        {
+            // got the value.
+        }
+        
+        R8 year0 ;
+        if (row.get(2, year0))
+        {
+            // we got field value.
+        }
+        
+    }
+    
+    // enumerat rows.
+    auto enumerator = table.get_Rows().EnumerateRows();
+    for (auto start = enumerator.first; start != enumerator.second; ++start )
+    {
+        CDataRow& row = *start;
+        string accName;
+        if (row.get("AccountName", accName))
+        {
+            cout << accName << endl;
+        }
+    }
+    
+    DataTableToJsonConversionTest(&table);
+}
+
+void DataTableToJsonConversionTest(CDataTable* datatable)
+{
+    SP<IDataFormattedOutput> jsonoutput;
+    ErrorId ret = ConvertDataTableToJson(datatable, &jsonoutput);
+    if (ret == S_Success)
+    {
+        cout << "Successfully converted to json." << endl;
+        SP<IString> str;
+        jsonoutput->ToString(&str);
+        cout << str->get_Buffer() << endl;
+    }
+}
+
+
+
+void ParseEdgarHtml()
+{
+    
+   CSmartConnection conn(SEDBCONN);
+   CSTR sfindsql ="select * from se_edgar_formrecs order by filedate desc limit 1";
+   Query qfind = conn->query(sfindsql);
+   auto res = qfind.use();
+   if (res)
+   {
+       Row row = res.fetch_row();
+       if (row){
+           string location = (CSTR)row[4];
+  
+           string ftpUrl = "ftp://ftp.sec.gov/" ;
+           ftpUrl += location;
+           ftpUrl += "/*";
+           
+           I32 pos =0;
+           string token;
+           string delimiter = "/";
+           while ((pos = location.find(delimiter)) != std::string::npos) 
+           {
+               token = location.substr(0, pos);
+               location.erase(0, pos + delimiter.length());
+           }
+
+           string first,middle,last;
+           first = location;
+           middle = location;
+           last = location;
+           first.erase(10);
+           middle.erase(0,10);
+           last = middle;
+           middle.erase(2);
+           last.erase(0,2);
+           
+           struct passwd* pPwd = getpwuid(getuid()); 
+           string strDest = pPwd->pw_dir;
+           char tmpFileBuff[TMP_MAX];
+           strDest += tmpnam(tmpFileBuff);
+           CFtpClient ftp;
+           ftp.GetFiles(ftpUrl.c_str(), strDest.c_str(), "(.*)(-index.htm)");
+           ftp.GetFiles(ftpUrl.c_str(), strDest.c_str(), "([\\w\\d]+)(-)([\\d]{8})(_)?(pre|cal|lab|def|ref)?(.xml|.xsd)");
+           
+           string filepath=strDest+"/"+first+"-"+middle+"-"+last+"-index.htm";
+           
+           properties ppt1;
+           ParseEdgarHtmlData(filepath.c_str(), ppt1);
+           CDirectory::Delete(strDest.c_str());
+           
+           // test 
+           //cout<<ppt1.xbrlDocs["XBRL INSTANCE DOCUMENT"]<<endl;
+           LOG4CXX_INFO(Logger::getLogger("EdgarCompanyInfo"), "PPT1::CompanyName: " << ppt1.CompanyName);
+           
+       }
+   }
+  
+   
+}
+#include <boost/regex.hpp>
+const char* Fdate="(<FILING-DATE>)(.*)";
+const char* Cdate="(<DATE-OF-FILING-DATE-CHANGE>)(.*)";
+const char* CName="(<CONFORMED-NAME>)(.*)";
+const char* cik="(<CIK>)(.*)";
+const char* Sicnumber = "(<ASSIGNED-SIC>)(.*)";
+const char* Ipsnumber = "(<IRS-NUMBER>)(.*)";
+const char* Fyear = "(<FISCAL-YEAR-END>)(.*)";
+
+const char* FType = "(<FORM-TYPE>)(.*)";
+const char* BS1 =  "(<STREET1>)(.*)";
+const char* BS2 =  "(<STREET2>)(.*)";
+const char* BC = "(<CITY>)(.*)";
+const char* BS = "(<STATE>)(.*)";
+const char* BZ = "(<ZIP>)(.*)";
+const char* PH = "(<PHONE>)(.*)"; //13
+
+const char* MS1 =  "(<FORM-TYPE>)(.*)";
+const char* MS2 =  "(<FORM-TYPE>)(.*)";
+const char* MC = "(<FORM-TYPE>)(.*)";
+const char* MS = "(<FORM-TYPE>)(.*)";
+const char* MZ = "(<FORM-TYPE>)(.*)";
+
+
+
+void ParseEdgarHtmlData(CSTR path, properties &ppt1)
+{
+    ifstream fin;
+    fin.open(path);
+    string line;
+    I32 Flag = 0;
+    I32 DFlag =0;
+    string desc;
+    while (getline(fin, line))
+    {
+      
+       regex regexPattern(Fdate, regex::extended);  
+       smatch what;
+       bool isMatchFound = boost::regex_match(line, what, regexPattern);
+       if (isMatchFound) 
+        { 
+            for (unsigned int i=0; i < what.size(); i++) 
+            { 
+                if(i==1)
+                {
+                     
+                    ppt1.fieldDate = what.str(2).c_str();
+                   
+                    
+                    
+                }
+            } 
+        } 
+      regex regexPattern1(Cdate, regex::extended);  
+      smatch what1;
+      bool isMatchFound1 = boost::regex_match(line, what1, regexPattern1);
+      if (isMatchFound1) 
+      { 
+           for (unsigned int i=0; i < what1.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.ChangeDate = what1.str(2).c_str();
+                   
+                    
+                }
+            } 
+      } 
+      regex regexPattern2(CName, regex::extended);  
+      smatch what2;
+      bool isMatchFound2 = boost::regex_match(line, what2, regexPattern2);
+      if (isMatchFound2) 
+      { 
+           for (unsigned int i=0; i < what2.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.CompanyName = what2.str(2).c_str();
+                   
+                    
+                }
+            } 
+      } 
+      
+      regex regexPattern3(cik, regex::extended);  
+      smatch what3;
+      bool isMatchFound3 = boost::regex_match(line, what3, regexPattern3);
+      if (isMatchFound3) 
+      { 
+           for (unsigned int i=0; i < what3.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.cikValue = what3.str(2).c_str();
+                   
+                    
+                }
+            } 
+      } 
+      
+    
+      regex regexPattern4(Sicnumber, regex::extended);  
+      smatch what4;
+      bool isMatchFound4 = boost::regex_match(line, what4, regexPattern4);
+      if (isMatchFound4) 
+      { 
+           for (unsigned int i=0; i < what4.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.sik = what4.str(2).c_str();
+                 
+                   ppt1.sic = std::make_pair(1, "test");
+                    
+                }
+            } 
+      } 
+       
+    
+      regex regexPattern5(Ipsnumber, regex::extended);  
+      smatch what5;
+      bool isMatchFound5 = boost::regex_match(line, what5, regexPattern5);
+      if (isMatchFound5) 
+      { 
+           for (unsigned int i=0; i < what5.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.ips = what5.str(2).c_str();
+                  
+                    
+                }
+            } 
+      }  
+      
+   
+      regex regexPattern6(Fyear, regex::extended);  
+      smatch what6;
+      bool isMatchFound6 = boost::regex_match(line, what6, regexPattern6);
+      if (isMatchFound6) 
+      { 
+           for (unsigned int i=0; i < what6.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.FYearEnd = what6.str(2).c_str();
+                   
+                    
+                }
+            } 
+      } 
+      
+  
+      regex regexPattern7(FType, regex::extended);  
+      smatch what7;
+      bool isMatchFound7 = boost::regex_match(line, what7, regexPattern7);
+      if (isMatchFound7) 
+      { 
+           for (unsigned int i=0; i < what7.size(); i++) 
+           { 
+               if(i==1)
+               {
+                     
+                   ppt1.TYPE = what7.str(2).c_str();
+                   
+                    
+                }
+            } 
+      } 
+      
+      
+      regex regexPattern8(BS1, regex::extended);  
+      smatch what8;
+      bool isMatchFound8 = boost::regex_match(line, what8, regexPattern8);
+      if (isMatchFound8) 
+      { 
+           for (unsigned int i=0; i < what8.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                  ppt1.BStreet1 = what8.str(2).c_str();
+                  
+                    
+                }
+               else if(i==1 && Flag ==1)
+               {
+                     
+                   ppt1.MStreet1 = what8.str(2).c_str();
+                   
+                    
+               }
+            } 
+      } 
+      
+  
+      regex regexPattern9(BS2, regex::extended);  
+      smatch what9;
+      bool isMatchFound9 = boost::regex_match(line, what9, regexPattern9);
+      if (isMatchFound9) 
+      { 
+           for (unsigned int i=0; i < what9.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                   ppt1.BStreet2 = what9.str(2).c_str();
+                   
+                    
+                }
+               else if(i==1 && Flag ==1)
+               {
+                     
+                   ppt1.MStreet2 = what9.str(2).c_str();
+                   
+                    
+               }
+            } 
+      }
+      
+     
+      regex regexPattern10(BC, regex::extended);  
+      smatch what10;
+      bool isMatchFound10 = boost::regex_match(line, what10, regexPattern10);
+      if (isMatchFound10) 
+      { 
+           for (unsigned int i=0; i < what10.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                   ppt1.City = what10.str(2).c_str();
+                   
+                }
+               else if(i==1 && Flag ==1)
+               {
+                     
+                   ppt1.MCity = what10.str(2).c_str();
+                   
+               }
+            } 
+      } 
+      
+      
+      regex regexPattern11(BS, regex::extended);  
+      smatch what11;
+      bool isMatchFound11 = boost::regex_match(line, what11, regexPattern11);
+      if (isMatchFound11) 
+      { 
+           for (unsigned int i=0; i < what11.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                   ppt1.State = what11.str(2).c_str();
+                   
+                }
+               else if(i==1 && Flag ==1)
+               {
+                     
+                   ppt1.MState = what11.str(2).c_str();
+                  
+                }
+            } 
+      } 
+      
+      
+      regex regexPattern12(BZ, regex::extended);  
+      smatch what12;
+      bool isMatchFound12 = boost::regex_match(line, what12, regexPattern12);
+      if (isMatchFound12) 
+      { 
+           for (unsigned int i=0; i < what12.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                   ppt1.ZIP = what12.str(2).c_str();
+                   
+                    
+                }
+               else if(i==1 && Flag ==1)
+               {
+                     
+                   ppt1.MZIP = what12.str(2).c_str();
+                 
+                }
+            } 
+      } 
+      
+     
+      regex regexPattern13(PH, regex::extended);  
+      smatch what13;
+      bool isMatchFound13 = boost::regex_match(line, what13, regexPattern13);
+      if (isMatchFound13) 
+      { 
+           for (unsigned int i=0; i < what13.size(); i++) 
+           { 
+               if(i==1 && Flag ==0)
+               {
+                     
+                   ppt1.Phone = what13.str(2).c_str();
+                
+                 
+                }
+               else if(i==1 && Flag ==1)
+               {
+                   ppt1.MPhone = what13.str(2).c_str();
+                   
+               }
+            } 
+      } 
+      if(DFlag == 1)
+      {
+          const char* doc = "(&lt;DESCRIPTION&gt;)(.*)";
+          regex regexPattern15(doc, regex::extended);  
+          smatch what15;
+          bool isMatchFound15 = boost::regex_match(line, what15, regexPattern15);
+          if (isMatchFound15) 
+          { 
+               for (unsigned int i=0; i < what15.size(); i++) 
+               { 
+                   if(i==1)
+                   {
+                       desc= what15.str(2).c_str();
+  
+                    }
+                } 
+          } 
+          
+            const char* xsd = "(.*)(Document)(.*)(- file:)(.*)(.xml)(.*)";
+            regex regexPattern14(xsd, regex::extended);  
+            smatch what14;
+            bool isMatchFound14 = boost::regex_match(line, what14, regexPattern14);
+            if (isMatchFound14) 
+            { 
+                 for (unsigned int i=0; i < what14.size(); i++) 
+                 { 
+                     if(i==1)
+                     {
+
+                         string xml= what14.str(5).c_str();
+                         string url = xml+".xml";
+                         ppt1.xbrlDocs[desc] =url;
+                         //cout<<desc<<"\t"<<url<<endl;
+
+                      }
+
+                  } 
+            } 
+            
+            const char* xsd1 = "(.*)(Document)(.*)(- file:)(.*)(.xsd)(.*)";
+            regex regexPattern16(xsd1, regex::extended);  
+            smatch what16;
+            bool isMatchFound16 = boost::regex_match(line, what16, regexPattern16);
+            if (isMatchFound16) 
+            { 
+                 for (unsigned int i=0; i < what16.size(); i++) 
+                 { 
+                     if(i==1)
+                     {
+
+                         string xml= what16.str(5).c_str();
+                         string url = xml+".xsd";
+                         ppt1.xbrlDocs[desc] =url;
+                         //cout<<desc<<"\t"<<url<<endl;
+
+                      }
+
+                  } 
+            } 
+            
+      
+      }
+      if(line == "<MAIL-ADDRESS>")
+          Flag =1;
+      if(line == "&lt;DOCUMENT&gt;")
+          DFlag = 1;
+      if(line == "&lt;/DOCUMENT&gt;")
+      {
+          DFlag = 0;
+          
+      }
+    }//end while loop
+    
+}

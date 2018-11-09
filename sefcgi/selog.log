@@ -1,0 +1,57 @@
+INFO 0x7ffff7fc6780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Exiting execute function with retCode 140733193388033
+INFO 0x7ffff7fc6780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc6780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc6780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc6780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc6780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc6780 se.cgi.xbrlwrapper - Exiting company info for ticker goog with retCode 0
+INFO 0x7ffff7fc6780 se::gw::jsonwrapper - Exiting execute function with retCode 0
+INFO 0x7ffff7fc6780 se.fcgi.main - Exiting se fcgi gw.
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company performance for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company performance for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company performance for ticker goog
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Exiting company performance for ticker goog with retCode 0
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Exiting execute function with retCode 0
+INFO 0x7ffff7fc3780 se.fcgi.main - Exiting se fcgi gw.
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.fcgi.main - Entering se fcgi gw.
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company info for ticker goog
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Exiting company info for ticker goog with retCode 0
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Exiting execute function with retCode 0
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Entering execute function
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Entering company performance for ticker goog
+INFO 0x7ffff7fc3780 se.cgi.xbrlwrapper - Exiting company performance for ticker goog with retCode 0
+INFO 0x7ffff7fc3780 se::gw::jsonwrapper - Exiting execute function with retCode 0
+INFO 0x7ffff7fc3780 se.fcgi.main - Exiting se fcgi gw.

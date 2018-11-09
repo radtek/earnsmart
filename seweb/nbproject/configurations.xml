@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="config" projectFiles="true">
+      <itemPath>../config/se.json</itemPath>
+      <itemPath>../config/sgweb.key</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f4" displayName="css" projectFiles="true">
+      <itemPath>css/earnsmart.css</itemPath>
+      <itemPath>css/jquery-ui.css</itemPath>
+      <itemPath>css/jquery-ui.min.css</itemPath>
+      <itemPath>css/jquery-ui.structure.css</itemPath>
+      <itemPath>css/jquery-ui.structure.min.css</itemPath>
+      <itemPath>css/jquery-ui.theme.css</itemPath>
+      <itemPath>css/jquery-ui.theme.min.css</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f9" displayName="emltempls" projectFiles="true">
+      <logicalFolder name="f1" displayName="default" projectFiles="true">
+        <itemPath>emltempls/RegistrationEmailConfirmation.html</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f7" displayName="ext" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CAppBase.h</itemPath>
+      <itemPath>CAppMain.h</itemPath>
+      <itemPath>CBrowserSession.h</itemPath>
+      <itemPath>CInvestmentProducts.h</itemPath>
+      <itemPath>CJsonRPCApp.h</itemPath>
+      <itemPath>CSPSerializable.h</itemPath>
+      <itemPath>internal.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f8" displayName="html" projectFiles="true">
+      <logicalFolder name="f1" displayName="w10" projectFiles="true">
+        <itemPath>html/w10/jsonrpc.html</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="images" projectFiles="true">
+      <itemPath>images/eulerlogo.png</itemPath>
+      <itemPath>images/paypal_btn_subscribeCC_LG.gif</itemPath>
+      <itemPath>images/searrowuplogo.png</itemPath>
+      <itemPath>images/smartearneulerlogo.png</itemPath>
+      <itemPath>images/smartearnlogo.png</itemPath>
+      <itemPath>images/ui-bg_flat_0_aaaaaa_40x100.png</itemPath>
+      <itemPath>images/ui-bg_flat_75_ffffff_40x100.png</itemPath>
+      <itemPath>images/ui-bg_glass_55_fbf9ee_1x400.png</itemPath>
+      <itemPath>images/ui-bg_glass_65_ffffff_1x400.png</itemPath>
+      <itemPath>images/ui-bg_glass_75_dadada_1x400.png</itemPath>
+      <itemPath>images/ui-bg_glass_75_e6e6e6_1x400.png</itemPath>
+      <itemPath>images/ui-bg_glass_95_fef1ec_1x400.png</itemPath>
+      <itemPath>images/ui-bg_highlight-soft_75_cccccc_1x100.png</itemPath>
+      <itemPath>images/ui-icons_222222_256x240.png</itemPath>
+      <itemPath>images/ui-icons_2e83ff_256x240.png</itemPath>
+      <itemPath>images/ui-icons_454545_256x240.png</itemPath>
+      <itemPath>images/ui-icons_888888_256x240.png</itemPath>
+      <itemPath>images/ui-icons_cd0a0a_256x240.png</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f5" displayName="prog" projectFiles="true">
+      <itemPath>prog/earnsmart.js</itemPath>
+      <itemPath>prog/jquery-1.11.3.js</itemPath>
+      <itemPath>prog/jquery-1.11.3.min.js</itemPath>
+      <itemPath>prog/jquery-ui.js</itemPath>
+      <itemPath>prog/jquery-ui.min.js</itemPath>
+      <itemPath>prog/modernzr-min.js</itemPath>
+      <itemPath>prog/modernzr.js</itemPath>
+      <itemPath>prog/oboe-browser.js</itemPath>
+      <itemPath>prog/oboe-browser.min.js</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CAppBase.cpp</itemPath>
+      <itemPath>CAppMain.cpp</itemPath>
+      <itemPath>CBrowserSession.cpp</itemPath>
+      <itemPath>CInvestmentProducts.cpp</itemPath>
+      <itemPath>CJsonRPCApp.cpp</itemPath>
+      <itemPath>CSPSerializable.cpp</itemPath>
+      <itemPath>emailtmpls.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>skdefault.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="themes" projectFiles="true">
+      <logicalFolder name="f1" displayName="default" projectFiles="true">
+        <logicalFolder name="f1" displayName="mobile" projectFiles="true">
+        </logicalFolder>
+        <itemPath>account.html</itemPath>
+        <itemPath>appsearch.html</itemPath>
+        <itemPath>charts.html</itemPath>
+        <itemPath>closeaccount.html</itemPath>
+        <itemPath>error.html</itemPath>
+        <itemPath>footer.html</itemPath>
+        <itemPath>header.html</itemPath>
+        <itemPath>home.html</itemPath>
+        <itemPath>loginorregister.html</itemPath>
+        <itemPath>master.html</itemPath>
+        <itemPath>pwd.html</itemPath>
+        <itemPath>registration.html</itemPath>
+        <itemPath>resetpwd.html</itemPath>
+        <itemPath>signon.html</itemPath>
+        <itemPath>tobasic.html</itemPath>
+        <itemPath>tolicensed.html</itemPath>
+        <itemPath>toolbar.html</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f6" displayName="txt" projectFiles="true">
+      <itemPath>txt/menus.json</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__DEBUG__</Elem>
+            <Elem>__PAID__</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sesecurities"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sewebmodels"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sewebmodels"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsewebmodels.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seann"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seann"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>mariadbclient_r</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>cgicc</linkerLibLibItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+            <linkerLibLibItem>uuid</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../config/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/sgweb.key" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBrowserSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBrowserSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CInvestmentProducts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CInvestmentProducts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonRPCApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CJsonRPCApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSPSerializable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSPSerializable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="account.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="appsearch.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="charts.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="closeaccount.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/earnsmart.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.structure.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.structure.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.theme.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.theme.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="emailtmpls.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="emltempls/RegistrationEmailConfirmation.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="error.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="home.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/w10/jsonrpc.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/eulerlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/paypal_btn_subscribeCC_LG.gif"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/searrowuplogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/smartearneulerlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/smartearnlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-bg_flat_0_aaaaaa_40x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_flat_75_ffffff_40x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_55_fbf9ee_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_65_ffffff_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_75_dadada_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_75_e6e6e6_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_95_fef1ec_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_highlight-soft_75_cccccc_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-icons_222222_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_2e83ff_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_454545_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_888888_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_cd0a0a_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="loginorregister.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="master.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/earnsmart.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-1.11.3.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-1.11.3.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-ui.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-ui.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/modernzr-min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/modernzr.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/oboe-browser.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/oboe-browser.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pwd.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="registration.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resetpwd.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signon.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="skdefault.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tobasic.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tolicensed.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="toolbar.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="txt/menus.json" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/mysql</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sesecurities"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sesecurities"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsesecurities.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sexbrl"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sexbrl"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsexbrl.so">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../secubist"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../secubist"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsecubist.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../sewebmodels"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../sewebmodels"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsewebmodels.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semain"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semain"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemain.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seadmin"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seadmin"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseadmin.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seeconomy"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seeconomy"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseeconomy.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../setraining"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../setraining"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsetraining.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seann"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seann"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseann.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../semysql"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../semysql"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsemysql.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../seglobal"
+                            CT="3"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../seglobal"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libseglobal.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../external/mariadbpp"
+                            CT="2"
+                            CN="Debug"
+                            AC="true"
+                            BL="true"
+                            WD="../external/mariadbpp"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmariadbpp.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../senet"
+                            CT="2"
+                            CN="Debug"
+                            AC="false"
+                            BL="true"
+                            WD="../senet"
+                            BC="${MAKE}  -f Makefile CONF=Debug"
+                            CC="${MAKE}  -f Makefile CONF=Debug clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libsenet.${CND_DLIB_EXT}">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>ZThread</linkerLibLibItem>
+            <linkerLibLibItem>jsoncpp</linkerLibLibItem>
+            <linkerLibLibItem>mariadbclient_r</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>cgicc</linkerLibLibItem>
+            <linkerLibLibItem>booster</linkerLibLibItem>
+            <linkerLibLibItem>cppcms</linkerLibLibItem>
+            <linkerLibLibItem>uuid</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-rdynamic</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../config/se.json" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../config/sgweb.key" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CAppMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CAppMain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CBrowserSession.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CBrowserSession.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CInvestmentProducts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CInvestmentProducts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CJsonRPCApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CJsonRPCApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CSPSerializable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSPSerializable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="account.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="appsearch.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="charts.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="closeaccount.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/earnsmart.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.structure.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.structure.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.theme.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="css/jquery-ui.theme.min.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="emailtmpls.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="emltempls/RegistrationEmailConfirmation.html"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="error.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="footer.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="home.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="html/w10/jsonrpc.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/eulerlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/paypal_btn_subscribeCC_LG.gif"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/searrowuplogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/smartearneulerlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/smartearnlogo.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-bg_flat_0_aaaaaa_40x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_flat_75_ffffff_40x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_55_fbf9ee_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_65_ffffff_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_75_dadada_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_75_e6e6e6_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_glass_95_fef1ec_1x400.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-bg_highlight-soft_75_cccccc_1x100.png"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="images/ui-icons_222222_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_2e83ff_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_454545_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_888888_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="images/ui-icons_cd0a0a_256x240.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="loginorregister.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="master.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/earnsmart.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-1.11.3.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-1.11.3.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-ui.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/jquery-ui.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/modernzr-min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/modernzr.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/oboe-browser.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="prog/oboe-browser.min.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pwd.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="registration.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resetpwd.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="signon.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="skdefault.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tobasic.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tolicensed.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="toolbar.html" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="txt/menus.json" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

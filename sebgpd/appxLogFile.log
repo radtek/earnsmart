@@ -1,0 +1,686 @@
+2013-07-08 08:55:34,628 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 08:55:34,628 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 08:55:34,628 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 08:55:34,628 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 08:55:34,629 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 08:55:35,630 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 08:55:35,675 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already create edgar schema folder.
+2013-07-08 08:55:46,002 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:102) - Select se_edgar_formrecs: Query successful.
+2013-07-08 08:55:47,208 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:103) - se_edgar_formrecs: Found 100 items.
+2013-07-08 08:57:25,697 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 08:57:25,697 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 08:57:25,698 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 08:57:25,698 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 08:57:25,698 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 08:57:26,699 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 08:57:26,741 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already create edgar schema folder.
+2013-07-08 08:58:01,325 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 08:58:01,325 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 08:58:01,325 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 08:58:01,326 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 08:58:01,326 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 08:58:02,327 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 08:58:02,382 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 08:58:15,143 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:102) - Select se_edgar_formrecs: Query successful.
+2013-07-08 08:58:15,593 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:103) - se_edgar_formrecs: Found 100 items.
+2013-07-08 08:58:42,273 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 08:58:51,349 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 08:58:51,349 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,541 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:58:52,821 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 08:58:52,821 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 08:58:52,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 08:58:52,823 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:58:53,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 08:58:56,451 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 08:59:00,815 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 08:59:00,816 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:03,172 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:59:03,453 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 08:59:03,453 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:05,758 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:59:06,039 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 08:59:06,039 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:09,132 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:59:09,412 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 08:59:09,412 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:12,489 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:59:12,768 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 08:59:12,768 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:15,621 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 08:59:15,901 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 08:59:15,901 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 08:59:16,182 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 08:59:42,260 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1233) - Processing/caching schema file /home/santony/tmp/fileYHFWpA/adbe-20071130.xsd
+2013-07-08 08:59:42,318 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1233) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 08:59:46,633 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1338) - Start Data insertion into lookup table
+2013-07-08 09:48:16,839 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 09:48:16,840 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 09:48:16,840 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 09:48:16,840 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 09:48:16,840 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 09:48:17,841 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 09:48:17,883 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 09:49:32,653 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:102) - Select se_edgar_formrecs: Query successful.
+2013-07-08 09:49:32,654 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:103) - se_edgar_formrecs: Found 100 items.
+2013-07-08 09:49:32,658 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 09:49:38,285 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 09:49:38,286 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,438 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,720 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 09:49:39,721 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,722 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 09:49:39,723 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:39,723 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 09:49:39,723 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:40,006 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 09:49:40,010 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 09:49:44,725 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 09:49:44,726 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 09:49:44,727 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:47,302 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:49:47,604 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 09:49:47,605 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:50,817 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:49:51,367 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 09:49:51,367 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:55,197 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:49:55,489 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 09:49:55,489 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:49:58,822 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:49:59,117 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 09:49:59,117 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:50:02,058 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:50:02,338 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 09:50:02,338 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:50:02,639 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 09:50:07,830 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1233) - Processing/caching schema file /home/santony/tmp/file0wpw4Q/adbe-20071130.xsd
+2013-07-08 09:50:07,832 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1459) - Successfully processed/cached schema file /home/santony/tmp/file0wpw4Q/adbe-20071130.xsd
+2013-07-08 09:50:15,186 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:148) - Parse index html successful.
+2013-07-08 09:50:17,372 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:149) - Start Inserting Data
+2013-07-08 09:50:22,661 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1581) - cik 0000796343Found in Table
+2013-07-08 09:50:23,263 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1622) - cik 0000796343 insert successful
+2013-07-08 09:50:31,091 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:164) - Process Statement Started for 0000796343 and for file date 20080124
+2013-07-08 09:50:31,209 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:705) - Process Presentation Started
+2013-07-08 09:57:51,792 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 09:57:51,792 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 09:57:51,792 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 09:57:51,792 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 09:57:51,793 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 09:57:52,794 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 09:57:52,864 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 09:57:57,058 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:102) - Select se_edgar_formrecs: Query successful.
+2013-07-08 09:57:57,058 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:103) - se_edgar_formrecs: Found 100 items.
+2013-07-08 09:57:57,063 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 09:58:03,917 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 09:58:03,918 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,098 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:05,389 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 09:58:05,389 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 09:58:05,390 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 09:58:05,391 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:05,676 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 09:58:05,679 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 09:58:10,268 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,269 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 09:58:10,270 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:12,690 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:12,970 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 09:58:12,971 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:15,185 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:15,473 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 09:58:15,473 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:18,548 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:18,835 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 09:58:18,835 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:21,938 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:22,223 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 09:58:22,223 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:26,957 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 09:58:27,388 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 09:58:27,388 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 09:58:27,829 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 09:58:32,463 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1228) - Processing/caching schema file /home/santony/tmp/fileZcZEC4/adbe-20071130.xsd
+2013-07-08 09:58:32,464 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1454) - Successfully processed/cached schema file /home/santony/tmp/fileZcZEC4/adbe-20071130.xsd
+2013-07-08 09:58:34,109 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:148) - Parse index html successful.
+2013-07-08 09:58:34,900 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:149) - Start Inserting Data
+2013-07-08 09:59:04,363 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1575) - cik 0000796343Found in Table
+2013-07-08 09:59:21,032 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1616) - cik 0000796343 insert successful
+2013-07-08 10:03:26,455 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 10:03:26,456 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 10:03:26,456 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 10:03:26,456 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 10:03:26,456 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 10:03:27,457 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 10:03:27,533 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 10:12:45,566 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 10:12:45,567 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 10:12:45,567 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 10:12:45,567 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 10:12:45,567 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 10:12:46,568 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 10:12:46,626 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 10:12:49,294 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:107) - Select se_edgar_formrecs: Query successful.
+2013-07-08 10:12:49,295 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:108) - se_edgar_formrecs: Found 100 items.
+2013-07-08 10:12:49,299 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 10:12:55,797 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 10:12:55,797 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,085 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:12:57,382 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 10:12:57,382 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 10:12:57,383 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,384 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 10:12:57,385 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:12:57,696 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 10:12:57,699 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 10:13:02,627 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 10:13:02,627 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,627 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 10:13:02,628 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 10:13:02,629 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:05,138 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:13:05,438 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 10:13:05,438 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:07,943 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:13:08,242 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 10:13:08,242 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:11,541 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:13:11,841 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 10:13:11,841 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:15,142 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:13:15,442 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 10:13:15,442 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:18,445 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 10:13:18,744 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 10:13:18,744 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 10:13:19,043 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 10:13:22,851 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file /home/santony/tmp/fileGVbwmO/adbe-20071130.xsd
+2013-07-08 10:13:22,853 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file /home/santony/tmp/fileGVbwmO/adbe-20071130.xsd
+2013-07-08 10:13:24,495 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:153) - Parse index html successful.
+2013-07-08 10:13:24,990 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:154) - Start Inserting Data
+2013-07-08 10:13:27,051 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1590) - cik 0000796343Found in Table
+2013-07-08 10:13:27,332 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1631) - cik 0000796343 insert successful
+2013-07-08 10:13:33,379 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:179) - Process Statement Started for 0000796343 and for file date 20080124
+2013-07-08 10:13:36,375 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:717) - Process Presentation Started
+2013-07-08 10:13:50,239 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:772) - Start Process Schema
+2013-07-08 10:14:07,560 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd#StatementCashFlows
+2013-07-08 10:14:08,680 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 10:14:08,682 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 10:14:08,682 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 10:14:10,146 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file ../../../common/ptr/2005-02-28/usfr-ptr-2005-02-28.xsd
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file ../../../common/ptr/2005-02-28/usfr-ptr-2005-02-28.xsd
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd#StatementCashFlows
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:811) - Starting to get the details of fin report role type to store in the statements table.
+2013-07-08 10:14:37,795 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:812) - Finding usedOn and description/title
+2013-07-08 10:15:19,382 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:875) - Data Insert into Statement Table Stared
+2013-07-08 10:16:20,303 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/common/pte/2005-02-28/usfr-pte-2005-02-28.xsd#usfr-pte_NetCashFlowsProvidedUsedInvestingActivitiesAbstract
+2013-07-08 12:52:43,041 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 12:52:43,041 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 12:52:43,041 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 12:52:43,042 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 12:52:43,042 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 12:52:44,043 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 12:52:44,113 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 12:52:49,427 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:107) - Select se_edgar_formrecs: Query successful.
+2013-07-08 12:52:49,427 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:108) - se_edgar_formrecs: Found 100 items.
+2013-07-08 12:52:49,431 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 12:52:55,737 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 12:52:55,737 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,112 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,421 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,422 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 12:52:57,423 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:52:57,744 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 12:52:57,748 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 12:53:02,919 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 12:53:02,919 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 12:53:02,920 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:02,921 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 12:53:02,921 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:05,548 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:53:05,867 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 12:53:05,867 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:08,529 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:53:08,842 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 12:53:08,843 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:12,272 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:53:12,587 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 12:53:12,587 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:15,960 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:53:16,271 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 12:53:16,271 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:19,389 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:53:19,696 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 12:53:19,696 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:53:20,022 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 12:53:23,029 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file /home/santony/tmp/fileSotnPC/adbe-20071130.xsd
+2013-07-08 12:54:57,946 INFO  [0x7ffff7fb6780:null]  (main.cpp:74) - Entering sebgps.
+2013-07-08 12:54:57,946 INFO  [0x7ffff7fb6780:null]  (main.cpp:105) - Command argument 'f' with function name processstatements is accepted.
+2013-07-08 12:54:57,946 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:13) - Opening main controller.
+2013-07-08 12:54:57,946 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:19) - Exiting main controller ctor after setting timer callback.
+2013-07-08 12:54:57,946 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:31) - Starting the main loop.
+2013-07-08 12:54:58,948 INFO  [0x7ffff7fb6780:null] CMainController (MainController.cpp:46) - Controller has 1 function handlers.
+2013-07-08 12:54:59,024 ERROR [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:56) - Already created edgar schema folder.
+2013-07-08 12:55:05,607 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:107) - Select se_edgar_formrecs: Query successful.
+2013-07-08 12:55:05,608 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:108) - se_edgar_formrecs: Found 100 items.
+2013-07-08 12:55:05,613 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 12:55:10,494 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 12:55:10,494 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:11,798 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:12,117 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 12:55:12,117 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,117 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 12:55:12,118 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 12:55:12,119 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:12,440 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 12:55:12,443 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:87) - Successfully opened ftp client.
+2013-07-08 12:55:17,273 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 190001047469-08-000497-index.htm5744
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 180001047469-08-000497.hdr.sgml762
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 170001047469-08-000497.txt3362098
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 16a2181848z10-k.htm1609145
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 15a2181848z10-k.pdf372748
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 14a2181848zex-10_5.htm70928
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 13a2181848zex-10_52.htm165723
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 12a2181848zex-21.htm21514
+2013-07-08 12:55:17,274 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 11a2181848zex-23_1.htm3977
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 10a2181848zex-31_1.htm6944
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 9a2181848zex-31_2.htm7159
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 8a2181848zex-32_1.htm4910
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 7a2181848zex-32_2.htm5179
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 6adbe-20071130.xsd64141
+2013-07-08 12:55:17,275 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:19,916 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:20,239 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 5adbe-20071130_cal.xml94225
+2013-07-08 12:55:20,239 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:22,773 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:23,082 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 4adbe-20071130_lab.xml271949
+2013-07-08 12:55:23,082 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:26,742 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:27,140 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 3adbe-20071130_pre.xml277663
+2013-07-08 12:55:27,140 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:30,729 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:31,037 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 2adbe-20071217.xml206027
+2013-07-08 12:55:31,037 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:34,200 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:342) - DOWNLOADED.
+2013-07-08 12:55:34,513 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:290) - 1g363580.jpg26480
+2013-07-08 12:55:34,514 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:298) -  FILE.
+2013-07-08 12:55:34,833 INFO  [0x7ffff7fb6780:null] se (CFtpClient.cpp:109) - Successfully closed ftp client.
+2013-07-08 12:55:37,231 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file /home/santony/tmp/fileqEYiGT/adbe-20071130.xsd
+2013-07-08 12:56:35,155 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 12:57:34,111 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:00:00,016 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:00:12,742 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:00:25,967 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd
+2013-07-08 13:00:53,708 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:01:01,357 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:01:05,502 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:01:13,060 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:01:39,143 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:01:41,321 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:02:04,351 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file ../../../common/ptr/2005-02-28/usfr-ptr-2005-02-28.xsd
+2013-07-08 13:02:07,134 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file ../../../common/ptr/2005-02-28/usfr-ptr-2005-02-28.xsd
+2013-07-08 13:02:32,574 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:02:32,574 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:02:34,878 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd
+2013-07-08 13:02:37,358 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/rpt/mda/2005-02-28/usfr-mda-2005-02-28.xsd
+2013-07-08 13:02:40,086 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:02:41,966 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:02:43,326 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:02:45,326 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:02:46,990 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:03:25,292 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:03:28,230 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/us/fr/rpt/mda/2005-02-28/usfr-mda-2005-02-28.xsd
+2013-07-08 13:03:31,743 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:05:49,316 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:05:52,613 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file /home/santony/tmp/fileqEYiGT/adbe-20071130.xsd
+2013-07-08 13:06:45,118 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:153) - Parse index html successful.
+2013-07-08 13:06:49,993 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:154) - Start Inserting Data
+2013-07-08 13:07:30,036 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1590) - cik 0000796343Found in Table
+2013-07-08 13:07:50,755 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1631) - cik 0000796343 insert successful
+2013-07-08 13:07:57,351 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:179) - Process Statement Started for 0000796343 and for file date 20080124
+2013-07-08 13:08:00,471 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:717) - Process Presentation Started
+2013-07-08 13:08:09,880 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:772) - Start Process Schema
+2013-07-08 13:08:25,075 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd#StatementCashFlows
+2013-07-08 13:08:27,123 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/us/fr/gaap/ci/2005-02-28/us-gaap-ci-2005-02-28.xsd#StatementCashFlows
+2013-07-08 13:08:27,123 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:811) - Starting to get the details of fin report role type to store in the statements table.
+2013-07-08 13:08:27,124 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:812) - Finding usedOn and description/title
+2013-07-08 13:09:01,358 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:875) - Data Insert into Statement Table Stared
+2013-07-08 13:09:31,974 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/us/fr/common/pte/2005-02-28/usfr-pte-2005-02-28.xsd#usfr-pte_NetCashFlowsProvidedUsedInvestingActivitiesAbstract
+2013-07-08 13:09:50,908 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:09:55,715 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd
+2013-07-08 13:09:55,716 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1243) - Processing/caching schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:09:55,716 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd
+2013-07-08 13:09:55,772 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1348) - Start Data insertion into lookup table
+2013-07-08 13:24:53,958 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1449) - End Data insertion into lookup table
+2013-07-08 13:24:53,958 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1469) - Successfully processed/cached schema file http://www.xbrl.org/us/fr/common/pte/2005-02-28/usfr-pte-2005-02-28.xsd#usfr-pte_NetCashFlowsProvidedUsedInvestingActivitiesAbstract
+2013-07-08 13:24:53,958 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1062) - Starting to get the details of element name in the look table.
+2013-07-08 14:22:32,766 INFO  [0x7ffff7fb6780:null] CProcessEdgarStatements (CProcessEdgarStatements.cpp:1154) - Data Insert into Statement Table Stared

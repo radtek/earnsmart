@@ -1,0 +1,40 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view SitemapView uses sg::web::models::Sitemap %>
+<% template render() %>
+<div class="div_site_map">
+    <ul class="ul_site_map">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/fundamentals">Fundamentals</a>
+            <% if (!content.get_Products()) %>
+                Products missing due to an exception. Sorry for any inconvenience.
+            <% else %>
+                <ul>
+                    <% c++ for(const mysqlpp::Row& row : content.get_Products()->get_Result()) { %>
+                        <% c++ CSTR prodName = row["product_name"]; %>
+                        <% c++ CSTR prodId = row["product_id"]; %>
+                        <% c++ CSTR exchange = row["exchange_name"]; %>
+                        <% c++ CSTR symbol = row["product_symbol"]; %>
+                        <li>
+                            <a href="/fundamentals/p/summary/<% c++ out() << prodId; %>">
+                                <% c++ out() << prodName; %>(<% c++ out() << exchange; %>:<% c++ out() << symbol; %>)
+                            </a>
+                        </li>
+                    <% c++ } %>
+                </ul>
+            <% end %>
+        </li>
+        <li>
+            <a href="/economy">Economy</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

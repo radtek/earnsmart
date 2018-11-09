@@ -1,0 +1,22 @@
+<div id="dvSigonControls" ng-style="disableView()">
+    <h2>Reset Password</h2>
+    <h3>Enter your email address and we will email you the new password.</h3>
+    <form name="resetpwdform" novalidate>
+        <div>
+            <div>
+                <input 
+                    name="signEmail" 
+                    type="email"
+                    placeholder="Email Address" 
+                    ng-model="emailAddress" 
+                    title="Enter a valid email address."
+                    >
+                <span class="errorlabel" ng-show="resetpwdform.signEmail.$invalid">*required</span>
+            </div>
+            <div>
+                <button ng-disabled="resetpwdform.signEmail.$invalid" ng-click="resetpwd()">Reset Password</button>
+            </div>
+            <div class="errorlabel" >{{errorMsg}}</div>
+        </div>
+    </form>
+</div>

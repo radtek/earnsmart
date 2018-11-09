@@ -1,0 +1,134 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompSearchView uses sg::web::models::CompSearch %>
+<% template render() %>
+<div id="global_cosearch">
+    <script>
+        
+        var global_search_option_position = { my: "top", at : "right bottom+5", of: "#global_cosearch_text" };
+        var bodyHeight,bodyWidth ;
+        var globalsearchtableoptions = 
+            {
+                'showRowNumber': true, 
+                'alternatingRowStyle' : true, 
+                'allowHtml' : true,
+                'cssClassNames' : 
+                    {
+                        oddTableRow : 'screenerResultTableOddRow',
+                        hoverTableRow : 'screenerResultTableHoverRow'
+                    }
+            };
+                
+        var globalsearchtablePageIndex = 0;
+        var globalsearchtableview = null;
+        var globalsearchtabledata = null;
+
+        var fnpaging = function(p)
+        {
+            globalsearchtablePageIndex = p.page;
+        }
+        
+        $(document).ready(function()
+        {
+            globalsearchtableoptions['page'] = 'enable';
+            globalsearchtableoptions['pageSize'] = 20;
+            globalsearchtableoptions['pagingSymbols'] = {prev: 'prev', next: 'next'};
+            globalsearchtableoptions['pagingButtonsConfiguration'] = 'auto';        
+            globalsearchtableoptions['width'] = null;
+            globalsearchtableoptions['height'] = null;        
+            $(document).tooltip();
+            $("#global_cosearch_text").focus(function(e)
+                {
+                    e.preventDefault = true;
+                    $("#global_search_dialog").position(global_search_option_position);
+                    $("#global_search_dialog").css("visibility", "visible");
+                });
+                
+                $("#global_cosearch_text").on("input", function(e)
+                {
+                    e.preventDefault = true;
+                    if ($("#global_search_dialog").css("visibility") == "visible")
+                    {
+                        if ($(this).val() != "")
+                        {
+                            $.post("/search", "search_text=" + $(this).val())
+                                    .done(function(data)
+                            {
+                                if (globalsearchtableview == null)
+                                {
+                                    globalsearchtableview = new google.visualization.Table(document.getElementById('global_search_table'));
+                                    google.visualization.events.addListener(globalsearchtableview, 'page', fnpaging);
+                                }
+                                globalsearchtabledata = new google.visualization.DataTable(data);
+                                globalsearchtableview.draw(globalsearchtabledata, globalsearchtableoptions);
+                            });
+                        }
+                        else
+                        {
+                            google.visualization.events.removeListener(globalsearchtableview, 'page', fnpaging);
+                            globalsearchtableview = null;
+                            globalsearchtabledata = null;
+                        }
+                    }
+                });
+        });
+        
+        $(window).resize(function()
+        {
+            bodyHeight = $(document).height();
+            bodyWidth = $(document).width();
+            if (globalsearchtableview && globalsearchtabledata && globalsearchtableoptions)
+            {
+                globalsearchtableoptions.startPage = globalsearchtablePageIndex;
+                globalsearchtableview.draw(globalsearchtabledata, globalsearchtableoptions);  
+            }
+        });
+        
+        $(document).click(function(e)
+        {
+            e.preventDefault = true;
+            if (e.target)
+            {
+                var eobj = $(e.target);
+                if (eobj.prop("id") == "global_cosearch_text") 
+                {
+                    return ;
+                }
+            }
+            if ($("#global_search_dialog").css("visibility") == "visible")
+            {
+                $("#global_search_dialog").css("visibility", "hidden");
+            }
+        });
+        
+    </script>
+    
+    <div id="global_search_dialog">
+        <div id="global_search_results">
+            <p style="font-weight: bold; font-size: large ">Search Results</p>
+            <hr>
+            <div id="global_search_table" style="width:auto;height:auto;"></div>
+        </div>
+        <% c++ const string PRODPAGE = "PRPG"; %>
+        <% c++ SP<ISecurityDescriptionList> plist; %>
+        <% c++ plist = content.getRecentPicks(); %>
+        <% c++ if (plist) { %>
+        <div id="global_search_recent">
+            <p style="font-weight: bold; font-size: large">Recent Picks</p>
+            <hr>
+            <ul style="list-style: square; list-style-type:square ">
+                <% c++ for (ISecurityDescription* p : *plist) { %>
+                <li style="padding:5px">
+                    <a href='<% c++ out() << "/fundamentals/p/" << (content.getContext().session().is_set(PRODPAGE) ? content.getContext().session().get(PRODPAGE) : "summary") << "/" << p->get_Id();%>'><% c++ out() << p->get_Symbol() << " - " << p->get_Name(); %></a>
+                </li>
+                <% c++ } %>
+            </ul>
+        </div>
+        <% c++ } %>
+    </div>    
+    <span class="ui-icon ui-icon-search global_cosearch_span"></span>
+    <input class="ui-widget global_cosearch_input" type="text" id="global_cosearch_text" name="cosearch_text" autocomplete="off"/>
+</div>
+<% end template %>
+<% end view %>
+<% end skin %>

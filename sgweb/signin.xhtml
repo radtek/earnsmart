@@ -1,0 +1,79 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view SignInView uses sg::web::models::SignIn  %>
+<% template render() %>
+    <div style="padding:20pt">
+         <style>
+             .signin_inputcontrols 
+             {
+                 width: 200pt;
+             }
+
+             .signin_btns {
+                 width: 100pt;
+                 margin: 10pt;
+             }
+             
+             div.cls_signin_dvInputRed 
+             {
+                 border-right-color: red;
+                 border-right-style: solid;
+                 border-right-width: 8pt;
+            }
+            
+             div.cls_signin_dvInput
+             {
+                 border-right-width: 0px;
+             }
+
+             label.cls_signin_validity
+             {
+                 font-size: small;
+             }            
+            
+         </style>
+         <form id="signin_form" method="post">
+             <script src="/blob/signin.js"></script>
+             <h3>Sign In</h3>
+             <div style="padding:10pt;color:red;display:<%= DisplayError %>"><%= ErrorMessage %></div>
+             <div style="padding:10pt">
+                 <div style="padding-left:10pt;padding-right:10pt">
+                     <table>
+                         <tr>
+                             <td style="width:220pt">Email Address (Required): </td>
+                             <td style="width:150pt">
+                                 <div class="cls_signin_dvInput">
+                                     <input class="signin_inputcontrols" title="Enter email address (required)" name="signin_txtemail" type="text" value="<%= Login %>" />
+                                 </div></td>
+                             <td></td>
+                         </tr>
+                         <tr>
+                             <td>Password (Required): </td>
+                             <td>
+                                 <div class="cls_signin_dvInput">
+                                     <input class="signin_inputcontrols" type="password" name="signin_txtpassword" title="Enter password (required)" />
+                                 </div>
+                             </td>
+                             <td><a href="javascript::void()">I forgot my password</a></td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+             <div style="padding:10pt">
+                 <table style="padding:10pt">
+                     <tr>
+                         <td align="right"style="width:200pt"><button id="signin_Login" class="signin_btns">Sign In</button></td>
+                         <td align="left" style="width:200pt"><input type="checkbox" value="No" /> Remember me on this computer</td>
+                     </tr>
+                     <tr>
+                         <td colspan="2" style="text-align: center">
+                             Not yet registered with us? Please click <a href="/register">here</a> to register.
+                         </td>
+                     </tr>
+                 </table>
+             </div>
+         </form>
+     </div>
+<% end template %>
+<% end view %>
+<% end skin %>

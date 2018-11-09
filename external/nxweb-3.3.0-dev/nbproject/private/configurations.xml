@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="etc">
+      </df>
+      <df name="m4">
+      </df>
+      <df name="sample_config">
+        <df name="cache">
+          <df name="curtime">
+            <df name="localhost$3A8055">
+            </df>
+          </df>
+          <df name="gzip">
+            <df name="www">
+            </df>
+          </df>
+          <df name="img">
+            <df name="www">
+            </df>
+          </df>
+        </df>
+        <df name="modules">
+          <in>benchmark.c</in>
+          <in>hello.c</in>
+          <in>subrequests.c</in>
+          <in>upload.c</in>
+        </df>
+        <df name="python">
+        </df>
+        <df name="ssl">
+        </df>
+        <df name="www">
+        </df>
+      </df>
+      <df name="src">
+        <df name="bin">
+          <in>main.c</in>
+        </df>
+        <df name="include">
+          <df name="nxweb">
+            <df name="deps">
+              <df name="sha1-c">
+                <in>sha1.h</in>
+              </df>
+              <df name="ulib">
+                <in>alignhash_tpl.h</in>
+                <in>common.h</in>
+                <in>hash.h</in>
+              </df>
+            </df>
+            <in>config.h</in>
+            <in>http_server.h</in>
+            <in>misc.h</in>
+            <in>nx_alloc.h</in>
+            <in>nx_buffer.h</in>
+            <in>nx_event.h</in>
+            <in>nx_file_reader.h</in>
+            <in>nx_pool.h</in>
+            <in>nx_queue_tpl.h</in>
+            <in>nx_workers.h</in>
+            <in>nxd.h</in>
+            <in>nxjson.h</in>
+            <in>nxweb.h</in>
+            <in>nxweb_config.h</in>
+            <in>templates.h</in>
+          </df>
+        </df>
+        <df name="lib">
+          <df name="deps">
+            <df name="sha1-c">
+              <in>sha1.c</in>
+            </df>
+            <df name="ulib">
+              <in>hash.c</in>
+            </df>
+          </df>
+          <df name="filters">
+            <in>cors_filter.c</in>
+            <in>draw_filter.c</in>
+            <in>file_cache_filter.c</in>
+            <in>gzip_filter.c</in>
+            <in>image_filter.c</in>
+            <in>ssi_filter.c</in>
+            <in>templates_filter.c</in>
+          </df>
+          <df name="modules">
+            <in>host_redirect.c</in>
+            <in>http_proxy.c</in>
+            <in>python.c</in>
+            <in>sendfile.c</in>
+          </df>
+          <in>access_log.c</in>
+          <in>cache.c</in>
+          <in>daemon.c</in>
+          <in>http_server.c</in>
+          <in>http_subrequest.c</in>
+          <in>http_utils.c</in>
+          <in>json_config.c</in>
+          <in>main_stub.c</in>
+          <in>mime.c</in>
+          <in>misc.c</in>
+          <in>nx_buffer.c</in>
+          <in>nx_event.c</in>
+          <in>nx_file_reader.c</in>
+          <in>nx_pool.c</in>
+          <in>nx_workers.c</in>
+          <in>nxd_buffer.c</in>
+          <in>nxd_http_client_proto.c</in>
+          <in>nxd_http_proxy.c</in>
+          <in>nxd_http_server_proto.c</in>
+          <in>nxd_http_server_proto_subrequest.c</in>
+          <in>nxd_socket.c</in>
+          <in>nxd_ssl_socket.c</in>
+          <in>nxd_streamer.c</in>
+          <in>nxjson.c</in>
+          <in>templates.c</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

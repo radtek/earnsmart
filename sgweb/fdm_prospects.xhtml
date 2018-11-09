@@ -1,0 +1,27 @@
+<% c++ #include "models.h" %>
+<% skin sgskin %>
+<% view CompanyProspectsView uses sg::web::models::CompanyProspects %>
+<% template render() %>
+<% c++ using namespace sg::web::models; %>
+
+<div id="fdm_subsection_header">
+    <div class="fdmcosumcontainer">
+        <div>
+            <div class="fdmcosumformula_selected">
+                <% foreach chart in charts %>
+                <% item %>
+                    <% render chart->viewName with *chart %>
+                <% end %>
+                <% empty %>
+                <div style="padding: 25pt; color: red">
+                    Sorry. Chart generation failed. Chart could not be displayed. 
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>                
+
+<% end template %>
+<% end view %>
+<% end skin %>
